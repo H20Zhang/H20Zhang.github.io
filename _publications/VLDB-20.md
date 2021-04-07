@@ -1,7 +1,7 @@
 ---
 title: 'Distributed Subgraph Counting: A General Approach'
 collection: publications
-permalink: /publication/2009-10-01-paper-title-number-1
+permalink: VLDB-20
 excerpt: 'Hao Zhang, Jeffrey Xu Yu, Yikai Zhang, Kangfei Zhao, Hong Cheng'
 date: 2020
 venue: 'PVLDB'

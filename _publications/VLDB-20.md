@@ -6,7 +6,7 @@ excerpt: 'Hao Zhang, Jeffrey Xu Yu, Yikai Zhang, Kangfei Zhao, Hong Cheng'
 date: 2020
 venue: 'PVLDB'
 paperurl: 'http://www.vldb.org/pvldb/vol13/p2493-zhang.pdf'
-citation:
+citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
 This paper is about the number 1. The number 2 is left for future work.
 

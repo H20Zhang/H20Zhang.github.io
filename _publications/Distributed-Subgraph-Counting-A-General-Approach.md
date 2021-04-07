@@ -1,5 +1,5 @@
 ---
-title: "Distributed Subgraph Counting A General Approach"
+title: 'Distributed Subgraph Counting: A General Approach'
 collection: publications
 permalink: /publication/Distributed-Subgraph-Counting-A-General-Approach
 excerpt: 'Hao Zhang, Jeffrey Xu Yu, Yikai Zhang, Kangfei Zhao, Hong Cheng'

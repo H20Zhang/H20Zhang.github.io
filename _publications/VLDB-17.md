@@ -3,7 +3,7 @@ title: 'Subgraph matching: on compression and computation'
 collection: publications
 permalink: /publication/VLDB-17
 excerpt: 'Miao Qiao, Hao Zhang, Hong Cheng'
-date: 2017
+date: 2017-10-01
 venue: 'PVLDB'
 paperurl: 'http://www.vldb.org/pvldb/vol11/p176-qiao.pdf'
 citation:

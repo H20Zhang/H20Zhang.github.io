@@ -3,7 +3,7 @@ title: 'SQL-G: Efficient Graph Analytics by SQL'
 collection: publications
 permalink: /publication/TKDE-19
 excerpt: 'Kangfei Zhao, Jiao Su, Jeffrey Xu Yu, Hao Zhang'
-date: 2019
+date: 2019-10-01
 venue: 'IEEE Transactions on Knowledge and Data Engineering'
 paperurl: 
 citation:

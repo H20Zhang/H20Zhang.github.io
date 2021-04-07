@@ -12,7 +12,7 @@ Hi, I am currently a fourth-year Ph.D. student at the Database Group in [The Chi
 
 
 
-I have a broad interest in **distributed relational engine **, **online analytical processing(OLAP)** ,and **distributed computing**, especially combining new advancement in the theory of database with state-of-the-art systems. Currently, my research interests focuses on distributed relational engine for complex OLAP.
+I have a broad interest in **distributed relational engine for large scale OLAP** and **distributed system for graph processing**, especially combining new advancement in the theory of database with the state-of-the-art systems. Currently, my research interests focuses on distributed relational engine for complex OLAP.
 
 
 
@@ -21,6 +21,19 @@ More about me: [Google Scholar](https://scholar.google.com/citations?hl=zh-CN&us
 ------
 
 ### Research Interests
+
+* Distributed Relational Engine for Large Scale OLAP
+* Distributed System for Graph Processing
+* Machine Learning in Database
+
+### Hornor & Awards
+
+* Meritorious Winner, COMAP’s Mathematical Contest in Modeling, 2016
+
+### Professional Activities
+
+* Reviewer: TKDD, PAKDD'21
+* Secondary Reviewer: KDD'20, CIKM'20, AAAI'21
 
 
 

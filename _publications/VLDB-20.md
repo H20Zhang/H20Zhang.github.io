@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/VLDB-20
 excerpt: 'Hao Zhang, Jeffrey Xu Yu, Yikai Zhang, Kangfei Zhao, Hong Cheng'
 date: 2020-10-01
-venue: 'International Conference on Very Large Data Bases (VLDB)'
+venue: '46th International Conference on Very Large Data Bases (VLDB)'
 paperurl: 'http://www.vldb.org/pvldb/vol13/p2493-zhang.pdf'
 citation:
 ---

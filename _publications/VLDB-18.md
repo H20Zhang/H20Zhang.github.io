@@ -3,8 +3,8 @@ title: 'Subgraph matching: on compression and computation'
 collection: publications
 permalink: /publication/VLDB-17
 excerpt: 'Miao Qiao, Hao Zhang, Hong Cheng'
-date: 2017-10-01
-venue: 'International Conference on Very Large Data Bases (VLDB)'
+date: 2018-10-01
+venue: '44th International Conference on Very Large Data Bases (VLDB)'
 paperurl: 'http://www.vldb.org/pvldb/vol11/p176-qiao.pdf'
 citation:
 ---

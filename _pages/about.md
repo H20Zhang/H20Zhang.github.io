@@ -8,5 +8,5 @@ redirect_from:
   - /about.html
 ---
 
-This is Hao Zhang's home on the web!
+My name is Hao Zhang
 

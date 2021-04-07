@@ -16,7 +16,7 @@ I have a broad interest in **distributed relational engine for large scale OLAP*
 
 
 
-More about me: [Google Scholar](https://scholar.google.com/citations?hl=zh-CN&user=PLwImrcAAAAJ)
+More about me: [Google Scholar](https://scholar.google.com/citations?hl=zh-CN&user=PLwImrcAAAAJ)/[Github](https://github.com/H20Zhang)
 
 ------
 
@@ -36,6 +36,8 @@ More about me: [Google Scholar](https://scholar.google.com/citations?hl=zh-CN&us
 * Secondary Reviewer: KDD'20, CIKM'20, AAAI'21
 
 
+
+Contact me: hzhang@se.cuhk.edu
 
 [updated on 2021/4/7]
 

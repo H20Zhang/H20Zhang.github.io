@@ -37,8 +37,6 @@ More about me: [Google Scholar](https://scholar.google.com/citations?hl=zh-CN&us
 
 
 
-Contact me: hzhang@se.cuhk.edu
-
 [updated on 2021/4/7]
 
 

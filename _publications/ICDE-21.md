@@ -3,7 +3,7 @@ title: 'Fast Distributed Complex Join Processing'
 collection: publications
 permalink: /publication/ICDE-21
 excerpt: 'Hao Zhang, Miao Qiao, Jeffrey Xu Yu, Hong Cheng'
-date: 2020-10-01
+date: 2021-10-01
 venue: 'ICDE (short)'
 paperurl: 'https://arxiv.org/pdf/2102.13370.pdf'
 citation: 

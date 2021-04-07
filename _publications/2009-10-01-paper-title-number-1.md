@@ -8,9 +8,3 @@ venue: 'Journal 1'
 paperurl: 'http://academicpages.github.io/files/paper1.pdf'
 citation: 1234
 ---
-This paper is about the number 1.
-
-[Download paper here](http://academicpages.github.io/files/paper1.pdf)
-
-5678
-

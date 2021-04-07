@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/DASFAA-17
 excerpt: 'Hao Zhang, Yuanyuan Zhu, Lu Qin, Hong Cheng, Jeffrey Xu Yu'
 date: 2017-10-01
-venue: 'Database Systems for Advanced Applications'
+venue: 'Database Systems for Advanced Applications (DASFAA)'
 paperurl: 
 citation:
 ---

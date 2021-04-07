@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/VLDB-17
 excerpt: 'Miao Qiao, Hao Zhang, Hong Cheng'
 date: 2017-10-01
-venue: 'PVLDB'
+venue: 'International Conference on Very Large Data Bases (VLDB)'
 paperurl: 'http://www.vldb.org/pvldb/vol11/p176-qiao.pdf'
 citation:
 ---

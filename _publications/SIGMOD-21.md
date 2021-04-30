@@ -3,8 +3,8 @@ title: 'A Learned Sketch for Subgraph Counting'
 collection: publications
 permalink: /publication/SIGMOD-21
 excerpt: 'Kangfei Zhao, Jeffrey Xu Yu, Hao Zhang, Qiyan Li, Yu Rong'
-date: 2020-10-01
-venue: 'ACM SIGMOD/PODS International Conference on Managerment of Data (SIGMOD)'
+date: 2021-10-01
+venue: 'ACM SIGMOD/PODS International Conference on Managerment of Data (SIGMOD) (To appear)'
 paperurl:
 citation:
 ---

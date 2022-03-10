@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "Hao Zhang"
-excerpt: "hzhang [at] se.cuhk.edu.hk"
+excerpt:
 author_profile: true
 redirect_from: 
   - /about/

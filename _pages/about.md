@@ -16,10 +16,6 @@ I have a broad interest in query optimization/execution for large scale OLAP que
 
 
 
-
-
-More about me: [Google Scholar](https://scholar.google.com/citations?hl=zh-CN&user=PLwImrcAAAAJ)/[Github](https://github.com/H20Zhang)
-
 ------
 
 ### Research Interests

@@ -10,7 +10,7 @@ redirect_from:
 
 Hi, I am currently a fifth-year Ph.D. student at the Database Group in [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/), where I am supervised by [Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/). Before that, I obtained my B.E. degree from HongYi Honor Class of Wuhan University in 2017.
 
-I have a broad interest in query optimization/execution for large scale OLAP query in distributed environment. More specifically, I'm intereseted in 1) **query execution/optimization of complex OLAP query**, e.g., subgraph (counting) query, 2) **unify query execution/optimization of different kinds of queries (e.g., SQL query, subgraph query, graph analytic query) in a relational way**, 3) **machine learning based query optimization**,
+I have a broad interest in query optimization/execution for large scale OLAP query in distributed environment. More specifically, I'm intereseted in (1) **query execution/optimization of complex OLAP query**, e.g., subgraph (counting) query, (2) **unify query execution/optimization of different kinds of queries (e.g., SQL query, subgraph query, graph analytic query) in a relational way**, (3) **machine learning based query optimization**,
 
 I develop several distributed SQL/Graph systems based on Spark/Hadoop. 
 

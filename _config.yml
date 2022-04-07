@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Hao Zhang"
   avatar           : "profile.jpeg"
-  bio              : "PhD candidate at the Chinese University of Hong Kong \n Email:hzhang@se.cuhk.edu.hk"
+  bio              : "PhD candidate at the Chinese University of Hong Kong"
   location         : "Hong Kong, China"
   employer         :
   pubmed           : 
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/hao-zhang-ab18b413b/"
+  linkedin         : "hao-zhang-ab18b413b"
   orcid            : #"http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :

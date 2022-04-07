@@ -14,10 +14,16 @@ I have a broad interest in query optimization/execution for large scale OLAP que
 
 **I am looking for position in industry. Please drop me an email if interested~**
 
-
-
-
 ------
+
+### Systems
+
+* **SeccoSQL** (ongoing): SeccoSQL (Separate communication from computation) is an experimental dis- tributed SQL engine on Spark for processing complex SQL/Graph queries. It explicitly decouples RA operators into pure communication and computation operators, and can reorder operators at a finer granularity than existing SQL engine (i.e., reordering communications and computations versus reorder- ing RA operators), which enables greater search space of plan and can further reduce communication cost.
+
+* **[DISC](https://github.com/H20Zhang/DISC)**: DISC is a specialized graph system on Spark for computing subgraph counting of arbitrary patterns and orbits in a relational way. Unlike existing subgraph counting approaches, which perform subgraph counting directly on graph, it decomposes the subgraph counting query into a sequence of relational queries, which can be efficiently executed.
+
+* **[Crystal](https://github.com/H20Zhang/Crystal)**: Crystal is a novel method for distributed subgraph matching on very large graphs. It differs from existing subgraph matching approaches in that it can compute an compressed results of subgraph matching directly, which also greatly reduce the computation cost.
+
 
 ### Research Interests
 

@@ -8,13 +8,15 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I am currently a fifth-year Ph.D. student at the Database Group in [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/), where I am supervised by [Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/). Before that, I obtained my B.E. degree from HongYi Honor Class of Wuhan University in 2017.
+Hi, I join Huawei Cloud Database Innovation Lab through TopMinds program, which is also known as "天才少年", as a research scientist. Before that I graduate from the Database Group in [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/), where I am supervised by [Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/) in 2022. I obtained my B.E. degree from HongYi Honor Class of Wuhan University in 2017.
 
 I have a broad interest in query optimization/execution for large scale OLAP query in distributed environment. More specifically, I'm intereseted in (1) **query execution/optimization of complex OLAP query**, e.g., subgraph (counting) query, (2) **unify query execution/optimization of different kinds of queries (e.g., SQL query, subgraph query, graph analytic query) in a relational way**, (3) **machine learning based query optimization**,
 
 I develop several distributed SQL/Graph systems based on Spark/Hadoop. 
 
-**I am looking for position in industry. Please drop me an email if interested~**
+In huawei, I'm working on building the next generation unified data processing engine. 
+
+**I am hiring for full-time and intern who are interested in the system research and building, please drop me a link if interested!~**
 
 ------
 
@@ -41,11 +43,11 @@ I develop several distributed SQL/Graph systems based on Spark/Hadoop.
 
 ### Publications
 
-* **Hao Zhang**, Jeffrey Xu Yu, Yikai Zhang, Kangfei Zhao. Parallel Query Processing: To Separate Communication from Computation. ACM SIGMOD/PODS International Conference on Managerment of Data (SIGMOD), 2022 (To appear).
+* **Hao Zhang**, Jeffrey Xu Yu, Yikai Zhang, Kangfei Zhao. Parallel Query Processing: To Separate Communication from Computation. ACM SIGMOD/PODS International Conference on Managerment of Data (SIGMOD), 2022.
 
-* **Hao Zhang**, Qiyan, Li, Kangfei Zhao, Jeffrey Xu Yu, Yuanyuan Zhu. How Learning Can Help Complex Cyclic Join Decomposition (Demo). IEEE International Conference on Data Engineering (ICDE), 2022 (To appear).
+* **Hao Zhang**, Qiyan, Li, Kangfei Zhao, Jeffrey Xu Yu, Yuanyuan Zhu. How Learning Can Help Complex Cyclic Join Decomposition (Demo). IEEE International Conference on Data Engineering (ICDE), 2022.
 
-* Kangfei Zhao, Jeffrey Xu Yu, Zongyan He, Rui Li, **Hao Zhang**. Lightweight and Accurate Cardinality Estimation by Neural Network Gaussian Process. ACM SIGMOD/PODS International Conference on Managerment of Data (SIGMOD), 2022 (To Appear).
+* Kangfei Zhao, Jeffrey Xu Yu, Zongyan He, Rui Li, **Hao Zhang**. Lightweight and Accurate Cardinality Estimation by Neural Network Gaussian Process. ACM SIGMOD/PODS International Conference on Managerment of Data (SIGMOD), 2022.
 
 * Kangfei Zhao, Jeffrey Xu Yu, **Hao Zhang**, Qiyan Li, Yu Rong, A Learned Sketch for Subgraph Counting. ACM SIGMOD/PODS International Conference on Managerment of Data (SIGMOD), 2021.
 
@@ -72,12 +74,12 @@ I develop several distributed SQL/Graph systems based on Spark/Hadoop.
 
 ### Professional Activities
 
-* Reviewer: TKDD, PAKDD'21, PAKDD'22, KDD'20, CIKM'20, AAAI'21, CIKM'21
-* External Reviewer: SIGMOD'21, SIGMOD'22, VLDB'19, VLDB'20, VLDB'21, VLDB'22, ICDE'19, ICDE'20, ICDE'21, ICDE'22
+* Reviewer: TKDD, PAKDD'21,22,23 , KDD'20, CIKM'20,21, AAAI'21
+* External Reviewer: SIGMOD'21,22, VLDB'19,20,21,22, ICDE'19,20,21,22
 
 
 
-[updated on 2022/04/07]
+[updated on 2023/01/10]
 
 
 

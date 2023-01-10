@@ -68,7 +68,7 @@ In huawei, I'm working on building the next generation unified data processing e
 
 ### Hornor & Awards
 
-* First class, TopMinds Program in Huawei, 2022
+* First Class, TopMinds Program in Huawei, 2022
 * Meritorious Winner, COMAP’s Mathematical Contest in Modeling, 2016
 * Second Class, Hongyi Scholarship, 2015
 * Second Class, HuaZhong Area Mathematical Modelling, 2015

@@ -10,13 +10,13 @@ redirect_from:
 
 Hi, I join Huawei Cloud Database Innovation Lab through TopMinds program, which is also known as "天才少年", as a research scientist. Before that I graduate from the Database Group in [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/), where I am supervised by [Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/) in 2022. I obtained my B.E. degree from HongYi Honor Class of Wuhan University in 2017.
 
-I have a broad interest in query optimization/execution for large scale OLAP query in distributed environment. More specifically, I'm intereseted in (1) **query execution/optimization of complex OLAP query**, e.g., subgraph (counting) query, (2) **unify query execution/optimization of different kinds of queries (e.g., SQL query, subgraph query, graph analytic query) in a relational way**, (3) **machine learning based query optimization**,
+I have a broad interest in query optimization/execution for large scale OLAP query in distributed environment. More specifically, I'm intereseted in (1) **unified execution/optimization of cross-domain queries (e.g., SQL + Graph + AI)**, (2) **machine learning based query optimization, which is also known as AI4DB**,(3) **query execution/optimization of complex OLAP query**, e.g., subgraph (counting) query.
 
 I develop several distributed SQL/Graph systems based on Spark/Hadoop. 
 
 In huawei, I'm working on building the next generation unified data processing engine. 
 
-**I am hiring for full-time and intern who are interested in the system research and building, please drop me a link if interested!~**
+**I am hiring for full-time and interns who are interested in the system research and building, please drop me a link if interested~**
 
 ------
 
@@ -68,9 +68,10 @@ In huawei, I'm working on building the next generation unified data processing e
 
 ### Hornor & Awards
 
+* First class, TopMinds Program in Huawei, 2022
 * Meritorious Winner, COMAP’s Mathematical Contest in Modeling, 2016
-* Second-Class, Hongyi Scholarship, 2015
-* Second-Class, HuaZhong Area Mathematical Modelling, 2015
+* Second Class, Hongyi Scholarship, 2015
+* Second Class, HuaZhong Area Mathematical Modelling, 2015
 
 ### Professional Activities
 

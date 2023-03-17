@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I join Huawei Cloud Database Innovation Lab through TopMinds program, which is also known as "天才少年", as a research scientist. Before that I graduate from the Database Group in [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/), where I am supervised by [Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/) in 2022. I obtained my B.E. degree from HongYi Honor Class of Wuhan University in 2017.
+Hi, I join Huawei Cloud Database Innovation Lab through TopMinds program as a research scientist. Before that I graduate from the Database Group in [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/), where I am supervised by [Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/) in 2022. I obtained my B.E. degree from HongYi Honor Class of Wuhan University in 2017.
 
 I have a broad interest in query optimization/execution for large scale OLAP query in distributed environment. More specifically, I'm intereseted in (1) **unified execution/optimization of cross-domain queries (e.g., SQL + Graph + AI)**, (2) **machine learning based query optimization, which is also known as AI4DB**,(3) **query execution/optimization of complex OLAP query**, e.g., subgraph (counting) query.
 

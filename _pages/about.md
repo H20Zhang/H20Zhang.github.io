@@ -29,7 +29,7 @@ Currently, I am leading the development of the next-generation unified data proc
 
 ### Systems
 
-* **[TCRDS] (2022-)**: TCRDS is a unified analytic engine for SQL queries, Subgraph queries, and Graph Analytic Queries, built upon Tensor Computation Runtime (TCR), such as PyTorch. Leveraging a highly optimized and cross-platform TCR backend, TCRDS achieves full-speed operation on all platforms (including Nvidia GPU, AMD GPU, Apple M series SoC, and Huawei Ascend), outperforming traditional purpose-built systems by orders of magnitude.
+* **TCRDS (2022-)**: TCRDS is a unified analytic engine for SQL queries, Subgraph queries, and Graph Analytic Queries, built upon Tensor Computation Runtime (TCR), such as PyTorch. Leveraging a highly optimized and cross-platform TCR backend, TCRDS achieves full-speed operation on all platforms (including Nvidia GPU, AMD GPU, Apple M series SoC, and Huawei Ascend), outperforming traditional purpose-built systems by orders of magnitude.
 
 * **[SeccoSQL](https://github.com/H20Zhang/SeccoSQL) (2020-2022)**: SeccoSQL (Separate communication from computation) is an experimental distributed SQL engine on Spark designed for processing complex SQL/Graph queries. It explicitly decouples Relational Algebra (RA) operators into pure communication and computation operators. SeccoSQL can reorder operators at a finer granularity than existing SQL engines, enabling a greater search space of plans and further reducing communication costs.
 
@@ -78,12 +78,12 @@ Currently, I am leading the development of the next-generation unified data proc
 
 ### Professional Activities
 
-* Reviewer: TKDD, PAKDD'21,22,23 , KDD'20, CIKM'20,21, AAAI'21
+* Reviewer: TKDD, PAKDD'21,22,23,24 , KDD'20, CIKM'20,21, AAAI'21
 * External Reviewer: SIGMOD'21,22, VLDB'19,20,21,22, ICDE'19,20,21,22
 
 
 
-[updated on 2023/01/10]
+[updated on 2024/03/21]
 
 
 

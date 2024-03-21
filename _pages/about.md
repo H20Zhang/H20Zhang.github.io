@@ -22,7 +22,7 @@ My research interests lie in query optimization and execution for large-scale OL
    - Creating high-performance primitives to support graph database operations.
    - Optimizing complex graph queries, such as subgraph counting queries, to tackle challenges posed by intricate data structures and analytical requirements.
 
-Currently, I am leading the development of the next-generation unified data processing engine at Huawei.
+Currently, I am leading the development of the next-generation high performance composable graph database and unified data processing engine at Huawei.
 
 **We are actively seeking talented individuals for full-time positions and internships who share our passion for system research and development. If you're interested, please reach out to me with your details or resume!**
 

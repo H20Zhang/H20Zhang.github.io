@@ -8,37 +8,34 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I join Huawei Cloud Database Innovation Lab through TopMinds program as a research scientist. Before that I graduate from the Database Group in [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/), where I am supervised by [Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/) in 2022. I obtained my B.E. degree from HongYi Honor Class of Wuhan University in 2017.
+I am a research scientist at Huawei Cloud Database Innovation Lab, recruited through the TopMinds program. I obtained my graduate degree from the Database Group at [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/) in 2022 under the guidance of [Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/), following my B.E. degree from the HongYi Honor Class of Wuhan University in 2017.
 
-I have a broad interest in query optimization/execution for large scale OLAP query in distributed environment. More specifically, I'm intereseted in (1) **unified execution/optimization of cross-domain queries (e.g., SQL + Graph + AI)**, (2) **machine learning based query optimization, which is also known as AI4DB**,(3) **query execution/optimization of complex OLAP query**, e.g., subgraph (counting) query.
+My research interests lie in query optimization and execution for large-scale OLAP queries, with a focus on two main areas:
 
-I develop several distributed SQL/Graph systems based on Spark/Hadoop. 
+1. Exploiting AI for Data Systems:
+   - Leveraging Tensor Computation Runtime (TCR) as a backend to support various data analytic tasks, including relational algebra queries, subgraph graph queries, graph analytic queries, and ANNs.
+   - Implementing machine learning-based query optimization (AI4DB) to improve the efficiency and effectiveness of query processing.
+   - Pursuing unified execution and optimization of cross-domain queries, integrating SQL, graph, and AI technologies.
 
-In huawei, I'm working on building the next generation unified data processing engine. 
+2. Building High-Performance Composable Graph Databases:
+   - Developing high-performance graph-native storage and caching mechanisms.
+   - Creating high-performance primitives to support graph database operations.
+   - Optimizing complex graph queries, such as subgraph counting queries, to tackle challenges posed by intricate data structures and analytical requirements.
 
-**I am hiring for full-time and interns who are interested in the system research and building, please drop me a link if interested~**
+Currently, I am leading the development of the next-generation unified data processing engine at Huawei.
 
-------
+**We are actively seeking talented individuals for full-time positions and internships who share our passion for system research and development. If you're interested, please reach out to me with your details or resume!**
+
 
 ### Systems
 
-* **SeccoSQL** (ongoing): SeccoSQL (Separate communication from computation) is an experimental distributed SQL engine on Spark for processing complex SQL/Graph queries. It explicitly decouples RA operators into pure communication and computation operators, and can reorder operators at a finer granularity than existing SQL engine (i.e., reordering communications and computations versus reorder- ing RA operators), which enables greater search space of plan and can further reduce communication cost.
+* **[TCRDS] (2022-)**: TCRDS is a unified analytic engine for SQL queries, Subgraph queries, and Graph Analytic Queries, built upon Tensor Computation Runtime (TCR), such as PyTorch. Leveraging a highly optimized and cross-platform TCR backend, TCRDS achieves full-speed operation on all platforms (including Nvidia GPU, AMD GPU, Apple M series SoC, and Huawei Ascend), outperforming traditional purpose-built systems by orders of magnitude.
 
-* **[DISC](https://github.com/H20Zhang/DISC)**: DISC is a specialized graph system on Spark for computing subgraph counting of arbitrary patterns and orbits in a relational way. Unlike existing subgraph counting approaches, which perform subgraph counting directly on graph, it decomposes the subgraph counting query into a sequence of relational queries, which can be efficiently executed.
+* **[SeccoSQL](https://github.com/H20Zhang/SeccoSQL) (2020-2022)**: SeccoSQL (Separate communication from computation) is an experimental distributed SQL engine on Spark designed for processing complex SQL/Graph queries. It explicitly decouples Relational Algebra (RA) operators into pure communication and computation operators. SeccoSQL can reorder operators at a finer granularity than existing SQL engines, enabling a greater search space of plans and further reducing communication costs.
 
-* **[Crystal](https://github.com/H20Zhang/Crystal)**: Crystal is a novel method for distributed subgraph matching on very large graphs. It differs from existing subgraph matching approaches in that it can compute an compressed results of subgraph matching directly, which also greatly reduce the computation cost.
+* **[DISC](https://github.com/H20Zhang/DISC) (2018-2020)**: DISC is a specialized graph system on Spark for computing subgraph counts of arbitrary patterns and orbits in a relational manner. Unlike existing subgraph counting approaches that operate directly on graphs, DISC decomposes subgraph counting queries into a sequence of relational queries, enabling efficient execution.
 
-
-### Research Interests
-
-* Big Data Management
-* Query Optimization
-* Query Processing
-* Graph Database
-* In-Database Machine Learning
-
-
-
+* **[Crystal](https://github.com/H20Zhang/Crystal) (2016-2017)**: Crystal is a novel method for distributed subgraph matching on very large graphs. It differs from existing subgraph matching approaches by computing compressed results of subgraph matching directly, greatly reducing computation costs.
 
 
 ### Publications

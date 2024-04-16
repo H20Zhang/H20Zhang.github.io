@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a research scientist at Huawei Cloud Database Innovation Lab, recruited through the TopMinds program. I obtained my graduate degree from the Database Group at [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/) in 2022 under the supervision of [Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/), prior to that I obtianed my B.E. degree from the HongYi Honor Class of Wuhan University in 2017.
+I am a research scientist at Huawei Cloud Database Innovation Lab, recruited through the TopMinds program. I obtained my PhD degree from the Database Group at [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/) in 2022 under the supervision of [Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/), prior to that I obtianed my B.E. degree from the HongYi Honor Class of Wuhan University in 2017.
 
 My research interests lie in query optimization and execution for large-scale OLAP queries, with a focus on two main areas:
 

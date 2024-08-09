@@ -8,23 +8,25 @@ redirect_from:
   - /about.html
 ---
 
-I am a research scientist at Huawei Cloud Database Innovation Lab, recruited through the TopMinds program. I obtained my PhD degree from the Database Group at [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/) in 2022 under the supervision of [Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/), prior to that I obtianed my B.E. degree from the HongYi Honor Class of Wuhan University in 2017.
+I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited through the prestigious TopMinds program. I earned my Ph.D. from the Database Group at The Chinese University of Hong Kong in 2022, under the mentorship of Prof. Jeffrey Xu Yu. Prior to that, I obtained my B.E. degree from the HongYi Honor Class at Wuhan University in 2017.
 
-My research interests lie in query optimization and execution for large-scale OLAP queries, with a focus on two main areas:
+### Research Interests
 
-1. Exploiting AI for Data Systems:
-   - Leveraging Tensor Computation Runtime (TCR) as a backend to support various data analytic tasks, including relational algebra queries, subgraph graph queries, graph analytic queries, and ANNs.
-   - Implementing machine learning-based query optimization (AI4DB) to improve the efficiency and effectiveness of query processing.
-   - Pursuing unified execution and optimization of cross-domain queries, integrating SQL, graph, and AI technologies.
+My research focuses on optimizing and executing large-scale OLAP queries, particularly in the following areas:
 
-2. Building High-Performance Composable Graph Databases:
-   - Developing high-performance graph-native storage and caching mechanisms.
-   - Creating high-performance primitives to support graph database operations.
-   - Optimizing complex graph queries, such as subgraph counting queries, to tackle challenges posed by intricate data structures and analytical requirements.
+1. Design and Optimization of Next-Generation Data Systems in the AI Era:
+	-	Leveraging Tensor Computation Runtimes (TCR) powered by GPU/NPU to support diverse data analytic workloads, including SQL, Cypher (Graph queries), Graph Analytics, and ANNs.
+	-	Enhancing query optimization through machine learning-based approaches (AI4DB) to improve processing efficiency and effectiveness.
+	-	Optimizing cross-domain ML pipelines, encompassing SQL, Graph, and ML queries.
+2.	Development of High-Performance Composable Graph Databases:
+	-	Creating graph-native storage and caching mechanisms for enhanced performance.
+	-	Developing high-performance graph-native operators.
+	-	Optimizing complex graph workload such as subgraph counting, subgraph matching, etc.
 
-Currently, I am leading the development of the next-generation high performance composable graph database and unified data processing engine at Huawei.
+Currently, I am leading the development of next-generation data systems and high-performance composable graph databases at Huawei.
 
-**We are actively seeking talented individuals for full-time positions and internships who share our passion for system research and development. If you're interested, please reach out to me with your details or resume!**
+We are actively seeking talented individuals for full-time positions and internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
+
 
 
 ### Systems

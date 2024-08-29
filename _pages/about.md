@@ -12,18 +12,18 @@ I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited thr
 
 ### Research Interests
 
-My research focuses on optimizing and executing large-scale OLAP queries, particularly in the following areas:
+My current research focuses on preparing the data system for the AI Era, particularly in the following areas:
 
-1. Design and Optimization of Next-Generation Data Systems in the AI Era:
-	-	Leveraging Tensor Computation Runtimes (TCR) powered by GPU/NPU to support diverse data analytic workloads, including SQL, Cypher (Graph queries), Graph Analytics, and ANNs.
-	-	Enhancing query optimization through machine learning-based approaches (AI4DB) to improve processing efficiency and effectiveness.
+1. Data System: Design and Optimization of Next-Generation AI accelerated Data Systems for Compound AI Workload
+	-	Building SQL, Cypher (Graph queries), Graph Analytics engine on top of Tensor Computation Runtimes (TCR), e.g. Pytorch, to support diverse compound AI workload. 
 	-	Optimizing cross-domain ML pipelines, encompassing SQL, Graph, and ML queries.
-2.	Development of High-Performance Composable Graph Databases:
-	-	Creating graph-native storage and caching mechanisms for enhanced performance.
-	-	Developing high-performance graph-native operators.
-	-	Optimizing complex graph workload such as subgraph counting, subgraph matching, etc.
+	-	Enhancing query optimization through machine learning-based approaches (AI4DB) to improve processing efficiency and effectiveness.
+2. Knowledge System: Development of High-Performance Graph Databases (Knowledge Graph) / ANN system for LLM:
+	-	Building highly optimized ANN engine on top of Tensor Computation Runtime (TCR), which lays in the same system as LLM. 
+	-	Building world record breaking level graph database to accelerate the querying of graph. 
+	-	Optimizing mixed ANN query that encompassing ANN query and relational query.
 
-Currently, I am leading the development of next-generation data systems and high-performance composable graph databases at Huawei.
+Currently, I am leading the development/research of next-generation AI accelerated data systems and the research of knowledge system at Huawei.
 
 We are actively seeking talented individuals for full-time positions and internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
 

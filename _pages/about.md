@@ -12,7 +12,7 @@ I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited thr
 
 ### Research Interests
 
-My current research focuses on preparing the data system for the AI Era, particularly in the following areas:
+My current research focuses on preparing the data/knowledge system for the AI Era, particularly in the following areas:
 
 1. Data System: Design and Optimization of Next-Generation AI accelerated Data Systems for Compound AI Workload
 	-	Building SQL, Cypher (Graph queries), Graph Analytics engine on top of Tensor Computation Runtimes (TCR), e.g. Pytorch, to support diverse compound AI workload. 

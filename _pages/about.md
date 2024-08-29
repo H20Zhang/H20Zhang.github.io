@@ -20,7 +20,7 @@ My current research focuses on preparing the data system for the AI Era, particu
 	-	Enhancing query optimization through machine learning-based approaches (AI4DB) to improve processing efficiency and effectiveness.
 2. Knowledge System: Development of High-Performance Graph Databases (Knowledge Graph) / ANN system for LLM:
 	-	Building highly optimized ANN engine on top of Tensor Computation Runtime (TCR), which lays in the same system as LLM. 
-	-	Building world record breaking level graph database to accelerate the querying of graph. 
+	-	Building world record breaking level graph database to accelerate the serving of graph to LLM. 
 	-	Optimizing mixed ANN query that encompassing ANN query and relational query.
 
 Currently, I am leading the development/research of next-generation AI accelerated data systems and the research of knowledge system at Huawei.

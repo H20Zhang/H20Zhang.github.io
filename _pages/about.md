@@ -25,7 +25,7 @@ My current research focuses on preparing the data system for the AI Era, particu
 
 My previous research interest includes:
 - Distributed query processing system that focous on solving complex relational/graph queries.
-- Algorithms for foundamental problems in graph, i.e., subgraph matching.
+- Distributed algorithms for foundamental problems in graph, i.e., subgraph matching.
 
 
 Currently, I am leading the development/research of next-generation AI accelerated data systems and the research of knowledge system at Huawei.

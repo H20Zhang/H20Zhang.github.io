@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited through the prestigious TopMinds program. I earned my Ph.D. from the Database Group at The Chinese University of Hong Kong in 2022, under the mentorship of Prof. Jeffrey Xu Yu. Prior to that, I obtained my B.E. degree from the HongYi Honor Class at Wuhan University in 2017.
+I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited through the prestigious TopMinds program. I obtained my Ph.D. from the Database Group at The Chinese University of Hong Kong in 2022, under the mentorship of Prof. Jeffrey Xu Yu. Prior to that, I obtained my B.E. degree from the HongYi Honor Class at Wuhan University in 2017.
 
 ### Research Interests
 

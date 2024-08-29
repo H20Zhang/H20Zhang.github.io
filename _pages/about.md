@@ -23,7 +23,14 @@ My current research focuses on preparing the data system for the AI Era, particu
 	-	Building world record breaking level graph database to accelerate the serving of graph to LLM. 
 	-	Optimizing mixed ANN query that encompassing ANN query and relational query.
 
+My previous research interest includes:
+- Distributed query processing system that focous on solving complex relational/graph queries.
+- Algorithms for foundamental problems in graph, i.e., subgraph matching.
+
+
 Currently, I am leading the development/research of next-generation AI accelerated data systems and the research of knowledge system at Huawei.
+
+
 
 We are actively seeking talented individuals for full-time positions and internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
 

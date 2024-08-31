@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Currently, I am leading the development/research of next-generation AI accelerated data systems and the research of knowledge system at Huawei.
+Currently, I am leading the development/research of next-generation AI accelerated data systems and the research of knowledge system at Huawei Cloud Database Innovation Lab.
 
 We are actively seeking talented individuals for full-time positions and internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
 
@@ -17,6 +17,7 @@ We are actively seeking talented individuals for full-time positions and interns
 - 10/2023 Two paper accepted by ICDE'24 Research Track.
 - 05/2023 One paper accepted by The VLDB Journal.
 - 10/2022 Join Huawei Cloud Database Innovation Lab!
+- 08/2022 Graduate 
 
 ### Biography
 I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited through the prestigious TopMinds program. I obtained my Ph.D. from the Database Group at The Chinese University of Hong Kong in 2022, under the mentorship of Prof. Jeffrey Xu Yu. Prior to that, I obtained my B.E. degree from the HongYi Honor Class at Wuhan University in 2017.

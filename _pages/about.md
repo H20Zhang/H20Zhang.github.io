@@ -10,8 +10,8 @@ redirect_from:
 
 ### News
 
-- 05/2024 One paper accepted by VLDB'24 Research Track. Congrats to Guanghua Li and My colloborators
-- 10/2022 Join Huawei
+- 05/2024 One paper accepted by VLDB'24 Research Track. Congrats to Guanghua Li and My colloborators!
+- 10/2022 Join Huawei Cloud Database Innovation Lab!
 
 ### Biography
 I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited through the prestigious TopMinds program. I obtained my Ph.D. from the Database Group at The Chinese University of Hong Kong in 2022, under the mentorship of Prof. Jeffrey Xu Yu. Prior to that, I obtained my B.E. degree from the HongYi Honor Class at Wuhan University in 2017.

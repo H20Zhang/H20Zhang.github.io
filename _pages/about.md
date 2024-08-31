@@ -13,7 +13,7 @@ Currently, I am leading the development/research of next-generation AI accelerat
 We are actively seeking talented individuals for full-time positions and internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
 
 ### News
-- 05/2024 One paper accepted by VLDB'24 Research Track. Congrats to Guanghua Li and My colloborators!
+- 05/2024 One paper accepted by VLDB'24 Research Track. Congrats to Guanghua Li and my colloborators!
 - 10/2023 Two paper accepted by ICDE'24 Research Track.
 - 05/2023 One paper accepted by The VLDB Journal.
 - 10/2022 Join Huawei Cloud Database Innovation Lab!

@@ -30,14 +30,12 @@ My previous research interest includes:
 
 Currently, I am leading the development/research of next-generation AI accelerated data systems and the research of knowledge system at Huawei.
 
-
-
 We are actively seeking talented individuals for full-time positions and internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
 
 
 ### Systems
 
-* **Next-gen GES (2022-Current)**: Graph Engine Service (GES) is a high-performance, fully managed graph data base service designed to handle complex graph-based queries and large-scale graph computing tasks. On top on that, We build next-gen of GES that utilize various techniques to boost the performance of GES by several orders of magnitude.
+* **Next-gen GES (2022-Present)**: The Graph Engine Service (GES) is a high-performance, fully managed graph database service developed by Huawei to handle complex graph-based queries and large-scale graph computing tasks. We have developed the next generation of GES, employing advanced techniques to enhance performance by several orders of magnitude.
 
 * **TCRDS (2022-Current)**: TCRDS is a unified analytic engine for SQL queries, Subgraph queries, and Graph Analytic Queries, built upon Tensor Computation Runtime (TCR), such as PyTorch. Leveraging a highly optimized and cross-platform TCR backend, TCRDS achieves full-speed operation on all platforms (including Nvidia GPU, AMD GPU, Apple M series SoC, and Huawei Ascend), outperforming traditional purpose-built systems by orders of magnitude.
 

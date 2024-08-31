@@ -10,7 +10,13 @@ redirect_from:
 
 ### News
 
+Currently, I am leading the development/research of next-generation AI accelerated data systems and the research of knowledge system at Huawei.
+
+We are actively seeking talented individuals for full-time positions and internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
+
 - 05/2024 One paper accepted by VLDB'24 Research Track. Congrats to Guanghua Li and My colloborators!
+- 10/2023 Two paper accepted by ICDE'24 Research Track.
+- 05/2023 One paper accepted by The VLDB Journal.
 - 10/2022 Join Huawei Cloud Database Innovation Lab!
 
 ### Biography
@@ -32,12 +38,6 @@ My current research focuses on preparing the data/knowledge system for the AI Er
 My previous research interest includes:
 - Distributed query processing system that focous on solving complex relational/graph queries.
 - Distributed algorithms for foundamental problems in graph, i.e., subgraph matching.
-
-
-Currently, I am leading the development/research of next-generation AI accelerated data systems and the research of knowledge system at Huawei.
-
-We are actively seeking talented individuals for full-time positions and internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
-
 
 ### Systems
 

@@ -13,7 +13,7 @@ Currently, I am leading the development/research of next-generation AI accelerat
 We are actively seeking talented individuals for full-time positions and internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
 
 ### News
-- 09/2024 Building the world fastest Graph Database. Reaching [Top-1](https://ldbcouncil.org/benchmarks/snb/LDBC_SNB_I_20240916_SF30-100-300_huawei.pdf) in [LDBC Benchmark](https://ldbcouncil.org/benchmarks/snb-interactive/), outperforming previous Top-1 by 10000X! Big Congrats to all my team members and collborators at Huawei!
+- 09/2024 Build the world fastest Graph Database. Reach [Top-1](https://ldbcouncil.org/benchmarks/snb/LDBC_SNB_I_20240916_SF30-100-300_huawei.pdf) in [LDBC Benchmark](https://ldbcouncil.org/benchmarks/snb-interactive/), outperforming previous Top-1 by 10000X! Big Congrats to all my team members and collborators at Huawei!
 - 06/2024 One paper accepted by VLDB'24 Research Track. Congrats to Guanghua Li and my colloborators!
 - 06/2024 Join Linked Data Benchmark Council (LDBC) as MPC member on behalf of Huawei Cloud.
 - 10/2023 Two paper accepted by ICDE'24 Research Track.

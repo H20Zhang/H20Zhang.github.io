@@ -113,6 +113,7 @@ My previous research interest includes:
 
 ### Hornor & Awards
 
+* LDBC-IC Benchmark Declarative Track Top-1， 2024
 * First Class, TopMinds Program in Huawei, 2022
 * Meritorious Winner, COMAP’s Mathematical Contest in Modeling, 2016
 * Second Class, Hongyi Scholarship, 2015

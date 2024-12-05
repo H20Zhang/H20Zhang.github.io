@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Currently, I am leading the development/research of next-generation AI accelerated data systems and the research of knowledge system at Huawei Cloud Database Innovation Lab.
+Currently, I am leading the development/research of next-gen Data+AI system at Huawei Cloud Database Innovation Lab.
 
 We are actively seeking talented individuals for full-time positions and internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
 
@@ -113,7 +113,7 @@ My previous research interest includes:
 
 ### Hornor & Awards
 
-* LDBC-SNB-IC Benchmark Declarative Track Top-1， 2024
+* LDBC-SNB-IC Benchmark Declarative System Track Top-1， 2024
 * First Class, TopMinds Program in Huawei, 2022
 * Meritorious Winner, COMAP’s Mathematical Contest in Modeling, 2016
 * Second Class, Hongyi Scholarship, 2015

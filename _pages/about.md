@@ -29,14 +29,9 @@ I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited thr
 
 My current research focuses on preparing the data/knowledge system for the AI Era, particularly in the following areas:
 
-1. Data System: Design and Optimization of Next-Generation AI accelerated Data Systems for Compound AI Workload
-	-	Building SQL, Cypher (Graph queries), Graph Analytics engine on top of Tensor Computation Runtimes (TCR), e.g. Pytorch, to support diverse compound AI workload. 
-	-	Optimizing cross-domain ML pipelines, encompassing SQL, Graph, and ML queries.
-	-	Enhancing query optimization through machine learning-based approaches (AI4DB) to improve processing efficiency and effectiveness.
-2. Knowledge System: Development of High-Performance Graph Databases (Knowledge Graph) / ANN system for LLM:
-	-	Building highly optimized ANN engine on top of Tensor Computation Runtime (TCR), which lays in the same system as LLM. 
-	-	Building world record breaking level graph database to accelerate the serving of graph to LLM. 
-	-	Optimizing mixed ANN query that encompassing ANN query and relational query.
+1. Hardware-Accelerated Data System for SQL, GraphDB, Graph Analytic and more.
+2. High Performance Graph Database.
+3. Next Gen Data + AI System With Semantic Understanding.
 
 My previous research interest includes:
 - Distributed query processing system that focous on solving complex relational/graph queries.

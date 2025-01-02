@@ -39,7 +39,7 @@ My previous research interest includes:
 
 ### Systems
 
-* ** Project-X (2024-Present) **
+* **Project-X (2024-Present)**
 
 * **Next-gen GES (2022-Present)**: The Graph Engine Service (GES) is a high-performance, fully managed graph database service developed by Huawei to handle complex graph-based queries and large-scale graph computing tasks. We have developed the next generation of GES, employing advanced techniques to enhance performance by several orders of magnitude.
 

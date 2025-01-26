@@ -27,7 +27,7 @@ I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited thr
 
 ### Research Interests
 
-My current research focuses on buildin systems for the Data+AI Era, particularly in the following areas
+My current research focuses on building systems for the Data+AI Era, particularly in the following areas
 
 1. Declarative Data + AI system for semantic understanding at high throughput.
 2. GPU/NPU-accelerated data system for structured and unstructured data.

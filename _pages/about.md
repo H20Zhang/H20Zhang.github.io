@@ -27,11 +27,12 @@ I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited thr
 
 ### Research Interests
 
-My current research focuses on preparing the data/knowledge system for the AI Era, particularly in the following areas:
+My current research focuses on buildin systems for the Data+AI Era, particularly in the following areas
 
-1. Hardware-Accelerated Data System for SQL, GraphDB, Graph Analytic and more.
-2. High Performance Graph Database.
-3. Next Gen Data + AI System With Semantic Understanding.
+1. Declarative Data + AI system for semantic understanding at high throughput.
+2. GPU/NPU-accelerated data system for structured and unstructured data.
+3. High performance graph database for knowledge management.
+
 
 My previous research interest includes:
 - Distributed query processing system that focous on solving complex relational/graph queries.
@@ -39,9 +40,7 @@ My previous research interest includes:
 
 ### Systems
 
-* **Project-X (2024-Present)**
-
-* **Next-gen GES (2022-Present)**: The Graph Engine Service (GES) is a high-performance, fully managed graph database service developed by Huawei to handle complex graph-based queries and large-scale graph computing tasks. We have developed the next generation of GES, employing advanced techniques to enhance performance by several orders of magnitude.
+* ** GES (2022-Present)**: The Graph Engine Service (GES) is a high-performance, fully managed graph database service developed by Huawei to handle complex graph-based queries and large-scale graph computing tasks. We have developed the next generation of GES, employing advanced techniques to enhance performance by several orders of magnitude. The performance is validated in classcial benchmark for graph database ([LDBC-SNB-IC benchmark](https://ldbcouncil.org/benchmarks/snb-interactive/)), where we achieved #1 results with 3000X performance improvement over the #2.
 
 * **TCRDS (2022-Present)**: TCRDS is a unified analytic engine for SQL queries, Subgraph queries, and Graph Analytic Queries, built upon Tensor Computation Runtime (TCR), such as PyTorch. Leveraging a highly optimized and cross-platform TCR backend, TCRDS achieves full-speed operation on all platforms (including Nvidia GPU, AMD GPU, Apple M series SoC, and Huawei Ascend), outperforming traditional purpose-built systems by orders of magnitude.
 

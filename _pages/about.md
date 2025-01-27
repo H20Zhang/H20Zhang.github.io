@@ -68,10 +68,6 @@ My previous research interest includes:
 
 
 ### Full Publications
-Large Data Bases (VLDB), 2018.
-
-
-### Full Publications
 
 * YongLiang Zhang, Yuanyuan Zhu, **Hao Zhang**, Congli Gao, Yuyang wang, et al, TGraph: A Tensor-centric Graph Processing Framework, SIGMOD International Conference on Management of Data (SIGMOD), 2025, To Appear.
 

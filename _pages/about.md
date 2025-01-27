@@ -68,13 +68,14 @@ My previous research interest includes:
 
 
 ### Full Publications
-#### 2025
+Large Data Bases (VLDB), 2018.
+
+
+### Full Publications
 
 * YongLiang Zhang, Yuanyuan Zhu, **Hao Zhang**, Congli Gao, Yuyang wang, et al, TGraph: A Tensor-centric Graph Processing Framework, SIGMOD International Conference on Management of Data (SIGMOD), 2025, To Appear.
 
 * Jixian Su, Chiyu Hao, Shixuan Sun, **Hao Zhang**, Sen Gao, et al, Revisiting the Design of In-Memory Dynamic Graph Storage, SIGMOD International Conference on Management of Data (SIGMOD), 2025, To Appear.
-
-#### 2024
 
 * Guanghua Li, **Hao Zhang**, Xibo Sun, Qiong Luo, Yuanyuan Zhu. TenGraph: A Tensor-Based Graph Query Engine International Conference on Very Large Database (VLDB), 2024， To Appear.
 
@@ -82,11 +83,7 @@ My previous research interest includes:
 
 * Anbiao Wu, Ye Yuan, Changsheng Li, Yuliang Ma, **Hao Zhang**, Attributed Network Embedding in Streaming Style . IEEE International Conference on Data Engineering (ICDE), 2024.
 
-#### 2023
-
 * Kangfei Zhao, Jeffrey Xu Yu,, Qiyan Li, **Hao Zhang**, Yu Rong. Learned sketch for subgraph counting: a holistic approach. The VLDB Journal 32 (5), 937-962, 2023
-
-#### 2022
 
 * **Hao Zhang**, Jeffrey Xu Yu, Yikai Zhang, Kangfei Zhao. Parallel Query Processing: To Separate Communication from Computation. ACM SIGMOD/PODS International Conference on Managerment of Data (SIGMOD), 2022.
 
@@ -94,32 +91,22 @@ My previous research interest includes:
 
 * Kangfei Zhao, Jeffrey Xu Yu, Zongyan He, Rui Li, **Hao Zhang**. Lightweight and Accurate Cardinality Estimation by Neural Network Gaussian Process. ACM SIGMOD/PODS International Conference on Managerment of Data (SIGMOD), 2022.
 
-#### 2021
-
 * Kangfei Zhao, Jeffrey Xu Yu, **Hao Zhang**, Qiyan Li, Yu Rong, A Learned Sketch for Subgraph Counting. ACM SIGMOD/PODS International Conference on Managerment of Data (SIGMOD), 2021.
 
 * **Hao Zhang**, Miao Qiao, Jeffrey Xu Yu, Hong Cheng. Fast Distributed Complex Join Processing (Short). IEEE International Conference on Data Engineering (ICDE), 2021.
 
-#### 2020
-
 * **Hao Zhang**, Jeffrey Xu Yu, Yikai Zhang, Kangfei Zhao, Hong Cheng. Distributed Subgraph Counting: A General Approach.  International Conference on Very Large Data Bases (VLDB), 2020.
-
-#### 2019
 
 * Kangfei Zhao, Jiao Su, Jeffrey Xu Yu, **Hao Zhang**. SQL-G: Efficient Graph Analytics by SQL. IEEE Transactions on Knowledge and Data Engineering (TKDE), 2019.
 
-#### 2018
-
 * Miao Qiao, **Hao Zhang**, Hong Cheng. Subgraph matching: on compression and computation. International Conference on Very Large Data Bases (VLDB), 2018.
-
-#### 2017
 
 * Yuanyuan Zhu, **Hao Zhang**, Lu Qin, Hong Cheng. Efficient MapReduce algorithms for triangle listing in billion-scale graphs. Distributed And Parallel Database (DPD), 2017.
 
 * **Hao Zhang**, Yuanyuan Zhu, Lu Qin, Hong Cheng, Jeffrey Xu Yu. Efficient Local Clustering Coefficient Estimation in Massive Graphs. Database Systems for Advanced Applications (DASFAA), 2017
 
-#### 2016
 * **Hao Zhang**, Yuanyuan Zhu, Lu Qin, Hong Cheng, Jeffrey Xu Yu. Efficient triangle listing for billion-scale graphs. IEEE International Conference on Big Data (BigData), 2016
+
 
 
 ### Hornor & Awards

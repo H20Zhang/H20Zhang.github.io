@@ -51,8 +51,23 @@ My previous research interest includes:
 * **[Crystal](https://github.com/H20Zhang/Crystal) (2016-2017)**: Crystal is a novel method for distributed subgraph matching on very large graphs. It differs from existing subgraph matching approaches by computing compressed results of subgraph matching directly, greatly reducing computation costs.
 
 
-### Publications
+### Selected Publications
+* YongLiang Zhang, Yuanyuan Zhu, **Hao Zhang**, Congli Gao, Yuyang wang, et al, TGraph: A Tensor-centric Graph Processing Framework, SIGMOD International Conference on Management of Data (SIGMOD), 2025, To Appear.
 
+* Jixian Su, Chiyu Hao, Shixuan Sun, **Hao Zhang**, Sen Gao, et al, Revisiting the Design of In-Memory Dynamic Graph Storage, SIGMOD International Conference on Management of Data (SIGMOD), 2025, To Appear.
+
+* Guanghua Li, **Hao Zhang**, Xibo Sun, Qiong Luo, Yuanyuan Zhu. TenGraph: A Tensor-Based Graph Query Engine International Conference on Very Large Database (VLDB), 2024， To Appear.
+
+* **Hao Zhang**, Jeffrey Xu Yu, Yikai Zhang, Kangfei Zhao. Parallel Query Processing: To Separate Communication from Computation. ACM SIGMOD/PODS International Conference on Managerment of Data (SIGMOD), 2022.
+
+* Kangfei Zhao, Jeffrey Xu Yu, **Hao Zhang**, Qiyan Li, Yu Rong, A Learned Sketch for Subgraph Counting. ACM SIGMOD/PODS International Conference on Managerment of Data (SIGMOD), 2021.
+
+* **Hao Zhang**, Jeffrey Xu Yu, Yikai Zhang, Kangfei Zhao, Hong Cheng. Distributed Subgraph Counting: A General Approach.  International Conference on Very Large Data Bases (VLDB), 2020.
+
+* Miao Qiao, **Hao Zhang**, Hong Cheng. Subgraph matching: on compression and computation. International Conference on Very Large Data Bases (VLDB), 2018.
+
+
+### Full Publications
 #### 2025
 
 * YongLiang Zhang, Yuanyuan Zhu, **Hao Zhang**, Congli Gao, Yuyang wang, et al, TGraph: A Tensor-centric Graph Processing Framework, SIGMOD International Conference on Management of Data (SIGMOD), 2025, To Appear.

@@ -13,8 +13,9 @@ Currently, I am leading the development/research of Data+AI system at Huawei Clo
 We are actively seeking talented individuals for full-time positions and internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
 
 ### News
-- 11/2024 One paper accepted by SIGMOD'24. Congrats to Prof.Sun Shixuan.
-- 11/2024 One paper accepted by SIGMOD'24. Congrats to Yongliang Zhang and Prof.Yuanyuan Zhu.
+- 02/2025 One paper accepted by SIGMOD'25. Congrats to colleagues in Huawei.
+- 11/2024 One paper accepted by SIGMOD'25. Congrats to Prof.Sun Shixuan.
+- 11/2024 One paper accepted by SIGMOD'25. Congrats to Yongliang Zhang and Prof.Yuanyuan Zhu.
 - 09/2024 Built the world's fastest Graph Database, reaching [Top-1](https://ldbcouncil.org/benchmarks/snb/LDBC_SNB_I_20240916_SF30-100-300_huawei.pdf) in [LDBC Benchmark](https://ldbcouncil.org/benchmarks/snb-interactive/), and outperforming the previous Top-1 by 3000X! A big congratulation to all my team members and collaborators at Huawei!
 - 06/2024 One paper accepted by VLDB'24 Research Track. Congrats to Guanghua Li and my colloborators!
 - 06/2024 Join Linked Data Benchmark Council (LDBC) as MPC member on behalf of Huawei Cloud.
@@ -54,6 +55,8 @@ My previous research interest includes:
 
 
 ### Selected Publications
+* Sen Gao, Jianwen Zhao, **Hao Zhang**, Shixuan Sun, Chen Liang, Gongye Chen, et al, GES: High-Performance Graph Processing Engine and Service in Huawei, SIGMOD International Conference on Management of Data (SIGMOD), 2025, To Appear.
+* 
 * YongLiang Zhang, Yuanyuan Zhu, **Hao Zhang**, Congli Gao, Yuyang wang, et al, TGraph: A Tensor-centric Graph Processing Framework, SIGMOD International Conference on Management of Data (SIGMOD), 2025, To Appear.
 
 * Jixian Su, Chiyu Hao, Shixuan Sun, **Hao Zhang**, Sen Gao, et al, Revisiting the Design of In-Memory Dynamic Graph Storage, SIGMOD International Conference on Management of Data (SIGMOD), 2025, To Appear.
@@ -70,6 +73,8 @@ My previous research interest includes:
 
 
 ### Full Publications
+
+* Sen Gao, Jianwen Zhao, **Hao Zhang**, Shixuan Sun, Chen Liang, Gongye Chen, et al, GES: High-Performance Graph Processing Engine and Service in Huawei, SIGMOD International Conference on Management of Data (SIGMOD), 2025, To Appear.
 
 * Yadong Wang, Zhiwei Zhang, Pengpeng Qiao, Ye Yuan, Hao Zhang, Guoren Wang, Breaking Free from Label Limitations: A Novel Unsupervised Attack Method for Graph Classification, The 30th International Conference on Database Systems for Advanced Applications (DASFAA), 2025, To Appear
 

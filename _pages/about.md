@@ -30,7 +30,7 @@ I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited thr
 
 My current research focuses on building systems for the Data+AI Era, particularly in the following areas
 
-1. Declarative Data + AI system for semantic understanding at high throughput.
+1. Declarative Data + AI system for processing unstructured+structured data with semantic understanding at high throughput.
 2. GPU/NPU-accelerated data system for structured and unstructured data.
 3. High performance graph database for knowledge management.
 
@@ -41,7 +41,7 @@ My previous research interest includes:
 
 ### Systems
 
-* **DAIS (2024-Present)**: Declarative AI System (DAIS) is a Data + AI with a focus on semantic understanding, tremendous data volume, high throughput, and end-to-end optimziation. It adopts a SQL/Dataframe like interface and integrate the power of LLM to facilitate the understanding and processing of unstructured/structured data. 
+* **DAIS (2024-Present)**: Declarative Data+AI System (DAIS) is a Data + AI with a focus on semantic understanding of unstructured and structured data.
 
 * **GES (2022-Present)**: The Graph Engine Service (GES) is a high-performance, fully managed graph database service developed by Huawei to handle complex graph-based queries and large-scale graph computing tasks. We have developed the next generation of GES, employing advanced techniques to enhance performance by several orders of magnitude. The performance is validated at [LDBC-SNB-IC](https://ldbcouncil.org/benchmarks/snb-interactive/) a classcial benchmark for graph database, where we achieved #1 results with 3000X performance improvement over the #2.
 

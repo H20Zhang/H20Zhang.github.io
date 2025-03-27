@@ -41,7 +41,7 @@ My previous research interest includes:
 
 ### Systems
 
-* **DAIS (2024-Present)**: Declarative Data+AI System (DAIS) is a Data + AI with a focus on semantic understanding of unstructured and structured data.
+* **DAIS (2024-Present)**: Declarative Data+AI System (DAIS) is a compound AI system with a focus on semantic understanding of unstructured and structured data.
 
 * **GES (2022-Present)**: The Graph Engine Service (GES) is a high-performance, fully managed graph database service developed by Huawei to handle complex graph-based queries and large-scale graph computing tasks. We have developed the next generation of GES, employing advanced techniques to enhance performance by several orders of magnitude. The performance is validated at [LDBC-SNB-IC](https://ldbcouncil.org/benchmarks/snb-interactive/) a classcial benchmark for graph database, where we achieved #1 results with 3000X performance improvement over the #2.
 

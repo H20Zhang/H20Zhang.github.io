@@ -83,11 +83,11 @@ author:
   name             : "Hao Zhang"
   avatar           : "profile.jpeg"
   bio              : "Research Scientist at Huawei Cloud Database Innovation Lab"
-  location         : "Haidian, Beijing, China"
+  location         : 
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=PLwImrcAAAAJ&hl=en"
-  email            : "zhanghaowuda12@gmail.com"
+  email            : "zhanghao687@huawei.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :

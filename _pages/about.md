@@ -13,6 +13,7 @@ Currently, I am leading the development/research of Data+AI system at Huawei Clo
 We are actively seeking talented individuals for full-time positions and internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
 
 ### News
+- 02/2025 Awarded the Huawei Gold Award for Individual Excellence, awarded to top 0.5% of employees.
 - 02/2025 One paper accepted by SIGMOD'25. Congrats to colleagues in Huawei and my collaborators!
 - 11/2024 One paper accepted by SIGMOD'25. Congrats to Prof.Sun Shixuan!
 - 11/2024 One paper accepted by SIGMOD'25. Congrats to Yongliang Zhang and Prof.Yuanyuan Zhu!
@@ -118,11 +119,10 @@ My previous research interest includes:
 
 ### Hornor & Awards
 
-* LDBC-SNB-IC Benchmark Declarative System Track Top-1， 2024
-* First Class, TopMinds Program in Huawei, 2022
-* Meritorious Winner, COMAP’s Mathematical Contest in Modeling, 2016
-* Second Class, Hongyi Scholarship, 2015
-* Second Class, HuaZhong Area Mathematical Modelling, 2015
+* Huawei Gold Award for Individual Excellence, 2025 (0.5%)
+* LDBC-SNB-IC Benchmark Declarative System Track Top-1， 2024 
+* First Class, TopMinds Program in Huawei, 2022 
+* Meritorious Winner, COMAP’s Mathematical Contest in Modeling, 2016 （6%）
 
 ### Professional Activities
 

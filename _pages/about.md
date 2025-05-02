@@ -120,7 +120,7 @@ My previous research interest includes:
 ### Hornor & Awards
 
 * Huawei Gold Award for Individual Excellence, 2025 (0.5%)
-* LDBC-SNB-IC Benchmark Declarative System Track Top-1， 2024 
+* LDBC-SNB-IC Benchmark Top-1 on Declarative System Leadboard， 2024 
 * First Class, TopMinds Program in Huawei, 2022 
 * Meritorious Winner, COMAP’s Mathematical Contest in Modeling, 2016 （6%）
 

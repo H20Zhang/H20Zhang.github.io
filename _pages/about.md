@@ -32,9 +32,9 @@ I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited thr
 
 My current research focuses on building systems for the Data + AI/LLM, particularly in the following areas
 
-1. Declarative Data + AI system for processing unstructured+structured data with semantic understanding.
-2. GPU/NPU-accelerated data system for structured and unstructured data.
-3. High performance graph database for knowledge management.
+1. Multimodal Data + AI system for multimodal data analytics.
+2. GPU/NPU-accelerated data system for SQL/Graph.
+3. High performance graph database.
 
 
 My previous research interest includes:

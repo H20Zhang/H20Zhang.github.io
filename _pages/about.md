@@ -57,11 +57,11 @@ My previous research interest includes:
 
 
 ### Selected Publications
-* Sen Gao, Jianwen Zhao, **Hao Zhang**, Shixuan Sun, Chen Liang, Gongye Chen, et al, GES: High-Performance Graph Processing Engine and Service in Huawei, SIGMOD International Conference on Management of Data (SIGMOD), 2025, To Appear.
+* Sen Gao, Jianwen Zhao, **Hao Zhang**, Shixuan Sun, Chen Liang, Gongye Chen, et al, GES: High-Performance Graph Processing Engine and Service in Huawei, SIGMOD International Conference on Management of Data (SIGMOD), 2025.
 
-* YongLiang Zhang, Yuanyuan Zhu, **Hao Zhang**, Congli Gao, Yuyang wang, et al, TGraph: A Tensor-centric Graph Processing Framework, SIGMOD International Conference on Management of Data (SIGMOD), 2025, To Appear.
+* YongLiang Zhang, Yuanyuan Zhu, **Hao Zhang**, Congli Gao, Yuyang wang, et al, TGraph: A Tensor-centric Graph Processing Framework, SIGMOD International Conference on Management of Data (SIGMOD), 2025.
 
-* Jixian Su, Chiyu Hao, Shixuan Sun, **Hao Zhang**, Sen Gao, et al, Revisiting the Design of In-Memory Dynamic Graph Storage, SIGMOD International Conference on Management of Data (SIGMOD), 2025, To Appear.
+* Jixian Su, Chiyu Hao, Shixuan Sun, **Hao Zhang**, Sen Gao, et al, Revisiting the Design of In-Memory Dynamic Graph Storage, SIGMOD International Conference on Management of Data (SIGMOD), 2025.
 
 * Guanghua Li, **Hao Zhang**, Xibo Sun, Qiong Luo, Yuanyuan Zhu. TenGraph: A Tensor-Based Graph Query Engine International Conference on Very Large Database (VLDB), 2024.
  
@@ -78,15 +78,15 @@ My previous research interest includes:
 
 ### Full Publications
 
-* Chiyu Hao, Jixian Su, Shixuan Sun, **Hao Zhang**, Sen Gao, Jianwen Zhao, Chenyi Zhang, et al, RapidStore: An Efficient Dynamic Graph Storage System for Concurrent Queries, 51th International Conference on Very Large Databases (VLDB), 2025, To Appear.
+* Chiyu Hao, Jixian Su, Shixuan Sun, **Hao Zhang**, Sen Gao, Jianwen Zhao, Chenyi Zhang, et al, RapidStore: An Efficient Dynamic Graph Storage System for Concurrent Queries, 51th International Conference on Very Large Databases (VLDB), 2025.
 
-* Sen Gao, Jianwen Zhao, **Hao Zhang**, Shixuan Sun, Chen Liang, Gongye Chen, et al, GES: High-Performance Graph Processing Engine and Service in Huawei, SIGMOD International Conference on Management of Data (SIGMOD), 2025, To Appear.
+* Sen Gao, Jianwen Zhao, **Hao Zhang**, Shixuan Sun, Chen Liang, Gongye Chen, et al, GES: High-Performance Graph Processing Engine and Service in Huawei, SIGMOD International Conference on Management of Data (SIGMOD), 2025.
 
-* Yadong Wang, Zhiwei Zhang, Pengpeng Qiao, Ye Yuan, Hao Zhang, Guoren Wang, Breaking Free from Label Limitations: A Novel Unsupervised Attack Method for Graph Classification, The 30th International Conference on Database Systems for Advanced Applications (DASFAA), 2025, To Appear
+* YongLiang Zhang, Yuanyuan Zhu, **Hao Zhang**, Congli Gao, Yuyang wang, et al, TGraph: A Tensor-centric Graph Processing Framework, SIGMOD International Conference on Management of Data (SIGMOD), 2025.
 
-* YongLiang Zhang, Yuanyuan Zhu, **Hao Zhang**, Congli Gao, Yuyang wang, et al, TGraph: A Tensor-centric Graph Processing Framework, SIGMOD International Conference on Management of Data (SIGMOD), 2025, To Appear.
+* Jixian Su, Chiyu Hao, Shixuan Sun, **Hao Zhang**, Sen Gao, et al, Revisiting the Design of In-Memory Dynamic Graph Storage, SIGMOD International Conference on Management of Data (SIGMOD), 2025.
 
-* Jixian Su, Chiyu Hao, Shixuan Sun, **Hao Zhang**, Sen Gao, et al, Revisiting the Design of In-Memory Dynamic Graph Storage, SIGMOD International Conference on Management of Data (SIGMOD), 2025, To Appear.
+* Yadong Wang, Zhiwei Zhang, Pengpeng Qiao, Ye Yuan, Hao Zhang, Guoren Wang, Breaking Free from Label Limitations: A Novel Unsupervised Attack Method for Graph Classification, The 30th International Conference on Database Systems for Advanced Applications (DASFAA), 2025.
 
 * Guanghua Li, **Hao Zhang**, Xibo Sun, Qiong Luo, Yuanyuan Zhu. TenGraph: A Tensor-Based Graph Query Engine International Conference on Very Large Database (VLDB), 2024.
 
@@ -98,9 +98,9 @@ My previous research interest includes:
 
 * **Hao Zhang**, Jeffrey Xu Yu, Yikai Zhang, Kangfei Zhao. Parallel Query Processing: To Separate Communication from Computation. ACM SIGMOD/PODS International Conference on Managerment of Data (SIGMOD), 2022.
 
-* **Hao Zhang**, Qiyan, Li, Kangfei Zhao, Jeffrey Xu Yu, Yuanyuan Zhu. How Learning Can Help Complex Cyclic Join Decomposition. IEEE International Conference on Data Engineering (ICDE), 2022.
-
 * Kangfei Zhao, Jeffrey Xu Yu, Zongyan He, Rui Li, **Hao Zhang**. Lightweight and Accurate Cardinality Estimation by Neural Network Gaussian Process. ACM SIGMOD/PODS International Conference on Managerment of Data (SIGMOD), 2022.
+
+* **Hao Zhang**, Qiyan, Li, Kangfei Zhao, Jeffrey Xu Yu, Yuanyuan Zhu. How Learning Can Help Complex Cyclic Join Decomposition. IEEE International Conference on Data Engineering (ICDE), 2022.
 
 * Kangfei Zhao, Jeffrey Xu Yu, **Hao Zhang**, Qiyan Li, Yu Rong, A Learned Sketch for Subgraph Counting. ACM SIGMOD/PODS International Conference on Managerment of Data (SIGMOD), 2021.
 

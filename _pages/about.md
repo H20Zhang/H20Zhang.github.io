@@ -47,9 +47,9 @@ My previous research interest includes:
 - Distributed query processing system that focous on solving complex relational/graph queries.
 - Distributed algorithms for foundamental problems in graph, i.e., subgraph matching.
 
-### Systems
+### Architected Systems
 
-* **TCRDS (2022-Present)**: TCRDS is a unified query engine for SQL queries, Subgraph queries, and Graph Analytic Queries, built upon Tensor Computation Runtime (TCR), such as PyTorch. Leveraging a highly optimized and cross-platform TCR backend, TCRDS achieves full-speed operation on all platforms (including Nvidia GPU, AMD GPU, Apple M series SoC, and Huawei Ascend), outperforming traditional purpose-built systems by orders of magnitude. Several works related to the system have been accepted by SIGMOD 2025, VLDB 2024.
+* **TCRDS (2022-Present)**: TCRDS is a unified query engine for SQL queries, Subgraph queries, and Graph Analytic Queries, built upon Tensor Computation Runtime (TCR), such as PyTorch. Leveraging a highly optimized and cross-platform TCR backend, TCRDS achieves full-speed operation on all platforms (including Nvidia GPU, AMD GPU, Apple M series SoC, and Huawei Ascend), outperforming traditional purpose-built systems by orders of magnitude. [TGraph, SIGMOD'25](), VLDB 2024.
 
 * **DAIS (2024-Present)**: DAIS is a multimodal AI system with a focus on semantic understanding of unstructured and structured data. (Details confidential.)
 
@@ -120,7 +120,7 @@ My previous research interest includes:
 
 
 
-[updated on 2025/06/16]
+[updated on 2025/08/14]
 
 
 

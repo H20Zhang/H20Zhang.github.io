@@ -40,8 +40,10 @@ I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited thr
 My current research focuses on building systems for the Data + AI/LLM, particularly in the following areas
 
 1. GPU database for SQL and Graph.
-2. Data+AI System for multimodal data analytics.
-3. High performance graph database.
+   * [TGraph, SIGMOD'25]() - Tensorized GAS Framework for General Graph Analytics
+   * [TenGraph, VLDB'24]() - Tensorized & Factorized Graph Database
+3. Data+AI System for multimodal data analytics.
+4. High performance graph database.
 
 My previous research interest includes:
 - Distributed query processing system that focous on solving complex relational/graph queries.
@@ -52,9 +54,7 @@ My previous research interest includes:
 * **DAIS (2024-Present)**: DAIS is a multimodal AI system with a focus on semantic understanding of unstructured and structured data. 
  
 * **TCRDS (2022-Present)**: TCRDS is a unified query engine for SQL queries, Subgraph queries, and Graph Analytic Queries, built upon Tensor Computation Runtime (TCR), such as PyTorch. Leveraging a highly optimized and cross-platform TCR backend, TCRDS achieves full-speed operation on all platforms (including Nvidia GPU, AMD GPU, Apple M series SoC, and Huawei Ascend), outperforming traditional purpose-built systems by orders of magnitude.
- [//]: # ( * [TGraph, SIGMOD'25]() - Tensorized GAS Framework for General Graph Analytics)
-  [//]: # (* [TenGraph, VLDB'24]() - Tensorized & Factorized Graph Database)
-
+    
 * **GES (2022-2025)**: The Graph Engine Service (GES) is a high-performance, fully managed graph database service developed by Huawei to handle complex graph-based queries and large-scale graph computing tasks. We have developed the next generation of GES, employing advanced techniques (i.e., factorization) to enhance performance by several orders of magnitude. The performance is validated at [LDBC-SNB-IC](https://ldbcouncil.org/benchmarks/snb-interactive/) a classcial benchmark for graph database, where we achieved #1 results with 3000X performance improvement over the #2. Several works related to the system have been accepted by SIGMOD 2025, VLDB 2025.
 
 

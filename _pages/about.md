@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Currently, I am leading the development/research of Data+AI system at Huawei Cloud Database Innovation Lab.
+I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited through the prestigious TopMinds program. I earned my Ph.D. from the Database Group at The Chinese University of Hong Kong in 2022, under the mentorship of Prof. Jeffrey Xu Yu. Currently, I am leading the development/research of Data+AI system at Huawei Cloud Database Innovation Lab.
 
 We are actively seeking talented individuals for full-time positions and internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
 
@@ -31,9 +31,6 @@ We are actively seeking talented individuals for full-time positions and interns
 - 10/2022 Join Huawei Cloud Database Innovation Lab!
 
 </details>
-
-### Biography
-I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited through the prestigious TopMinds program. I earned my Ph.D. from the Database Group at The Chinese University of Hong Kong in 2022, under the mentorship of Prof. Jeffrey Xu Yu.
 
 ### Research Interests
 

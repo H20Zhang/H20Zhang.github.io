@@ -40,9 +40,9 @@ I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited thr
 My current research focuses on building systems for the Data + AI/LLM, particularly in the following areas
 
 1. Data+AI System for multimodal data analytics.
-   * [\[ALSS, SIGMOD'21, VLDBJ\]]() - first ml-based cardinality estimation for graph query
+   * [\[ALSS, SIGMOD'21, VLDBJ'23\]]() - first ml-based cardinality estimation for graph query
    * [\[NNGP-Card, SIGMOD'22\]]() - lightweight ml-based cardnality estimation for relational query
-   * [\[Leanred Multiway Join, ICDE'21\]] - ml-optimized multiway join
+   * [\[Leanred Multiway Join, ICDE'21\]]() - ml-optimized multiway join
 
 2. GPU database for SQL and Graph.
    * [\[TGraph, SIGMOD'25\]]() - Tensorized GAS Framework for General Graph Analytics
@@ -50,8 +50,8 @@ My current research focuses on building systems for the Data + AI/LLM, particula
 
 3. High performance graph database.
    * [\[RapidStore, VLDB'25\]]() - Fast dynamic graph storage
-   * [\[GES, SIGMOD'25\]] - Factorized Graph Database used in Huawei
-   * [\[Graph Storage Benchmark, SIGMOD'25\]] - Full fledge compairson on existing graph storage
+   * [\[GES, SIGMOD'25\]]() - Factorized Graph Database used in Huawei
+   * [\[Graph Storage Benchmark, SIGMOD'25\]]() - Full fledge compairson on existing graph storage
 
 
 <details>
@@ -59,8 +59,13 @@ My current research focuses on building systems for the Data + AI/LLM, particula
 <summary>Previous Research Interests</summary>
 
 4. Distributed query processing
-   * [\[Crystal, VLDB'18\]]() - Applying compression to graph query processing.
    * [\[SQL-G\, TKDE'19]]() - Mixed SQL+Graph system
+   * [\[Secco, SIGMOD'22\]]() - Distributed system for complex query evaluation with computation-communication seperation optimization
+   * [\[DISC, VLDB'20\]]() - Distributed system for general subgraph counting problem
+   * [\[Crystal, VLDB'18\]]() - Applying compression to graph query processing 
+   * [\[FTL, BigData'16, DPD'16\]]() - Massive triangle listing on MapReduce
+   * [\[FTL-C, DASFAA'16\]]() - Massive clustering coefficient on MapReduce
+     
 
 </details>
 

@@ -56,7 +56,7 @@ My current research focuses on building systems for the Data + AI/LLM, particula
 
 <details>
 
-<summary>Previous Research Interests</summary>
+<summary>Past Research Interests</summary>
 
 4. Distributed query processing
    * [\[SQL-G\, TKDE'19]]() - Mixed SQL+Graph system

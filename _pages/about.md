@@ -40,16 +40,30 @@ I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited thr
 My current research focuses on building systems for the Data + AI/LLM, particularly in the following areas
 
 1. Data+AI System for multimodal data analytics.
+   * [\[ALSS, SIGMOD'21, VLDBJ\]]() - first ml-based cardinality estimation for graph query
+   * [\[NNGP-Card, SIGMOD'22\]]() - lightweight ml-based cardnality estimation for relational query
+   * [\[Leanred Multiway Join, ICDE'21\]] - ml-optimized multiway join
 
 2. GPU database for SQL and Graph.
    * [\[TGraph, SIGMOD'25\]]() - Tensorized GAS Framework for General Graph Analytics
    * [\[TenGraph, VLDB'24\]]() - Tensorized & Factorized Graph Database
 
 3. High performance graph database.
+   * [\[RapidStore, VLDB'25\]]() - Fast dynamic graph storage
+   * [\[GES, SIGMOD'25\]] - Factorized Graph Database used in Huawei
+   * [\[Graph Storage Benchmark, SIGMOD'25\]] - Full fledge compairson on existing graph storage
 
-My previous research interest includes:
-- Distributed query processing system that focous on solving complex relational/graph queries.
-- Distributed algorithms for foundamental problems in graph, i.e., subgraph matching.
+
+<details>
+
+<summary>Past News</summary>
+
+4. Distributed query processing
+   * [\[Crystal, VLDB'18\]]() - Applying compression to graph query processing.
+   * [\[SQL-G\, TKDE'19]]() - Mixed SQL+Graph system
+
+</details>
+
 
 ### Architected Systems
 

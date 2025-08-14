@@ -39,11 +39,13 @@ I am a Research Scientist at Huawei Cloud Database Innovation Lab, recruited thr
 
 My current research focuses on building systems for the Data + AI/LLM, particularly in the following areas
 
-1. GPU database for SQL and Graph.
+1. Data+AI System for multimodal data analytics.
+
+2. GPU database for SQL and Graph.
    * [TGraph, SIGMOD'25]() - Tensorized GAS Framework for General Graph Analytics
    * [TenGraph, VLDB'24]() - Tensorized & Factorized Graph Database
-3. Data+AI System for multimodal data analytics.
-4. High performance graph database.
+
+3. High performance graph database.
 
 My previous research interest includes:
 - Distributed query processing system that focous on solving complex relational/graph queries.

@@ -23,11 +23,13 @@ We are actively seeking talented individuals for full-time positions and interns
 <details>
 
 <summary>Past News</summary>
+
 - 06/2024 One paper accepted by VLDB'24 Research Track. Congrats to Guanghua Li and my collaborators!
 - 06/2024 Join Linked Data Benchmark Council (LDBC) as MPC member on behalf of Huawei Cloud!
 - 10/2023 Two paper accepted by ICDE'24 Research Track!
 - 05/2023 One paper accepted by The VLDB Journal!
 - 10/2022 Join Huawei Cloud Database Innovation Lab!
+
 </details>
 
 ### Biography

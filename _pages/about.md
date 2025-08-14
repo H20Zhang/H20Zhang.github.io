@@ -56,7 +56,7 @@ My current research focuses on building systems for the Data + AI/LLM, particula
 
 <details>
 
-<summary>Past News</summary>
+<summary>Previous Research Interests</summary>
 
 4. Distributed query processing
    * [\[Crystal, VLDB'18\]]() - Applying compression to graph query processing.

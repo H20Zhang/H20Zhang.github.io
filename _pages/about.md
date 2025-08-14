@@ -42,8 +42,8 @@ My current research focuses on building systems for the Data + AI/LLM, particula
 1. Data+AI System for multimodal data analytics.
 
 2. GPU database for SQL and Graph.
-   * [TGraph, SIGMOD'25]() - Tensorized GAS Framework for General Graph Analytics
-   * [TenGraph, VLDB'24]() - Tensorized & Factorized Graph Database
+   * [\[TGraph, SIGMOD'25\]]() - Tensorized GAS Framework for General Graph Analytics
+   * [\[TenGraph, VLDB'24\]]() - Tensorized & Factorized Graph Database
 
 3. High performance graph database.
 

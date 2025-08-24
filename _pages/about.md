@@ -13,8 +13,9 @@ I am a Research Scientist at Huawei Cloud Database Innovation Lab. I earned my P
 We are actively seeking talented individuals for full-time positions and internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
 
 ### News
+- 08/2025 One paper accepted by SIGMOD'26. Congrats to Haitao Zhang and Prof.Yuanyuan Zhu!
 - 06/2025 One paper accepted by VLDB'25. Congrats to Chiyu Hao and Prof.Shixuan Sun!
-- 02/2025 Awarded the Huawei Gold Award for Individual Excellence, awarded to top 0.5% of employees.
+- 02/2025 Awarded the Huawei Gold Award for Individual Excellence, awarded to top 1% of employees.
 - 02/2025 One paper accepted by SIGMOD'25. Congrats to colleagues in Huawei and my collaborators!
 - 11/2024 One paper accepted by SIGMOD'25. Congrats to Prof.Sun Shixuan!
 - 11/2024 One paper accepted by SIGMOD'25. Congrats to Yongliang Zhang and Prof.Yuanyuan Zhu!
@@ -88,6 +89,9 @@ My current research focuses on building systems for the Data + AI/LLM, particula
 </details>
 
 ### Full Publications
+1. Haitao Zhang, Ran Pang, Yuanyuan Zhu, **Hao Zhang**, Congli Gao, Ming Zhong, Jiawei Jiang, Tieyun
+Qian, Jeffrey Xu Yu, TQEx: Tensor-based Query Engine Enhanced by Bridging the Gap. ACM SIGMOD/PODS
+International Conference on Management of Data (SIGMOD), 2026 (To Appear).
 
 1.  Chiyu Hao, Jixian Su, Shixuan Sun, **Hao Zhang**, Sen Gao, Jianwen Zhao, Chenyi Zhang, et al, RapidStore: An Efficient Dynamic Graph Storage System for Concurrent Queries, 51th International Conference on Very Large Databases (VLDB), 2025.
 
@@ -132,7 +136,7 @@ My current research focuses on building systems for the Data + AI/LLM, particula
 
 ### Hornor & Awards
 
-* Huawei Gold Award for Individual Excellence, 2025 (0.5%)
+* Huawei Gold Award for Individual Excellence, 2025 (1%)
 * LDBC-SNB-IC Benchmark Top-1 on Declarative System Leadboard， 2024 
 * First Class, TopMinds Program in Huawei, 2022 
 * Meritorious Winner, COMAP’s Mathematical Contest in Modeling, 2016 （6%）

@@ -43,10 +43,13 @@ My current research focuses on building systems for the Data + AI/LLM, particula
    * [\[Leanred Multiway Join, ICDE'21\]]() - ml-optimized multiway join
 
 2. GPU database for SQL and Graph.
-   * [\[TGraph, SIGMOD'25\]]() - Tensorized GAS Framework for General Graph Analytics
+   * [\[TQEx, SIGMOD'26]]() - Tensorized Relational Database
    * [\[TenGraph, VLDB'24\]]() - Tensorized & Factorized Graph Database
+   * [\[TGraph, SIGMOD'25\]]() - Tensorized Graph Processing System
+   
+   
 
-3. High performance graph database.
+4. High performance graph database.
    * [\[RapidStore, VLDB'25\]]() - Fast dynamic graph storage
    * [\[GES, SIGMOD'25\]]() - Factorized Graph Database used in Huawei
    * [\[Graph Storage Benchmark, SIGMOD'25\]]() - Full fledge compairson on existing graph storage

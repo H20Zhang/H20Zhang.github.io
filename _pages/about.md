@@ -137,7 +137,7 @@ International Conference on Management of Data (SIGMOD), 2026 (To Appear).
 20.  **Hao Zhang**, Yuanyuan Zhu, Lu Qin, Hong Cheng, Jeffrey Xu Yu. Efficient triangle listing for billion-scale graphs. IEEE International Conference on Big Data (BigData), 2016
 
 
-### Hornor & Awards
+### Selected Hornor & Awards
 
 * Huawei Gold Award for Individual Excellence, 2025 (1%)
 * LDBC-SNB-IC Benchmark (one of the most authorative graph database benchmark) Top-1 on Declarative System Leadboard， 2024 

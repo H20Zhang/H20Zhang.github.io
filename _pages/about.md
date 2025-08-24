@@ -137,7 +137,7 @@ International Conference on Management of Data (SIGMOD), 2026 (To Appear).
 ### Hornor & Awards
 
 * Huawei Gold Award for Individual Excellence, 2025 (1%)
-* LDBC-SNB-IC Benchmark Top-1 on Declarative System Leadboard， 2024 
+* LDBC-SNB-IC Benchmark (one of the most authorative graph database benchmark) Top-1 on Declarative System Leadboard， 2024 
 * First Class, TopMinds Program in Huawei, 2022 
 * Meritorious Winner, The International Mathematical Contest in Modeling, 2016 （6%）
 

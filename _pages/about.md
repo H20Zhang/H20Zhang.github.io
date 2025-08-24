@@ -43,7 +43,7 @@ My current research focuses on building systems for the Data + AI/LLM, particula
    * [\[Leanred Multiway Join, ICDE'21\]]() - ml-optimized multiway join
 
 2. GPU database for SQL and Graph.
-   * [\[TQEx, SIGMOD'26]]() - Tensorized Relational Database
+   * [\[TQEx, SIGMOD'26\]]() - Tensorized Relational Database
    * [\[TenGraph, VLDB'24\]]() - Tensorized & Factorized Graph Database
    * [\[TGraph, SIGMOD'25\]]() - Tensorized Graph Processing System
    

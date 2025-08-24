@@ -60,7 +60,7 @@ My current research focuses on building systems for the Data + AI/LLM, particula
 <summary>Past Research Interests</summary>
 
 4. Distributed query processing
-   * [\[SQL-G\, TKDE'19]]() - Mixed SQL+Graph system
+   * [\[SQL-G\, TKDE'19\]]() - Mixed SQL+Graph system
    * [\[Secco, SIGMOD'22\]]() - Distributed system for complex query evaluation with computation-communication seperation optimization
    * [\[DISC, VLDB'20\]]() - Distributed system for general subgraph counting problem
    * [\[Crystal, VLDB'18\]]() - Applying compression to graph query processing 

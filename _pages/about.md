@@ -139,7 +139,7 @@ International Conference on Management of Data (SIGMOD), 2026 (To Appear).
 * Huawei Gold Award for Individual Excellence, 2025 (1%)
 * LDBC-SNB-IC Benchmark Top-1 on Declarative System Leadboard， 2024 
 * First Class, TopMinds Program in Huawei, 2022 
-* Meritorious Winner, COMAP’s Mathematical Contest in Modeling, 2016 （6%）
+* Meritorious Winner, The International Mathematical Contest in Modeling, 2016 （6%）
 
 ### Professional Activities
 

@@ -47,28 +47,14 @@ My current research focuses on building systems for the Data + AI/LLM, particula
    * [\[TenGraph, VLDB'24\]]() - Tensorized & Factorized Graph Database
    * [\[TGraph, SIGMOD'25\]]() - Tensorized Graph Processing System
    
-   
-
-4. High performance graph database.
+3. High performance graph database.
    * [\[RapidStore, VLDB'25\]]() - Fast dynamic graph storage
    * [\[GES, SIGMOD'25\]]() - Factorized Graph Database used in Huawei
    * [\[Graph Storage Benchmark, SIGMOD'25\]]() - Full fledge compairson on existing graph storage
 
-
-<details>
-
-<summary>Past Research Interests</summary>
-
-4. Distributed query processing
-   * [\[SQL-G\, TKDE'19\]]() - Mixed SQL+Graph system
-   * [\[Secco, SIGMOD'22\]]() - Distributed system for complex query evaluation with computation-communication seperation optimization
-   * [\[DISC, VLDB'20\]]() - Distributed system for general subgraph counting problem
-   * [\[Crystal, VLDB'18\]]() - Applying compression to graph query processing 
-   * [\[FTL, BigData'16, DPD'16\]]() - Massive triangle listing on MapReduce
-   * [\[FTL-C, DASFAA'16\]]() - Massive clustering coefficient on MapReduce
+My past research includes following
+1. Distributed query processing [\[SQL-G\, TKDE'19\]](), [\[Secco, SIGMOD'22\]](), [\[DISC, VLDB'20\]](), [\[Crystal, VLDB'18\]](), [\[FTL, BigData'16, DPD'16\]](), [\[FTL-C, DASFAA'16\]]()
      
-
-</details>
 
 
 ### Architected Systems

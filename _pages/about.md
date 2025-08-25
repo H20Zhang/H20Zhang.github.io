@@ -52,9 +52,9 @@ My current research focuses on building systems for the Data + AI/LLM, particula
    * [\[GES, SIGMOD'25\]]() - Factorized Graph Database used in Huawei
    * [\[Graph Storage Benchmark, SIGMOD'25\]]() - Full fledge compairson on existing graph storage
 
-My past research includes following
-1. Distributed query processing [\[SQL-G\, TKDE'19\]](), [\[Secco, SIGMOD'22\]](), [\[DISC, VLDB'20\]](), [\[Crystal, VLDB'18\]](), [\[FTL, BigData'16, DPD'16\]](), [\[FTL-C, DASFAA'16\]]()
-     
+My past research interest includes works published in following conference & journal
+1. Distributed query processing [\[SQL-G\, TKDE'19\]](), [\[Secco, SIGMOD'22\]](), [\[DISC, VLDB'20\]](), [\[Crystal, VLDB'18\]](), 
+2. Graph algorithm and GNN [\[DASFAA'25, ICDE'24, BigData'16, DPD'16, DASFAA'16 ICDE'24\]]()
 
 
 ### Architected Systems

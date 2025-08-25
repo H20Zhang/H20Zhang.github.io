@@ -55,7 +55,7 @@ My current research focuses on building systems for the Data + AI/LLM, particula
 
 My past research interest includes works published in following conference & journal
 1. Distributed query processing [\[SIGMOD'22, VLDB'20, VLDB'18\]]()
-2. Graph algorithm and GNN [\[DASFAA'25, ICDE'24, BigData'16, DPD'16, DASFAA'16, ICDE'24\]]()
+2. Graph algorithm and GNN [\[DASFAA'25, ICDE'24, BigData'16, DPD'16, DASFAA'16\]]()
 
 
 ### Architected Systems

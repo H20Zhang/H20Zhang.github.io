@@ -21,18 +21,13 @@ We are actively seeking talented individuals for full-time positions and interns
 - 11/2024 One paper accepted by SIGMOD'25. Congrats to Yongliang Zhang and Prof.Yuanyuan Zhu!
 - 09/2024 Built the world's fastest Graph Database, reaching [Top-1](https://ldbcouncil.org/benchmarks/snb/LDBC_SNB_I_20240916_SF30-100-300_huawei.pdf) in [LDBC Benchmark](https://ldbcouncil.org/benchmarks/snb-interactive/), the most authoritative ranking in graph database, and outperforming the previous Top-1 by 3000X! A big congratulation to all my team members and collaborators at Huawei!
 
-<details>
-<summary>Past News</summary>
-
-
+<!--
   - 06/2024 One paper accepted by VLDB'24 Research Track. Congrats to Guanghua Li and my collaborators!
   - 06/2024 Join Linked Data Benchmark Council (LDBC) as MPC member on behalf of Huawei Cloud!
   - 10/2023 Two paper accepted by ICDE'24 Research Track!
   - 05/2023 One paper accepted by The VLDB Journal!
   - 10/2022 Join Huawei Cloud Database Innovation Lab!
-
-
-</details>
+-->
 
 ### Research Interests
 

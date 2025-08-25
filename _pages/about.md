@@ -60,20 +60,14 @@ My past research interest includes works published in following conference & jou
 * **TCRDS (2022-Present)**: TCRDS is a unified query engine for SQL queries, Subgraph queries, and Graph Analytic Queries, built upon Tensor Computation Runtime (TCR), such as PyTorch. Leveraging a highly optimized and cross-platform TCR backend, TCRDS achieves full-speed operation on all platforms (including Nvidia GPU, AMD GPU, Apple M series SoC, and Huawei Ascend), outperforming traditional purpose-built systems by orders of magnitude.
     
 * **GES (2022-2025)**: The Graph Engine Service (GES) is a high-performance, fully managed graph database service developed by Huawei to handle complex graph-based queries and large-scale graph computing tasks. We have developed the next generation of GES, employing advanced techniques (i.e., factorization) to enhance performance by several orders of magnitude. The performance is validated at [LDBC-SNB-IC](https://ldbcouncil.org/benchmarks/snb-interactive/) a classcial benchmark for graph database, where we achieved #1 results with 3000X performance improvement over the #2.
-
-<details>
-
-<summary>Past Systems</summary>
-
+  
 * **[SeccoSQL](https://github.com/H20Zhang/SeccoSQL) (2020-2022)**: SeccoSQL (Separate communication from computation) is an experimental distributed SQL engine on Spark designed for processing complex SQL/Graph queries. It explicitly decouples Relational Algebra (RA) operators into pure communication and computation operators. SeccoSQL can reorder operators at a finer granularity than existing SQL engines, enabling a greater search space of plans and further reducing communication costs.
 
 * **[DISC](https://github.com/H20Zhang/DISC) (2018-2020)**: DISC is a specialized graph system on Spark for computing subgraph counts of arbitrary patterns and orbits in a relational manner. Unlike existing subgraph counting approaches that operate directly on graphs, DISC decomposes subgraph counting queries into a sequence of relational queries, enabling efficient execution.
 
 * **[Crystal](https://github.com/H20Zhang/Crystal) (2016-2017)**: Crystal is a novel method for distributed subgraph matching on very large graphs. It differs from existing subgraph matching approaches by computing compressed results of subgraph matching directly, greatly reducing computation costs.
 
-</details>
-
-### Full Publications
+### Publications
 1. Haitao Zhang, Ran Pang, Yuanyuan Zhu, **Hao Zhang**, Congli Gao, Ming Zhong, Jiawei Jiang, Tieyun
 Qian, Jeffrey Xu Yu, TQEx: Tensor-based Query Engine Enhanced by Bridging the Gap. ACM SIGMOD/PODS
 International Conference on Management of Data (SIGMOD), 2026 (To Appear).

@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Research Scientist at Huawei Cloud Database Innovation Lab. I earned my Ph.D. from the Database Group at The Chinese University of Hong Kong in 2022, under the mentorship of Prof. Jeffrey Xu Yu. Currently, I am leading the development/research of Data+AI system at Huawei Cloud Database Innovation Lab.
+I am a Research Scientist at Huawei Cloud Database Innovation Lab. I earned my Ph.D. from the Database Group at The Chinese University of Hong Kong in 2022, under the mentorship of Prof. Jeffrey Xu Yu. Currently, I am leading the development/research of AI+Data at Huawei Cloud Database Innovation Lab.
 
 We are actively seeking talented individuals for full-time positions and internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
 
@@ -31,19 +31,19 @@ We are actively seeking talented individuals for full-time positions and interns
 
 ### Research Interests
 
-My current research focuses on building systems for the Data + AI/LLM, particularly in the following areas
+My current research focuses on building systems for the AI/LLM + Data, particularly in the following areas
 
-1. Data+AI System for multimodal data analytics.
+1.AI Native Data System.
    * [\[ALSS, SIGMOD'21, VLDBJ'23\]]() - first ml-based cardinality estimation for graph query
    * [\[NNGP-Card, SIGMOD'22\]]() - lightweight ml-based cardnality estimation for relational query
    * [\[Leanred Multiway Join, ICDE'21\]]() - ml-optimized multiway join
 
-2. GPU database for SQL and Graph.
+2. GPU Accelerated Data System.
    * [\[TQEx, SIGMOD'26\]]() - Tensorized Relational Database
    * [\[TenGraph, VLDB'24\]]() - Tensorized & Factorized Graph Database
    * [\[TGraph, SIGMOD'25\]]() - Tensorized Graph Processing System
    
-3. High performance graph database.
+3. AI Knowledge Management Infra.
    * [\[RapidStore, VLDB'25\]]() - Fast dynamic graph storage
    * [\[GES, SIGMOD'25\]]() - Factorized Graph Database used in Huawei
    * [\[Graph Storage Benchmark, SIGMOD'25\]]() - Full fledge compairson on existing graph storage

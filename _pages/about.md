@@ -32,17 +32,14 @@ We are actively seeking talented individuals for full-time positions and interns
 ### Research Interests
 
 My current research focuses on building systems for the AI/LLM + Data, particularly in the following areas
-
- 1.AI Native Data System.
+1.AI Native Data System.
   * [\[ALSS, SIGMOD'21, VLDBJ'23\]]() - First ML-based Cardinality Estimation for Graph Query
   * [\[NNGP-Card, SIGMOD'22\]]() - Lightweight ML-based Cardnality Estimation for Relational Query
   * [\[Leanred Multiway Join, ICDE'21\]]() - ML-optimized Multiway Join
-
 2. GPU Accelerated Data System.
   * [\[TQEx, SIGMOD'26\]]() - Tensorized Relational Database
   * [\[TenGraph, VLDB'24\]]() - Tensorized & Factorized Graph Database
   * [\[TGraph, SIGMOD'25\]]() - Tensorized Graph Processing System
-
 3. AI Knowledge Management Infra.
   * [\[RapidStore, VLDB'25\]]() - Fast Dynamic Graph Storage
   * [\[GES, SIGMOD'25\]]() - Factorized Graph Database

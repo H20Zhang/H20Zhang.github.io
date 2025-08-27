@@ -42,10 +42,10 @@ My current research focuses on building systems for the AI/LLM + Data, particula
   * [\[TQEx, SIGMOD'26\]]() - Tensorized Relational Database
   * [\[TenGraph, VLDB'24\]]() - Tensorized & Factorized Graph Database
   * [\[TGraph, SIGMOD'25\]]() - Tensorized Graph Processing System
-   
+
 3. AI Knowledge Management Infra.
   * [\[RapidStore, VLDB'25\]]() - Fast Dynamic Graph Storage
-  * [\[GES, SIGMOD'25\]]() - Factorized Graph Database Used in Huawei
+  * [\[GES, SIGMOD'25\]]() - Factorized Graph Database
   * [\[Graph Storage Benchmark, SIGMOD'25\]]() - Full Fledge Compairson on Graph Storage
 
 My past research interest includes works published in following conference & journal

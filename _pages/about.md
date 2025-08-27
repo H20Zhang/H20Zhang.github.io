@@ -37,14 +37,18 @@ My current research focuses on building systems for the AI/LLM + Data, particula
   * [\[ALSS, SIGMOD'21, VLDBJ'23\]]() - First ML-based Cardinality Estimation for Graph Query
   * [\[NNGP-Card, SIGMOD'22\]]() - Lightweight ML-based Cardnality Estimation for Relational Query
   * [\[Leanred Multiway Join, ICDE'21\]]() - ML-optimized Multiway Join
+
 2. GPU Accelerated Data System.
   * [\[TQEx, SIGMOD'26\]]() - Tensorized Relational Database
   * [\[TenGraph, VLDB'24\]]() - Tensorized & Factorized Graph Database
   * [\[TGraph, SIGMOD'25\]]() - Tensorized Graph Processing System
+
 3. AI Knowledge Management Infra.
   * [\[RapidStore, VLDB'25\]]() - Fast Dynamic Graph Storage
   * [\[GES, SIGMOD'25\]]() - Factorized Graph Database
   * [\[Graph Storage Benchmark, SIGMOD'25\]]() - Full Fledge Compairson on Graph Storage
+
+
 My past research interest includes works published in following conference & journal
 1. Distributed Query Processing [\[SIGMOD'22, VLDB'20, VLDB'18\]]()
 2. Graph Algorithm and GNN [\[DASFAA'25, ICDE'24, BigData'16, DPD'16, DASFAA'16\]]()

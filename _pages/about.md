@@ -32,6 +32,7 @@ We are actively seeking talented individuals for full-time positions and interns
 ### Research Interests
 
 My current research focuses on building systems for the AI/LLM + Data, particularly in the following areas
+
 1.AI Native Data System.
   * [\[ALSS, SIGMOD'21, VLDBJ'23\]]() - First ML-based Cardinality Estimation for Graph Query
   * [\[NNGP-Card, SIGMOD'22\]]() - Lightweight ML-based Cardnality Estimation for Relational Query

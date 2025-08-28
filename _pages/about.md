@@ -36,8 +36,8 @@ My current research focuses on building systems for the AI/LLM + Data, particula
 1. AI Native Data System.
   -  AI4DB [\[ALSS, SIGMOD'21, VLDBJ'23\]]() [\[NNGP-Card, SIGMOD'22\]]() [\[Leanred Multiway Join, ICDE'21\]]()
   -  LLM+Data
-    - Multimodal Analytic
-    - NL2SQL
+    -  Multimodal Analytic
+    -  L2SQL
 
 2. GPU Accelerated Data System.
   - Tensorized Relational Database [\[TQEx, SIGMOD'26\]]()

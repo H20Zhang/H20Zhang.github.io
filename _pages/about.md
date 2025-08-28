@@ -36,8 +36,13 @@ My current research focuses on building systems for the AI/LLM + Data, particula
 1. AI Native Data System.
   - AI4DB [\[ALSS, SIGMOD'21, VLDBJ'23\]]() [\[NNGP-Card, SIGMOD'22\]]() [\[Leanred Multiway Join, ICDE'21\]]()
   - LLM+Data
+
+<!--
+  - LLM+Data
     - Multimodal Analytic
-    - L2SQL
+    - Data Pipeline for LLM
+    - NLI (Natual Language Interface)
+-->
 
 2. GPU Accelerated Data System.
   - Tensorized Relational Database [\[TQEx, SIGMOD'26\]]()
@@ -45,7 +50,7 @@ My current research focuses on building systems for the AI/LLM + Data, particula
   - Tensorized Graph Processing System [\[TGraph, SIGMOD'25\]]()
 
 3. AI Knowledge Management Infra.
-  - Agent Memory Framework
+  - Agent Memory Framework 
   - Agent Memory Infra
     - Graph Database [\[RapidStore, VLDB'25\]]() [\[GES, SIGMOD'25\]]() [\[Graph Storage Benchmark, SIGMOD'25\]]()
     - Vector Database

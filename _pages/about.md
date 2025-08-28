@@ -63,7 +63,7 @@ My past research interest includes works published in following conference & jou
 
 ### Architected Systems
 
-* **DAIS (2024-Present)**: DAIS is a multimodal AI system with a focus on semantic understanding of unstructured and structured data. 
+* **DAIS (2024–Present)**: DAIS is a multimodal AI system designed to unify semantic understanding across both structured and unstructured data. Powered by large language models, it enables data systems to interpret complex semantics that traditional systems cannot handle. DAIS functions as the query engine for next-generation multimodal data processing, supporting (1) multimodal/semantic ETL for LLM pipelines, (2) semantic ad-hoc querying for user requests, and (3) comprehensive analytics over diverse data types—including text, images, videos, and structured datasets.
  
 * **TCRDS (2022-Present)**: TCRDS is a unified query engine for SQL queries, Subgraph queries, and Graph Analytic Queries, built upon Tensor Computation Runtime (TCR), such as PyTorch. Leveraging a highly optimized and cross-platform TCR backend, TCRDS achieves full-speed operation on all platforms (including Nvidia GPU, AMD GPU, Apple M series SoC, and Huawei Ascend), outperforming traditional purpose-built systems by orders of magnitude.
     

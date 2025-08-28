@@ -10,7 +10,9 @@ redirect_from:
 
 I am a Research Scientist at Huawei Cloud Database Innovation Lab. I earned my Ph.D. from the Database Group at The Chinese University of Hong Kong, under the mentorship of Prof. Jeffrey Xu Yu. Currently, I am leading the development/research of AI+Data at Huawei Cloud Database Innovation Lab.
 
-We are actively seeking talented individuals for full-time positions and internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
+<!--
+We are actively seeking talented individuals for internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
+-->
 
 ### News
 - 08/2025 One paper accepted by SIGMOD'26. Congrats to Haitao Zhang and Prof.Yuanyuan Zhu!

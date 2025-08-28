@@ -34,19 +34,20 @@ We are actively seeking talented individuals for full-time positions and interns
 My current research focuses on building systems for the AI/LLM + Data, particularly in the following areas
 
 1. AI Native Data System.
-  - [\[ALSS, SIGMOD'21, VLDBJ'23\]]() - First ML-based Cardinality Estimation for Graph Query
-  - [\[NNGP-Card, SIGMOD'22\]]() - Lightweight ML-based Cardnality Estimation for Relational Query
-  - [\[Leanred Multiway Join, ICDE'21\]]() - ML-optimized Multiway Join
+  -  AI4DB [\[ALSS, SIGMOD'21, VLDBJ'23\]]() [\[NNGP-Card, SIGMOD'22\]]()
+  -  AI+DB [\[Leanred Multiway Join, ICDE'21\]]()
+  -  LLM+Data
 
 2. GPU Accelerated Data System.
-  - [\[TQEx, SIGMOD'26\]]() - Tensorized Relational Database
-  - [\[TenGraph, VLDB'24\]]() - Tensorized & Factorized Graph Database
-  - [\[TGraph, SIGMOD'25\]]() - Tensorized Graph Processing System
+  - Tensorized Relational Database [\[TQEx, SIGMOD'26\]]()
+  - Tensorized Graph Database [\[TenGraph, VLDB'24\]]()
+  - Tensorized Graph Processing System [\[TGraph, SIGMOD'25\]]()
 
 3. AI Knowledge Management Infra.
-  - [\[RapidStore, VLDB'25\]]() - Fast Dynamic Graph Storage
-  - [\[GES, SIGMOD'25\]]() - Factorized Graph Database
-  - [\[Graph Storage Benchmark, SIGMOD'25\]]() - Full Fledge Compairson on Graph Storage
+  - Agent Memory Framework
+  - Agent Memory Infra
+    - Graph Database [\[RapidStore, VLDB'25\]]() [\[GES, SIGMOD'25\]]() [\[Graph Storage Benchmark, SIGMOD'25\]]()
+    - Vector Database
 
 
 My past research interest includes works published in following conference & journal

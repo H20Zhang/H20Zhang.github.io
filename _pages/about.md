@@ -61,7 +61,7 @@ My past research interest includes works published in following conference & jou
 2. Graph Algorithm and GNN [\[DASFAA'25, ICDE'24, BigData'16, DPD'16, DASFAA'16\]]()
 
 
-### Architected Systems
+### Selected Architected Systems
 
 * **DAIS (2024–Present)**: DAIS is a multimodal AI system designed to unify semantic understanding across both structured and unstructured data. Powered by large language models, it enables data systems to interpret complex semantics that traditional systems cannot handle. DAIS functions as the query engine for next-generation multimodal data processing, supporting (1) multimodal/semantic ETL for LLM pipelines, (2) semantic ad-hoc querying for user requests, and (3) comprehensive analytics over diverse data types—including text, images, videos, and structured datasets.
  

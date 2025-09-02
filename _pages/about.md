@@ -53,9 +53,8 @@ My current research focuses on building systems for the AI/LLM + Data, particula
 
 3. AI Knowledge Management Infra.
   - Agent Memory Framework 
-  - Agent Memory Infra
-    - Graph Database [\[RapidStore, VLDB'25\]]() [\[GES, SIGMOD'25\]]() [\[Graph Storage Benchmark, SIGMOD'25\]]()
-    - Vector Database
+  - Graph Database [\[RapidStore, VLDB'25\]]() [\[GES, SIGMOD'25\]]() [\[Graph Storage Benchmark, SIGMOD'25\]]()
+  - Vector Database
 
 
 My past research interest includes works published in following conference & journal

@@ -126,7 +126,7 @@ International Conference on Management of Data (SIGMOD), 2026 (To Appear).
 
 *	Huawei Gold Award for Individual Excellence (Top 1%) - Huawei's most prestigious award for individual, 2025
 *	LDBC-SNB-IC Benchmark – Ranked Top-1 on the Declarative Systems Leaderboard (one of the most authoritative graph database benchmarks), 2024
-*	TopMinds Program (First Class) – Huawei’s most prestigious graduate offer, 2022
+*	TopMinds Program (First Class) – Huawei’s most prestigious talent program, 2022
 *	Meritorious Winner (Top 6%), International Mathematical Contest in Modeling (MCM/ICM), 2016
 
 ### Professional Activities

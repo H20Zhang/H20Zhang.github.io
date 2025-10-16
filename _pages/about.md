@@ -15,6 +15,7 @@ We are actively seeking talented individuals for internships who share our passi
 -->
 
 ### News
+- 10/2025 One paper accepted by VLDB'26. Congrats to Ziqi Zhou and Prof.Zhiwei Zhang!
 - 08/2025 One paper accepted by SIGMOD'26. Congrats to Haitao Zhang and Prof.Yuanyuan Zhu!
 - 06/2025 One paper accepted by VLDB'25. Congrats to Chiyu Hao and Prof.Shixuan Sun!
 - 02/2025 Awarded the Huawei Gold Award for Individual Excellence, awarded to top 1% of employees.

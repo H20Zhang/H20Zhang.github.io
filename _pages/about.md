@@ -78,6 +78,11 @@ My past research interest includes works published in following conference & jou
 * **[Crystal](https://github.com/H20Zhang/Crystal) (2016-2017)**: Crystal is a novel method for distributed subgraph matching on very large graphs. It differs from existing subgraph matching approaches by computing compressed results of subgraph matching directly, greatly reducing computation costs.
 
 ### Publications
+
+^ indicate first author or corresponding author
+
+1. Ziqi Zou, **Hao Zhang^**, Jiaxin Yao, Kangfei Zhao, Zhiwei Zhang, Sen Gao, Jingpeng Hao, Yeyuan, Guoren Wang, Aquila: A High-Concurrency System for Incremental Graph Query, 52th International Conference on Very Large Databases (VLDB), 2026 (To Appear)
+
 1. Haitao Zhang, Ran Pang, Yuanyuan Zhu, **Hao Zhang**, Congli Gao, Ming Zhong, Jiawei Jiang, Tieyun
 Qian, Jeffrey Xu Yu, TQEx: Tensor-based Query Engine Enhanced by Bridging the Gap. ACM SIGMOD/PODS
 International Conference on Management of Data (SIGMOD), 2026 (To Appear).
@@ -90,7 +95,7 @@ International Conference on Management of Data (SIGMOD), 2026 (To Appear).
 
 4.  Jixian Su, Chiyu Hao, Shixuan Sun, **Hao Zhang**, Sen Gao, et al, Revisiting the Design of In-Memory Dynamic Graph Storage, SIGMOD International Conference on Management of Data (SIGMOD), 2025.
 
-5.  Yadong Wang, Zhiwei Zhang, Pengpeng Qiao, Ye Yuan, Hao Zhang, Guoren Wang, Breaking Free from Label Limitations: A Novel Unsupervised Attack Method for Graph Classification, The 30th International Conference on Database Systems for Advanced Applications (DASFAA), 2025.
+5.  Yadong Wang, Zhiwei Zhang, Pengpeng Qiao, Ye Yuan, **Hao Zhang**, Guoren Wang, Breaking Free from Label Limitations: A Novel Unsupervised Attack Method for Graph Classification, The 30th International Conference on Database Systems for Advanced Applications (DASFAA), 2025.
 
 6.  Guanghua Li, **Hao Zhang**, Xibo Sun, Qiong Luo, Yuanyuan Zhu. TenGraph: A Tensor-Based Graph Query Engine International Conference on Very Large Database (VLDB), 2024.
 

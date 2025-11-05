@@ -8,11 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-I am a Research Scientist at Huawei Cloud Database Innovation Lab. I received my Ph.D. from the Database Group at The Chinese University of Hong Kong, under the mentorship of Prof. Jeffrey Xu Yu. Currently, I am leading the development/research of AI+Data at Huawei Cloud Database Innovation Lab.
+I am a Research Scientist at ByteDance. I received my Ph.D. from the Database Group at The Chinese University of Hong Kong, under the mentorship of Prof. Jeffrey Xu Yu.
 
-<!--
 We are actively seeking talented individuals for internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
--->
 
 ### News
 - 10/2025 One paper accepted by VLDB'26. Congrats to Ziqi Zhou and Prof.Zhiwei Zhang!
@@ -36,9 +34,20 @@ We are actively seeking talented individuals for internships who share our passi
 
 My current research focuses on building systems for the AI/LLM + Data, particularly in the following areas
 
-1. AI Native Data System.
-  - AI4DB [\[ALSS, SIGMOD'21, VLDBJ'23\]]() [\[NNGP-Card, SIGMOD'22\]]() [\[Leanred Multiway Join, ICDE'21\]]()
-  - LLM+Data [Actively Exploring]
+1. Agentic/Multimodal Data System.
+  - Semantic Query Engine [Actively Exploring]
+  - Data Agents [Actively Exploring]
+
+2. AI Knowledge Management Infra. 
+  - Graph Database [\[RapidStore, VLDB'25\]]() [\[GES, SIGMOD'25\]]() [\[Graph Storage Benchmark, SIGMOD'25\]]() [\[Aquila, VLDB'26\]]()
+  - Vector Database [Actively Exploring]
+
+3. Tensor-Centric Data System.
+  - Tensorized Relational Database [\[TQEx, SIGMOD'26\]]()
+  - Tensorized Graph Database [\[TenGraph, VLDB'24\]]()
+  - Tensorized Graph Processing System [\[TGraph, SIGMOD'25\]]()
+
+
 
 <!--
   - LLM+Data
@@ -47,20 +56,10 @@ My current research focuses on building systems for the AI/LLM + Data, particula
     - NLI (Natual Language Interface)
 -->
 
-2. Tensor-Centric Data System.
-  - Tensorized Relational Database [\[TQEx, SIGMOD'26\]]()
-  - Tensorized Graph Database [\[TenGraph, VLDB'24\]]()
-  - Tensorized Graph Processing System [\[TGraph, SIGMOD'25\]]()
-
-3. AI Knowledge Management Infra.
-  - Agent Memory Framework 
-  - Graph Database [\[RapidStore, VLDB'25\]]() [\[GES, SIGMOD'25\]]() [\[Graph Storage Benchmark, SIGMOD'25\]]()
-  - Vector Database
-
-
 My past research interest includes works published in following conference & journal
 1. Distributed Query Processing [\[SIGMOD'22, VLDB'20, VLDB'18\]]()
 2. Graph Algorithm and GNN [\[DASFAA'25, ICDE'24, BigData'16, DPD'16, DASFAA'16\]]()
+3. AI4DB [\[ALSS, SIGMOD'21, VLDBJ'23\]]() [\[NNGP-Card, SIGMOD'22\]]() [\[Leanred Multiway Join, ICDE'21\]]()
 
 
 ### Selected Architected Systems

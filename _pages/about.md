@@ -39,13 +39,13 @@ My current research focuses on building systems for the AI/LLM + Data, particula
   - Data Agents [Actively Exploring]
 
 2. AI Knowledge Management Infra. 
-  - Graph Database [\[RapidStore, VLDB'25\]]() [\[GES, SIGMOD'25\]]() [\[Graph Storage Benchmark, SIGMOD'25\]]() [\[Aquila, VLDB'26\]]()
+  - Graph Database [\[RapidStore, VLDB'25\]](https://arxiv.org/abs/2507.00839) [\[GES, SIGMOD'25\]](https://dl.acm.org/doi/10.1145/3722212.3724439) [\[Graph Storage Benchmark, SIGMOD'25\]](https://dl.acm.org/doi/10.1145/3709720) [\[Aquila, VLDB'26\]]()
   - Vector Database [Actively Exploring]
 
 3. Tensor-Centric Data System.
   - Tensorized Relational Database [\[TQEx, SIGMOD'26\]]()
-  - Tensorized Graph Database [\[TenGraph, VLDB'24\]]()
-  - Tensorized Graph Processing System [\[TGraph, SIGMOD'25\]]()
+  - Tensorized Graph Database [\[TenGraph, VLDB'24\]](https://www.vldb.org/pvldb/vol17/p4571-li.pdf)
+  - Tensorized Graph Processing System [\[TGraph, SIGMOD'25\]](https://dl.acm.org/doi/10.1145/3709731)
 
 
 
@@ -57,7 +57,7 @@ My current research focuses on building systems for the AI/LLM + Data, particula
 -->
 
 My past research interest includes works published in following conference & journal
-1. Distributed Query Processing [\[Secco, SIGMOD'22\]\(), [\[DISC, VLDB'20\]\(), [\[Crystal, VLDB'18\]\()
+1. Distributed Query Processing [\[Secco, SIGMOD'22\](https://dl.acm.org/doi/abs/10.1145/3514221.3526164), [\[DISC, VLDB'20\](https://www.vldb.org/pvldb/vol13/p2493-zhang.pdf), [\[Crystal, VLDB'18\](http://www.vldb.org/pvldb/vol11/p176-qiao.pdf)
 2. Graph Algorithm and GNN [\[DASFAA'25, ICDE'24, BigData'16, DPD'16, DASFAA'16\]]()
 3. AI4DB [\[ALSS, SIGMOD'21, VLDBJ'23\]]() [\[NNGP-Card, SIGMOD'22\]]() [\[Leanred Multiway Join, ICDE'21\]]()
 

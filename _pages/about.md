@@ -57,7 +57,7 @@ My current research focuses on building systems for the AI/LLM + Data, particula
 -->
 
 My past research interest includes works published in following conference & journal
-1. Distributed Query Processing [\[Secco, SIGMOD'22\](https://dl.acm.org/doi/abs/10.1145/3514221.3526164), [\[DISC, VLDB'20\](https://www.vldb.org/pvldb/vol13/p2493-zhang.pdf), [\[Crystal, VLDB'18\](http://www.vldb.org/pvldb/vol11/p176-qiao.pdf)
+1. Distributed Query Processing [\[Secco, SIGMOD'22\]](https://dl.acm.org/doi/abs/10.1145/3514221.3526164), [\[DISC, VLDB'20\]](https://www.vldb.org/pvldb/vol13/p2493-zhang.pdf), [\[Crystal, VLDB'18\]](http://www.vldb.org/pvldb/vol11/p176-qiao.pdf)
 2. Graph Algorithm and GNN [\[DASFAA'25, ICDE'24, BigData'16, DPD'16, DASFAA'16\]]()
 3. AI4DB [\[ALSS, SIGMOD'21, VLDBJ'23\]]() [\[NNGP-Card, SIGMOD'22\]]() [\[Leanred Multiway Join, ICDE'21\]]()
 

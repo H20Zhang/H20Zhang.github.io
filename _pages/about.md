@@ -10,7 +10,9 @@ redirect_from:
 
 I am a Research Scientist at ByteDance. I received my Ph.D. from the Database Group at The Chinese University of Hong Kong, under the mentorship of Prof. Jeffrey Xu Yu.
 
-We are actively seeking talented individuals for internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume!
+We are actively seeking talented individuals for internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume. 
+
+[Application Link](https://job.toutiao.com/s/cDZp3-iInbY) 
 
 ### News
 - 10/2025 One paper accepted by VLDB'26. Congrats to Ziqi Zhou and Prof.Zhiwei Zhang!

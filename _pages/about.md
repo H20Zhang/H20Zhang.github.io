@@ -64,7 +64,7 @@ My past research interest includes works published in following conference & jou
 
 ### Selected Architected Systems
 
-* **SEMA(Semantic Query Engine) (2024–Present)**: DAIS is a multimodal AI system designed to unify semantic understanding across both structured and unstructured data. Powered by large language models, it enables data systems to interpret complex semantics that traditional systems cannot handle. DAIS functions as the query engine for next-generation multimodal data processing, supporting (1) multimodal/semantic ETL for LLM pipelines, (2) semantic ad-hoc querying for user requests, and (3) comprehensive analytics over diverse data types—including text, images, videos, and structured datasets.
+* **SEMA(Semantic Query Engine) (2024–Present)**: SEMA is a multimodal AI system designed to unify semantic understanding across both structured and unstructured data. Powered by large language models, it enables data systems to interpret complex semantics that traditional systems cannot handle. DAIS functions as the query engine for next-generation multimodal data processing, supporting (1) multimodal/semantic ETL for LLM pipelines, (2) semantic ad-hoc querying for user requests, and (3) comprehensive analytics over diverse data types—including text, images, videos, and structured datasets.
  
 * **TDB(Tensor-Centric DB) (2022-Present)**: TDB is a unified GPU/NPU-based query engine for SQL queries, Subgraph queries, and Graph Analytic Queries, built upon Tensor Computation Runtime (TCR), such as PyTorch. Leveraging a highly optimized and cross-platform TCR backend, TDB achieves full-speed operation on all platforms (including Nvidia GPU, AMD GPU, Apple M series Soc), outperforming traditional purpose-built systems by orders of magnitude.
     
@@ -129,9 +129,10 @@ International Conference on Management of Data (SIGMOD), 2026 (To Appear).
 
 ### Selected Hornor & Awards
 
+* ByteDance Soaring Star Talent Program - ByteDance's most prestigious talent program, 2025
 *	Huawei Gold Award for Individual Excellence (Top 1%) - Huawei's most prestigious award for individual, 2025
 *	LDBC-SNB-IC Benchmark – Ranked Top-1 on the Declarative Systems Leaderboard (one of the most authoritative graph database benchmarks), 2024
-*	TopMinds Program (First Class) – Huawei’s most prestigious talent program, 2022
+*	TopMinds Talent Program (First Class) – Huawei’s most prestigious talent program, 2022
 *	Meritorious Winner (Top 6%), International Mathematical Contest in Modeling (MCM/ICM), 2016
 
 ### Professional Activities
@@ -142,7 +143,7 @@ International Conference on Management of Data (SIGMOD), 2026 (To Appear).
 
 
 
-[updated on 2025/10]
+[updated on 2025/11]
 
 
 

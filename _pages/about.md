@@ -38,10 +38,10 @@ My current research focuses on building systems for the AI/LLM + Data, particula
 
 2. Vector Database [Actively Exploring]
   
-3. Tensor-Centric Data System.
-  - Tensorized Relational Database [\[TQEx, SIGMOD'26\]]()
-  - Tensorized Graph Database [\[TenGraph, VLDB'24\]](https://www.vldb.org/pvldb/vol17/p4571-li.pdf)
-  - Tensorized Graph Processing System [\[TGraph, SIGMOD'25\]](https://dl.acm.org/doi/10.1145/3709731)
+3. Tensor-Centric (GPU accelerated) Data System.
+  1. Tensorized Relational Database [\[TQEx, SIGMOD'26\]]()
+  2. Tensorized Graph Database [\[TenGraph, VLDB'24\]](https://www.vldb.org/pvldb/vol17/p4571-li.pdf)
+  3. Tensorized Graph Processing System [\[TGraph, SIGMOD'25\]](https://dl.acm.org/doi/10.1145/3709731)
 
 
 

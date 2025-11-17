@@ -34,15 +34,11 @@ I am a Research Scientist at ByteDance. I received my Ph.D. from the Database Gr
 
 My current research focuses on building systems for the AI/LLM + Data, particularly in the following areas
 
-1. Agentic/Multimodal Data System [Actively Exploring].
+1. Agentic/Multimodal Data System [Actively Exploring]
 
 2. Vector Database [Actively Exploring]
   
-3. Tensor-Centric (GPU accelerated) Data System.
-     - Tensorized Relational Database [\[TQEx, SIGMOD'26\]]()
-     - Tensorized Graph Database [\[TenGraph, VLDB'24\]](https://www.vldb.org/pvldb/vol17/p4571-li.pdf)
-     - Tensorized Graph Processing System [\[TGraph, SIGMOD'25\]](https://dl.acm.org/doi/10.1145/3709731)
-
+3. Tensor-Centric (GPU accelerated) Data System for Structured and Unstructured Data [\[TQEx, SIGMOD'26\]](), [\[TenGraph, VLDB'24\]](https://www.vldb.org/pvldb/vol17/p4571-li.pdf), [\[TGraph, SIGMOD'25\]](https://dl.acm.org/doi/10.1145/3709731)
 
 
 <!--

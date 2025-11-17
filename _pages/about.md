@@ -10,9 +10,9 @@ redirect_from:
 
 I am a Research Scientist at ByteDance. I received my Ph.D. from the Database Group at The Chinese University of Hong Kong, under the mentorship of Prof. Jeffrey Xu Yu.
 
-We are actively seeking talented individuals for internships who share our passion for systems research and development. If you are interested, please reach out with your details or resume and [apply for intern](https://job.toutiao.com/s/cDZp3-iInbY). 
-
 ### News
+- We are looking for strong interns who are passionate about Data+AI systems research and development. If interested, please send your details or resume and apply through the intern portal: https://job.toutiao.com/s/cDZp3-iInbY (locations: Shenzhen, Beijing, Shanghai).
+- We also welcome collaboration across a broad range of Data+AI research topics.
 - 10/2025 One paper accepted by VLDB'26. Congrats to Ziqi Zhou and Prof.Zhiwei Zhang!
 - 08/2025 One paper accepted by SIGMOD'26. Congrats to Haitao Zhang and Prof.Yuanyuan Zhu!
 - 06/2025 One paper accepted by VLDB'25. Congrats to Chiyu Hao and Prof.Shixuan Sun!

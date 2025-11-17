@@ -12,7 +12,7 @@ I am a Research Scientist at ByteDance. I received my Ph.D. from the Database Gr
 
 ### News
 - We are looking for strong interns who are passionate about Data+AI systems research and development. If interested, please send your details or resume and apply through the intern portal: https://job.toutiao.com/s/cDZp3-iInbY (locations: Shenzhen, Beijing, Shanghai).
-- We also welcome collaboration across a broad range of Data+AI research topics.
+- We also welcome collaboration across a broad range of Data+AI research topics (please refer to my current research interest).
 - 10/2025 One paper accepted by VLDB'26. Congrats to Ziqi Zhou and Prof.Zhiwei Zhang!
 - 08/2025 One paper accepted by SIGMOD'26. Congrats to Haitao Zhang and Prof.Yuanyuan Zhu!
 - 06/2025 One paper accepted by VLDB'25. Congrats to Chiyu Hao and Prof.Shixuan Sun!
@@ -32,7 +32,7 @@ I am a Research Scientist at ByteDance. I received my Ph.D. from the Database Gr
 
 ### Research Interests
 
-My current research focuses on building systems for the AI/LLM + Data, particularly in the following areas
+My current research focuses on building systems for the AI/LLM + Data, particularly in the following areas:
 
 1. Agentic/Multimodal Data System [Actively Exploring]
 
@@ -48,7 +48,7 @@ My current research focuses on building systems for the AI/LLM + Data, particula
     - NLI (Natual Language Interface)
 -->
 
-My past research interest includes works published in following conference & journal
+My past research interest:
 1. Distributed Query Processing [\[Secco, SIGMOD'22\]](https://dl.acm.org/doi/abs/10.1145/3514221.3526164), [\[DISC, VLDB'20\]](https://www.vldb.org/pvldb/vol13/p2493-zhang.pdf), [\[Crystal, VLDB'18\]](http://www.vldb.org/pvldb/vol11/p176-qiao.pdf)
 2. Graph Algorithm and GNN [\[DASFAA'25, ICDE'24, BigData'16, DPD'16, DASFAA'16\]]()
 3. AI4DB [\[ALSS, SIGMOD'21, VLDBJ'23\]]() [\[NNGP-Card, SIGMOD'22\]]() [\[Leanred Multiway Join, ICDE'21\]]()

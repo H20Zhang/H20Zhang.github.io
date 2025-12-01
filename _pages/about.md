@@ -73,7 +73,7 @@ My past research interest:
 ### Publications
 
 ^ indicates first author or corresponding author
-1. Junchao Ma, Xin Yan, Yuanyuan Zhu, Guojing Li, Hao Zhang, Jeffrey Xu Yu, Accelerating Triangle-Connected Truss Community Search Across Heterogeneous Hardware.  ACM SIGMOD/PODS
+1. Junchao Ma, Xin Yan, Yuanyuan Zhu, Guojing Li, **Hao Zhang**, Jeffrey Xu Yu, Accelerating Triangle-Connected Truss Community Search Across Heterogeneous Hardware.  ACM SIGMOD/PODS
 International Conference on Management of Data (SIGMOD), 2026 (To Appear).
 
 1. Ziqi Zou, **Hao Zhang^**, Jiaxin Yao, Kangfei Zhao, Zhiwei Zhang, Sen Gao, Jingpeng Hao, Yeyuan, Guoren Wang, Aquila: A High-Concurrency System for Incremental Graph Query, 52th International Conference on Very Large Databases (VLDB), 2026 (To Appear)

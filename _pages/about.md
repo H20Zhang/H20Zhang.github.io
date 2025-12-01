@@ -13,6 +13,7 @@ I am a Research Scientist at ByteDance. I received my Ph.D. from the Database Gr
 ### News
 - We are looking for strong interns who are passionate about Data+AI systems research and development. If interested, please send your details or resume and apply through the intern portal: https://job.toutiao.com/s/cDZp3-iInbY (locations: Shenzhen, Beijing, Shanghai).
 - We also welcome collaboration across a broad range of Data+AI research topics (please refer to my current research interest).
+- 11/2025 One paper accepted by SIGMOD'26. Congrats to Junchao Ma and Prof.Yuanyuan Zhu!
 - 10/2025 One paper accepted by VLDB'26. Congrats to Ziqi Zhou and Prof.Zhiwei Zhang!
 - 08/2025 One paper accepted by SIGMOD'26. Congrats to Haitao Zhang and Prof.Yuanyuan Zhu!
 - 06/2025 One paper accepted by VLDB'25. Congrats to Chiyu Hao and Prof.Shixuan Sun!
@@ -72,6 +73,8 @@ My past research interest:
 ### Publications
 
 ^ indicates first author or corresponding author
+1. Junchao Ma, Xin Yan, Yuanyuan Zhu, Guojing Li, Hao Zhang, Jeffrey Xu Yu, Accelerating Triangle-Connected Truss Community Search Across Heterogeneous Hardware.  ACM SIGMOD/PODS
+International Conference on Management of Data (SIGMOD), 2026 (To Appear).
 
 1. Ziqi Zou, **Hao Zhang^**, Jiaxin Yao, Kangfei Zhao, Zhiwei Zhang, Sen Gao, Jingpeng Hao, Yeyuan, Guoren Wang, Aquila: A High-Concurrency System for Incremental Graph Query, 52th International Conference on Very Large Databases (VLDB), 2026 (To Appear)
 

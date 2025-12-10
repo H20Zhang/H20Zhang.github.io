@@ -75,6 +75,13 @@ My past research interest:
 ### Publications
 
 ^ indicates first author or corresponding author
+
+<ol reversed start="10">
+  <li>Step 10</li>
+  <li>Step 9</li>
+  <li>Step 8</li>
+</ol>
+
 1. Junchao Ma, Xin Yan, Yuanyuan Zhu, Guojing Li, **Hao Zhang**, Jeffrey Xu Yu, Accelerating Triangle-Connected Truss Community Search Across Heterogeneous Hardware.  ACM SIGMOD/PODS
 International Conference on Management of Data (SIGMOD), 2026 (To Appear).
 

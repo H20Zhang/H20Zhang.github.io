@@ -10,6 +10,11 @@ redirect_from:
 
 I am a Research Scientist at ByteDance. I received my Ph.D. from the Database Group at The Chinese University of Hong Kong, under the mentorship of Prof. Jeffrey Xu Yu. I obtained my bachelor’s degree in Computer Science from the Hongyi Honor School (弘毅学堂) at Wuhan University.
 
+<!--
+full employee: https://job.toutiao.com/s/ZedHSl3KTZo
+intern:
+-->
+
 ### News
 - We are looking for strong interns who are passionate about Data+AI systems research and development. If interested, please send your resume (internship locations: Shenzhen, Beijing, Shanghai).
 - We also welcome collaboration across a broad range of Data+AI research topics (please refer to my current research interest).

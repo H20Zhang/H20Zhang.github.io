@@ -13,7 +13,8 @@ I am a Research Scientist at ByteDance. I received my Ph.D. from the Database Gr
 ### News
 - We are looking for strong interns who are passionate about Data+AI systems research and development. If interested, please send your details or resume and apply through the intern portal: https://job.toutiao.com/s/cDZp3-iInbY (locations: Shenzhen, Beijing, Shanghai).
 - We also welcome collaboration across a broad range of Data+AI research topics (please refer to my current research interest).
-- 12/2025 Break the world record for graph database workload, again, during my time at Huawei, reaching [Top-1](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/) in [LDBC Benchmark SNB - Imperative Track](https://ldbcouncil.org/benchmarks/snb-interactive/), the most authoritative ranking in graph database. A big congratulation to all my former team members and collaborators at Huawei!
+
+- 12/2025 Break the world record for graph database workload using [chinese made chip](https://e.huawei.com/ma/industries/grid/power-grid/power-data-center/high-performance-computing), again, during my time at Huawei, reaching [Top-1](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/) in [LDBC Benchmark SNB - Imperative Track](https://ldbcouncil.org/benchmarks/snb-interactive/), the most authoritative ranking in graph database. A big congratulation to all my former team members and collaborators at Huawei!
 - 11/2025 One paper accepted by SIGMOD'26. Congrats to Junchao Ma and Prof.Yuanyuan Zhu!
 - 10/2025 One paper accepted by VLDB'26. Congrats to Ziqi Zhou and Prof.Zhiwei Zhang!
 - 08/2025 One paper accepted by SIGMOD'26. Congrats to Haitao Zhang and Prof.Yuanyuan Zhu!

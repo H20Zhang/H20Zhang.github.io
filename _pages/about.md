@@ -128,10 +128,10 @@ International Conference on Management of Data (SIGMOD), 2026 (To Appear).
 
 ### Selected Hornor & Awards
 
-*	New World Record on LDBC-SNB-IC Benchmark – Ranked Top-1 on the Imperative Systems Leaderboard (one of the most authoritative graph database benchmarks), 2025
+*	New World Record on [LDBC-SNB-IC Benchmark](https://ldbcouncil.org/benchmarks/snb-interactive/) – Ranked Top-1 on the Imperative Systems Leaderboard (one of the most authoritative graph database benchmarks), 2025
 * ByteDance Soaring Star Talent Program - ByteDance's most prestigious talent program, 2025
 *	Huawei Gold Award for Individual Excellence (Top 1%) - Huawei's most prestigious award for individual, 2025
-*	New World Record on LDBC-SNB-IC Benchmark – Ranked Top-1 on the Declarative Systems Leaderboard (one of the most authoritative graph database benchmarks), 2024
+*	New World Record on [LDBC-SNB-IC Benchmark](https://ldbcouncil.org/benchmarks/snb-interactive/) – Ranked Top-1 on the Declarative Systems Leaderboard (one of the most authoritative graph database benchmarks), 2024
 *	TopMinds Talent Program (First Class) – Huawei’s most prestigious talent program, 2022
 *	Meritorious Winner (Top 6%), International Mathematical Contest in Modeling (MCM/ICM), 2016
 

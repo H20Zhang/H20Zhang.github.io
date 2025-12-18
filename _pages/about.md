@@ -44,7 +44,7 @@ intern:
 
 My current research focuses on building systems for the AI/LLM + Data, particularly in the following areas:
 
-1. Agentic/Multimodal Data System [Actively Exploring]
+1. Agentic Search/Analytic System [Actively Exploring]
 
 2. Vector Database [Actively Exploring]
   

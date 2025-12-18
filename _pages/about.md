@@ -18,7 +18,7 @@ intern:
 
 ### News
 - We are looking for strong interns (internship locations: Shenzhen, Beijing, Shanghai) who are passionate about Data+AI systems research and development. If interested, please send your resume. Contact: zhanghao.ai [at] bytednace [dot] com
-- We also welcome collaboration across a broad range of Data+AI research topics (please refer to my current research interest).
+- We also welcome collaboration across a broad range of Data+AI research topics, remote collaboration is also welcome!.
 
 - 12/2025 Set a new world record for graph database workload again, this time on a [Chinese-made chip](https://e.huawei.com/ma/industries/grid/power-grid/power-data-center/high-performance-computing) (during my time at Huawei), achieving [Ranked #1](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/) in [LDBC Benchmark SNB - Imperative Track](https://ldbcouncil.org/benchmarks/snb-interactive/), the most authoritative ranking in graph database. Congrats to all my former team members and collaborators at Huawei and SJTU!
 - 11/2025 One paper accepted by SIGMOD'26. Congrats to Junchao Ma and Prof.Yuanyuan Zhu!

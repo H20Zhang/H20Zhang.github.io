@@ -15,7 +15,7 @@ full employee: https://job.toutiao.com/s/ZedHSl3KTZo
 intern:
 -->
 
-- We are looking for strong interns (internship locations: Shenzhen, Beijing, Shanghai) who are passionate about Data+AI systems research and development. If interested, please send your resume. Contact: zhanghao.ai [at] bytednace [dot] com
+- We are looking for strong interns (internship locations: Shenzhen, Beijing, Shanghai) who are passionate about Data+AI systems research and development. If you are interested, please send your resume to zhanghao.ai [at] bytednace [dot] com
 - We also welcome collaboration across a broad range of Data+AI research topics, remote collaboration is also welcome!.
 
 ### News

@@ -8,7 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-I am a Research Scientist at ByteDance. I received my Ph.D. from the Database Group at The Chinese University of Hong Kong, under the mentorship of Prof. Jeffrey Xu Yu. I obtained my bachelor’s degree in Computer Science from the Hongyi Honor School (弘毅学堂) at Wuhan University.
+I’m a Research Scientist at ByteDance, working on Data+AI systems. I earned my Ph.D. from the Department of Systems Engineering and Engineering Management (SEEM) at The Chinese University of Hong Kong, advised by Prof. Jeffrey Xu Yu, in 2022. Before that, I received my B.S. in Computer Science from the Hongyi Honor School (弘毅学堂) at Wuhan University in 2017.
+
+My research spans relational databases, graph databases, and AI-driven data systems. I have authored and co-authored 20+ papers in top-tier database venues, including SIGMOD and VLDB. Beyond publications, I build systems: I have designed and architected multiple industry and academic platforms, and my industry graph database work has achieved world-record results on standard graph database benchmarks multiple times.
 
 <!--
 full employee: https://job.toutiao.com/s/ZedHSl3KTZo

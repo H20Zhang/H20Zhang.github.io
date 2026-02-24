@@ -46,7 +46,7 @@ My current research focuses on building systems for the AI/LLM + Data, particula
 
 1. Agentic Search/Analytic System [Actively Exploring]
 
-2. Vector Database [Actively Exploring]
+2. Vector Database [\[SQLVec, ICDE'26\]]()
   
 3. Tensor-Centric (GPU accelerated) Data System for Structured and Unstructured Data [\[TQEx, SIGMOD'26\]](), [\[TenGraph, VLDB'24\]](https://www.vldb.org/pvldb/vol17/p4571-li.pdf), [\[TGraph, SIGMOD'25\]](https://dl.acm.org/doi/10.1145/3709731)
 
@@ -82,6 +82,8 @@ My past research interest:
 ### Publications
 
 ^ indicates first author or corresponding author
+
+1. Zequn Zhang, Yuanyuan Zhu, **Hao Zhang**, Jeffrey Xu Yu, SQLVec: SQL-Based Vector Similarity Search. 42nd IEEE International Conference on Data Engineering (**ICDE**), 2026 (To Appear).
 
 1. Junchao Ma, Xin Yan, Yuanyuan Zhu, Guojing Li, **Hao Zhang**, Jeffrey Xu Yu, Accelerating Triangle-Connected Truss Community Search Across Heterogeneous Hardware.  ACM SIGMOD/PODS
 International Conference on Management of Data (**SIGMOD**), 2026 (To Appear).

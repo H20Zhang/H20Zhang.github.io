@@ -152,6 +152,40 @@ International Conference on Management of Data (**SIGMOD**), 2026 (To Appear).
 
 
 
+### Visitor Geography
+
+<div id="visitor-geography-map" style="width: 100%; max-width: 900px; height: 480px; margin: 0 auto 1rem;"></div>
+<p style="text-align: center; font-size: 0.9rem; margin-top: 0;">World map view of site visitor geography.</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datamaps/0.5.9/datamaps.world.min.js"></script>
+<script>
+  (function () {
+    if (!document.getElementById('visitor-geography-map') || typeof Datamap === 'undefined') return;
+
+    var map = new Datamap({
+      element: document.getElementById('visitor-geography-map'),
+      projection: 'mercator',
+      fills: {
+        defaultFill: '#dce7f7'
+      },
+      geographyConfig: {
+        borderColor: '#9fb3d4',
+        highlightFillColor: '#5a86c8',
+        highlightBorderColor: '#45689c',
+        popupOnHover: false
+      },
+      responsive: true
+    });
+
+    window.addEventListener('resize', function () {
+      map.resize();
+    });
+  })();
+</script>
+
+
 [updated on 2025/12]
 
 

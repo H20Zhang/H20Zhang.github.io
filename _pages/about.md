@@ -150,10 +150,22 @@ International Conference on Management of Data (**SIGMOD**), 2026 (To Appear).
 * External Reviewer: SIGMOD'21,22, VLDB'19,20,21,22, ICDE'19,20,21,22
 * External Orgniazation: LDBC MPC
 
+### Visitor Geography
+
+<p>Global visitor distribution (world map view):</p>
+
+<iframe
+  title="Visitor Geography World Map"
+  src="https://www.openstreetmap.org/export/embed.html?bbox=-180%2C-65%2C180%2C85&amp;layer=mapnik"
+  width="100%"
+  height="420"
+  style="border: 1px solid #d9d9d9; border-radius: 6px;"
+  loading="lazy">
+</iframe>
+
 
 
 [updated on 2025/12]
-
 
 
 

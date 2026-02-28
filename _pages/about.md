@@ -152,21 +152,18 @@ International Conference on Management of Data (**SIGMOD**), 2026 (To Appear).
 
 ### Visitor Geography
 
-<p>Global visitor distribution (world map view):</p>
+<p>Global visitor distribution:</p>
 
-<iframe
-  title="Visitor Geography World Map"
-  src="https://www.openstreetmap.org/export/embed.html?bbox=-180%2C-65%2C180%2C85&amp;layer=mapnik"
-  width="100%"
-  height="420"
-  style="border: 1px solid #d9d9d9; border-radius: 6px;"
-  loading="lazy">
-</iframe>
+<a href="https://info.flagcounter.com/YvUQ" target="_blank" rel="noopener noreferrer">
+  <img
+    src="https://s11.flagcounter.com/map/YvUQ/size_l/txt_000000/border_CCCCCC/pageviews_1/viewers_1"
+    alt="Visitor map"
+    style="width: 100%; max-width: 760px; border: 1px solid #d9d9d9; border-radius: 6px;" />
+</a>
 
 
 
 [updated on 2025/12]
-
 
 
 

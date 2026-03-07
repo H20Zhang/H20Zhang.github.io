@@ -1,11 +1,12 @@
 ---
 title: 'Subgraph matching: on compression and computation'
 collection: publications
-permalink: /publication/VLDB-17
+permalink: /publication/VLDB-18
 excerpt: 'Miao Qiao, Hao Zhang, Hong Cheng'
 date: 2018-10-01
 venue: '44th International Conference on Very Large Data Bases (VLDB)'
 paperurl: 'http://www.vldb.org/pvldb/vol11/p176-qiao.pdf'
+research_theme: 'Graph Data Systems'
 citation:
 ---
 Abstract: Subgraph matching finds a set I of all occurrences of a pattern graph in a target graph. It has a wide range of applications while suffers an expensive computation. This eciency issue has been studied extensively. All existing approaches, however, turn a blind eye to the output crisis, that is, when the system has to materialize I as a prepro- cessing/intermediate/final result or an index, the cost of the export of I dominates the overall cost, which could be pro- hibitive even for a small pattern graph.

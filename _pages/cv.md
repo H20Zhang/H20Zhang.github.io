@@ -9,47 +9,34 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+## Current Position
+- **Research Scientist**, ByteDance (2025–Present)
 
-Work experience
-======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+## Education
+- **Ph.D.**, Systems Engineering and Engineering Management, The Chinese University of Hong Kong (2022)
+  - Advisor: Prof. Jeffrey Xu Yu
+- **B.S.**, Computer Science, Hongyi Honor School, Wuhan University (2017)
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+## Research Interests
+- AI/LLM + Data systems
+- Tensor-centric (GPU-accelerated) data systems
+- Graph databases and graph analytics
+- Distributed query processing
 
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+## Selected Honors
+- New World Record on LDBC-SNB-IC (Imperative Track), Ranked #1, 2025
+- ByteDance Soaring Star Talent Program, 2025
+- Huawei Gold Award for Individual Excellence (Top 1%), 2025
+- New World Record on LDBC-SNB-IC (Declarative Track), Ranked #1, 2024
+- Huawei TopMinds Talent Program (First Class), 2022
 
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
+## Professional Service
+- Reviewer: TKDD, PAKDD, KDD, CIKM, AAAI
+- External Reviewer: SIGMOD, VLDB, ICDE
+- External Organization: LDBC MPC
 
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+## Publications
+For a complete and up-to-date list, visit the [Publications]({{ base_path }}/publications/) page and my [Google Scholar](https://scholar.google.com/citations?user=PLwImrcAAAAJ&hl=en) profile.
+
+## Contact
+- Email: zhanghao.ai [at] bytedance [dot] com

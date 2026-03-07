@@ -48,7 +48,7 @@ My current research focuses on building systems for the AI/LLM + Data, particula
 
 2. Vector Database [\[SQLVec, ICDE'26\]]()
   
-3. Tensor-Centric (GPU accelerated) Data System for Structured and Unstructured Data [\[TQEx, SIGMOD'26\]](), [\[TenGraph, VLDB'24\]](https://www.vldb.org/pvldb/vol17/p4571-li.pdf), [\[TGraph, SIGMOD'25\]](https://dl.acm.org/doi/10.1145/3709731)
+3. Tensor-Centric (GPU accelerated) Data System for Structured and Unstructured Data [\[TQEX(SQL), SIGMOD'26\]](), [\[TenGraph, VLDB'24\]](https://www.vldb.org/pvldb/vol17/p4571-li.pdf), [\[TGraph, SIGMOD'25\]](https://dl.acm.org/doi/10.1145/3709731)
 
 
 <!--
@@ -91,7 +91,7 @@ International Conference on Management of Data (**SIGMOD**), 2026 (To Appear).
 1. Ziqi Zou, **Hao Zhang^**, Jiaxin Yao, Kangfei Zhao, Zhiwei Zhang, Sen Gao, Jingpeng Hao, Yeyuan, Guoren Wang, Aquila: A High-Concurrency System for Incremental Graph Query, 52th International Conference on Very Large Databases (**VLDB**), 2026 (To Appear)
 
 1. Haitao Zhang, Ran Pang, Yuanyuan Zhu, **Hao Zhang^**, Congli Gao, Ming Zhong, Jiawei Jiang, Tieyun
-Qian, Jeffrey Xu Yu, TQEx: Tensor-based Query Engine Enhanced by Bridging the Gap. ACM SIGMOD/PODS
+Qian, Jeffrey Xu Yu, TQEX(SQL): Tensor-based Query Engine Enhanced by Bridging the Gap. ACM SIGMOD/PODS
 International Conference on Management of Data (**SIGMOD**), 2026 (To Appear).
 
 1.  Chiyu Hao, Jixian Su, Shixuan Sun, **Hao Zhang**, Sen Gao, Jianwen Zhao, Chenyi Zhang, et al, RapidStore: An Efficient Dynamic Graph Storage System for Concurrent Queries, 51th International Conference on Very Large Databases (**VLDB**), 2025.

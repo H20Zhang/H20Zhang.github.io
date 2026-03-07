@@ -85,56 +85,56 @@ My past research interest:
 
 ^ indicates first author or corresponding author
 
-1. Zequn Zhang, Yuanyuan Zhu, **Hao Zhang**, Jeffrey Xu Yu, SQLVec: SQL-Based Vector Similarity Search. 42nd IEEE International Conference on Data Engineering (**ICDE**), 2026 (To Appear).
+1. Zequn Zhang, Yuanyuan Zhu, **Hao Zhang**, Jeffrey Xu Yu, SQLVec: SQL-Based Vector Similarity Search. 42nd IEEE International Conference on Data Engineering (**ICDE**), 2026 (To Appear). [[Download](https://scholar.google.com/scholar?q=SQLVec%3A+SQL-Based+Vector+Similarity+Search)]
 
 1. Junchao Ma, Xin Yan, Yuanyuan Zhu, Guojing Li, **Hao Zhang**, Jeffrey Xu Yu, Accelerating Triangle-Connected Truss Community Search Across Heterogeneous Hardware.  ACM SIGMOD/PODS
-International Conference on Management of Data (**SIGMOD**), 2026 (To Appear).
+International Conference on Management of Data (**SIGMOD**), 2026 (To Appear). [[Download](https://scholar.google.com/scholar?q=Accelerating+Triangle-Connected+Truss+Community+Search+Across+Heterogeneous+Hardware)]
 
-1. Ziqi Zou, **Hao Zhang^**, Jiaxin Yao, Kangfei Zhao, Zhiwei Zhang, Sen Gao, Jingpeng Hao, Yeyuan, Guoren Wang, Aquila: A High-Concurrency System for Incremental Graph Query, 52th International Conference on Very Large Databases (**VLDB**), 2026 (To Appear)
+1. Ziqi Zou, **Hao Zhang^**, Jiaxin Yao, Kangfei Zhao, Zhiwei Zhang, Sen Gao, Jingpeng Hao, Yeyuan, Guoren Wang, Aquila: A High-Concurrency System for Incremental Graph Query, 52th International Conference on Very Large Databases (**VLDB**), 2026 (To Appear). [[Download](https://scholar.google.com/scholar?q=Aquila%3A+A+High-Concurrency+System+for+Incremental+Graph+Query)]
 
 1. Haitao Zhang, Ran Pang, Yuanyuan Zhu, **Hao Zhang^**, Congli Gao, Ming Zhong, Jiawei Jiang, Tieyun
 Qian, Jeffrey Xu Yu, TQEX(SQL): Tensor-based Query Engine Enhanced by Bridging the Gap. ACM SIGMOD/PODS
-International Conference on Management of Data (**SIGMOD**), 2026 (To Appear).
+International Conference on Management of Data (**SIGMOD**), 2026 (To Appear). [[Download](https://scholar.google.com/scholar?q=TQEX%28SQL%29%3A+Tensor-based+Query+Engine+Enhanced+by+Bridging+the+Gap)]
 
-1.  Chiyu Hao, Jixian Su, Shixuan Sun, **Hao Zhang**, Sen Gao, Jianwen Zhao, Chenyi Zhang, et al, RapidStore: An Efficient Dynamic Graph Storage System for Concurrent Queries, 51th International Conference on Very Large Databases (**VLDB**), 2025.
+1.  Chiyu Hao, Jixian Su, Shixuan Sun, **Hao Zhang**, Sen Gao, Jianwen Zhao, Chenyi Zhang, et al, RapidStore: An Efficient Dynamic Graph Storage System for Concurrent Queries, 51th International Conference on Very Large Databases (**VLDB**), 2025. [[Download](https://arxiv.org/abs/2507.00839)]
 
-2.  Sen Gao, Jianwen Zhao, **Hao Zhang^**, Shixuan Sun, Chen Liang, Gongye Chen, et al, GES: High-Performance Graph Processing Engine and Service in Huawei, SIGMOD International Conference on Management of Data (**SIGMOD**), 2025.
+2.  Sen Gao, Jianwen Zhao, **Hao Zhang^**, Shixuan Sun, Chen Liang, Gongye Chen, et al, GES: High-Performance Graph Processing Engine and Service in Huawei, SIGMOD International Conference on Management of Data (**SIGMOD**), 2025. [[Download](https://dl.acm.org/doi/10.1145/3722212.3724439)]
 
-3.  YongLiang Zhang, Yuanyuan Zhu, **Hao Zhang^**, Congli Gao, Yuyang wang, et al, TGraph: A Tensor-centric Graph Processing Framework, SIGMOD International Conference on Management of Data (**SIGMOD**), 2025.
+3.  YongLiang Zhang, Yuanyuan Zhu, **Hao Zhang^**, Congli Gao, Yuyang wang, et al, TGraph: A Tensor-centric Graph Processing Framework, SIGMOD International Conference on Management of Data (**SIGMOD**), 2025. [[Download](https://dl.acm.org/doi/10.1145/3709731)]
 
-4.  Jixian Su, Chiyu Hao, Shixuan Sun, **Hao Zhang**, Sen Gao, et al, Revisiting the Design of In-Memory Dynamic Graph Storage, SIGMOD International Conference on Management of Data (**SIGMOD**), 2025.
+4.  Jixian Su, Chiyu Hao, Shixuan Sun, **Hao Zhang**, Sen Gao, et al, Revisiting the Design of In-Memory Dynamic Graph Storage, SIGMOD International Conference on Management of Data (**SIGMOD**), 2025. [[Download](https://dl.acm.org/doi/10.1145/3709720)]
 
-5.  Yadong Wang, Zhiwei Zhang, Pengpeng Qiao, Ye Yuan, **Hao Zhang**, Guoren Wang, Breaking Free from Label Limitations: A Novel Unsupervised Attack Method for Graph Classification, The 30th International Conference on Database Systems for Advanced Applications (DASFAA), 2025.
+5.  Yadong Wang, Zhiwei Zhang, Pengpeng Qiao, Ye Yuan, **Hao Zhang**, Guoren Wang, Breaking Free from Label Limitations: A Novel Unsupervised Attack Method for Graph Classification, The 30th International Conference on Database Systems for Advanced Applications (DASFAA), 2025. [[Download](https://scholar.google.com/scholar?q=Breaking+Free+from+Label+Limitations%3A+A+Novel+Unsupervised+Attack+Method+for+Graph+Classification)]
 
-6.  Guanghua Li, **Hao Zhang**, Xibo Sun, Qiong Luo, Yuanyuan Zhu. TenGraph: A Tensor-Based Graph Query Engine International Conference on Very Large Database (**VLDB**), 2024.
+6.  Guanghua Li, **Hao Zhang**, Xibo Sun, Qiong Luo, Yuanyuan Zhu. TenGraph: A Tensor-Based Graph Query Engine International Conference on Very Large Database (**VLDB**), 2024. [[Download](https://www.vldb.org/pvldb/vol17/p4571-li.pdf)]
 
-7. Yishu Wang, Jinlong Chu, Ye Yuan, Yu Gu, Hangxu Ji, **Hao Zhang**. Label Constrained Reacability Queries on Time Dependent Graphs. IEEE International Conference on Data Engineering (ICDE), 2024.
+7. Yishu Wang, Jinlong Chu, Ye Yuan, Yu Gu, Hangxu Ji, **Hao Zhang**. Label Constrained Reacability Queries on Time Dependent Graphs. IEEE International Conference on Data Engineering (ICDE), 2024. [[Download](https://scholar.google.com/scholar?q=Label+Constrained+Reacability+Queries+on+Time+Dependent+Graphs)]
 
-8. Anbiao Wu, Ye Yuan, Changsheng Li, Yuliang Ma, **Hao Zhang**, Attributed Network Embedding in Streaming Style . IEEE International Conference on Data Engineering (ICDE), 2024.
+8. Anbiao Wu, Ye Yuan, Changsheng Li, Yuliang Ma, **Hao Zhang**, Attributed Network Embedding in Streaming Style . IEEE International Conference on Data Engineering (ICDE), 2024. [[Download](https://scholar.google.com/scholar?q=Attributed+Network+Embedding+in+Streaming+Style)]
 
-9. Kangfei Zhao, Jeffrey Xu Yu,, Qiyan Li, **Hao Zhang**, Yu Rong. Learned sketch for subgraph counting: a holistic approach. The VLDB Journal 32 (5), 937-962, 2023
+9. Kangfei Zhao, Jeffrey Xu Yu,, Qiyan Li, **Hao Zhang**, Yu Rong. Learned sketch for subgraph counting: a holistic approach. The VLDB Journal 32 (5), 937-962, 2023. [[Download](https://scholar.google.com/scholar?q=Learned+sketch+for+subgraph+counting%3A+a+holistic+approach)]
 
-10. **Hao Zhang^**, Jeffrey Xu Yu, Yikai Zhang, Kangfei Zhao. Parallel Query Processing: To Separate Communication from Computation. ACM SIGMOD/PODS International Conference on Managerment of Data (**SIGMOD**), 2022.
+10. **Hao Zhang^**, Jeffrey Xu Yu, Yikai Zhang, Kangfei Zhao. Parallel Query Processing: To Separate Communication from Computation. ACM SIGMOD/PODS International Conference on Managerment of Data (**SIGMOD**), 2022. [[Download](https://scholar.google.com/scholar?q=Parallel+Query+Processing%3A+To+Separate+Communication+from+Computation)]
 
-11. Kangfei Zhao, Jeffrey Xu Yu, Zongyan He, Rui Li, **Hao Zhang**. Lightweight and Accurate Cardinality Estimation by Neural Network Gaussian Process. ACM SIGMOD/PODS International Conference on Managerment of Data (**SIGMOD**), 2022.
+11. Kangfei Zhao, Jeffrey Xu Yu, Zongyan He, Rui Li, **Hao Zhang**. Lightweight and Accurate Cardinality Estimation by Neural Network Gaussian Process. ACM SIGMOD/PODS International Conference on Managerment of Data (**SIGMOD**), 2022. [[Download](https://scholar.google.com/scholar?q=Lightweight+and+Accurate+Cardinality+Estimation+by+Neural+Network+Gaussian+Process)]
 
-12. **Hao Zhang^**, Qiyan, Li, Kangfei Zhao, Jeffrey Xu Yu, Yuanyuan Zhu. How Learning Can Help Complex Cyclic Join Decomposition. IEEE International Conference on Data Engineering (ICDE), 2022.
+12. **Hao Zhang^**, Qiyan, Li, Kangfei Zhao, Jeffrey Xu Yu, Yuanyuan Zhu. How Learning Can Help Complex Cyclic Join Decomposition. IEEE International Conference on Data Engineering (ICDE), 2022. [[Download](https://scholar.google.com/scholar?q=How+Learning+Can+Help+Complex+Cyclic+Join+Decomposition)]
 
-13. Kangfei Zhao, Jeffrey Xu Yu, **Hao Zhang**, Qiyan Li, Yu Rong, A Learned Sketch for Subgraph Counting. ACM SIGMOD/PODS International Conference on Managerment of Data (**SIGMOD**), 2021.
+13. Kangfei Zhao, Jeffrey Xu Yu, **Hao Zhang**, Qiyan Li, Yu Rong, A Learned Sketch for Subgraph Counting. ACM SIGMOD/PODS International Conference on Managerment of Data (**SIGMOD**), 2021. [[Download](https://scholar.google.com/scholar?q=A+Learned+Sketch+for+Subgraph+Counting)]
 
-14. **Hao Zhang^**, Miao Qiao, Jeffrey Xu Yu, Hong Cheng. Fast Distributed Complex Join Processing. IEEE International Conference on Data Engineering (ICDE), 2021.
+14. **Hao Zhang^**, Miao Qiao, Jeffrey Xu Yu, Hong Cheng. Fast Distributed Complex Join Processing. IEEE International Conference on Data Engineering (ICDE), 2021. [[Download](https://arxiv.org/pdf/2102.13370.pdf)]
 
-15. **Hao Zhang^**, Jeffrey Xu Yu, Yikai Zhang, Kangfei Zhao, Hong Cheng. Distributed Subgraph Counting: A General Approach.  International Conference on Very Large Data Bases (VLDB), 2020.
+15. **Hao Zhang^**, Jeffrey Xu Yu, Yikai Zhang, Kangfei Zhao, Hong Cheng. Distributed Subgraph Counting: A General Approach.  International Conference on Very Large Data Bases (VLDB), 2020. [[Download](http://www.vldb.org/pvldb/vol13/p2493-zhang.pdf)]
 
-16. Kangfei Zhao, Jiao Su, Jeffrey Xu Yu, **Hao Zhang**. SQL-G: Efficient Graph Analytics by SQL. IEEE Transactions on Knowledge and Data Engineering (TKDE), 2019.
+16. Kangfei Zhao, Jiao Su, Jeffrey Xu Yu, **Hao Zhang**. SQL-G: Efficient Graph Analytics by SQL. IEEE Transactions on Knowledge and Data Engineering (TKDE), 2019. [[Download](https://scholar.google.com/scholar?q=SQL-G%3A+Efficient+Graph+Analytics+by+SQL)]
 
-17. Miao Qiao, **Hao Zhang**, Hong Cheng. Subgraph matching: on compression and computation. International Conference on Very Large Data Bases (**VLDB**), 2018.
+17. Miao Qiao, **Hao Zhang**, Hong Cheng. Subgraph matching: on compression and computation. International Conference on Very Large Data Bases (**VLDB**), 2018. [[Download](http://www.vldb.org/pvldb/vol11/p176-qiao.pdf)]
 
-18. Yuanyuan Zhu, **Hao Zhang**, Lu Qin, Hong Cheng. Efficient MapReduce algorithms for triangle listing in billion-scale graphs. Distributed And Parallel Database (DPD), 2017.
+18. Yuanyuan Zhu, **Hao Zhang**, Lu Qin, Hong Cheng. Efficient MapReduce algorithms for triangle listing in billion-scale graphs. Distributed And Parallel Database (DPD), 2017. [[Download](https://scholar.google.com/scholar?q=Efficient+MapReduce+algorithms+for+triangle+listing+in+billion-scale+graphs)]
 
-19. **Hao Zhang^**, Yuanyuan Zhu, Lu Qin, Hong Cheng, Jeffrey Xu Yu. Efficient Local Clustering Coefficient Estimation in Massive Graphs. Database Systems for Advanced Applications (DASFAA), 2017
+19. **Hao Zhang^**, Yuanyuan Zhu, Lu Qin, Hong Cheng, Jeffrey Xu Yu. Efficient Local Clustering Coefficient Estimation in Massive Graphs. Database Systems for Advanced Applications (DASFAA), 2017. [[Download](https://scholar.google.com/scholar?q=Efficient+Local+Clustering+Coefficient+Estimation+in+Massive+Graphs)]
 
-20.  **Hao Zhang^**, Yuanyuan Zhu, Lu Qin, Hong Cheng, Jeffrey Xu Yu. Efficient triangle listing for billion-scale graphs. IEEE International Conference on Big Data (BigData), 2016
+20.  **Hao Zhang^**, Yuanyuan Zhu, Lu Qin, Hong Cheng, Jeffrey Xu Yu. Efficient triangle listing for billion-scale graphs. IEEE International Conference on Big Data (BigData), 2016. [[Download](https://scholar.google.com/scholar?q=Efficient+triangle+listing+for+billion-scale+graphs)]
 
 
 ### Selected Hornor & Awards
@@ -166,7 +166,6 @@ International Conference on Management of Data (**SIGMOD**), 2026 (To Appear).
 
 
 [updated on 2025/12]
-
 
 
 

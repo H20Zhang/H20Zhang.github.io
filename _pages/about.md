@@ -10,6 +10,8 @@ redirect_from:
 
 I’m a Research Scientist at ByteDance, working on Data+AI systems. I earned my Ph.D. from the Department of Systems Engineering and Engineering Management (SEEM) at The Chinese University of Hong Kong, advised by Prof. Jeffrey Xu Yu, in 2022. Before that, I received my B.S. in Computer Science from the Hongyi Honor School (弘毅学堂) at Wuhan University in 2017.
 
+**Quick links:** [Publications](/publications/) · [CV](/cv/) · [Google Scholar](https://scholar.google.com/citations?user=PLwImrcAAAAJ&hl=en) · [LinkedIn](https://www.linkedin.com/in/hao-zhang-ab18b413b/)
+
 My research spans relational databases, graph databases, and AI-driven data systems. I have authored and co-authored 20+ papers in top-tier database venues, including SIGMOD and VLDB. Beyond publications, I build systems: I have designed and architected multiple industry and academic platforms, and my industry graph database work has achieved world-record results on standard graph database benchmarks multiple times.
 
 <!--
@@ -46,7 +48,7 @@ My current research focuses on building systems for the AI/LLM + Data, particula
 
 1. Agentic Search/Analytic System [Actively Exploring]
 
-2. Vector Database [\[SQLVec, ICDE'26\]]()
+2. Vector Database [\[SQLVec, ICDE'26\]](/publications/)
   
 3. Tensor-Centric (GPU accelerated) Data System for Structured and Unstructured Data [\[TQEX(SQL), SIGMOD'26\]](), [\[TenGraph, VLDB'24\]](https://www.vldb.org/pvldb/vol17/p4571-li.pdf), [\[TGraph, SIGMOD'25\]](https://dl.acm.org/doi/10.1145/3709731)
 
@@ -61,8 +63,8 @@ My current research focuses on building systems for the AI/LLM + Data, particula
 My past research interest:
 1. Distributed Query Processing [\[Secco, SIGMOD'22\]](https://dl.acm.org/doi/abs/10.1145/3514221.3526164), [\[DISC, VLDB'20\]](https://www.vldb.org/pvldb/vol13/p2493-zhang.pdf), [\[Crystal, VLDB'18\]](http://www.vldb.org/pvldb/vol11/p176-qiao.pdf)
 2. Graph Algorithm and GNN [\[DASFAA'25, ICDE'24, BigData'16, DPD'16, DASFAA'16\]]()
-3. AI4DB [\[ALSS, SIGMOD'21, VLDBJ'23\]]() [\[NNGP-Card, SIGMOD'22\]]() [\[Leanred Multiway Join, ICDE'21\]]()
-4. Graph Database [\[RapidStore, VLDB'25\]](https://arxiv.org/abs/2507.00839) [\[GES, SIGMOD'25\]](https://dl.acm.org/doi/10.1145/3722212.3724439) [\[Graph Storage Benchmark, SIGMOD'25\]](https://dl.acm.org/doi/10.1145/3709720) [\[Aquila, VLDB'26\]]()
+3. AI4DB [\[ALSS, SIGMOD'21, VLDBJ'23\]](/publication/SIGMOD-21) [\[NNGP-Card, SIGMOD'22\]](/publication/SIGMOD-22-1) [\[Leanred Multiway Join, ICDE'21\]](/publication/ICDE-21)
+4. Graph Database [\[RapidStore, VLDB'25\]](https://arxiv.org/abs/2507.00839) [\[GES, SIGMOD'25\]](https://dl.acm.org/doi/10.1145/3722212.3724439) [\[Graph Storage Benchmark, SIGMOD'25\]](https://dl.acm.org/doi/10.1145/3709720) [\[Aquila, VLDB'26\]](/publications/)
 
 
 ### Selected Architected Systems

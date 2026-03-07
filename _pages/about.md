@@ -156,15 +156,17 @@ International Conference on Management of Data (**SIGMOD**), 2026 (To Appear).
 
 <a href="https://info.flagcounter.com/YvUQ" target="_blank" rel="noopener noreferrer">
   <img
-    src="https://s11.flagcounter.com/map/YvUQ/size_l/txt_000000/border_CCCCCC/pageviews_1/viewers_1"
+    src="https://s01.flagcounter.com/map/YvUQ/size_l/txt_000000/border_CCCCCC/pageviews_1/viewers_1"
+    onerror="this.onerror=null;this.src='https://s11.flagcounter.com/map/YvUQ/size_l/txt_000000/border_CCCCCC/pageviews_1/viewers_1';"
     alt="Visitor map"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
     style="width: 100%; max-width: 760px; border: 1px solid #d9d9d9; border-radius: 6px;" />
 </a>
 
 
 
 [updated on 2025/12]
-
 
 
 

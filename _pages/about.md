@@ -39,10 +39,10 @@ I have authored and co-authored **20+ papers** in top-tier database venues inclu
 
 ## Prior Research
 
-- **Distributed Query Processing.** **Representative systems:** [Secco](/publications/#SIGMOD-22-1), [DISC](/publications/#VLDB-20), and [Crystal](/publications/#VLDB-18).
-- **Graph Algorithms and GNN.** **Representative papers:** [Graph Classification Attack (DASFAA 2025)](/publications/#DASFAA-25), [Time-Dependent Reachability (ICDE 2024)](/publications/#ICDE-24-1), [Streaming Attributed Embedding (ICDE 2024)](/publications/#ICDE-24-2), [Triangle Listing (BigData 2016)](/publications/#BigData-16), [Triangle Listing, Journal Extension (DPD 2017)](/publications/#Distributed-And-Parallel-Database-17), and [Local Clustering Coefficient Estimation (DASFAA 2017)](/publications/#DASFAA-17).
-- **AI4DB.** **Representative papers:** [ALSS (SIGMOD 2021)](/publications/#SIGMOD-21), [Learned Sketch for Subgraph Counting (VLDBJ 2023)](/publications/#VLDBJ-23), [NNGP-Card (SIGMOD 2022)](/publications/#SIGMOD-22-2), and [Learned Multiway Join (ICDE 2021)](/publications/#ICDE-21).
-- **Graph Database.** **Representative systems and studies:** [RapidStore (VLDB 2025)](/publications/#VLDB-25), [GES (SIGMOD 2025)](/publications/#SIGMOD-25-1), [Graph Storage Benchmark (SIGMOD 2025)](/publications/#SIGMOD-25-3), and [Aquila (VLDB 2026)](/publications/#VLDB-26).
+1. **Distributed Query Processing:** [Secco, SIGMOD'22](/publications/#SIGMOD-22-1), [DISC, VLDB'20](/publications/#VLDB-20), [Crystal, VLDB'18](/publications/#VLDB-18)
+2. **Graph Algorithms and GNN:** [Graph Classification Attack, DASFAA'25](/publications/#DASFAA-25), [Time-Dependent Reachability, ICDE'24](/publications/#ICDE-24-1), [Streaming Embedding, ICDE'24](/publications/#ICDE-24-2), [Triangle Listing, BigData'16](/publications/#BigData-16), [Triangle Listing, DPD'17](/publications/#Distributed-And-Parallel-Database-17), [Local Clustering Coefficient, DASFAA'17](/publications/#DASFAA-17)
+3. **AI4DB:** [ALSS, SIGMOD'21](/publications/#SIGMOD-21), [Learned Sketch for Subgraph Counting, VLDBJ'23](/publications/#VLDBJ-23), [NNGP-Card, SIGMOD'22](/publications/#SIGMOD-22-2), [Learned Multiway Join, ICDE'21](/publications/#ICDE-21)
+4. **Graph Database:** [RapidStore, VLDB'25](/publications/#VLDB-25), [GES, SIGMOD'25](/publications/#SIGMOD-25-1), [Graph Storage Benchmark, SIGMOD'25](/publications/#SIGMOD-25-3), [Aquila, VLDB'26](/publications/#VLDB-26)
 
 ## Highlights
 

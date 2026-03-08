@@ -24,6 +24,10 @@ body.fixed-top-nav {
   padding-top: 57px;
 }
 
+body.no-footer {
+  padding-bottom: 0;
+}
+
 body.sticky-bottom-footer {
   // Remove padding below footer.
   padding-bottom: 0;

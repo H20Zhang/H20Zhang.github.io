@@ -39,10 +39,10 @@ I have authored and co-authored **20+ papers** in top-tier database venues inclu
 
 ## Prior Research
 
-- **Distributed Query Processing**, including [Secco](/publications/#SIGMOD-22-1), [DISC](/publications/#VLDB-20), and [Crystal](/publications/#VLDB-18).
-- **Graph Algorithms and GNN**, including [DASFAA 2025](/publications/#DASFAA-25), [ICDE 2024 Reachability](/publications/#ICDE-24-1), [ICDE 2024 Streaming Embedding](/publications/#ICDE-24-2), [BigData 2016](/publications/#BigData-16), [DPD 2017](/publications/#Distributed-And-Parallel-Database-17), and [DASFAA 2017](/publications/#DASFAA-17).
-- **AI4DB**, including [ALSS](/publications/#SIGMOD-21), [VLDBJ 2023](/publications/#VLDBJ-23), [NNGP-Card](/publications/#SIGMOD-22-2), and [Learned Multiway Join](/publications/#ICDE-21).
-- **Graph Database**, including [RapidStore](/publications/#VLDB-25), [GES](/publications/#SIGMOD-25-1), [Graph Storage Benchmark](/publications/#SIGMOD-25-3), and [Aquila](/publications/#VLDB-26).
+- **Distributed Query Processing.** **Representative systems:** [Secco](/publications/#SIGMOD-22-1), [DISC](/publications/#VLDB-20), and [Crystal](/publications/#VLDB-18).
+- **Graph Algorithms and GNN.** **Representative papers:** [Graph Classification Attack (DASFAA 2025)](/publications/#DASFAA-25), [Time-Dependent Reachability (ICDE 2024)](/publications/#ICDE-24-1), [Streaming Attributed Embedding (ICDE 2024)](/publications/#ICDE-24-2), [Triangle Listing (BigData 2016)](/publications/#BigData-16), [Triangle Listing, Journal Extension (DPD 2017)](/publications/#Distributed-And-Parallel-Database-17), and [Local Clustering Coefficient Estimation (DASFAA 2017)](/publications/#DASFAA-17).
+- **AI4DB.** **Representative papers:** [ALSS (SIGMOD 2021)](/publications/#SIGMOD-21), [Learned Sketch for Subgraph Counting (VLDBJ 2023)](/publications/#VLDBJ-23), [NNGP-Card (SIGMOD 2022)](/publications/#SIGMOD-22-2), and [Learned Multiway Join (ICDE 2021)](/publications/#ICDE-21).
+- **Graph Database.** **Representative systems and studies:** [RapidStore (VLDB 2025)](/publications/#VLDB-25), [GES (SIGMOD 2025)](/publications/#SIGMOD-25-1), [Graph Storage Benchmark (SIGMOD 2025)](/publications/#SIGMOD-25-3), and [Aquila (VLDB 2026)](/publications/#VLDB-26).
 
 ## Highlights
 

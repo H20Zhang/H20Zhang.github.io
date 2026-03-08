@@ -30,7 +30,7 @@ cv:
         studyType: Ph.D.
         end_date: 2022
         highlights:
-          - Advisor: Prof. Jeffrey Xu Yu.
+          - "Advisor: Prof. Jeffrey Xu Yu."
 
       - institution: Wuhan University
         area: Computer Science

@@ -16,13 +16,13 @@ cv:
       - company: ByteDance
         position: Research Scientist
         start_date: 2025
-        summary: Building Data+AI systems for retrieval, analytics, vector search, agentic systems, and multimodal workloads.
+        summary: Researching and building Data+AI systems for retrieval, analytics, vector search, agentic workflows, and multimodal data processing.
 
       - company: Huawei Cloud Database Innovation Lab
         position: Research Scientist
         start_date: 2022
         end_date: 2025
-        summary: Worked on graph database infrastructure, relational database kernel, and system architecture, including the GES line of work and benchmark-leading graph execution systems.
+        summary: Researched graph database infrastructure, relational database kernels, tensor-centric data systems, and overall architecture, including the GES line of work behind benchmark-leading graph systems.
 
     Education:
       - institution: The Chinese University of Hong Kong

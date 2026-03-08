@@ -1,0 +1,83 @@
+cv:
+  name: Hao Zhang
+  label: Research Scientist
+  email: zhanghao.ai@bytedance.com
+  website: https://H20Zhang.github.io
+  summary: Research scientist working on Data+AI systems, database infrastructure, vector search, graph engines, and multimodal analytics.
+
+  social_networks:
+    - network: GitHub
+      username: H20Zhang
+    - network: LinkedIn
+      username: hao-zhang-ab18b413b
+
+  sections:
+    Experience:
+      - company: ByteDance
+        position: Research Scientist
+        start_date: 2025
+        summary: Building Data+AI systems for retrieval, analytics, vector search, graph infrastructure, and multimodal workloads.
+
+      - company: Huawei Cloud Database Innovation Lab
+        position: Research Engineer
+        start_date: 2022
+        end_date: 2025
+        summary: Worked on graph database infrastructure and system architecture, including the GES line of work and benchmark-leading graph execution systems.
+
+    Education:
+      - institution: The Chinese University of Hong Kong
+        area: Systems Engineering and Engineering Management
+        studyType: Ph.D.
+        end_date: 2022
+        highlights:
+          - Advisor: Prof. Jeffrey Xu Yu.
+
+      - institution: Wuhan University
+        area: Computer Science
+        studyType: B.S.
+        end_date: 2017
+        highlights:
+          - Hongyi Honor School (弘毅学堂).
+
+    Research Areas:
+      - bullet: Data+AI systems
+      - bullet: Database systems
+      - bullet: Vector and graph infrastructure
+      - bullet: Distributed query processing
+      - bullet: Structured and unstructured analytics
+
+    Honors and Awards:
+      - title: ByteDance Soaring Star Talent Program
+        date: 2025-01-01
+        awarder: ByteDance
+        summary: ByteDance's most prestigious talent program.
+
+      - title: Huawei Gold Award for Individual Excellence
+        date: 2025-02-01
+        awarder: Huawei
+        summary: Awarded to the top 1% of employees.
+
+      - title: LDBC SNB Interactive benchmark world record, imperative systems leaderboard
+        date: 2025-12-01
+        awarder: LDBC
+        summary: Ranked top-1 on one of the most authoritative public graph database benchmarks.
+
+      - title: LDBC SNB Interactive benchmark world record, declarative systems leaderboard
+        date: 2024-09-01
+        awarder: LDBC
+        summary: Ranked top-1 with a 3,000x improvement over the prior #2 result.
+
+      - title: TopMinds Talent Program (First Class)
+        date: 2022-01-01
+        awarder: Huawei
+        summary: Huawei's most prestigious talent program.
+
+      - title: Meritorious Winner, International Mathematical Contest in Modeling
+        date: 2016-01-01
+        awarder: COMAP
+        summary: Top 6% distinction.
+
+    Professional Activities:
+      - bullet: "Reviewer: TKDD; PAKDD 2021, 2022, 2023, 2024; KDD 2020; CIKM 2020, 2021; AAAI 2021."
+      - bullet: "External reviewer: SIGMOD 2021, 2022; VLDB 2019, 2020, 2021, 2022; ICDE 2019, 2020, 2021, 2022."
+      - bullet: "External organization: LDBC Management and Planning Committee."

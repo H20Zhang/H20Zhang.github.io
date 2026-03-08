@@ -3,6 +3,8 @@ title: 'Efficient MapReduce algorithms for triangle listing in billion-scale gra
 collection: publications
 permalink: /publication/Distributed-And-Parallel-Database-17
 excerpt: 'Yuanyuan Zhu, Hao Zhang, Lu Qin, Hong Cheng'
+authors: 'Yuanyuan Zhu, Hao Zhang, Lu Qin, Hong Cheng'
+abstract: 'Develops efficient MapReduce algorithms for triangle listing that compress intermediate data and scale better on billion-edge graphs.'
 date: 2017-10-01
 venue: 'Distributed And Parallel Database (DPD)'
 paperurl: 'https://scholar.google.com/scholar?q=Efficient+MapReduce+algorithms+for+triangle+listing+in+billion-scale+graphs'

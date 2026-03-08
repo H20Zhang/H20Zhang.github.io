@@ -2,7 +2,9 @@
 title: 'Efficient Local Clustering Coefficient Estimation in Massive Graphs'
 collection: publications
 permalink: /publication/DASFAA-17
-excerpt: 'Hao Zhang, Yuanyuan Zhu, Lu Qin, Hong Cheng, Jeffrey Xu Yu'
+excerpt: 'Hao Zhang^, Yuanyuan Zhu, Lu Qin, Hong Cheng, Jeffrey Xu Yu'
+authors: 'Hao Zhang^, Yuanyuan Zhu, Lu Qin, Hong Cheng, Jeffrey Xu Yu'
+abstract: 'Presents a scalable framework for estimating local clustering coefficients on massive graphs with bounded error and distributed execution support.'
 date: 2017-10-01
 venue: '22nd Database Systems for Advanced Applications (DASFAA)'
 paperurl: 'https://scholar.google.com/scholar?q=Efficient+Local+Clustering+Coefficient+Estimation+in+Massive+Graphs'

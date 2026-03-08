@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=bin/_common.sh
+source "$SCRIPT_DIR/_common.sh"
+
+require_ruby_tools
+cd "$ROOT_DIR"
+
+export BUNDLE_USER_HOME="$ROOT_DIR/.bundle"
+mkdir -p "$BUNDLE_USER_HOME"
+
+bundle config set --local path vendor/bundle
+
+if ! bundle check >/dev/null 2>&1; then
+  bundle install
+else
+  echo "Ruby gems already installed."
+fi
+
+if command -v npm >/dev/null 2>&1; then
+  if [[ ! -d node_modules ]]; then
+    npm install --no-package-lock
+  else
+    echo "Node dependencies already installed."
+  fi
+fi
+
+echo "Local setup complete."

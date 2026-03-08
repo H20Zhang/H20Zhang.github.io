@@ -3,6 +3,8 @@ title: 'Subgraph matching: on compression and computation'
 collection: publications
 permalink: /publication/VLDB-18
 excerpt: 'Miao Qiao, Hao Zhang, Hong Cheng'
+authors: 'Miao Qiao, Hao Zhang, Hong Cheng'
+abstract: 'Introduces compression-aware distributed subgraph matching to cut output and intermediate-result costs in expensive pattern queries.'
 date: 2018-10-01
 venue: '44th International Conference on Very Large Data Bases (VLDB)'
 paperurl: 'http://www.vldb.org/pvldb/vol11/p176-qiao.pdf'

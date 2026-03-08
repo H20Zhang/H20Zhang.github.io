@@ -3,6 +3,8 @@ title: 'SQL-G: Efficient Graph Analytics by SQL'
 collection: publications
 permalink: /publication/TKDE-19
 excerpt: 'Kangfei Zhao, Jiao Su, Jeffrey Xu Yu, Hao Zhang'
+authors: 'Kangfei Zhao, Jiao Su, Jeffrey Xu Yu, Hao Zhang'
+abstract: 'Shows how graph analytics can be expressed and executed through SQL, integrating graph workloads with distributed relational processing.'
 date: 2019-10-01
 venue: 'IEEE Transactions on Knowledge and Data Engineering (TKDE)'
 paperurl: 'https://scholar.google.com/scholar?q=SQL-G%3A+Efficient+Graph+Analytics+by+SQL'

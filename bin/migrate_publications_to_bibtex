@@ -1,0 +1,131 @@
+#!/usr/bin/env ruby
+
+require "date"
+require "fileutils"
+require "yaml"
+
+SOURCE_DIR = ARGV[0] || "_publications"
+OUTPUT_FILE = ARGV[1] || "_bibliography/papers.bib"
+
+ARTICLE_PATTERNS = [
+  /journal/i,
+  /transactions/i,
+  /distributed and parallel database/i
+].freeze
+
+def parse_front_matter(path)
+  content = File.read(path)
+  match = content.match(/\A---\s*\n(.*?)\n---\s*\n/m)
+  raise "Missing front matter in #{path}" unless match
+
+  YAML.safe_load(match[1], permitted_classes: [Date, Time], aliases: true) || {}
+end
+
+def publication_type(venue)
+  ARTICLE_PATTERNS.any? { |pattern| venue.to_s.match?(pattern) } ? "article" : "inproceedings"
+end
+
+def abbreviation_for(key)
+  case key
+  when /\ABigData-/
+    "BigData"
+  when /\ADASFAA-/
+    "DASFAA"
+  when /\ADistributed-And-Parallel-Database-/
+    "DPD"
+  when /\AICDE-/
+    "ICDE"
+  when /\ASIGMOD-/
+    "SIGMOD"
+  when /\ATKDE-/
+    "TKDE"
+  when /\AVLDBJ-/
+    "VLDBJ"
+  when /\AVLDB-/
+    "VLDB"
+  end
+end
+
+def normalize_authors(raw)
+  raw.to_s.split(",").map(&:strip).reject(&:empty?).map do |author|
+    author.match?(/\Aet al\.?\z/i) ? "others" : author
+  end.join(" and ")
+end
+
+def normalize_date(value)
+  case value
+  when Date
+    value
+  when Time
+    value.to_date
+  else
+    Date.parse(value.to_s)
+  end
+end
+
+def paper_fields(url)
+  return {} if url.to_s.strip.empty?
+
+  if (match = url.match(%r{arxiv\.org/(?:abs|pdf)/([0-9]+\.[0-9]+)}i))
+    { "arxiv" => match[1] }
+  elsif (match = url.match(%r{/doi/(10\.[^/?#]+/[^?#]+)}i))
+    { "doi" => match[1] }
+  elsif url.match?(/\.pdf(?:\?|#|$)/i)
+    { "pdf" => url }
+  else
+    { "website" => url }
+  end
+end
+
+def bib_escape(value)
+  value.to_s.gsub("\\", "\\\\\\").gsub("{", "\\{").gsub("}", "\\}")
+end
+
+entries = Dir.glob(File.join(SOURCE_DIR, "*.md")).sort.map do |path|
+  key = File.basename(path, ".md")
+  data = parse_front_matter(path)
+  date = normalize_date(data.fetch("date"))
+  type = publication_type(data["venue"])
+
+  fields = {
+    "title" => data.fetch("title"),
+    "author" => normalize_authors(data["authors"]),
+    "year" => date.year.to_s,
+    "abstract" => data["abstract"],
+    "bibtex_show" => "true"
+  }
+
+  abbr = abbreviation_for(key)
+  fields["abbr"] = abbr if abbr
+
+  if type == "article"
+    fields["journal"] = data["venue"]
+  else
+    fields["booktitle"] = data["venue"]
+  end
+
+  fields["selected"] = "true" if data["selected"]
+  fields.merge!(paper_fields(data["paperurl"]))
+
+  {
+    key: key,
+    type: type,
+    year: date.year,
+    fields: fields
+  }
+end.sort_by { |entry| [-entry[:year], entry[:key]] }
+
+FileUtils.mkdir_p(File.dirname(OUTPUT_FILE))
+
+File.open(OUTPUT_FILE, "w") do |file|
+  entries.each do |entry|
+    file.puts "@#{entry[:type]}{#{entry[:key]},"
+    field_lines = entry[:fields].compact.map do |name, value|
+      "  #{name.ljust(18)} = {#{bib_escape(value)}},"
+    end
+    file.puts field_lines.join("\n")
+    file.puts "}\n\n"
+  end
+end
+
+puts "Wrote #{entries.size} entries to #{OUTPUT_FILE}"

@@ -1,31 +1,16 @@
 ---
-layout: archive
-title: "Publications"
+layout: page
 permalink: /publications/
-description: "Peer-reviewed publications in database systems, graph analytics, and AI for data management."
-author_profile: true
+title: Publications
+description: Publications in databases, vector search, graph systems, and Data+AI infrastructure.
+nav: true
+nav_order: 1
 ---
 
-This page is the canonical publication list used across the site.
+<p><sup>^</sup> indicates first author or corresponding author.</p>
 
-You can also browse via [Google Scholar](https://scholar.google.com/citations?user=PLwImrcAAAAJ&hl=en).
+{% include bib_search.liquid %}
 
-## Selected Papers
-
-{% assign selected = site.publications | where: "selected", true | sort: "date" | reverse %}
-{% for post in selected %}
-- **{{ post.title }}**. {{ post.excerpt }}. *{{ post.venue }}*, {{ post.date | date: "%Y" }}. [Paper]({{ post.paperurl }}).
-{% endfor %}
-
-## Full Publication List
-
-{% assign pubs = site.publications | sort: "date" | reverse %}
-{% assign current_year = "" %}
-{% for post in pubs %}
-  {% assign year = post.date | date: "%Y" %}
-  {% if year != current_year %}
-### {{ year }}
-    {% assign current_year = year %}
-  {% endif %}
-- **{{ post.title }}**. {{ post.excerpt }}. *{{ post.venue }}*. [Paper]({{ post.paperurl }}).
-{% endfor %}
+<div class="publications">
+{% bibliography %}
+</div>

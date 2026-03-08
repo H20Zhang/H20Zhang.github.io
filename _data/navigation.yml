@@ -1,9 +1,0 @@
-main:
-  - title: "Home"
-    url: /
-  - title: "Publications"
-    url: /publications/
-  - title: "Systems"
-    url: /systems/
-  - title: "CV"
-    url: /cv/

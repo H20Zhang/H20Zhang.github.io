@@ -1,4 +1,5 @@
 name: Deploy site
+# Deploys the prebuilt Jekyll artifact to GitHub Pages.
 
 on:
   push:

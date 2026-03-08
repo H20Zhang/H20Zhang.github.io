@@ -27,7 +27,7 @@ latest_posts:
 
 I am a **Research Scientist at ByteDance** working on **Data+AI systems** for retrieval, analytics, and multimodal AI. My work spans relational and graph databases, vector search, tensor-centric execution, and infrastructure that connects structured and unstructured data.
 
-I received my **Ph.D.** from the Chinese University of Hong Kong in 2022 under the supervision of **Prof. Jeffrey Xu Yu**. Before that, I earned my **B.S. in Computer Science** from the **Hongyi Honor School (弘毅学堂)** at Wuhan University in 2017. Before ByteDance, I worked at the **Huawei Cloud Database Innovation Lab** on graph database infrastructure and high-performance systems for interactive graph workloads.
+I received my **Ph.D.** from the Chinese University of Hong Kong in 2022 under the supervision of **Prof. Jeffrey Xu Yu** and **Prof. Hong Chen**. Before that, I earned my **B.S. in Computer Science** from the **Hongyi Honor School (弘毅学堂)** at Wuhan University in 2017. Before ByteDance, I worked at the **Huawei Cloud Database Innovation Lab** on graph database infrastructure and high-performance systems for interactive graph workloads.
 
 I have authored and co-authored **20+ papers** in top-tier database venues including **SIGMOD, VLDB, ICDE, and TKDE**. Beyond publications, I build systems: I have designed and architected multiple industry and research platforms, and my graph database work has achieved **world-record benchmark results** multiple times.
 

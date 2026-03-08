@@ -1,0 +1,11 @@
+{% if site.visitor_counter and site.visitor_counter.enabled %}
+  <div class="visitor-counter-wrap" aria-label="Visitor statistics">
+    <div class="visitor-counter card" role="status" aria-live="polite">
+      <span class="visitor-counter__label">Visitors</span>
+      <span id="busuanzi_value_site_uv" class="visitor-counter__value">--</span>
+      <span class="visitor-counter__sep">•</span>
+      <span class="visitor-counter__label">Views</span>
+      <span id="busuanzi_value_site_pv" class="visitor-counter__value">--</span>
+    </div>
+  </div>
+{% endif %}

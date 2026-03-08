@@ -259,3 +259,39 @@ ul.task-list input[type="checkbox"] {
 .d2h-diff-table {
   position: relative;
 }
+
+// Visitor counter
+
+.visitor-counter-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.visitor-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  color: var(--global-text-color-light);
+  font-size: 0.82rem;
+  line-height: 1;
+
+  .visitor-counter__label {
+    letter-spacing: 0.02em;
+  }
+
+  .visitor-counter__value {
+    color: var(--global-text-color);
+    font-weight: 600;
+    min-width: 1.7rem;
+    text-align: right;
+  }
+
+  .visitor-counter__sep {
+    color: var(--global-divider-color);
+    margin: 0 0.1rem;
+  }
+}

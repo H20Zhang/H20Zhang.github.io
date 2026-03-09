@@ -27,7 +27,7 @@ latest_posts:
 
 I am a **Research Scientist at ByteDance** working on **Data+AI systems** for retrieval, analytics, and multimodal AI. My work spans relational and graph databases, vector search, tensor-centric execution, and infrastructure that connects structured and unstructured data.
 
-I received my **Ph.D.** from the Chinese University of Hong Kong in 2022 under the supervision of **[Prof. Jeffrey Xu Yu](https://www.cse.cuhk.edu.hk/people/faculty/yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.cse.cuhk.edu.hk/people/faculty/cheng-hong/)**. Before that, I earned my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
+I received my **Ph.D.** from the Chinese University of Hong Kong in 2022 under the supervision of **[Prof. Jeffrey Xu Yu](https://www.seem.cuhk.edu.hk/people/faculty/yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.seem.cuhk.edu.hk/people/faculty/cheng-hong/)**. Before that, I earned my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
 
 I have authored and co-authored **20+ papers** in top-tier database venues including **SIGMOD, VLDB, ICDE, and TKDE**. Beyond publications, I build systems: I have designed and architected multiple industry and research platforms, and my graph database work has achieved **world-record benchmark results** multiple times.
 

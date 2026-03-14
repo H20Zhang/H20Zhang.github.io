@@ -12,3 +12,5 @@ SEMA is a multimodal semantic data system designed to unify semantic understandi
 It functions as a query engine for next-generation multimodal data processing, supporting semantic ETL for LLM pipelines, semantic ad-hoc querying over user requests, and analytics across text, images, video, and structured datasets.
 
 The system goal is to let AI-heavy pipelines retrieve, interpret, and analyze heterogeneous content in one flow rather than stitching together separate systems for indexing, orchestration, and analytics.
+
+Links: [ArXiv paper](/publications/#Arxiv-26)

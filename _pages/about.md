@@ -33,7 +33,7 @@ I have authored and co-authored **20+ papers** in top-tier database venues inclu
 
 ## Current Research
 
-- **Agentic Search and Analytic Systems** for AI-native data workflows.
+- **Agentic Search and Analytic Systems** for AI-native data workflows, including [\[SEMA, Arxiv'26\]](/publications/#Arxiv-26).
 - **Vector Databases** and SQL-native vector similarity search, including [\[SQLVec, ICDE'26\]](/publications/#ICDE-26).
 - **Tensor-centric accelerated data systems** for structured and unstructured data, including [\[TQEX(SQL), SIGMOD'26\]](/publications/#SIGMOD-26-2), [\[TenGraph, VLDB'24\]](/publications/#VLDB-24), and [\[TGraph, SIGMOD'25\]](/publications/#SIGMOD-25-2).
 

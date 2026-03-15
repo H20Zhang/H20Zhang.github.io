@@ -33,8 +33,8 @@ I have authored and co-authored **20+ papers** in top-tier database venues inclu
 
 ## Current Research
 
-- **Agentic Search and Analytic Systems** for AI-native data workflows, including [\[SEMA, Arxiv'26\]](/publications/#Arxiv-26).
-- **Vector Databases** and SQL-native vector similarity search, including [\[SQLVec, ICDE'26\]](/publications/#ICDE-26).
+- **Agentic Search and Analytic Framework** for harnessing LLM, including [\[SEMA, Arxiv'26\]](/publications/#Arxiv-26).
+- **Management of Unstructured and Structured Data** for agents, including [\[SQLVec, ICDE'26\]](/publications/#ICDE-26),[\[RapidStore, VLDB'25\]](/publications/#VLDB-25), [\[GES, SIGMOD'25\]](/publications/#SIGMOD-25-1), [\[Graph Storage Benchmark, SIGMOD'25\]](/publications/#SIGMOD-25-3), [\[Aquila, VLDB'26\]](/publications/#VLDB-26).
 - **Tensor-centric accelerated data systems** for structured and unstructured data, including [\[TQEX(SQL), SIGMOD'26\]](/publications/#SIGMOD-26-2), [\[TenGraph, VLDB'24\]](/publications/#VLDB-24), and [\[TGraph, SIGMOD'25\]](/publications/#SIGMOD-25-2).
 
 ## Prior Research
@@ -42,7 +42,6 @@ I have authored and co-authored **20+ papers** in top-tier database venues inclu
 1. **Distributed Query Processing:** [\[Secco, SIGMOD'22\]](/publications/#SIGMOD-22-1), [\[DISC, VLDB'20\]](/publications/#VLDB-20), [\[Crystal, VLDB'18\]](/publications/#VLDB-18)
 2. **Graph Algorithms and GNN:** [\[Graph Classification Attack, DASFAA'25\]](/publications/#DASFAA-25), [\[Time-Dependent Reachability, ICDE'24\]](/publications/#ICDE-24-1), [\[Streaming Embedding, ICDE'24\]](/publications/#ICDE-24-2), [\[Triangle Listing, BigData'16\]](/publications/#BigData-16), [\[Triangle Listing, DPD'17\]](/publications/#Distributed-And-Parallel-Database-17), [\[Local Clustering Coefficient, DASFAA'17\]](/publications/#DASFAA-17)
 3. **AI4DB:** [\[ALSS, SIGMOD'21\]](/publications/#SIGMOD-21), [\[Learned Sketch for Subgraph Counting, VLDBJ'23\]](/publications/#VLDBJ-23), [\[NNGP-Card, SIGMOD'22\]](/publications/#SIGMOD-22-2), [\[Learned Multiway Join, ICDE'21\]](/publications/#ICDE-21)
-4. **Graph Database:** [\[RapidStore, VLDB'25\]](/publications/#VLDB-25), [\[GES, SIGMOD'25\]](/publications/#SIGMOD-25-1), [\[Graph Storage Benchmark, SIGMOD'25\]](/publications/#SIGMOD-25-3), [\[Aquila, VLDB'26\]](/publications/#VLDB-26)
 
 ## Highlights
 

@@ -25,7 +25,7 @@ latest_posts:
   enabled: false
 ---
 
-I am a **Research Scientist** at ByteDance. My research centers on **agentic systems for LLM orchestration**, **data management for agents (relational, graph, and vector)**, and **hardware-accelerated query engine**.
+I am a **Research Scientist** at ByteDance. My research centers on **agentic systems for LLM orchestration**, **vector database + graph database**, and **hardware-accelerated query engine**.
 
 I received my **Ph.D.** from the Chinese University of Hong Kong in 2022 under the supervision of **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**. Before that, I earned my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
 

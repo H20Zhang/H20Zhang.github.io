@@ -25,7 +25,7 @@ latest_posts:
   enabled: false
 ---
 
-I am a **Research Scientist** at ByteDance. My research centers on agentic systems for LLM orchestration, data management for agents (relational, graph, and vector), and hardware-accelerated query execution.
+I am a **Research Scientist** at ByteDance. My research centers on **agentic systems for LLM orchestration**, **data management for agents (relational, graph, and vector)**, and **hardware-accelerated query engine**.
 
 I received my **Ph.D.** from the Chinese University of Hong Kong in 2022 under the supervision of **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**. Before that, I earned my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
 
@@ -33,7 +33,7 @@ I have authored and co-authored **20+ papers** in top-tier database venues inclu
 
 ## Current Research
 
-- **Agentic System** for harnessing LLM, including [\[SEMA, Arxiv'26\]](/publications/#Arxiv-26).
+- **Agentic System** for LLM orchestration, including [\[SEMA, Arxiv'26\]](/publications/#Arxiv-26).
 - **Vector Database + Graph Database** for agents, including [\[SQLVec, ICDE'26\]](/publications/#ICDE-26),[\[RapidStore, VLDB'25\]](/publications/#VLDB-25), [\[GES, SIGMOD'25\]](/publications/#SIGMOD-25-1), [\[Graph Storage Benchmark, SIGMOD'25\]](/publications/#SIGMOD-25-3), [\[Aquila, VLDB'26\]](/publications/#VLDB-26).
 - **Hardware-Accelerated Query Engine** for structured (e.g. SQL) and unstructured data (e.g., Graph), including [\[TQEX(SQL), SIGMOD'26\]](/publications/#SIGMOD-26-2), [\[TenGraph, VLDB'24\]](/publications/#VLDB-24), and [\[TGraph, SIGMOD'25\]](/publications/#SIGMOD-25-2).
 

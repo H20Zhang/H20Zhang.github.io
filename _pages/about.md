@@ -33,15 +33,15 @@ I have authored and co-authored **20+ papers** in top-tier database venues inclu
 
 ## Current Research
 
-- **Agentic System** for LLM orchestration, including [\[SEMA, Arxiv'26\]](/publications/#Arxiv-26).
-- **Vector Database + Graph Database** for agents, including [\[SQLVec, ICDE'26\]](/publications/#ICDE-26),[\[RapidStore, VLDB'25\]](/publications/#VLDB-25), [\[GES, SIGMOD'25\]](/publications/#SIGMOD-25-1), [\[Graph Storage Benchmark, SIGMOD'25\]](/publications/#SIGMOD-25-3), [\[Aquila, VLDB'26\]](/publications/#VLDB-26).
-- **Hardware-Accelerated Query Engine** for structured (e.g. SQL) and unstructured data (e.g., Graph), including [\[TQEX(SQL), SIGMOD'26\]](/publications/#SIGMOD-26-2), [\[TenGraph, VLDB'24\]](/publications/#VLDB-24), and [\[TGraph, SIGMOD'25\]](/publications/#SIGMOD-25-2).
+- **Agentic System** for LLM orchestration, including [\[SEMA, Arxiv'26\]](/publications/).
+- **Vector Database + Graph Database** for agents, including [\[SQLVec, ICDE'26\]](/publication/ICDE-26),[\[RapidStore, VLDB'25\]](/publication/VLDB-25), [\[GES, SIGMOD'25\]](/publication/SIGMOD-25-1), [\[Graph Storage Benchmark, SIGMOD'25\]](/publication/SIGMOD-25-3), [\[Aquila, VLDB'26\]](/publication/VLDB-26).
+- **Hardware-Accelerated Query Engine** for structured (e.g. SQL) and unstructured data (e.g., Graph), including [\[TQEX(SQL), SIGMOD'26\]](/publication/SIGMOD-26-2), [\[TenGraph, VLDB'24\]](/publication/VLDB-24), and [\[TGraph, SIGMOD'25\]](/publication/SIGMOD-25-2).
 
 ## Prior Research
 
-1. **Distributed Query Engine:** [\[Secco, SIGMOD'22\]](/publications/#SIGMOD-22-1), [\[DISC, VLDB'20\]](/publications/#VLDB-20), [\[Crystal, VLDB'18\]](/publications/#VLDB-18)
-2. **Graph Algorithms and GNN:** [\[Graph Classification Attack, DASFAA'25\]](/publications/#DASFAA-25), [\[Time-Dependent Reachability, ICDE'24\]](/publications/#ICDE-24-1), [\[Streaming Embedding, ICDE'24\]](/publications/#ICDE-24-2), [\[Triangle Listing, BigData'16\]](/publications/#BigData-16), [\[Triangle Listing, DPD'17\]](/publications/#Distributed-And-Parallel-Database-17), [\[Local Clustering Coefficient, DASFAA'17\]](/publications/#DASFAA-17)
-3. **AI4DB:** [\[ALSS, SIGMOD'21\]](/publications/#SIGMOD-21), [\[Learned Sketch for Subgraph Counting, VLDBJ'23\]](/publications/#VLDBJ-23), [\[NNGP-Card, SIGMOD'22\]](/publications/#SIGMOD-22-2), [\[Learned Multiway Join, ICDE'21\]](/publications/#ICDE-21)
+1. **Distributed Query Engine:** [\[Secco, SIGMOD'22\]](/publication/SIGMOD-22-1), [\[DISC, VLDB'20\]](/publication/VLDB-20), [\[Crystal, VLDB'18\]](/publication/VLDB-18)
+2. **Graph Algorithms and GNN:** [\[Graph Classification Attack, DASFAA'25\]](/publication/DASFAA-25), [\[Time-Dependent Reachability, ICDE'24\]](/publication/ICDE-24-1), [\[Streaming Embedding, ICDE'24\]](/publication/ICDE-24-2), [\[Triangle Listing, BigData'16\]](/publication/BigData-16), [\[Triangle Listing, DPD'17\]](/publication/Distributed-And-Parallel-Database-17), [\[Local Clustering Coefficient, DASFAA'17\]](/publication/DASFAA-17)
+3. **AI4DB:** [\[ALSS, SIGMOD'21\]](/publication/SIGMOD-21), [\[Learned Sketch for Subgraph Counting, VLDBJ'23\]](/publication/VLDBJ-23), [\[NNGP-Card, SIGMOD'22\]](/publication/SIGMOD-22-2), [\[Learned Multiway Join, ICDE'21\]](/publication/ICDE-21)
 
 ## Highlights
 

@@ -31,6 +31,12 @@ I received my **Ph.D.** from the Chinese University of Hong Kong in 2022 under t
 
 I have authored and co-authored **20+ papers** in top-tier database venues including **SIGMOD, VLDB, ICDE, and TKDE**. Beyond publications, I build systems: I have designed and architected multiple industry and research platforms, and my graph database work has achieved **world-record benchmark results** multiple times.
 
+## Collaboration and Internships
+
+- I welcome collaboration on technically ambitious systems problems in database infrastructure, retrieval, vector search, graph systems, and multimodal analytics. **Remote collaboration** is also welcome.
+- We are looking for **strong interns** in **Shenzhen, Beijing, and Shanghai** who are excited about Data+AI systems research and development. If that fits your profile, you can apply through [this](https://job.toutiao.com/s/_MUF_jmY9qI).
+
+
 ## Current Research
 
 - **Agentic System** for LLM orchestration, including [\[SEMA, Arxiv'26\]](/publications/).
@@ -48,8 +54,3 @@ I have authored and co-authored **20+ papers** in top-tier database venues inclu
 - Authored and co-authored **20+ papers** in top-tier database venues, with recent work spanning vector search, tensor-centric execution, graph systems, and Data+AI infrastructure.
 - Designed and architected systems such as **`SEMA`, `TDB`, `GES`, `SeccoSQL`, `DISC`, and `Crystal`**; the [projects](/projects/) page summarizes these systems from research prototypes to production infrastructure.
 - Achieved **LDBC SNB Interactive world-record results** in both the declarative track (2024) and the imperative track (2025), two of the strongest public signals for graph database performance.
-
-## Collaboration and Internships
-
-- I welcome collaboration on technically ambitious systems problems in database infrastructure, retrieval, vector search, graph systems, and multimodal analytics. **Remote collaboration** is also welcome.
-- We are looking for **strong interns** in **Shenzhen, Beijing, and Shanghai** who are excited about Data+AI systems research and development. If that fits your profile, you can apply through [this](https://job.toutiao.com/s/_MUF_jmY9qI).

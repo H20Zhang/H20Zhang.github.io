@@ -34,7 +34,7 @@ I have authored and co-authored **20+ papers** in top-tier database venues inclu
 ## Collaboration and Internships
 
 - I welcome collaboration on technically ambitious systems problems in database infrastructure, retrieval, vector search, graph systems, and multimodal analytics. **Remote collaboration** is also welcome.
-- We are looking for **strong interns** in **Shenzhen, Beijing, and Shanghai** who are excited about Data+AI systems research and development. If that fits your profile, you can apply through [this](https://job.toutiao.com/s/_MUF_jmY9qI).
+- We are looking for **strong interns** in **Shenzhen, Beijing, and Shanghai** who are excited about Data+AI systems research and development. If that fits your profile, you can apply through [this](https://job.toutiao.com/s/DlKWjmXQX7E).
 
 
 ## Current Research

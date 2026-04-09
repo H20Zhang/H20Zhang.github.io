@@ -34,7 +34,7 @@ I have authored and co-authored **20+ papers** in top-tier database venues inclu
 ## Collaboration and Internships
 
 - I welcome collaboration on technically ambitious systems problems in database infrastructure, retrieval, vector search, graph systems, and multimodal analytics. **Remote collaboration** is also welcome.
-- We are looking for **strong interns** in **Shenzhen** who are excited about Data+AI systems research and development. If that fits your profile, you can apply through [this](https://jobs.bytedance.com/referral/campus/pc/position/detail/?token=MjsxNzc1NTQzOTc0NjcxOzc1NjY0NDk1MzY2MTk1OTUyNjk7NzYxNDM4NDUzMTUzODIzMzYwNTsx).
+- We are looking for **strong interns** in **Shenzhen** who are excited about Data+AI systems research and development. If that fits your profile, you can apply by [email](zhanghao.ai@bytedance.com). 
 
 
 ## Current Research

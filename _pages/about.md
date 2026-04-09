@@ -13,7 +13,7 @@ profile:
     <p>Data+AI systems</p>
     <p><a href="mailto:zhanghao.ai@bytedance.com">zhanghao.ai@bytedance.com</a></p>
 
-recent_publications: true
+recent_publications: false
 social: true
 
 announcements:

@@ -32,9 +32,8 @@ I received my **Ph.D.** from the Chinese University of Hong Kong in 2022 under t
 I have authored and co-authored **20+ papers** in top-tier database venues including **SIGMOD, VLDB, ICDE, and TKDE**. Beyond publications, I build systems: I have designed and architected multiple industry and research platforms, and my graph database work has achieved **world-record benchmark results** multiple times.
 
 ## Collaboration and Internships
-
-- I welcome collaboration on technically ambitious systems problems in database infrastructure, retrieval, vector search, graph systems, and multimodal analytics. **Remote collaboration** is also welcome.
-- We are looking for **strong interns** in **Shenzhen** who are excited about Data+AI systems research and development. If that fits your profile, you can apply by [email](zhanghao.ai@bytedance.com). 
+	- I welcome collaboration on technically ambitious systems challenges in database infrastructure, retrieval, vector search, graph systems, and multimodal analytics. Remote collaboration is also welcome.
+	- We are seeking strong interns in Shenzhen who are excited about research and development in Data+AI systems. If this fits your interests and background, please apply by email￼ and prefix the subject line with [Intern].
 
 
 ## Current Research

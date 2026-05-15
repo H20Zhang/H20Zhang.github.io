@@ -25,7 +25,9 @@ latest_posts:
   enabled: false
 ---
 
-I am an AI-native data systems researcher and builder focused on agentic workflows, retrieval, and accelerator-native execution. At ByteDance, I develop data infrastructure and orchestration frameworks for LLM-based agents. More broadly, my research spans agentic systems, vector and graph databases, and hardware-accelerated query processing for SQL and other data-intensive workloads, with an emphasis on building efficient foundations for modern AI applications.
+I am a Research Scientist at ByteDance, working on data systems for AI-native and agentic workloads. My recent work focuses on semantic data processing, multimodal retrieval and ETL, vector and graph data management, and accelerator-aware query execution.
+
+A recurring theme in my research is how database systems should evolve when LLM-based agents and AI applications increasingly interact with heterogeneous data through retrieval, tools, and workflows.
 
 I received my **Ph.D.** from the Chinese University of Hong Kong in 2022 under the supervision of **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**. Before that, I earned my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
 
@@ -38,9 +40,9 @@ I have authored and co-authored **20+ papers** in top-tier database venues inclu
 
 ## Current Research
 
-- **Agentic System** for LLM orchestration, including [\[SEMA, Arxiv'26\]](/publications/).
-- **Vector Database + Graph Database** for agents, including [\[SQLVec, ICDE'26\]](/publication/ICDE-26),[\[RapidStore, VLDB'25\]](/publication/VLDB-25), [\[GES, SIGMOD'25\]](/publication/SIGMOD-25-1), [\[Graph Storage Benchmark, SIGMOD'25\]](/publication/SIGMOD-25-3), [\[Aquila, VLDB'26\]](/publication/VLDB-26).
-- **Hardware-Accelerated Query Engine** for structured (e.g. SQL) and unstructured data (e.g., Graph), including [\[TQEX(SQL), SIGMOD'26\]](/publication/SIGMOD-26-2), [\[TenGraph, VLDB'24\]](/publication/VLDB-24), and [\[TGraph, SIGMOD'25\]](/publication/SIGMOD-25-2).
+- **Data systems for agentic workflows.** I study how data systems can support LLM-based workflows over heterogeneous data, including semantic ETL, multimodal querying, and evidence-oriented data processing. Representative work: [\[SEMA, Arxiv'26\]](/publications/).
+- **Retrieval and memory substrates.** I work on systems for querying structured, vector, and graph data, with an emphasis on dynamic updates, high-throughput retrieval, and hybrid query processing. These problems are increasingly relevant to AI applications and agentic workloads. Representative work: [\[SQLVec, ICDE'26\]](/publication/ICDE-26), [\[RapidStore, VLDB'25\]](/publication/VLDB-25), [\[GES, SIGMOD'25\]](/publication/SIGMOD-25-1), [\[Graph Storage Benchmark, SIGMOD'25\]](/publication/SIGMOD-25-3), [\[Aquila, VLDB'26\]](/publication/VLDB-26).
+- **Efficient execution for AI-native workloads.** I explore how query engines can use modern accelerators and tensor runtimes to execute SQL, graph, and analytical operators efficiently. Representative work: [\[TQEX(SQL), SIGMOD'26\]](/publication/SIGMOD-26-2), [\[TenGraph, VLDB'24\]](/publication/VLDB-24), and [\[TGraph, SIGMOD'25\]](/publication/SIGMOD-25-2).
 
 ## Prior Research
 

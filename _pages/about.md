@@ -10,7 +10,7 @@ profile:
   image_circular: false
   more_info: >
     <p>Research Scientist, ByteDance</p>
-    <p>Data+AI systems</p>
+    <p>Systems for Agents</p>
     <p><a href="mailto:zhanghao.ai@bytedance.com">zhanghao.ai@bytedance.com</a></p>
 
 recent_publications: false

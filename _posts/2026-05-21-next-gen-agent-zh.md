@@ -1,476 +1,458 @@
 ---
 layout: single
-title: "下一代 Agent：从调用工具到治理自己的可感知世界"
+title: "Context Management 的下一代：维护模型可感知的世界"
 date: 2026-05-21 10:00:00 +0000
 categories:
   - Agent
   - AI
+  - Context Management
 lang: zh
 tags:
+  - Context Management
   - Agent
-  - Information Architecture
-  - Governance
+  - RAG
   - Memory
-  - Search
+  - Information Architecture
 ---
 
-tldr：下一代 Agent 的核心，不是更会调用工具，也不是更会写 prompt，而是能和自己的外部信息环境共同演化。
+Context Management 最早被理解成一个窗口管理问题。
 
-模型越强，越不能只盯着模型。
+怎么塞更多 token？
 
-真正决定 Agent 上限的，是它所处的世界：它能看见什么，记住什么，相信什么，行动依赖什么，失败之后改造什么。
+怎么摘要历史对话？
 
-外部信息不是资料库。
+怎么把 RAG 结果放进 context？
 
-外部信息是 Agent 的世界。
+怎么让长上下文不丢关键信息？
 
-更准确地说，是它的可感知世界。
+这些问题都重要，但它们只覆盖了第一层：**如何把信息放进窗口。**
+
+下一代 Context Management 要处理的是更底层的问题：**如何维护一个能被模型正确感知、持续使用、并在使用中不断变好的信息环境。**
+
+因为模型本身不接触外部世界。
+
+它只接触 context。
+
+所以 context 不是普通输入。
+
+Context 是模型这一轮的现实。
+
+模型在这一轮里相信什么、忽略什么、能调用什么、会沿着什么证据推理，都取决于 context 为它构造了一个怎样的世界。
+
+如果这个世界是旧的、脏的、冲突的、没有来源的，模型越强，反而越可能错得更有说服力。
 
 ---
 
-## 1. 现在的 Agent 叙事太窄了
+## 1. 长上下文不会自动解决 context 问题
 
-现在大家讲 Agent，通常是这个公式：
+长上下文扩大了窗口，但没有自动提高信号质量。
 
-LLM + Tool + Memory + RAG + Planner
+窗口变长之后，能进入 context 的不只是有用信息，也包括更多噪声、旧证据、重复内容、冲突版本，以及模型自己之前生成的错误。
 
-这个公式没错。
+128K 的脏 context，不一定比 8K 的干净 context 更好。
 
-但它把最重要的东西说轻了。
+Context window 更像信道，不是仓库。真正重要的不是塞了多少 token，而是进入窗口的信息是否足够相关、足够新、足够可信、足够结构化。
 
-它让人以为 Agent 的主体是 LLM，其他东西只是外挂。
+因此，Context Management 的目标不应该是最大化填充率，而应该是最大化当前任务所需世界状态的表达质量。
 
-Tool 是外挂。
+关键问题不是：
 
-RAG 是外挂。
-
-Memory 是外挂。
-
-Skill 是外挂。
-
-Eval 是外挂。
-
-这会导致一个错误的工程直觉：只要模型够强，再给它接上足够多的工具和知识库，Agent 就会自然变强。
-
-现实不是这样。
-
-生产里的 Agent 不是生活在模型内部。
-
-它生活在一个外部信息环境里。
-
-这个环境决定它的感知、记忆、行动和学习。
-
-如果这个环境是脏的，Agent 会被污染。
-
-如果这个环境是乱的，Agent 会迷路。
-
-如果这个环境不可追溯，Agent 会把猜测当事实。
-
-如果这个环境不会更新，Agent 会反复犯同样的错。
-
-所以，下一代 Agent 的问题不是：
-
-怎么让模型更像一个独立智能体？
+> 还能塞什么？
 
 而是：
 
-怎么构造一个能让智能稳定发生的外部信息环境？
+> 当前任务需要模型看见什么？哪些信息已经过时？哪些来源可信？哪些冲突必须显式暴露？哪些内容根本不应该进入这一轮现实？
 
 ---
 
-## 2. 外部信息到底是什么
+## 2. Agentic Search 解决的是“怎么找”，不是“世界是否值得被找”
 
-对一个 Agent 来说，外部信息不是“上下文材料”。
+第一代 RAG 是开环的：
 
-它至少扮演四个角色。
+```text
+query → retrieve → top-k → stuff into context
+```
 
-**第一，它是感知对象**
+Agentic Search 往前走了一步。它会发现信息缺口，构造 query，检索，评估结果，改写 query，换源，找反证，再决定是否注入 context。
 
-Search 不是 RAG 插件。
+这很重要。
 
-Search 是 Agent 的眼睛。
+它让系统更会“找”。
 
-模型本身不知道外部世界发生了什么。它看到的世界，是 Search 帮它找来的世界。
+但它仍然主要解决的是：**如何在已有信息环境里看得更好。**
 
-如果搜索只会返回 top-k 文档，Agent 的眼睛就是近视的。
+如果信息环境本身不适合被搜索，Agentic Search 也会遇到上限。
 
-如果搜索知道 source、freshness、provenance、conflict、coverage，Agent 才开始有真正的感知。
+文档没有时间戳，系统很难判断新旧。
 
-**第二，它是长期状态**
+实体没有归一，query 改写也可能漏掉别名。
 
-Memory 不是聊天记录。
+summary 没有 provenance，模型可能把上一次生成的总结当成外部事实。
 
-Memory 是 Agent 对用户、项目、任务和环境的长期状态估计。
+旧文档没有 deprecated，新旧证据会在 context 里同权竞争。
 
-它决定 Agent 认为“现在是什么情况”。
+事实、猜测、计划、复盘混在同一个文档里，retriever 很难区分信号和噪声。
 
-一条错误 memory，不是一次错误。
+所以，下一步不是只让系统更会搜索。
 
-它是未来很多次错误的种子。
-
-**第三，它是行动空间**
-
-Tool schema、API docs、workflow、Skill registry，不只是说明书。
-
-它们定义了 Agent 能做什么、不能做什么、应该怎么做。
-
-对 Agent 来说，工具不是外部函数。
-
-工具是世界里的 affordance。
-
-Skill 不是 prompt 模板。
-
-Skill 是行动习惯。
-
-**第四，它是学习材料**
-
-Trace、Eval、失败日志、用户反馈，不只是 observability。
-
-它们是 Agent 未来能不能变好的原料。
-
-没有 trace，失败只是失败。
-
-有 trace，失败才可能变成结构更新。
-
-所以外部信息不是输入。
-
-外部信息是 Agent 的感知世界、状态世界、行动世界和学习世界。
-
-这四个世界合在一起，才是 Agent 真正的外部信息架构。
+而是让被搜索的世界更值得被搜索。
 
 ---
 
-## 3. 下一代 Agent，不是更自治，而是更会维护世界
+## 3. Context 背后真正需要维护的是什么
 
-很多人谈下一代 Agent，会自然想到更强 autonomy。
+Context 背后的信息环境可以分成三类。
 
-更长任务。
+### 外部知识源
 
-更多工具。
+包括文档、网页、数据库、知识库、代码仓库、产品文档、API 文档、业务规则、人工整理的说明。
 
-更少人工干预。
+这些是 Agent 要感知的外部世界。
 
-更复杂 planning。
+它们需要版本、时间戳、deprecated 标记、来源、可信度、结构化边界和 canonical source。
 
-但 autonomy 如果没有信息治理，只是更快地把错误放大。
+没有这些基础治理，检索再强也只是从混乱信息里找相对不坏的片段。
 
-一个不会区分事实和猜测的 Agent，越自治越危险。
+### 检索与组织结构
 
-一个不会清理 memory 的 Agent，越长期越混乱。
+包括 chunk、index、metadata、entity resolver、alias table、temporal index、source trust、canonical summary、materialized view。
 
-一个不会验证 source 的 Agent，越会搜索越容易被噪声带偏。
+这些不是知识本身，而是让知识更容易被正确找到、正确排序、正确压缩、正确进入 context 的结构。
 
-一个不会把失败转成结构更新的 Agent，跑一万次也不会真正变聪明。
+很多 RAG 问题，本质上不是 query 问题，也不是 embedding 问题，而是这层结构没有维护好。
 
-所以，下一代 Agent 的关键能力不是“更自主”。
+### 外置 Memory
 
-而是：能维护自己的可感知世界。
+包括用户偏好、项目状态、历史结论、长期约束、会话外状态。
 
-它不只是从知识库里找答案。
+Memory 是模型外部的长期状态层。它会被召回进 context，并直接影响模型对当前任务的判断。
 
-它会整理知识库。
+Memory 最大的风险不是召回不到，而是写错了、过期了、冲突了，还继续以“长期事实”的身份进入 context。
 
-它不只是召回 memory。
-
-它会清理 memory。
-
-它不只是调用 Skill。
-
-它会沉淀 Skill。
-
-它不只是记录 trace。
-
-它会把 trace 变成 eval、规则、索引和文档更新。
-
-它不只是适应环境。
-
-它会改造环境，让未来的自己更容易做对。
+所以 Memory 需要写入门槛、provenance、时间戳、置信度、冲突检测、版本和遗忘机制。
 
 ---
 
-## 4. Agent 和外部信息架构应该共同演化
+## 4. Skill、Eval、Trace 的位置
 
-真正的闭环应该是这样：
+Skill、Eval、Trace 很重要，但它们和文档、索引、Memory 不是同一类东西。
 
-执行任务 → 搜索外部信息 → 组装 context → 行动 → 产生 trace → eval 发现偏差 → 归因失败 → 更新 memory / skill / index / metadata / docs / eval → 未来任务受益
+文档、索引、metadata、Memory、canonical view，是未来 context 直接依赖的信息环境。
 
-这个闭环里，模型只是其中一个节点。
+Skill、Eval、Trace，更像维护这个环境的控制资产和信号系统。
 
-更重要的是信息环境的更新。
+Skill 是行动侧的控制资产。它沉淀的是稳定成功的任务流程：什么时候触发，context 怎么组装，工具怎么调用，输出怎么验证，失败怎么 fallback。
 
-搜索失败，不一定该改 query
+Eval / Benchmark 是测量系统。它们不只是判断最终答案对不对，更应该定位：问题出在 search、memory、evidence、citation、context budget，还是文档结构。
 
-也许该改 chunk。
+Trace 是维护信号。它记录本轮 context 是怎么来的，哪些信息被选中，哪些被丢弃，哪里发生冲突，最终错误和哪段信息有关。
 
-也许该补 metadata。
+这三者的价值，是帮助系统发现环境应该维护哪里，而不是把所有东西都混成“外部环境”。
 
-也许该建 entity resolver。
+更清晰的分法是：
 
-也许该加 temporal index。
+```text
+被维护的对象：docs / index / metadata / memory / canonical views
+维护的控制面：skill / eval / benchmark / trace / validation
+```
 
-也许该生成 canonical summary。
+下一代 Context Management 的核心，是用这些控制面持续维护未来 context 所依赖的信息环境。
 
-也许该把旧文档标成 deprecated。
+---
 
-回答不稳定，不一定该改 prompt
+## 5. 维护发生在使用前、使用中、使用后
 
-也许该沉淀 Skill。
+环境维护不是单一动作。
 
-也许该固定 tool sequence。
+它贯穿 Agent 的整个生命周期。
 
-也许该增加 validator。
+### 使用前维护
 
-也许该把成功路径变成 workflow。
+在 Agent 真正被调用之前，就应该把信息环境整理到一个更适合被感知的状态。
 
-记忆误导，不一定该提醒模型
+文档有版本。
 
-也许该给 memory 加时间衰减。
+旧结论能失效。
 
-也许该做冲突检测。
+实体有 alias。
 
-也许该要求用户确认。
+summary 有 provenance。
 
-也许该删除旧状态。
+索引和 chunk 适合任务。
 
-系统不会变好，不一定是模型不会反思
+高频问题有 canonical view。
 
-也许是失败 trace 没有进入学习回路。
+外置 memory 有时间戳和置信度。
 
-也许 eval 只打分，不归因。
+低可信信息不会和权威证据同权竞争。
 
-也许每次人工修复都没有转化成结构更新。
+这一步类似数据库里的 schema design、index design、statistics refresh、materialized view 和 data cleaning。
+
+没有这一步，每次 runtime search 都是在临场救火。
+
+### 使用中维护
+
+交互过程中，用户纠错、工具失败、检索缺失、memory 冲突、validator 报错，都不应该只是本轮事件。
+
+它们应该变成维护信号。
+
+用户纠正事实，可能意味着 canonical doc 或 memory 需要更新。
+
+用户指出引用错误，可能意味着 provenance 或 source trust 有问题。
+
+检索漏掉关键实体，可能意味着 alias table 或 entity resolver 缺失。
+
+某条 memory 误导当前任务，可能意味着它需要降权、确认或删除。
+
+### 使用后维护
+
+一批任务结束后，可以基于失败 case、正确 case 和 benchmark 做系统性维护。
+
+清理过时文档。
+
+重建 index。
+
+调整 chunking。
+
+维护 source trust。
+
+更新 canonical summary。
+
+清理 memory。
+
+把失败 trace 转成 eval case。
+
+把成功路径转成 workflow 或 skill。
+
+根据 benchmark 定位系统性短板。
+
+使用前维护让系统少踩坑。
+
+使用中维护让系统及时纠偏。
+
+使用后维护让系统积累复利。
+
+---
+
+## 6. 失败 case、正确 case 和 benchmark 都是维护信号
+
+很多系统只在失败时更新。
+
+这不够。
+
+失败 case 告诉系统哪里坏了。
+
+正确 case 告诉系统什么值得固化。
+
+Benchmark 告诉系统性短板在哪里。
+
+三者应该共同驱动信息环境维护。
+
+如果模型答错，是因为检索结果过时，那问题不只是本轮 context 坏了，而是外部文档需要 deprecated 机制。
+
+如果模型召回了错误 memory，那问题不只是本轮召回坏了，而是 Memory 需要冲突检测和过期机制。
+
+如果模型引用了没有来源的 summary，那问题不只是 citation 缺失，而是 derived artifact 需要 provenance。
+
+这些是失败 case 的价值：暴露信息环境里的缺口、污染和结构缺陷。
+
+正确 case 也同样重要。
+
+如果某类任务在某种 context 组织方式下稳定成功，这不是应该被丢掉的临时经验。
+
+成功的 query pattern 可以变成 query template。
+
+稳定有效的 evidence set 可以变成 canonical view。
+
+高频任务的上下文结构可以被物化。
+
+成功的 tool sequence 可以变成 skill。
+
+高质量人工回答可以变成 eval reference。
+
+Benchmark 的价值，则是把 Context Management 变成可测量的系统问题。
+
+一个好的 benchmark 不只是测最终答案对不对。
+
+它应该拆开看：Search 有没有找到关键证据，Memory 有没有召回正确长期状态，Context 有没有暴露冲突，是否引用了过时信息，是否把低可信 summary 当成事实，context budget 是否被噪声浪费，失败是否能归因到具体信息结构。
+
+Benchmark 不是为了刷分。
+
+Benchmark 是为了告诉系统该维护哪里。
+
+成熟循环应该是：
+
+```text
+真实交互 + 失败 case + 正确 case + benchmark
+→ 归因 context failure / success pattern
+→ 更新 docs / metadata / index / memory / canonical view / trust
+→ 必要时更新 skill / eval / validation
+→ 重新运行 benchmark
+→ 发布新的信息环境版本
+```
 
 经历错误不等于学习。
 
-只有错误改变了未来的信息结构，才叫学习。
+重复成功也不等于能力。
+
+只有失败和成功都改变了未来的信息结构，系统才真的在变强。
 
 ---
 
-## 5. 外部信息架构会成为新的护城河
+## 7. 几个典型例子
 
-模型 API 可以调用。
+### 检索到了旧文档
 
-Prompt 可以复制。
+普通修复：下次加 recency bias。
 
-RAG demo 可以很快搭出来。
+结构维护：补时间戳，标 deprecated，建立 temporal index。
 
-但干净、可追溯、可演化的外部信息架构，很难复制。
+### 同一实体有多个名字
 
-它来自真实任务。
+普通修复：query expansion。
 
-来自失败 trace。
+结构维护：维护 alias table 和 entity resolver。
 
-来自长期 memory 治理。
+### Summary 被当成事实
 
-来自用户反馈。
+普通修复：提醒模型“注意引用”。
 
-来自 domain workflow。
+结构维护：所有 derived summary 必须带 provenance；无来源 summary 默认低信任。
 
-来自 eval 体系。
+### Memory 误导当前任务
 
-来自文档习惯、metadata 习惯、版本习惯和组织习惯。
+普通修复：提示模型“以当前任务为准”。
 
-它很慢。
+结构维护：memory 加时间衰减、冲突检测、用户确认和版本。
 
-但也正因为慢，它会成为壁垒。
+### 重复任务不稳定
 
-未来的 Agent 公司，表面上看是在卖模型应用。
+普通修复：写更长 prompt。
 
-实际上是在积累一种东西：
+结构维护：如果是信息缺口，补文档和 canonical view；如果是行动流程不稳定，再沉淀 Skill。
 
-面向 Agent 的世界模型工程。
+### 用户反复纠错
 
-这里的世界模型，不是模型参数里的 world model。
+普通修复：把反馈记进日志。
 
-而是模型外部的、可检索、可验证、可更新、可行动的信息世界。
+结构维护：把纠错转成 documentation patch、memory update、retrieval test 或 eval case。
 
-谁的世界更干净，谁的 Agent 就更稳。
+失败不只是触发 retry。
 
-谁的世界更可追溯，谁的 Agent 就更可信。
+成功也不只是返回结果。
 
-谁的世界更容易被重构，谁的 Agent 就更能进化。
+它们都应该成为维护信号。
 
 ---
 
-## 6. 最大风险：Agent 把错误写进世界
+## 8. Context Manager 会变成信息环境的控制面
 
-Agent 能改造外部信息架构，是下一代能力。
+如果这个判断成立，context manager 就不是 prompt assembler。
 
-也是最大风险。
+也不只是 RAG orchestrator。
 
-因为它可能把自己的错误写成未来事实。
+它会变成 Agent 的 information control plane。
 
-模型生成错误 → 写入 summary / memory / knowledge base / skill rule → 后续 search 检索到 → 模型把它当外部证据 → 错误被强化
+它至少要做几件事：
 
-这比一次 hallucination 严重得多。
+```text
+Sensing：获取外部证据
+Selection：预算约束下选择信息
+Structuring：标注来源、时间、信任、冲突
+State：控制 memory / belief 的读取和写入
+Validation：判断 context 是否足够可信和完整
+Maintenance：把失败和成功都转成环境更新
+```
 
-一次 hallucination 是输出污染。
+第一代 context manager 主要做 Selection。
+
+下一代 context manager 要做完整闭环。
+
+它既要构造当前世界，也要维护未来世界。
+
+既要回答“这轮放什么”，也要回答“为什么每次都缺这个”。
+
+既要知道“这次为什么失败”，也要知道“这次为什么成功，能不能固化”。
+
+---
+
+## 9. 最大风险：把错误维护进环境
+
+环境维护是能力，也是风险。
+
+最危险的不是当前 context 不完美。
+
+而是错误进入未来 context 的生成环境。
+
+典型路径是：
+
+```text
+模型生成错误
+→ 写入 summary / memory / knowledge base / canonical doc
+→ 下一轮被检索或召回
+→ 进入 context
+→ 被模型当成外部事实
+→ 错误被强化
+```
+
+这就是信息正反馈。
+
+一次 hallucination 只是输出污染。
 
 错误 memory 是状态污染。
 
 错误 summary 是知识污染。
 
-错误 skill 是行动污染。
+错误 canonical doc 是环境污染。
 
-错误 eval case 是目标污染。
+如果错误进一步进入 eval reference，那就是目标污染。
 
-目标污染最可怕。
+目标污染最严重，因为系统会开始奖励错误。
 
-因为系统会开始奖励错误。
+所以，下一代 Context Management 必须内置信息免疫系统：
 
-所以，下一代 Agent 必须有信息免疫系统。
+- provenance：每段信息知道来源；
+- trust tier：raw evidence、tool output、human note、model summary、hypothesis 不能同权；
+- validation gate：写入长期结构前必须验证；
+- versioning：summary、memory、index、canonical view、eval 都能回滚；
+- TTL / decay：长期状态会自然失效；
+- conflict detection：冲突不能静默共存；
+- write permission：模型生成内容不能默认成为未来事实。
 
-不是简单的 safety filter。
-
-而是更底层的 epistemic hygiene：
-
-- 每条信息都有 provenance；
-- 每个来源都有 trust tier；
-- 每次写入都有 validation gate；
-- 每个结构更新都有 version；
-- 每个长期状态都有 decay / TTL；
-- 每个 derived artifact 都能追溯到 raw evidence；
-- 每次 evolve 都能 rollback；
-- 每个自我修改都有速率限制。
-
-没有这套东西，self-evolve 不是进化。
-
-是自污染。
+没有这些机制，environment maintenance 会变成自污染自动化。
 
 ---
 
-## 7. 下一代 Agent 的形态
+## 10. 结论
 
-我认为下一代 Agent 不应该被设计成“一个会调用很多工具的聊天机器人”。
+Context Management 的下一代，不是更长窗口，也不是更复杂的 RAG pipeline。
 
-它更像一个持续运行的信息生命体。
+Agentic Search 已经让系统更会“找”。
 
-它有感知层。
-
-不只是 retrieval，而是 active sensing：发现缺口、主动搜索、评估证据、寻找反证。
-
-它有状态层。
-
-不只是 memory，而是 belief management：写入、确认、冲突、遗忘、版本。
-
-它有行动层。
-
-不只是 tool calling，而是 skill execution：复用验证过的流程，控制风险，处理失败。
-
-它有学习层。
-
-不只是 logging，而是 trace-to-structure：把失败变成 eval、规则、索引、文档和 skill 更新。
-
-它有治理层。
-
-不只是 guardrail，而是 information governance：provenance、trust、validation、rollback、权限和更新速率。
-
-这五层加起来，才是 Agent 的下一代架构。
-
-- Perception：Search / Retrieval / Active Sensing
-- State：Memory / Belief / Context
-- Action：Tool / Skill / Workflow
-- Learning：Trace / Eval / Feedback
-- Governance：Provenance / Trust / Version / Rollback
-
-今天很多系统只有第一层和第三层。
-
-会搜。
-
-会调工具。
-
-但状态是脏的，学习是假的，治理是缺的。
-
-这种 Agent 可以 demo。
-
-但很难长期稳定运行。
-
----
-
-## 8. 真正的问题
-
-所以，下一代 Agent 的问题不是：
-
-模型能不能更强？
-
-当然能。
-
-上下文能不能更长？
-
-当然能。
-
-工具能不能更多？
-
-当然能。
-
-但这些不是最核心的问题。
+下一步是让系统更会“维护被找的世界”。
 
 真正的问题是：
 
-Agent 能不能维护一个适合自己思考和行动的世界？
+**系统能不能维护一个干净、可追溯、可更新、可失效、可被正确搜索的信息环境；并在每次调用时，从这个环境中构造出足够好的运行时世界。**
 
-它能不能让重要信息更容易被看见？
+这件事包括两部分。
 
-能不能让过时信息自然失效？
+第一，构造当前 context：从文档、检索结果、memory、工具返回和用户输入中，选择足够可信、足够新、足够相关的信息，组织成模型这一轮能使用的世界。
 
-能不能让事实、推测、总结、计划、偏好、规则分层？
+第二，维护未来 context 的来源：让文档有版本，让 summary 有 provenance，让 memory 会过期，让索引能更新，让实体能归一，让错误不会被写成未来事实。
 
-能不能把失败变成未来结构？
+Skill 和 Eval 很重要，但它们不是外部信息环境本身。
 
-能不能把经验变成 Skill？
+Skill 是行动经验的控制资产。
 
-能不能防止错误写入长期状态？
+Eval / Benchmark 是测量和维护的控制资产。
 
-能不能在改造环境的同时不污染环境？
+它们的价值在于帮助系统发现：哪些信息结构应该被修复，哪些成功路径应该被固化，哪些错误不应该再次进入 context。
 
-这才是 Agent 工程的下半场。
+Context 不是模型的输入。
 
----
+Context 是模型的世界。
 
-## 9. 结论
+而下一代 Context Management，不只是实时构造这个世界。
 
-AI 的上半场，是模型能力的竞争。
-
-谁的模型更强，谁赢。
-
-AI Agent 的下半场，会变成外部信息架构的竞争。
-
-谁能治理好模型所处的世界，谁赢。
-
-因为 Agent 不是孤立的大脑。
-
-它需要眼睛、记忆、习惯、工具、痛觉和免疫系统。
-
-Search 是眼睛。
-
-Context 是视野。
-
-Memory 是长期状态。
-
-Skill 是行动习惯。
-
-Tool 是手。
-
-Trace 和 Eval 是痛觉。
-
-Governance 是免疫系统。
-
-外部信息架构，是它生活的世界。
-
-未来真正强的 Agent，不只是能在世界里找到答案。
-
-它会持续整理世界。
-
-修正世界。
-
-压缩世界。
-
-验证世界。
-
-遗忘世界。
-
-并让未来的自己生活在一个更容易做对的世界里。
-
-模型越强，这件事越重要。
-
-因为越强的模型，越需要一个干净的世界。
+更是持续维护这个世界，并让它在使用前、使用中、使用后都变得更适合被模型正确感知。

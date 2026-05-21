@@ -3,7 +3,10 @@
  ******************************************************************************/
 
 .essay-page {
-  max-width: 100%;
+  width: min(1120px, calc(100vw - 2rem));
+  max-width: none;
+  margin-left: 50%;
+  transform: translateX(-50%);
 
   .essay-hero {
     max-width: 860px;
@@ -178,21 +181,21 @@
   #markdown-content {
     color: var(--global-text-color);
     font-size: 1.02rem;
-    line-height: 1.82;
+    line-height: 1.78;
 
     > p:first-child {
-      font-size: 1.12rem;
-      line-height: 1.75;
+      font-size: 1.1rem;
+      line-height: 1.72;
     }
 
     p {
       margin-top: 0;
-      margin-bottom: 1.05rem;
+      margin-bottom: 0.78rem;
     }
 
     h2 {
-      margin-top: 2.6rem;
-      margin-bottom: 1.05rem;
+      margin-top: 2.35rem;
+      margin-bottom: 0.95rem;
       padding-top: 0.25rem;
       color: var(--global-text-color);
       font-size: 1.55rem;
@@ -201,22 +204,22 @@
     }
 
     h3 {
-      margin-top: 1.75rem;
-      margin-bottom: 0.75rem;
+      margin-top: 1.55rem;
+      margin-bottom: 0.65rem;
       color: var(--global-text-color);
       font-size: 1.15rem;
       letter-spacing: -0.015em;
     }
 
     hr {
-      margin: 2rem 0;
+      margin: 1.55rem 0;
       border-color: var(--global-divider-color);
       opacity: 1;
     }
 
     blockquote {
-      margin: 1.4rem 0;
-      padding: 0.9rem 1.1rem;
+      margin: 1.15rem 0;
+      padding: 0.85rem 1.05rem;
       border-left: 3px solid var(--global-theme-color);
       border-radius: 0 10px 10px 0;
       background: rgba(128, 128, 128, 0.06);
@@ -228,7 +231,7 @@
     }
 
     pre {
-      margin: 1.25rem 0 1.45rem;
+      margin: 1.1rem 0 1.25rem;
       border-radius: 12px;
       border: 1px solid var(--global-divider-color);
     }
@@ -239,11 +242,11 @@
 
     ul,
     ol {
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.05rem;
       padding-left: 1.35rem;
 
       li {
-        margin-bottom: 0.35rem;
+        margin-bottom: 0.28rem;
       }
     }
   }
@@ -260,6 +263,8 @@ html[data-theme="dark"] {
 
 @media (max-width: 992px) {
   .essay-page {
+    width: min(860px, calc(100vw - 2rem));
+
     .essay-shell {
       display: block;
       max-width: 860px;
@@ -277,6 +282,8 @@ html[data-theme="dark"] {
 
 @media (max-width: 576px) {
   .essay-page {
+    width: calc(100vw - 1rem);
+
     .essay-hero {
       padding-top: 1rem;
       padding-bottom: 1.25rem;
@@ -294,7 +301,7 @@ html[data-theme="dark"] {
 
     #markdown-content {
       font-size: 0.98rem;
-      line-height: 1.75;
+      line-height: 1.72;
 
       h2 {
         font-size: 1.28rem;

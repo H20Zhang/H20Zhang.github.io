@@ -1,316 +1,462 @@
 ---
 layout: single
-title: "Next-Gen Agents: From Tool Calling to Governing Their Perceivable World"
+title: "The Next Generation of Context Management: Maintaining the Model's Perceivable World"
 date: 2026-05-21 10:05:00 +0000
 categories:
   - Agent
   - AI
+  - Context Management
 lang: en
 tags:
+  - Context Management
   - Agent
-  - Information Architecture
-  - Governance
+  - RAG
   - Memory
-  - Search
+  - Information Architecture
 ---
 
-**TL;DR:** The core of next-generation agents is not better tool calling or better prompting, but co-evolving with their external information environment.
+Context management was first understood as a window management problem.
 
-The stronger the model gets, the less we can focus only on the model itself.
+How do we fit in more tokens?
 
-What really determines an agent’s ceiling is the world it lives in: what it can see, remember, trust, rely on for action, and reconstruct after failure.
+How do we summarize conversation history?
 
-External information is not just a knowledge repository.
+How do we put RAG results into the context?
 
-External information is the agent’s world.
+How do we make long-context models stop losing important information?
 
-More precisely, it is the agent’s *perceivable world*.
+These questions matter, but they only cover the first layer: **how to put information into the window.**
+
+The next generation of context management has to handle a deeper problem: **how to maintain an information environment that the model can correctly perceive, continuously use, and improve through use.**
+
+The model itself does not touch the external world.
+
+It only touches context.
+
+So context is not ordinary input.
+
+Context is the model's reality for the current step.
+
+What the model believes, ignores, can call, and reasons from all depend on the world that context constructs for it.
+
+If that world is stale, dirty, conflicting, or source-free, a stronger model may simply become wrong in a more convincing way.
 
 ---
 
-## 1) Today’s agent narrative is too narrow
+## 1. Long context does not automatically solve the context problem
 
-We often describe agents as:
+Long context expands the window, but it does not automatically improve signal quality.
 
-**LLM + Tool + Memory + RAG + Planner**
+When the window becomes longer, what enters the context is not only useful information. It also includes more noise, stale evidence, duplicated content, conflicting versions, and errors the model generated earlier.
 
-That formula is not wrong.
+A dirty 128K context is not necessarily better than a clean 8K context.
 
-But it underweights the most important piece.
+The context window is more like a channel than a warehouse. What matters is not how many tokens are stuffed into it, but whether the information entering the window is relevant, fresh, trustworthy, and structured enough.
 
-It implies the LLM is the “real” agent and everything else is a plugin:
+The goal of context management should not be to maximize fill rate. It should be to maximize the quality of the world-state representation needed by the current task.
 
-- Tool as plugin
-- RAG as plugin
-- Memory as plugin
-- Skill as plugin
-- Eval as plugin
+The key question is not:
 
-That leads to a flawed engineering intuition: if the model is strong enough and you attach enough tools and data, the agent will naturally get better.
-
-Reality is different.
-
-Production agents do not live inside model weights.
-
-They live inside an **external information environment**.
-
-That environment determines perception, memory, action, and learning.
-
-If the environment is dirty, the agent gets contaminated.
-
-If it is chaotic, the agent gets lost.
-
-If it is not traceable, the agent confuses guesses with facts.
-
-If it cannot update, the agent repeats the same errors.
-
-So the next-gen question is not:
-
-> How do we make the model look more like an autonomous intelligence?
+> What else can we stuff in?
 
 It is:
 
-> How do we build an external information environment where stable intelligence can emerge?
+> What does the model need to see for the current task? Which information is stale? Which sources are trustworthy? Which conflicts must be exposed? Which content should not enter this round of reality at all?
 
 ---
 
-## 2) What “external information” really is
+## 2. Agentic search solves “how to search,” not “whether the world is worth searching”
 
-For an agent, external information is not just context payload.
+First-generation RAG is open loop:
 
-It plays at least four roles:
+```text
+query → retrieve → top-k → stuff into context
+```
 
-1. **Perception object**
-   Search is not a RAG add-on. Search is the agent’s eyes.
-   Without search, the model cannot know what changed in the world.
-   If search only returns top-k documents, the agent is nearsighted.
-   If search carries source, freshness, provenance, conflict, and coverage, the agent starts to truly perceive.
+Agentic search moves one step forward. It can detect information gaps, construct queries, retrieve, evaluate results, rewrite queries, switch sources, look for counter-evidence, and decide whether to inject the results into context.
 
-2. **Long-term state**
-   Memory is not chat history.
-   It is the agent’s state estimate of user, project, task, and environment.
-   One wrong memory is not one error; it is a seed for many future errors.
+This is important.
 
-3. **Action space**
-   Tool schemas, API docs, workflows, and skill registries are not manuals only.
-   They define what the agent can do, cannot do, and should do.
-   Tools are not external functions; they are world affordances.
-   Skills are not prompt templates; they are action habits.
+It makes the system better at searching.
 
-4. **Learning substrate**
-   Trace, evals, failure logs, and user feedback are not observability only.
-   They are raw material for improvement.
-   Without trace, failure is just failure.
-   With trace, failure can become structural updates.
+But it still mainly solves one problem: **how to see better inside an existing information environment.**
 
-So external information is not merely input.
+If the information environment itself is not suitable for search, agentic search will still hit a ceiling.
 
-It is the agent’s perception world, state world, action world, and learning world.
+If documents have no timestamps, the system struggles to distinguish old from new.
 
-Together, these form the real external information architecture.
+If entities are not normalized, query rewriting may still miss aliases.
+
+If summaries have no provenance, the model may treat a previous model-generated summary as an external fact.
+
+If old documents are not marked as deprecated, old and new evidence compete with equal weight inside the context.
+
+If facts, guesses, plans, and retrospectives are mixed in the same document, the retriever struggles to separate signal from noise.
+
+The next step is not merely to make the system better at searching.
+
+It is to make the world being searched more worth searching.
 
 ---
 
-## 3) Next-gen agents are not “more autonomous”; they are better world maintainers
+## 3. What actually needs to be maintained behind context
 
-Autonomy is attractive: longer tasks, more tools, less human intervention, deeper planning.
+The information environment behind context can be divided into three parts.
 
-But autonomy without information governance only scales mistakes faster.
+### External knowledge sources
 
-- An agent that cannot separate fact from speculation becomes more dangerous as autonomy increases.
-- An agent that cannot clean memory becomes more chaotic over time.
-- An agent that cannot validate sources becomes easier to mislead by noise.
-- An agent that cannot convert failures into structural updates will not truly get smarter, even after ten thousand runs.
+This includes documents, web pages, databases, knowledge bases, code repositories, product docs, API docs, business rules, and human-written notes.
 
-So the core next-gen capability is not just autonomy.
+These are the external world the agent needs to perceive.
 
-It is the ability to **maintain its perceivable world**.
+They need versions, timestamps, deprecation markers, sources, trust levels, structured boundaries, and canonical sources.
 
-Not only retrieving from a knowledge base, but organizing it.
+Without this basic governance, even a strong retriever is just finding the least-bad fragments inside a messy information space.
 
-Not only recalling memory, but cleaning it.
+### Retrieval and organization structures
 
-Not only invoking skills, but distilling them.
+This includes chunks, indexes, metadata, entity resolvers, alias tables, temporal indexes, source trust, canonical summaries, and materialized views.
 
-Not only recording traces, but turning traces into eval rules, indices, and docs updates.
+These are not knowledge itself. They are structures that make knowledge easier to find correctly, rank correctly, compress correctly, and inject into context correctly.
 
-Not only adapting to the environment, but reshaping it so future decisions are easier to get right.
+Many RAG failures are not query problems or embedding problems. They are failures to maintain this layer.
+
+### Externalized memory
+
+This includes user preferences, project state, historical conclusions, long-term constraints, and state outside the current conversation.
+
+Memory is the long-term state layer outside the model. It is recalled into context and directly affects how the model interprets the current task.
+
+The biggest risk of memory is not failing to recall it.
+
+The bigger risk is writing it incorrectly, letting it expire without noticing, allowing contradictions to coexist, and then continuing to inject it into context as if it were a long-term fact.
+
+So memory needs write gates, provenance, timestamps, confidence, conflict detection, versioning, and forgetting mechanisms.
 
 ---
 
-## 4) Agents and information architecture should co-evolve
+## 4. Where skill, eval, and trace fit
 
-A real loop looks like this:
+Skill, eval, and trace are important, but they are not the same type of thing as documents, indexes, or memory.
 
-Task execution → external search → context assembly → action → trace generation → eval finds deviation → failure attribution → update memory / skill / index / metadata / docs / eval → future tasks improve.
+Documents, indexes, metadata, memory, and canonical views are the information environment that future context directly depends on.
 
-In this loop, the model is only one node.
+Skill, eval, and trace are better understood as control assets and signal systems for maintaining that environment.
 
-The bigger driver is information-environment updates.
+A skill is an action-side control asset. It captures a stable task procedure: when it should trigger, how context should be assembled, which tools should be called, how output should be validated, and how failures should fall back.
 
-When search fails, maybe don’t just rewrite the query.
-Maybe improve chunking, add metadata, build an entity resolver, add temporal indexes, generate canonical summaries, or deprecate stale docs.
+Eval and benchmark are measurement systems. They should not only judge whether the final answer is correct. They should help locate whether the failure came from search, memory, evidence, citation, context budget, or document structure.
 
-When answers are unstable, maybe don’t just adjust prompts.
-Maybe distill skills, freeze tool sequences, add validators, or package winning paths into workflows.
+Trace is a maintenance signal. It records where the current context came from, which information was selected, which information was discarded, where conflicts occurred, and which piece of context contributed to the final error.
 
-When memory misleads, maybe don’t just remind the model.
-Maybe add memory decay, conflict detection, user confirmation, or state deletion.
+Their value is to help the system discover where the environment should be maintained, rather than to put everything into the same bucket called “external environment.”
 
-When the system does not improve, maybe it is not because the model cannot reflect.
-Maybe failure traces never enter the learning loop, evals score but do not attribute, and manual fixes never become structural updates.
+A cleaner separation is:
+
+```text
+Objects being maintained: docs / index / metadata / memory / canonical views
+Control plane for maintenance: skill / eval / benchmark / trace / validation
+```
+
+The core of next-generation context management is to use this control plane to continuously maintain the information environment that future context depends on.
+
+---
+
+## 5. Maintenance happens before, during, and after use
+
+Environment maintenance is not a single action.
+
+It spans the full lifecycle of the agent.
+
+### Maintenance before use
+
+Before the agent is invoked, the information environment should already be organized into a state that is easier to perceive.
+
+Documents have versions.
+
+Old conclusions can expire.
+
+Entities have aliases.
+
+Summaries have provenance.
+
+Indexes and chunks fit the workload.
+
+Frequent questions have canonical views.
+
+Externalized memory has timestamps and confidence.
+
+Low-trust information does not compete with authoritative evidence at equal weight.
+
+This is similar to schema design, index design, statistics refresh, materialized views, and data cleaning in databases.
+
+Without this step, every runtime search becomes firefighting.
+
+### Maintenance during use
+
+During interaction, user corrections, tool failures, retrieval misses, memory conflicts, and validator errors should not be treated as one-off events.
+
+They should become maintenance signals.
+
+If the user corrects a fact, the canonical document or memory may need to be updated.
+
+If the user points out a citation error, provenance or source trust may be wrong.
+
+If retrieval misses a key entity, an alias table or entity resolver may be missing.
+
+If a memory item misleads the current task, it may need to be downweighted, confirmed, or deleted.
+
+### Maintenance after use
+
+After a batch of tasks, the system can perform systematic maintenance based on failure cases, correct cases, and benchmarks.
+
+Clean stale documents.
+
+Rebuild indexes.
+
+Adjust chunking.
+
+Maintain source trust.
+
+Update canonical summaries.
+
+Clean memory.
+
+Turn failure traces into eval cases.
+
+Turn successful paths into workflows or skills.
+
+Use benchmarks to locate systematic weaknesses.
+
+Maintenance before use helps the system avoid avoidable failures.
+
+Maintenance during use allows timely correction.
+
+Maintenance after use creates compounding returns.
+
+---
+
+## 6. Failure cases, correct cases, and benchmarks are all maintenance signals
+
+Many systems update only after failures.
+
+That is not enough.
+
+Failure cases tell the system what is broken.
+
+Correct cases tell the system what is worth solidifying.
+
+Benchmarks reveal systematic weaknesses.
+
+All three should drive information environment maintenance.
+
+If the model answers incorrectly because retrieval returned stale evidence, the problem is not just a bad context for this round. The external documents need a deprecation mechanism.
+
+If the model recalls the wrong memory, the problem is not just a bad memory retrieval. Memory needs conflict detection and expiration mechanisms.
+
+If the model cites a summary with no source, the problem is not just missing citation text. Derived artifacts need provenance.
+
+This is the value of failure cases: they expose gaps, contamination, and structural defects in the information environment.
+
+Correct cases matter just as much.
+
+If a class of tasks consistently succeeds under a certain context organization pattern, that pattern should not be thrown away as temporary experience.
+
+A successful query pattern can become a query template.
+
+A stable evidence set can become a canonical view.
+
+A frequent task’s context structure can be materialized.
+
+A successful tool sequence can become a skill.
+
+A high-quality human answer can become an eval reference.
+
+The value of benchmarks is to turn context management into a measurable systems problem.
+
+A good benchmark should not only measure whether the final answer is correct.
+
+It should decompose the pipeline: Did search find the key evidence? Did memory recall the right long-term state? Did context expose conflicts? Did the system cite stale information? Did it treat a low-trust summary as fact? Was context budget wasted on noise? Can the failure be attributed to a specific information structure?
+
+Benchmarks are not for score chasing.
+
+Benchmarks tell the system what to maintain.
+
+A mature loop should look like this:
+
+```text
+real interactions + failure cases + correct cases + benchmarks
+→ attribute context failures / success patterns
+→ update docs / metadata / index / memory / canonical views / trust
+→ update skill / eval / validation when needed
+→ rerun benchmarks
+→ release a new version of the information environment
+```
 
 Experiencing errors is not learning.
 
-Only errors that change future information structure count as learning.
+Repeating successes is not capability.
+
+The system becomes stronger only when both failures and successes change the structure of future information.
 
 ---
 
-## 5) External information architecture will become the moat
+## 7. Typical examples
 
-Model APIs are accessible.
-Prompts are copyable.
-RAG demos are easy to assemble.
+### Retrieved documents are stale
 
-But a clean, traceable, evolvable information architecture is hard to copy.
+Naive fix: add recency bias next time.
 
-It comes from real tasks, failure traces, long-term memory governance, user feedback, domain workflows, eval systems, documentation discipline, metadata discipline, versioning discipline, and organizational habits.
+Structural maintenance: add timestamps, mark documents as deprecated, build a temporal index.
 
-It is slow to build.
+### The same entity has multiple names
 
-That slowness is exactly why it becomes defensible.
+Naive fix: query expansion.
 
-Future agent companies may appear to sell model applications.
+Structural maintenance: maintain an alias table and entity resolver.
 
-Underneath, they are accumulating something deeper:
+### A summary is treated as fact
 
-**world-model engineering for agents**—not inside parameters, but outside the model as a retrievable, verifiable, updatable, actionable information world.
+Naive fix: remind the model to pay attention to citations.
 
-Whoever has the cleaner world gets the more stable agent.
+Structural maintenance: require all derived summaries to carry provenance; summaries without sources default to low trust.
 
-Whoever has the more traceable world gets the more trustworthy agent.
+### Memory misleads the current task
 
-Whoever can re-architect the world faster gets the more evolvable agent.
+Naive fix: prompt the model to prioritize the current task.
 
----
+Structural maintenance: add time decay, conflict detection, user confirmation, and versioning to memory.
 
-## 6) The biggest risk: agents writing errors into the world
+### Repeated tasks are unstable
 
-The ability to modify external information architecture is next-gen power.
+Naive fix: write a longer prompt.
 
-It is also next-gen risk.
+Structural maintenance: if the issue is an information gap, improve documents and canonical views; if the action procedure is unstable, distill a skill.
 
-Because an agent may write its own mistakes as future facts:
+### The user repeatedly corrects the system
 
-Model error → written into summary/memory/knowledge/skill rule → retrieved later by search → treated as external evidence → reinforced.
+Naive fix: log the feedback.
 
-This is worse than one hallucinated response.
+Structural maintenance: turn the correction into a documentation patch, memory update, retrieval test, or eval case.
 
-- Hallucination: output contamination.
-- Wrong memory: state contamination.
-- Wrong summary: knowledge contamination.
-- Wrong skill: action contamination.
-- Wrong eval case: goal contamination.
+Failures should not only trigger retries.
 
-Goal contamination is the most dangerous because the system starts rewarding wrong behavior.
+Successes should not only return answers.
 
-So next-gen agents need an information immune system—not just a safety filter, but epistemic hygiene:
-
-- provenance for every information item;
-- trust tiers for every source;
-- validation gates for every write;
-- versioning for every structural update;
-- decay/TTL for long-term state;
-- traceability from derived artifacts to raw evidence;
-- rollback for every evolution;
-- rate limits for self-modification.
-
-Without these, self-evolution is not evolution.
-
-It is self-pollution.
+Both should become maintenance signals.
 
 ---
 
-## 7) Form factor of next-gen agents
+## 8. The context manager becomes the control plane of the information environment
 
-A next-gen agent should not be designed as “a chatbot that can call many tools.”
+If this direction is right, the context manager is no longer a prompt assembler.
 
-It is closer to a continuously running informational organism with five layers:
+It is not just a RAG orchestrator either.
 
-- **Perception**: Search / Retrieval / Active Sensing
-- **State**: Memory / Belief / Context
-- **Action**: Tool / Skill / Workflow
-- **Learning**: Trace / Eval / Feedback
-- **Governance**: Provenance / Trust / Version / Rollback
+It becomes the agent’s information control plane.
 
-Many systems today only have perception + action.
+It has to do at least several things:
 
-They can search.
+```text
+Sensing: acquire external evidence
+Selection: select information under budget constraints
+Structuring: annotate source, time, trust, and conflicts
+State: control memory / belief reads and writes
+Validation: decide whether the context is trustworthy and complete enough
+Maintenance: turn both failures and successes into environment updates
+```
 
-They can call tools.
+First-generation context managers mainly do selection.
 
-But state is dirty, learning is shallow, governance is missing.
+Next-generation context managers need to close the loop.
 
-Those agents can demo.
+They construct the current world and maintain the future world.
 
-They are hard to run stably over time.
+They answer not only “what should be included this round,” but also “why is this missing every time.”
+
+They need to know not only “why did this fail,” but also “why did this succeed, and can that success be solidified.”
 
 ---
 
-## 8) The real question
+## 9. The biggest risk: maintaining errors into the environment
 
-So the key question for next-gen agents is not:
+Environment maintenance is a capability.
 
-- Can models get stronger? (Yes.)
-- Can context windows get longer? (Yes.)
-- Can tool catalogs get larger? (Yes.)
+It is also a risk.
+
+The most dangerous problem is not an imperfect context in the current round.
+
+It is allowing errors to enter the environment that generates future context.
+
+A typical path looks like this:
+
+```text
+model generates an error
+→ error is written into summary / memory / knowledge base / canonical doc
+→ the next round retrieves or recalls it
+→ it enters context
+→ the model treats it as external fact
+→ the error is reinforced
+```
+
+This is information positive feedback.
+
+A hallucination is output contamination.
+
+Wrong memory is state contamination.
+
+Wrong summary is knowledge contamination.
+
+Wrong canonical document is environment contamination.
+
+If the error enters an eval reference, it becomes objective contamination.
+
+Objective contamination is the most dangerous form, because the system starts rewarding the error.
+
+Therefore, next-generation context management needs an information immune system:
+
+- provenance: every piece of information knows where it came from;
+- trust tiers: raw evidence, tool output, human notes, model summaries, and hypotheses are not equal;
+- validation gates: long-term structures must be verified before writes;
+- versioning: summaries, memory, indexes, canonical views, and evals can be rolled back;
+- TTL / decay: long-term state can expire naturally;
+- conflict detection: contradictions cannot silently coexist;
+- write gates: model-generated content does not automatically become future fact.
+
+Without these mechanisms, environment maintenance becomes automated self-contamination.
+
+---
+
+## 10. Conclusion
+
+The next generation of context management is not a longer window or a more complex RAG pipeline.
+
+Agentic search has already made systems better at finding.
+
+The next step is to make systems better at maintaining the world being searched.
 
 The real question is:
 
-Can the agent maintain a world that is fit for thinking and action?
+**Can the system maintain an information environment that is clean, traceable, updatable, expirable, and correctly searchable; and can it construct a good enough runtime world from that environment for every model call?**
 
-Can it make important information easier to see?
+This has two parts.
 
-Can it let outdated information expire naturally?
+First, construct the current context: select sufficiently trustworthy, fresh, and relevant information from documents, retrieval results, memory, tool outputs, and user input, then organize it into the world the model can use in this round.
 
-Can it separate facts, hypotheses, summaries, plans, preferences, and rules by layer?
+Second, maintain the sources of future context: make documents versioned, make summaries carry provenance, make memory expire, make indexes updatable, normalize entities, and prevent errors from becoming future facts.
 
-Can it turn failures into future structure?
+Skill and eval are important, but they are not the external information environment itself.
 
-Can it turn experience into skills?
+Skill is a control asset for action experience.
 
-Can it stop errors from entering long-term state?
+Eval and benchmark are control assets for measurement and maintenance.
 
-Can it reshape the environment without contaminating it?
+Their value is to help the system discover which information structures should be repaired, which successful paths should be solidified, and which errors should never enter context again.
 
-That is the second half of agent engineering.
+Context is not the model’s input.
 
----
+Context is the model’s world.
 
-## 9) Conclusion
+The next generation of context management is not only about constructing this world at runtime.
 
-The first half of AI competition is model capability.
-
-The second half of AI agent competition will be external information architecture.
-
-Who governs the model’s world better wins.
-
-Because an agent is not an isolated brain.
-
-It needs eyes, memory, habits, tools, pain signals, and an immune system.
-
-Search is eyes.
-Context is field of view.
-Memory is long-term state.
-Skill is action habit.
-Tools are hands.
-Trace and eval are pain signals.
-Governance is the immune system.
-
-External information architecture is the world where the agent lives.
-
-The strongest future agents will not only find answers in the world.
-
-They will continuously organize, correct, compress, verify, and forget parts of that world—so their future selves can do the right thing more reliably.
-
-The stronger the model, the more this matters.
+It is about continuously maintaining this world so that before, during, and after use, it becomes easier for the model to perceive correctly.

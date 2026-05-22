@@ -1,10 +1,10 @@
 ---
-title: 'VeloANN: SSD-Resident Graph ANN and VectorDB Storage-Execution Optimization'
+title: 'Optimizing SSD-Resident Graph Indexing for High-Throughput Vector Search'
 collection: publications
 permalink: /publication/Arxiv-26-2
-excerpt: 'Hao Zhang, et al.'
-authors: 'Hao Zhang, et al.'
-abstract: 'Studies SSD-resident graph ANN and storage-execution optimization for vector databases, improving retrieval efficiency under modern hardware constraints.'
+excerpt: 'Weichen Zhao, Yuncheng Lu, Yao Tian, Hao Zhang, Jiehui Li, Minghao Zhao, Yakun Li, Weining Qian'
+authors: 'Weichen Zhao, Yuncheng Lu, Yao Tian, Hao Zhang, Jiehui Li, Minghao Zhao, Yakun Li, Weining Qian'
+abstract: 'Presents VeloANN, an SSD-resident graph indexing system for high-throughput vector search.'
 date: 2026-02-26
 venue: 'arXiv'
 paperurl: 'https://arxiv.org/abs/2602.22805'
@@ -14,4 +14,4 @@ citation:
 ---
 [Paper link](https://arxiv.org/abs/2602.22805)
 
-VeloANN studies SSD-resident graph ANN with storage-execution optimization for vector database systems.
+VeloANN studies SSD-resident graph indexing for high-throughput vector search.

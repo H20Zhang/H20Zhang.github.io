@@ -2,7 +2,7 @@
 layout: default
 permalink: /visitors/
 title: Visitors
-nav: true
+nav: false
 nav_order: 5
 ---
 

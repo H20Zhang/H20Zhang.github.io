@@ -10,7 +10,7 @@ profile:
   image_circular: false
   more_info: >
     <p>Research Scientist, ByteDance</p>
-    <p>Data Systems for Agents</p>
+    <p>Data infrastructure for LLM agents and AI-native workloads</p>
     <p><a href="mailto:zhanghao.ai@bytedance.com">zhanghao.ai@bytedance.com</a></p>
 
 recent_publications: false
@@ -29,24 +29,20 @@ latest_posts:
 
 I am a Research Scientist at ByteDance, working on **data systems for LLM agents and AI-native workloads**. I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
 
-By **data systems for agents**, I mean the infrastructure that helps LLM agents acquire, organize, store, retrieve, query, transform, and use the heterogeneous information they need: documents, tables, vectors, graphs, multimodal data, knowledge, and externalized memory. I often use **agentic data management** to describe this research agenda.
-
-This is different from context-window optimization such as prompt compression or cache management. I focus on the data systems layer beneath the agent: storage, indexing, retrieval, query processing, semantic transformation, and execution. The goal is to make agent-facing data scalable, fresh, trustworthy, and useful. I also write short technical notes on this direction in the [Blog](/blog/).
+I focus on the data infrastructure beneath agents — storage, indexing, retrieval, semantic transformation, and query execution over documents, tables, vectors, graphs, and multimodal data. Not context-window optimization such as prompt compression or KV cache management, but the systems layer that makes agent-facing data scalable, fresh, and trustworthy. I use **agentic data management** to describe this research agenda, and write short technical notes on this direction in the [Blog](/blog/).
 
 ## Highlights
 
-- Authored and co-authored **20+ papers** in top-tier database venues including **SIGMOD, VLDB, ICDE, and TKDE**.
+- Authored and co-authored **25 papers** in top-tier database venues including **SIGMOD, VLDB, ICDE, and TKDE**.
 - Built database and Data+AI systems across distributed query processing, graph engines, vector search, semantic query processing, tensor-native execution, and agentic data management.
 - Designed and architected systems such as **`Sema`, `GES`, `SeccoSQL`, `DISC`, and `Crystal`**, spanning research prototypes and production-oriented infrastructure.
-- Achieved **LDBC SNB Interactive world-record results** in both the declarative track (2024) and the imperative track (2025), including a reported **3,000x improvement over the prior #2 result** in the declarative track.
+- Achieved **LDBC SNB Interactive world-record results** in both the declarative track (2024) and the imperative track (2025), including a **3,000× throughput improvement over the prior #2 result** in the declarative track.
 
 ## Research Thrusts
 
 ### Agentic data management
 
-My current research asks how data systems should support the full lifecycle of information used by LLM agents: acquiring task-relevant evidence, transforming heterogeneous data into usable context, storing and updating persistent memory, retrieving from vector/graph/relational substrates, validating information quality, and executing context-intensive queries efficiently.
-
-The key problem is not only how to fill an agent's context window, but how to maintain the underlying data landscape that future context depends on. This agenda connects my work on semantic query processing, multimodal ETL, vector and graph retrieval, externalized memory, and accelerator-aware execution.
+How should data systems support the full lifecycle of information used by LLM agents — from acquiring evidence, to storing and updating memory, to retrieving and executing context-intensive queries? This agenda connects my work across the three thrusts below.
 
 Recent writing: [Context Management 的下一代：维护模型可感知的世界](/blog/2026/next-gen-agent-zh/) ([English](/blog/2026/next-gen-agent-en/)).
 

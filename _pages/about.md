@@ -10,7 +10,7 @@ profile:
   image_circular: false
   more_info: >
     <p>Research Scientist, ByteDance</p>
-    <p>Data Systems for Agents</p>
+    <p>AI-native Data Systems</p>
     <p><a href="mailto:zhanghao.ai@bytedance.com">zhanghao.ai@bytedance.com</a></p>
 
 recent_publications: false
@@ -27,9 +27,9 @@ latest_posts:
   limit: 3
 ---
 
-I am a Research Scientist at ByteDance, working on **data systems for LLM agents**. I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
+I am a Research Scientist at ByteDance, building **data systems for AI-native and data-intensive workloads**. My current focus is **agentic data management** — not context-window optimization, but the systems layer beneath LLM agents that turns scattered enterprise and multimodal data into structured, queryable substrates. Beyond this focus, I also work on graph/vector retrieval infrastructure, accelerator-aware query execution, and distributed query processing. I write technical notes on agentic data management in the [Blog](/blog/).
 
-I focus on the data infrastructure beneath agents — not context-window optimization such as prompt compression or KV cache management, but the systems layer that turns scattered enterprise and multimodal data into structured, queryable substrates for agents. Retrieval, semantic transformation, storage, and query execution — making agent-facing data scalable, fresh, trustworthy, and reusable. I use **agentic data management** to describe this line of work, and write technical notes on this direction in the [Blog](/blog/).
+I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
 
 ## Highlights
 

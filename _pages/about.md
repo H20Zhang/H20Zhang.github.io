@@ -45,9 +45,9 @@ My research asks how data systems should manage the information that LLM agents 
 
 Recent writing: [Context Management 的下一代：维护模型可感知的世界](/blog/2026/next-gen-agent-zh/) ([English](/blog/2026/next-gen-agent-en/)).
 
-### Semantic data management
+### Agent-facing information management
 
-Semantic transformation is one key capability for maintaining this environment: LLM-based querying, ETL, and multimodal parsing turn raw heterogeneous data into canonical views that agents can reliably use.
+This thrust targets the logical layer above retrieval: turning raw heterogeneous sources into canonical, traceable views that agents can use across tasks and sessions. My current work uses LLM-native querying, semantic ETL, and multimodal parsing as mechanisms for building that layer.
 
 Representative work:
 

@@ -29,7 +29,7 @@ latest_posts:
 
 I am a Research Scientist at ByteDance, working on **data systems for LLM agents**. I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
 
-I focus on the data infrastructure beneath agents — not context-window optimization such as prompt compression or KV cache management, but the systems layer that turns scattered enterprise and multimodal data into structured, queryable substrates for agents. Retrieval, semantic transformation, storage, and query execution — making agent-facing data scalable, fresh, trustworthy, and reusable. I use **agentic data management** to describe this research agenda, and write technical notes on this direction in the [Blog](/blog/).
+I focus on the data infrastructure beneath agents — not context-window optimization such as prompt compression or KV cache management, but the systems layer that turns scattered enterprise and multimodal data into structured, queryable substrates for agents. Retrieval, semantic transformation, storage, and query execution — making agent-facing data scalable, fresh, trustworthy, and reusable. I use **agentic data management** to describe this line of work, and write technical notes on this direction in the [Blog](/blog/).
 
 ## Highlights
 
@@ -37,7 +37,7 @@ I focus on the data infrastructure beneath agents — not context-window optimiz
 - Designed and architected systems including **Sema, GES, SeccoSQL, DISC, and Crystal** — from research prototypes to production infrastructure. [→ Projects](/projects/)
 - **LDBC SNB Interactive world-record results** in both the declarative track (2024, **3,000× over #2**) and the imperative track (2025).
 
-## Research Agenda
+## Current Focus: Agentic Data Management
 
 My research asks how data systems should manage the information that LLM agents depend on — not by treating every source as unstructured context, but by building structured retrieval and integration layers over heterogeneous data. The agenda is data-centric rather than LLM-centric: agents should operate over curated substrates whose entities, attributes, relationships, provenance, and freshness are explicit, queryable, and maintained by the system.
 
@@ -64,6 +64,8 @@ Representative work:
 - [**Graph Storage Benchmark, SIGMOD'25**](/publication/SIGMOD-25-3) — unified dynamic-graph storage abstraction and test framework, exposing **3.3–10.8×** memory overhead over CSR in existing methods and version-control contention on high-degree vertices.
 - [**Aquila, VLDB'26**](/publication/VLDB-26) — incremental graph query system for highly concurrent mixed read/write workloads, using fast delta propagation to return query results immediately after updates.
 
+## Broader Systems Work
+
 ### Accelerator-aware query execution
 
 I also work on accelerator-aware query processing as a separate systems direction: using tensor runtimes such as PyTorch and TensorFlow to execute SQL and graph operators on GPUs and heterogeneous hardware. The core problems are tensorizing irregular relational and graph operators, managing memory across XPU backends, and making query execution portable across different accelerator stacks.
@@ -76,7 +78,7 @@ Representative work:
 
 ### Earlier foundations
 
-My earlier work focused on distributed query processing, subgraph analytics, and learned query optimization. These techniques — efficient joins, cardinality estimation, communication–computation separation, and distributed graph execution — turn out to be recurring primitives in the agentic data systems I build today.
+My earlier work focused on distributed query processing, subgraph analytics, and learned query optimization. These techniques — efficient joins, cardinality estimation, communication–computation separation, and distributed graph execution — form a systems foundation that I continue to build on today.
 
 Representative work:
 

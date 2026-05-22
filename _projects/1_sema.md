@@ -7,10 +7,26 @@ category: systems
 related_publications: false
 ---
 
-SEMA is a multimodal semantic data system designed to unify semantic understanding across structured and unstructured data. Powered by large language models, it targets the parts of data processing that traditional systems struggle to express cleanly.
+SEMA is a multimodal semantic data system for querying and transforming heterogeneous data with LLM-powered semantic operators.
 
-It functions as a query engine for next-generation multimodal data processing, supporting semantic ETL for LLM pipelines, semantic ad-hoc querying over user requests, and analytics across text, images, video, and structured datasets.
+## Problem
 
-The system goal is to let AI-heavy pipelines retrieve, interpret, and analyze heterogeneous content in one flow rather than stitching together separate systems for indexing, orchestration, and analytics.
+AI data pipelines need to process text, tables, images, video, and semi-structured records in one workflow. Traditional query engines are strong at relational operators, but they do not expose semantic interpretation as an optimizable first-class database operator.
 
-Links: [ArXiv paper](/publications/#Arxiv-26)
+## Core idea
+
+SEMA embeds LLM semantic operators into database query plans. Through **SemaSQL**, users express semantic querying and ETL in a SQL-like form; the engine then optimizes execution with operator reordering, semantic fusion, prompt batching, and adaptive execution.
+
+## My role
+
+System design and architecture for the semantic query-engine direction, including semantic operator abstraction, query-plan integration, and execution optimization around token cost and latency.
+
+## Evidence
+
+- [ArXiv paper](/publications/#Arxiv-26)
+- First-class LLM semantic operators inside DuckDB-style query plans.
+- Adaptive execution techniques including operator reordering, semantic fusion, and prompt batching.
+
+## Impact
+
+SEMA shows that semantic ETL and ad-hoc semantic querying can be managed inside a query engine. Reported semantic-query speedups are **2–10×**, while preserving a database-style interface for heterogeneous AI data processing.

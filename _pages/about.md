@@ -66,7 +66,7 @@ Representative work:
 
 ### Accelerator-aware query execution
 
-I explore how query engines can leverage tensor runtimes such as PyTorch and TensorFlow to execute SQL and graph operators on GPUs and heterogeneous hardware. This line began before the agent framing, but the execution problems — tensorizing irregular queries and porting across XPU backends — become increasingly relevant as agent workloads drive up retrieval and computation intensity.
+I also work on accelerator-aware query processing as a separate systems direction: using tensor runtimes such as PyTorch and TensorFlow to execute SQL and graph operators on GPUs and heterogeneous hardware. The core problems are tensorizing irregular relational and graph operators, managing memory across XPU backends, and making query execution portable across different accelerator stacks.
 
 Representative work:
 

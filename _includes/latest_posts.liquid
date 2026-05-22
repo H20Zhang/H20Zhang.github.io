@@ -16,7 +16,7 @@
         {% endif %}
         {% assign shown_posts = 0 %}
         {% for item in latest_posts %}
-          {% if item.hide_from_blog %}
+          {% if item.hide_from_blog or item.url contains '-en/' %}
             {% continue %}
           {% endif %}
           {% if shown_posts >= latest_posts_limit %}
@@ -48,6 +48,11 @@
               {% if item.translation_url %}
                 <span style="font-size: 0.85rem; color: var(--global-text-color-light);">
                   &nbsp;·&nbsp;<a href="{{ item.translation_url | relative_url }}">{{ item.translation_label | default: 'English' }}</a>
+                </span>
+              {% elsif item.url contains '-zh/' %}
+                {% assign english_url = item.url | replace: '-zh/', '-en/' %}
+                <span style="font-size: 0.85rem; color: var(--global-text-color-light);">
+                  &nbsp;·&nbsp;<a href="{{ english_url | relative_url }}">English</a>
                 </span>
               {% endif %}
             </td>

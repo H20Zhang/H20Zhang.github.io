@@ -41,13 +41,13 @@ I focus on the data infrastructure beneath agents — not context-window optimiz
 
 ### Agentic data management
 
-My research asks how data systems should manage the information that LLM agents depend on — not just filling the context window, but maintaining the underlying information environment so that it stays clean, traceable, up-to-date, and worth being searched. Agents depend on an information environment — documents, indexes, metadata, memory, canonical views — that must be actively maintained: versioned, deduplicated, provenance-tracked, conflict-detected, and kept fresh. The goal is not just to retrieve well, but to make the data environment worth retrieving from.
+My research asks how data systems should manage the information that LLM agents depend on — not just filling the context window, but building the integration layer that connects heterogeneous data into explicit, queryable, and continuously maintained representations. The agenda is data-centric rather than LLM-centric: agents should operate over curated substrates whose entities, attributes, relationships, provenance, and freshness are managed by the system, not recovered ad hoc from prompts.
 
 Recent writing: [Context Management 的下一代：维护模型可感知的世界](/blog/2026/next-gen-agent-zh/) ([English](/blog/2026/next-gen-agent-en/)).
 
-### Agent-facing information management
+### Agentic data integration
 
-This thrust targets the logical layer above retrieval: turning raw heterogeneous sources into canonical, traceable views that agents can use across tasks and sessions. My current work uses LLM-native querying, semantic ETL, and multimodal parsing as mechanisms for building that layer.
+Agents depend on integrated, curated views over heterogeneous sources — documents, tables, vector indexes, knowledge bases, memory, and multimodal content. Unlike classical virtual integration, which maps schemas at query time, agent-facing integration must be continuously managed: versioned, deduplicated, provenance-tracked, conflict-detected, and kept fresh. The goal is not just to retrieve well, but to make the underlying data worth retrieving from.
 
 Representative work:
 

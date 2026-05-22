@@ -25,9 +25,9 @@ latest_posts:
   enabled: false
 ---
 
-I am a Research Scientist at ByteDance, working on data infrastructure for AI-native and agentic workloads. My recent work focuses on semantic query processing, multimodal retrieval and ETL, vector and graph data management, and accelerator-aware query execution.
+I am a Research Scientist at ByteDance, working on data infrastructure for AI-native and agentic workloads. I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
 
-A recurring theme in my research is how database systems should evolve when LLM-based agents and AI applications increasingly interact with heterogeneous data through retrieval, tools, and workflows.
+My recent work focuses on semantic query processing, multimodal retrieval and ETL, vector and graph data management, and accelerator-aware query execution. A recurring theme in my research is how database systems should evolve when LLM-based agents and AI applications increasingly interact with heterogeneous data through retrieval, tools, and workflows.
 
 ## Highlights
 
@@ -48,7 +48,7 @@ Representative work: [Sema, arXiv'26](/publications/#Arxiv-26) — a high-perfor
 
 I work on systems for querying structured, vector, and graph data, with an emphasis on dynamic updates, high-throughput retrieval, and hybrid query processing for AI-native workloads.
 
-Representative work: [VeloANN, arXiv'26](/publication/Arxiv-26-2) — SSD-resident graph ANN with storage-execution optimization; [SQLVec, ICDE'26](/publication/ICDE-26) — vector similarity search as a first-class SQL capability; [GES, SIGMOD'25](/publication/SIGMOD-25-1) — high-performance graph processing engine and service.
+Representative work: [VeloANN, arXiv'26](/publication/Arxiv-26-2) — SSD-resident graph indexing for high-throughput vector search; [SQLVec, ICDE'26](/publication/ICDE-26) — vector similarity search as a first-class SQL capability; [GES, SIGMOD'25](/publication/SIGMOD-25-1) — high-performance graph processing engine and service.
 
 ### Tensor-native execution
 
@@ -67,10 +67,6 @@ Representative work: [Secco, SIGMOD'22](/publication/SIGMOD-22-1), [DISC, VLDB'2
 I have also worked on graph algorithms, learned cardinality estimation, and learning-based support for query optimization.
 
 Representative work: [ALSS, SIGMOD'21](/publication/SIGMOD-21), [NNGP-Card, SIGMOD'22](/publication/SIGMOD-22-2), [Learned Sketch for Subgraph Counting, VLDBJ'23](/publication/VLDBJ-23), [Time-Dependent Reachability, ICDE'24](/publication/ICDE-24-1), and [Streaming Embedding, ICDE'24](/publication/ICDE-24-2).
-
-## Education
-
-I received my **Ph.D.** from the Chinese University of Hong Kong in 2022 under the supervision of **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**. Before that, I earned my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
 
 ## Collaboration and Internships
 

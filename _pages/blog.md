@@ -60,6 +60,9 @@ pagination:
     {% assign is_even = featured_posts.size | modulo: 2 %}
     <div class="row row-cols-{% if featured_posts.size <= 2 or is_even == 0 %}2{% else %}3{% endif %}">
       {% for post in featured_posts %}
+        {% if post.hide_from_blog or post.url contains '-en/' %}
+          {% continue %}
+        {% endif %}
         <div class="col mb-4">
           <a href="{{ post.url | relative_url }}">
             <div class="card hoverable">
@@ -80,6 +83,12 @@ pagination:
                       <a href="{{ year | prepend: '/blog/' | relative_url }}">
                         <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
                       </a>
+                      {% if post.translation_url %}
+                        &nbsp; &middot; &nbsp;<a href="{{ post.translation_url | relative_url }}">{{ post.translation_label | default: 'English' }}</a>
+                      {% elsif post.url contains '-zh/' %}
+                        {% assign english_url = post.url | replace: '-zh/', '-en/' %}
+                        &nbsp; &middot; &nbsp;<a href="{{ english_url | relative_url }}">English</a>
+                      {% endif %}
                     </p>
                   </div>
                 </div>
@@ -101,6 +110,9 @@ pagination:
   {% endif %}
 
   {% for post in postlist %}
+    {% if post.hide_from_blog or post.url contains '-en/' %}
+      {% continue %}
+    {% endif %}
     {% if post.external_source == blank %}
       {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
     {% else %}
@@ -122,6 +134,9 @@ pagination:
             {% if post.lang %}
               <span class="blog-lang-badge">{{ post.lang | upcase }}</span>
             {% endif %}
+            {% if post.translation_url or post.url contains '-zh/' %}
+              <span class="blog-lang-badge">EN</span>
+            {% endif %}
           </div>
 
           <h2 class="blog-post-title">
@@ -142,6 +157,14 @@ pagination:
             <a class="blog-year-chip" href="{{ year | prepend: '/blog/' | relative_url }}">
               <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
             </a>
+            {% if post.translation_url %}
+              <a class="blog-year-chip" href="{{ post.translation_url | relative_url }}">
+                {{ post.translation_label | default: 'English' }} version
+              </a>
+            {% elsif post.url contains '-zh/' %}
+              {% assign english_url = post.url | replace: '-zh/', '-en/' %}
+              <a class="blog-year-chip" href="{{ english_url | relative_url }}">English version</a>
+            {% endif %}
             {% if tags != "" %}
               <div class="blog-tag-chips">
                 {% for tag in post.tags %}

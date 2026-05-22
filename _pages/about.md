@@ -53,7 +53,7 @@ Agents depend on integrated, curated views over heterogeneous sources — docume
 
 Representative work:
 
-- [**Sema, arXiv'26**](/publications/#Arxiv-26) — makes LLM semantic operators first-class DuckDB plan nodes via SemaSQL and adaptive execution (operator reordering, semantic fusion, prompt batching), optimizing token cost and latency; **2–10× speedup** on semantic queries.
+- [**Sema, arXiv'26**](/publications/#Arxiv-26) — LLM-powered semantic operators inside DuckDB/SQL.
 
 ### Retrieval and storage substrates
 
@@ -61,12 +61,12 @@ The integration layer above is physically built on storage, indexing, and retrie
 
 Representative work:
 
-- [**VeloANN, arXiv'26**](/publication/Arxiv-26-2) — SSD-resident graph ANN with affinity-aware layout to reduce page over-fetch, a record-level buffer pool to eliminate hot/cold page thrashing, and a coroutine async runtime that overlaps I/O with compute; reaches **0.92× in-memory throughput with 10% memory** and **5.8× higher throughput** than disk-based SOTA.
-- [**SQLVec, ICDE'26**](/publication/ICDE-26) — elevates vector similarity search to a first-class SQL capability, letting nearest-neighbor retrieval compose natively with relational joins, filters, and aggregation.
-- [**GES, SIGMOD'25**](/publication/SIGMOD-25-1) — Huawei production graph engine whose composable architecture and factorized executor enable high-concurrency query processing; LDBC SNB declarative #1, **3,000× throughput over #2**.
-- [**RapidStore, VLDB'25**](/publication/VLDB-25) — decouples read/write paths and separates version metadata from graph topology to balance insert, search, and scan performance in read-intensive dynamic graphs.
-- [**Graph Storage Benchmark, SIGMOD'25**](/publication/SIGMOD-25-3) — unified dynamic-graph storage abstraction and test framework, exposing **3.3–10.8×** memory overhead over CSR in existing methods and version-control contention on high-degree vertices.
-- [**Aquila, VLDB'26**](/publication/VLDB-26) — incremental graph query system for highly concurrent mixed read/write workloads, using fast delta propagation to return query results immediately after updates.
+- [**VeloANN, arXiv'26**](/publication/Arxiv-26-2) — SSD-resident graph indexing for high-throughput vector search.
+- [**SQLVec, ICDE'26**](/publication/ICDE-26) — SQL-native vector similarity search.
+- [**GES, SIGMOD'25**](/publication/SIGMOD-25-1) — a production graph database service for interactive graph workloads.
+- [**RapidStore, VLDB'25**](/publication/VLDB-25) — dynamic graph storage for concurrent read/write workloads.
+- [**Dynamic Graph Storage Study, SIGMOD'25**](/publication/SIGMOD-25-3) — a systematic study of in-memory dynamic graph storage designs.
+- [**Aquila, VLDB'26**](/publication/VLDB-26) — high-concurrency incremental graph query processing.
 
 ## Broader Systems Work
 
@@ -76,9 +76,9 @@ I also work on accelerator-aware query processing as a separate systems directio
 
 Representative work:
 
-- [**TQEX(SQL), SIGMOD'26**](/publication/SIGMOD-26-2) — first systematic analysis of the gap between irregular SQL workloads and uniform tensor operators; tensorizes variable-length data, joins, and aggregation; **9.6× over TQP**, **27.9× over HeavyDB** on TPC-H, and **12.2× over DuckDB** at SF100.
-- [**TenGraph, VLDB'24**](/publication/VLDB-24) — encodes graph topology as tensors and executes graph-query operators in batches on PyTorch; **50–100× GPU speedup over CPU** and substantial gains over existing CPU/GPU graph systems.
-- [**TGraph, SIGMOD'25**](/publication/SIGMOD-25-2) — tensor-centric graph processing framework with graph compression and out-of-XPU-memory computation, portable across PyTorch/TensorFlow and Nvidia/AMD/Apple hardware.
+- [**TQEx(SQL), SIGMOD'26**](/publication/SIGMOD-26-2) — tensor-based SQL execution over heterogeneous accelerators.
+- [**TenGraph, VLDB'24**](/publication/VLDB-24) — tensor-based graph query processing on PyTorch.
+- [**TGraph, SIGMOD'25**](/publication/SIGMOD-25-2) — tensor-centric graph processing across tensor runtimes and accelerators.
 
 ### Earlier foundations
 
@@ -86,11 +86,11 @@ My earlier work focused on distributed query processing, subgraph analytics, and
 
 Representative work:
 
-- [**Secco, SIGMOD'22**](/publication/SIGMOD-22-1) — introduces pair (⊗) and local-compute (`op'`) operators to make communication explicit in distributed relational algebra, reducing intermediate-result shuffle via partitioning push-down and computation push-up.
-- [**DISC, VLDB'20**](/publication/VLDB-20) — reduces local subgraph counting for arbitrary k-node patterns to homomorphism counting expressed as distributed joins, breaking the **k ≤ 5** limit of prior methods.
-- [**Crystal, VLDB'18**](/publication/VLDB-18) — computes subgraph matching results directly over compressed representations instead of enumerating all matches; compression up to **10^5×**.
-- [**ALSS, SIGMOD'21**](/publication/SIGMOD-21) — builds a learned sketch with neural regression for subgraph-count estimation, with an active learner that adapts online to new query patterns; useful for optimizer planning over complex self-joins.
-- [**NNGP-Card, SIGMOD'22**](/publication/SIGMOD-22-2) — cardinality estimation based on Neural Network Gaussian Processes, with training in seconds, built-in uncertainty quantification, and robustness to workload shift.
+- [**Secco, SIGMOD'22**](/publication/SIGMOD-22-1) — distributed query processing with communication separated from local computation.
+- [**DISC, VLDB'20**](/publication/VLDB-20) — distributed local subgraph counting via relational query processing.
+- [**Crystal, VLDB'18**](/publication/VLDB-18) — compressed subgraph matching without materializing all matches.
+- [**ALSS, SIGMOD'21**](/publication/SIGMOD-21) — a learned sketch for approximate subgraph counting.
+- [**NNGP-Card, SIGMOD'22**](/publication/SIGMOD-22-2) — uncertainty-aware learned cardinality estimation.
 
 ## News
 

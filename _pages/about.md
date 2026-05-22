@@ -42,7 +42,7 @@ I focus on the data infrastructure beneath agents — storage, indexing, retriev
 
 ### Agentic data management
 
-How should data systems support the full lifecycle of information used by LLM agents — from acquiring evidence, to storing and updating memory, to retrieving and executing context-intensive queries? This agenda connects my work across the three thrusts below.
+How should data systems support the full lifecycle of information used by LLM agents — from acquiring evidence, to storing and updating memory, to retrieving trustworthy context? This agenda connects my work on context acquisition and retrieval/storage substrates below.
 
 Recent writing: [Context Management 的下一代：维护模型可感知的世界](/blog/2026/next-gen-agent-zh/) ([English](/blog/2026/next-gen-agent-en/)).
 
@@ -58,15 +58,15 @@ I work on systems for storing, updating, and querying structured, vector, and gr
 
 Representative work: [VeloANN, arXiv'26](/publication/Arxiv-26-2) — SSD-resident graph indexing for high-throughput vector search; [SQLVec, ICDE'26](/publication/ICDE-26) — vector similarity search as a first-class SQL capability; [GES, SIGMOD'25](/publication/SIGMOD-25-1) — high-performance graph processing engine and service.
 
-### Context-intensive query execution
+### Accelerator-aware query execution
 
-I explore how query engines can use tensor runtimes and modern accelerators to execute SQL, graph, and analytical operators efficiently, especially when agent workloads require repeated retrieval, joining, filtering, and aggregation over large context sources.
+I explore how query engines can leverage tensor runtimes to execute SQL and graph operators on GPUs and heterogeneous hardware. This line of work was not originally motivated by agent workloads, but provides an execution foundation that AI-native and agentic data systems can build on.
 
 Representative work: [TQEX(SQL), SIGMOD'26](/publication/SIGMOD-26-2) — tensor-based SQL execution bridging irregular relational workloads and tensor runtimes; [TenGraph, VLDB'24](/publication/VLDB-24) — tensor-based graph query execution; [TGraph, SIGMOD'25](/publication/SIGMOD-25-2) — tensor-centric graph processing.
 
 ### Earlier foundations: distributed query processing and AI4DB
 
-My earlier work studied distributed relational and graph query processing, communication-efficient execution, subgraph query processing, graph algorithms, and learning-based support for query optimization. These systems problems remain recurring primitives in agentic data management: efficient joins, cardinality estimation, communication-computation separation, and large-scale graph execution.
+My earlier work studied distributed relational and graph query processing, communication-efficient execution, subgraph query processing, graph algorithms, and learning-based support for query optimization. These systems problems remain recurring primitives across my research: efficient joins, cardinality estimation, communication-computation separation, and large-scale graph execution.
 
 Representative work: [Secco, SIGMOD'22](/publication/SIGMOD-22-1), [DISC, VLDB'20](/publication/VLDB-20), [Crystal, VLDB'18](/publication/VLDB-18), [ALSS, SIGMOD'21](/publication/SIGMOD-21), and [NNGP-Card, SIGMOD'22](/publication/SIGMOD-22-2).
 

@@ -1,6 +1,7 @@
 ---
 layout: about
 title: About
+seo_title: Hao Zhang — Data Systems for AI Agents, Retrieval, and Graph/Vector Infrastructure
 permalink: /
 subtitle: Research Scientist at ByteDance
 description: Research Scientist at ByteDance working on agentic data management, semantic query processing, vector/graph retrieval systems, and accelerator-aware query execution.
@@ -9,6 +10,7 @@ keywords: Hao Zhang, ByteDance, agentic data management, semantic query processi
 profile:
   align: right
   image: bio-photo.jpeg
+  image_alt: Hao Zhang portrait
   image_circular: false
   more_info: >
     <p>Research Scientist, ByteDance</p>

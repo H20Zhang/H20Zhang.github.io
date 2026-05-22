@@ -9,20 +9,24 @@ related_publications: false
 
 GES is a production graph database service architecture developed at Huawei for high-throughput interactive graph workloads.
 
-## What it is
+## Problem
 
-GES targets interactive graph query workloads at service scale. The newer generation of GES applies composable architecture design, factorized execution, and execution redesign to improve throughput while remaining a managed service rather than a one-off benchmark prototype.
+Interactive graph services need to serve complex graph queries with high concurrency, predictable latency, and production-grade manageability. Traditional graph engines often optimize for either offline graph analytics or isolated benchmark kernels, but production services must combine query throughput, maintainability, and extensibility.
 
-## Key results
+## Core idea
 
-- Top-ranked result on the LDBC SNB Interactive declarative leaderboard.
-- Reported 3,000x improvement over the previous #2 declarative result.
-- Follow-on #1 result on the LDBC SNB Interactive imperative leaderboard.
+The newer GES line uses a composable service architecture and factorized execution to improve high-concurrency query processing. The goal is to make graph query execution fast without turning the system into a benchmark-only prototype.
 
 ## My role
 
-Research and system architecture for graph database infrastructure and the GES line of work.
+Research and system architecture for graph database infrastructure and the GES line of work, including execution design and benchmark-facing system optimization.
 
-## Links
+## Evidence
 
 - [SIGMOD 2025 paper](/publications/#SIGMOD-25-1)
+- [LDBC SNB Interactive declarative result, 2024](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/)
+- [LDBC SNB Interactive imperative result, 2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/)
+
+## Impact
+
+GES reached **#1** on the LDBC SNB Interactive declarative track with reported throughput over **3,000×** the previous #2 result, and later reached **#1** on the imperative track with Graph Engine Service 3.1.0 at SF300.

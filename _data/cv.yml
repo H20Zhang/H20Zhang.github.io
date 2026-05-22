@@ -3,7 +3,7 @@ cv:
   label: Research Scientist
   email: zhanghao.ai@bytedance.com
   website: https://H20Zhang.github.io
-  summary: Research scientist working on Data+AI systems, database infrastructure, vector search, graph engines, and multimodal analytics.
+  summary: Research scientist building database, retrieval, and Data+AI infrastructure for AI-native and agentic workloads, spanning distributed query processing, graph systems, vector search, semantic data processing, and accelerator-aware execution.
 
   social_networks:
     - network: GitHub
@@ -16,13 +16,18 @@ cv:
       - company: ByteDance
         position: Research Scientist
         start_date: 2025
-        summary: Researching and building Data+AI systems for retrieval, analytics, vector search, agentic workflows, and multimodal data processing.
+        highlights:
+          - Building Data+AI systems for retrieval, analytics, vector search, agentic workflows, and multimodal data processing.
+          - Working on semantic data processing and AI-native infrastructure for heterogeneous data and LLM-based workflows.
 
       - company: Huawei Cloud Database Innovation Lab
         position: Research Scientist
         start_date: 2022
         end_date: 2025
-        summary: Researched graph database infrastructure, relational database kernels, tensor-centric data systems, and overall architecture, including the GES line of work behind benchmark-leading graph systems.
+        highlights:
+          - Researched graph database infrastructure, relational database kernels, tensor-centric data systems, and overall system architecture.
+          - Contributed to the GES line of work behind benchmark-leading graph systems and LDBC SNB Interactive results.
+          - Worked on systems connecting database research prototypes with production-oriented infrastructure.
 
     Education:
       - institution: The Chinese University of Hong Kong
@@ -42,11 +47,11 @@ cv:
           - "[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)."
 
     Research Areas:
-      - bullet: Data+AI systems
-      - bullet: Database systems
-      - bullet: Vector and graph infrastructure
-      - bullet: Distributed query processing
-      - bullet: Structured and unstructured analytics
+      - bullet: Data systems for AI-native and agentic workloads
+      - bullet: Vector and graph retrieval infrastructure
+      - bullet: Graph database systems and dynamic graph storage
+      - bullet: Tensor-native query and graph execution
+      - bullet: Distributed query processing and AI4DB
 
     Honors and Awards:
       - title: ByteDance Soaring Star Talent Program

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Set a new world record for graph database workload again, this time on a [Chinese-made chip](https://e.huawei.com/ma/industries/grid/power-grid/power-data-center/high-performance-computing) (during my time at Huawei), achieving [Ranked #1](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/) in [LDBC Benchmark SNB - Imperative Track](https://ldbcouncil.org/benchmarks/snb-interactive/), the most authoritative ranking in graph database. Congrats to all my former team members and collaborators at Huawei and SJTU!
+GES set another world record on the [LDBC SNB Interactive imperative track](https://ldbcouncil.org/benchmarks/snb-interactive/), achieving [Ranked #1](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/) with Graph Engine Service 3.1.0 at SF300 on Kunpeng hardware. The result reports **139,411.14 throughput**. Congrats to all my former team members and collaborators at Huawei and SJTU!

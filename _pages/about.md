@@ -37,9 +37,7 @@ I focus on the data infrastructure beneath agents — not context-window optimiz
 - Designed and architected systems including **Sema, GES, SeccoSQL, DISC, and Crystal** — from research prototypes to production infrastructure. [→ Projects](/projects/)
 - **LDBC SNB Interactive world-record results** in both the declarative track (2024, **3,000× over #2**) and the imperative track (2025).
 
-## Research Thrusts
-
-### Agentic data management
+## Research Agenda
 
 My research asks how data systems should manage the information that LLM agents depend on — not by treating every source as unstructured context, but by building structured retrieval and integration layers over heterogeneous data. The agenda is data-centric rather than LLM-centric: agents should operate over curated substrates whose entities, attributes, relationships, provenance, and freshness are explicit, queryable, and maintained by the system.
 

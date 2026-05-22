@@ -3,6 +3,8 @@ layout: about
 title: About
 permalink: /
 subtitle: Research Scientist at ByteDance
+description: Research Scientist at ByteDance working on agentic data management, semantic query processing, vector/graph retrieval systems, and accelerator-aware query execution.
+keywords: Hao Zhang, ByteDance, agentic data management, semantic query processing, vector search, graph database, AI-native data systems
 
 profile:
   align: right
@@ -33,9 +35,9 @@ I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advise
 
 ## Highlights
 
-- **25 papers** in **SIGMOD, VLDB, ICDE, and TKDE**, spanning retrieval, graph engines, tensor-native execution, and agentic data management.
+- **25+ publications** across database systems, graph/vector retrieval, and Data+AI infrastructure, including papers in **SIGMOD, VLDB, ICDE, TKDE, and The VLDB Journal**.
 - Designed and architected systems including **Sema, GES, SeccoSQL, DISC, and Crystal** — from research prototypes to production infrastructure. [→ Projects](/projects/)
-- **LDBC SNB Interactive world-record results** in both the declarative track (2024, **3,000× over #2**) and the imperative track (2025).
+- **LDBC SNB Interactive world-record results** in both the declarative track ([2024, **3,000× over #2**](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/)) and the imperative track ([2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/)).
 
 ## Current Focus: Agentic Data Management
 

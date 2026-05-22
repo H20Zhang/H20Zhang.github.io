@@ -49,23 +49,44 @@ Recent writing: [Context Management 的下一代：维护模型可感知的世�
 
 Agents depend on an information environment — documents, indexes, metadata, memory, canonical views — that must be actively maintained: versioned, deduplicated, provenance-tracked, conflict-detected, and kept fresh. The goal is not just to retrieve well, but to make the data environment worth retrieving from. Semantic transformation, including LLM-based querying, ETL, and multimodal parsing, is one key capability; but the broader problem is maintaining a living data landscape that agents can draw from across tasks and sessions.
 
-Representative work: [Sema, arXiv'26](/publications/#Arxiv-26) — a DuckDB-based system for LLM-based semantic query processing with semantic operators and adaptive execution.
+Representative work:
+
+- [**Sema, arXiv'26**](/publications/#Arxiv-26) — a DuckDB-based system for LLM-based semantic query processing with semantic operators and adaptive execution.
 
 ### Retrieval and storage substrates
 
 I work on systems for storing, indexing, and querying structured, vector, and graph data, with emphasis on dynamic updates, high-throughput retrieval, and hybrid query processing. These substrates are the infrastructure that the information environment above is physically built on.
 
-Representative work: [VeloANN, arXiv'26](/publication/Arxiv-26-2), [SQLVec, ICDE'26](/publication/ICDE-26), [GES, SIGMOD'25](/publication/SIGMOD-25-1), [RapidStore, VLDB'25](/publication/VLDB-25), [Graph Storage Benchmark, SIGMOD'25](/publication/SIGMOD-25-3), and [Aquila, VLDB'26](/publication/VLDB-26).
+Representative work:
+
+- [**VeloANN, arXiv'26**](/publication/Arxiv-26-2) — SSD-resident graph ANN with storage-execution optimization for vector databases.
+- [**SQLVec, ICDE'26**](/publication/ICDE-26) — brings vector similarity search into SQL as a first-class relational capability.
+- [**GES, SIGMOD'25**](/publication/SIGMOD-25-1) — high-performance graph processing engine and service behind benchmark-leading LDBC SNB results.
+- [**RapidStore, VLDB'25**](/publication/VLDB-25) — dynamic graph storage system for efficient concurrent read and write queries.
+- [**Graph Storage Benchmark, SIGMOD'25**](/publication/SIGMOD-25-3) — systematic study of in-memory dynamic graph storage design trade-offs.
+- [**Aquila, VLDB'26**](/publication/VLDB-26) — high-concurrency system for incremental graph query processing.
 
 ### Accelerator-aware query execution
 
 I explore how query engines can leverage tensor runtimes such as PyTorch and TensorFlow to execute SQL and graph operators on GPUs and heterogeneous hardware. This line of work is not agent-specific in origin, but provides the execution substrate that agentic data management can build on as agent workloads grow in retrieval and computation intensity.
 
-Representative work: [TQEX(SQL), SIGMOD'26](/publication/SIGMOD-26-2) — 9.6× over TQP and 27.9× over HeavyDB on TPC-H; [TenGraph, VLDB'24](/publication/VLDB-24); [TGraph, SIGMOD'25](/publication/SIGMOD-25-2).
+Representative work:
+
+- [**TQEX(SQL), SIGMOD'26**](/publication/SIGMOD-26-2) — bridges irregular SQL workloads and tensor runtimes; 9.6× over TQP and 27.9× over HeavyDB on TPC-H.
+- [**TenGraph, VLDB'24**](/publication/VLDB-24) — tensor-based graph query engine achieving GPU acceleration for graph query workloads.
+- [**TGraph, SIGMOD'25**](/publication/SIGMOD-25-2) — tensor-centric graph processing framework designed for portability across tensor runtimes and accelerators.
 
 ### Earlier foundations
 
-My earlier work on distributed query processing, including [Secco](/publication/SIGMOD-22-1), [DISC](/publication/VLDB-20), and [Crystal](/publication/VLDB-18), and learned query optimization, including [ALSS](/publication/SIGMOD-21) and [NNGP-Card](/publication/SIGMOD-22-2), addressed problems that remain recurring primitives in agentic data management: efficient joins, cardinality estimation, communication-computation separation, and large-scale graph execution.
+My earlier work on distributed query processing and learned query optimization addressed problems that remain recurring primitives in agentic data management: efficient joins, cardinality estimation, communication-computation separation, and large-scale graph execution.
+
+Representative work:
+
+- [**Secco, SIGMOD'22**](/publication/SIGMOD-22-1) — distributed SQL execution by explicitly separating communication from computation.
+- [**DISC, VLDB'20**](/publication/VLDB-20) — distributed subgraph counting by decomposing graph workloads into relational query processing.
+- [**Crystal, VLDB'18**](/publication/VLDB-18) — compressed execution for distributed subgraph matching to reduce output materialization cost.
+- [**ALSS, SIGMOD'21**](/publication/SIGMOD-21) — learned sketch framework for subgraph counting and query optimization support.
+- [**NNGP-Card, SIGMOD'22**](/publication/SIGMOD-22-2) — lightweight and uncertainty-aware neural network Gaussian process cardinality estimation.
 
 ## News
 

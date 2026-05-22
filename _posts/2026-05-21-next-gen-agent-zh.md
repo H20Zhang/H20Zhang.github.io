@@ -7,6 +7,8 @@ categories:
   - AI
   - Context Management
 lang: zh
+translation_url: /blog/2026/next-gen-agent-en/
+translation_label: English
 tags:
   - Context Management
   - Agent

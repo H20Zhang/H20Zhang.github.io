@@ -14,7 +14,15 @@
         {% else %}
           {% assign latest_posts_limit = latest_posts_size %}
         {% endif %}
-        {% for item in latest_posts limit: latest_posts_limit %}
+        {% assign shown_posts = 0 %}
+        {% for item in latest_posts %}
+          {% if item.hide_from_blog %}
+            {% continue %}
+          {% endif %}
+          {% if shown_posts >= latest_posts_limit %}
+            {% break %}
+          {% endif %}
+          {% assign shown_posts = shown_posts | plus: 1 %}
           <tr>
             <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
             <td>
@@ -36,6 +44,11 @@
                 </svg>
               {% else %}
                 <a class="news-title" href="{{ item.redirect | relative_url }}">{{ item.title }}</a>
+              {% endif %}
+              {% if item.translation_url %}
+                <span style="font-size: 0.85rem; color: var(--global-text-color-light);">
+                  &nbsp;·&nbsp;<a href="{{ item.translation_url | relative_url }}">{{ item.translation_label | default: 'English' }}</a>
+                </span>
               {% endif %}
             </td>
           </tr>

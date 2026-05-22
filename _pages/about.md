@@ -29,7 +29,7 @@ latest_posts:
 
 I am a Research Scientist at ByteDance, working on **data systems for LLM agents**. I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
 
-I focus on the data infrastructure beneath agents — not context-window optimization such as prompt compression or KV cache management, but the systems layer that manages the information agents depend on: documents, tables, vectors, graphs, multimodal content, and externalized memory. Retrieval, semantic transformation, storage, and query execution — making agent-facing data scalable, fresh, and trustworthy. I use **agentic data management** to describe this research agenda, and write technical notes on this direction in the [Blog](/blog/).
+I focus on the data infrastructure beneath agents — not context-window optimization such as prompt compression or KV cache management, but the systems layer that turns scattered enterprise and multimodal data into structured, queryable substrates for agents. Retrieval, semantic transformation, storage, and query execution — making agent-facing data scalable, fresh, trustworthy, and reusable. I use **agentic data management** to describe this research agenda, and write technical notes on this direction in the [Blog](/blog/).
 
 ## Highlights
 
@@ -41,13 +41,13 @@ I focus on the data infrastructure beneath agents — not context-window optimiz
 
 ### Agentic data management
 
-My research asks how data systems should manage the information that LLM agents depend on — not just filling the context window, but building the integration layer that connects heterogeneous data into explicit, queryable, and continuously maintained representations. The agenda is data-centric rather than LLM-centric: agents should operate over curated substrates whose entities, attributes, relationships, provenance, and freshness are managed by the system, not recovered ad hoc from prompts.
+My research asks how data systems should manage the information that LLM agents depend on — not by treating every source as unstructured context, but by building structured retrieval and integration layers over heterogeneous data. The agenda is data-centric rather than LLM-centric: agents should operate over curated substrates whose entities, attributes, relationships, provenance, and freshness are explicit, queryable, and maintained by the system.
 
 Recent writing: [Context Management 的下一代：维护模型可感知的世界](/blog/2026/next-gen-agent-zh/) ([English](/blog/2026/next-gen-agent-en/)).
 
 ### Agentic data integration
 
-Agents depend on integrated, curated views over heterogeneous sources — documents, tables, vector indexes, knowledge bases, memory, and multimodal content. Unlike classical virtual integration, which maps schemas at query time, agent-facing integration must be continuously managed: versioned, deduplicated, provenance-tracked, conflict-detected, and kept fresh. The goal is not just to retrieve well, but to make the underlying data worth retrieving from.
+Agents depend on integrated, curated views over heterogeneous sources — documents, tables, vector indexes, knowledge bases, memory, and multimodal content. Classical virtual integration leaves sources in place and integrates them at query time; agentic integration must also maintain the substrate before and between queries: schema and semantic alignment, semantic joins, versioning, deduplication, provenance tracking, conflict detection, and freshness. The goal is to turn fragmented corpora and indexes into inspectable data substrates that agents can query, join, reuse, and trust.
 
 Representative work:
 
@@ -55,7 +55,7 @@ Representative work:
 
 ### Retrieval and storage substrates
 
-The information environment above is physically built on storage, indexing, and retrieval substrates. My work here targets the infrastructure layer — dynamic graph stores, vector indexes, and hybrid query engines — where correctness under concurrent updates and retrieval throughput are the primary design constraints.
+The integration layer above is physically built on storage, indexing, and retrieval substrates. My work here targets the infrastructure layer — dynamic graph stores, vector indexes, and hybrid query engines — where correctness under concurrent updates and retrieval throughput are the primary design constraints.
 
 Representative work:
 

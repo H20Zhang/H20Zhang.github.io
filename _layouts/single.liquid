@@ -5,7 +5,26 @@ layout: default
 {% assign tags = page.tags | join: '' %}
 {% assign categories = page.categories | join: '' %}
 {% assign url_beginning = page.url | slice: 0, 6 %}
-{% assign read_time = content | number_of_words | divided_by: 180 | plus: 1 %}
+{% if page.lang == 'zh' %}
+  {% assign estimated_read_time = content | strip_html | size | divided_by: 600 | plus: 1 %}
+{% else %}
+  {% assign estimated_read_time = content | number_of_words | divided_by: 180 | plus: 1 %}
+{% endif %}
+{% assign read_time = page.reading_time | default: estimated_read_time %}
+{% if page.reading_time_text %}
+  {% assign read_time_label = page.reading_time_text %}
+{% elsif page.lang == 'zh' %}
+  {% capture read_time_label %}{{ read_time }} 分钟阅读{% endcapture %}
+{% else %}
+  {% capture read_time_label %}{{ read_time }} min read{% endcapture %}
+{% endif %}
+{% if page.toc_label %}
+  {% assign toc_label = page.toc_label %}
+{% elsif page.lang == 'zh' %}
+  {% assign toc_label = '本文结构' %}
+{% else %}
+  {% assign toc_label = 'In this essay' %}
+{% endif %}
 
 {% if page._styles %}
   <style type="text/css">
@@ -18,7 +37,7 @@ layout: default
     <div class="essay-hero-kicker">
       <a href="{{ '/blog/' | relative_url }}">Blog</a>
       <span>{{ page.date | date: '%B %d, %Y' }}</span>
-      <span>{{ read_time }} min read</span>
+      <span>{{ read_time_label }}</span>
       {% if page.lang %}<span class="essay-lang">{{ page.lang | upcase }}</span>{% endif %}
     </div>
 
@@ -50,13 +69,15 @@ layout: default
   <div class="essay-shell">
     <aside class="essay-sidebar" aria-label="Article navigation">
       <div class="essay-sidebar-inner">
-        <div class="essay-sidebar-label">In this essay</div>
+        <div class="essay-sidebar-label">{{ toc_label }}</div>
         <nav class="essay-toc">
           {% toc %}
         </nav>
         <div class="essay-sidebar-actions">
           <a href="{{ '/blog/' | relative_url }}">← All posts</a>
-          {% if page.lang == 'zh' %}
+          {% if page.translation_url %}
+            <a href="{{ page.translation_url | relative_url }}">{{ page.translation_label | default: 'Translation' }}</a>
+          {% elsif page.lang == 'zh' %}
             <a href="{{ '/blog/2026/next-gen-agent-en/' | relative_url }}">English version</a>
           {% elsif page.lang == 'en' %}
             <a href="{{ '/blog/2026/next-gen-agent-zh/' | relative_url }}">中文版</a>

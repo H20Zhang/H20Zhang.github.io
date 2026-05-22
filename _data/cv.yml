@@ -2,8 +2,8 @@ cv:
   name: Hao Zhang
   label: Research Scientist
   email: zhanghao.ai@bytedance.com
-  website: https://H20Zhang.github.io
-  summary: Research scientist building database, retrieval, and Data+AI infrastructure for AI-native and agentic workloads, spanning distributed query processing, graph systems, vector search, semantic data processing, and accelerator-aware execution.
+  website: https://h20zhang.github.io
+  summary: Research scientist building database, retrieval, and Data+AI infrastructure for AI-native and data-intensive workloads, spanning agentic data management, graph/vector retrieval, semantic query processing, accelerator-aware execution, and distributed query processing.
 
   social_networks:
     - network: GitHub
@@ -47,37 +47,37 @@ cv:
           - "[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)."
 
     Research Areas:
-      - bullet: Data systems for AI-native and agentic workloads
+      - bullet: Agentic data management and semantic query processing
       - bullet: Vector and graph retrieval infrastructure
       - bullet: Graph database systems and dynamic graph storage
-      - bullet: Tensor-native query and graph execution
+      - bullet: Accelerator-aware SQL and graph query execution
       - bullet: Distributed query processing and AI4DB
 
     Honors and Awards:
       - title: ByteDance Soaring Star Talent Program
         date: 2025-01-01
         awarder: ByteDance
-        summary: ByteDance's most prestigious talent program.
+        summary: Talent program award.
 
       - title: Huawei Gold Award for Individual Excellence
         date: 2025-02-01
         awarder: Huawei
-        summary: Awarded to the top 1% of employees.
+        summary: Individual excellence award.
 
       - title: LDBC SNB Interactive benchmark world record, imperative systems leaderboard
         date: 2025-12-01
         awarder: LDBC
-        summary: Ranked top-1 on one of the most authoritative public graph database benchmarks.
+        summary: Ranked top-1 on the public LDBC SNB Interactive imperative leaderboard.
 
       - title: LDBC SNB Interactive benchmark world record, declarative systems leaderboard
-        date: 2024-09-01
+        date: 2024-09-16
         awarder: LDBC
-        summary: Ranked top-1 with a 3,000x improvement over the prior #2 result.
+        summary: Ranked top-1 on the public LDBC SNB Interactive declarative leaderboard.
 
       - title: TopMinds Talent Program (First Class)
         date: 2022-01-01
         awarder: Huawei
-        summary: Huawei's most prestigious talent program.
+        summary: Talent program award.
 
       - title: Meritorious Winner, International Mathematical Contest in Modeling
         date: 2016-01-01

@@ -97,8 +97,8 @@ Representative work:
 ## News
 
 - **11/2025** — LDBC SNB Interactive imperative track world record (#1).
-- **10/2025** — **Accelerating Triangle-Connected Truss Community Search Across Heterogeneous Hardware** accepted by SIGMOD'26.
-- **09/2025** — **Aquila**, a high-concurrency system for incremental graph query, accepted by VLDB'26.
+- **10/2025** — **Accelerating Triangle-Connected Truss Community Search Across Heterogeneous Hardware**, accepted by SIGMOD'26.
+- **09/2025** — **Aquila: a high-concurrency system for incremental graph query**, accepted by VLDB'26.
 
 [→ All news](/news/)
 

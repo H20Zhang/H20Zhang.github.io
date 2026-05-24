@@ -1,11 +1,11 @@
 ---
 layout: about
 title: About
-seo_title: Hao Zhang — Agentic Data Integration, Knowledge Extraction, and Retrieval-Aware Knowledge Representation
+seo_title: Hao Zhang — Agentic Data Management, Retrieval-Aware Knowledge Representation, and Graph/Vector Infrastructure
 permalink: /
 subtitle: Research Scientist at ByteDance
-description: Research Scientist at ByteDance working on agentic data integration and knowledge extraction, retrieval-aware knowledge representation, semantic query processing, vector/graph retrieval systems, and accelerator-aware query execution.
-keywords: Hao Zhang, ByteDance, agentic data integration, knowledge extraction, retrieval-aware knowledge representation, semantic query processing, vector search, graph database, AI-native data systems
+description: Research Scientist at ByteDance working on agentic data management, retrieval-aware knowledge representation, agentic data integration and knowledge extraction, semantic query processing, vector/graph retrieval systems, and accelerator-aware query execution.
+keywords: Hao Zhang, ByteDance, agentic data management, agentic data integration, knowledge extraction, retrieval-aware knowledge representation, semantic query processing, vector search, graph database, AI-native data systems
 
 profile:
   align: right
@@ -31,7 +31,7 @@ latest_posts:
   limit: 3
 ---
 
-I am a Research Scientist at ByteDance, building **data systems for AI-native and data-intensive workloads**. My current focus is **agentic data integration & knowledge extraction** — the systems layer beneath LLM agents that turns scattered enterprise and multimodal data into structured, retrieval-optimized knowledge substrates. A central question is **retrieval-aware knowledge representation**. Beyond this focus, I also work on graph/vector retrieval infrastructure, accelerator-aware query execution, and distributed query processing.
+I am a Research Scientist at ByteDance, building **data systems for AI-native and data-intensive workloads**. My current focus is **agentic data management** — the systems layer beneath LLM agents that turns scattered enterprise and multimodal data into structured, retrieval-optimized knowledge substrates. This includes **agentic data integration & knowledge extraction** and **retrieval-aware knowledge representation**. Beyond this focus, I also work on graph/vector retrieval infrastructure, accelerator-aware query execution, and distributed query processing.
 
 I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
 
@@ -41,9 +41,9 @@ I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advise
 - Designed and architected systems including **Sema, GES, SeccoSQL, DISC, and Crystal** — from research prototypes to production infrastructure. [→ Projects](/projects/)
 - **LDBC SNB Interactive world-record results** in both the declarative track ([2024, **3,000× over #2**](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/)) and the imperative track ([2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/)).
 
-## Current Focus: Agentic Data Integration & Knowledge Extraction
+## Current Focus: Agentic Data Management
 
-My research asks how data systems should integrate heterogeneous information for LLM agents and extract reliable knowledge from it. A central question is **retrieval-aware knowledge representation**: what form should extracted knowledge take so that downstream retrieval is accurate, efficient, attributable, and fresh? The agenda is data-centric rather than LLM-centric: agents should operate over curated knowledge substrates whose structure is explicit, queryable, and system-maintained.
+My research asks how data systems should manage heterogeneous information for LLM agents: integrating scattered sources, extracting reliable knowledge, and maintaining it as queryable substrates. A central question is **retrieval-aware knowledge representation**: what form should extracted knowledge take so that downstream retrieval is accurate, efficient, attributable, and fresh? The agenda is data-centric rather than LLM-centric: agents should operate over curated knowledge substrates whose structure is explicit, queryable, and system-maintained.
 
 This focus spans two layers: **agentic data integration & knowledge extraction** (what knowledge to extract and how to maintain it) and **retrieval & storage substrates** (the infrastructure that physically supports these substrates).
 
@@ -104,4 +104,4 @@ Representative work:
 
 ## Collaboration
 
-**Open to collaboration** on agentic data integration, knowledge extraction, retrieval-aware knowledge representation, and vector/graph engines. Internship openings in Shenzhen — [email](mailto:zhanghao.ai@bytedance.com) with `[Intern]` in the subject line.
+**Open to collaboration** on agentic data management, retrieval-aware knowledge representation, agentic data integration and knowledge extraction, and vector/graph engines. Internship openings in Shenzhen — [email](mailto:zhanghao.ai@bytedance.com) with `[Intern]` in the subject line.

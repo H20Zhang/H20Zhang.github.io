@@ -31,7 +31,7 @@ latest_posts:
   limit: 3
 ---
 
-I am a Research Scientist at ByteDance, building **data systems for AI-native and data-intensive workloads**. My current focus is **agentic data integration & knowledge extraction** — the systems layer beneath LLM agents that turns scattered enterprise and multimodal data into structured, queryable, retrieval-optimized knowledge substrates. A central question is **retrieval-aware knowledge representation**: what form should extracted knowledge take so that downstream retrieval is accurate, efficient, attributable, and fresh? Beyond this focus, I also work on graph/vector retrieval infrastructure, accelerator-aware query execution, and distributed query processing. I write technical notes on agentic data integration and knowledge extraction in the [Blog](/blog/).
+I am a Research Scientist at ByteDance, building **data systems for AI-native and data-intensive workloads**. My current focus is **agentic data integration & knowledge extraction** — the systems layer beneath LLM agents that turns scattered enterprise and multimodal data into structured, retrieval-optimized knowledge substrates. A central question is **retrieval-aware knowledge representation**. Beyond this focus, I also work on graph/vector retrieval infrastructure, accelerator-aware query execution, and distributed query processing.
 
 I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
 
@@ -43,21 +43,23 @@ I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advise
 
 ## Current Focus: Agentic Data Integration & Knowledge Extraction
 
-My research asks how data systems should integrate heterogeneous information for LLM agents and extract reliable knowledge from it. A central question is **retrieval-aware knowledge representation**: what form should extracted knowledge take so that downstream retrieval is accurate, efficient, attributable, fresh, and cost-effective? Rather than treating documents as unstructured context or choosing chunks by layout heuristics, the system should derive knowledge units, relations, provenance, temporal scopes, summaries, and materialized views from retrieval objectives and agent workloads. The agenda is data-centric rather than LLM-centric: agents should operate over curated knowledge substrates whose entities, attributes, relationships, provenance, and freshness are explicit, queryable, and maintained by the system.
+My research asks how data systems should integrate heterogeneous information for LLM agents and extract reliable knowledge from it. A central question is **retrieval-aware knowledge representation**: what form should extracted knowledge take so that downstream retrieval is accurate, efficient, attributable, and fresh? The agenda is data-centric rather than LLM-centric: agents should operate over curated knowledge substrates whose structure is explicit, queryable, and system-maintained.
 
-Recent writing: [Context Management 的下一代：维护模型可感知的世界](/blog/2026/next-gen-agent-zh/) ([English](/blog/2026/next-gen-agent-en/)).
+This focus spans two layers: **agentic data integration & knowledge extraction** (what knowledge to extract and how to maintain it) and **retrieval & storage substrates** (the infrastructure that physically supports these substrates).
 
 ### Agentic data integration & knowledge extraction
 
-Agents depend on integrated, curated knowledge views over heterogeneous sources — documents, tables, vector indexes, knowledge bases, memory, and multimodal content. A core theme is **retrieval-aware knowledge representation**: using downstream retrieval metrics to decide how knowledge should be segmented, linked, summarized, versioned, and indexed. Classical virtual integration leaves sources in place and integrates them at query time; agentic integration must also extract, align, and maintain knowledge before and between queries: schema and semantic alignment, entity and relation extraction, semantic joins, versioning, deduplication, provenance tracking, conflict detection, and freshness. The goal is to turn fragmented corpora and indexes into inspectable knowledge substrates that agents can query, join, reuse, and trust.
+Agents depend on integrated knowledge views over heterogeneous sources — documents, tables, vector indexes, knowledge bases, memory, and multimodal content. Rather than treating documents as opaque context or chunking by layout heuristics, the system derives knowledge units, relations, provenance, temporal scopes, and materialized views — driven by downstream retrieval objectives and agent workloads. Unlike classical virtual integration that defers everything to query time, agentic integration must extract, align, and maintain knowledge between queries: schema and semantic alignment, entity/relation extraction, semantic joins, versioning, deduplication, conflict detection, and freshness. The goal is to turn fragmented corpora into inspectable substrates that agents can query, join, and trust.
 
 Representative work:
 
 - [**Sema, arXiv'26**](/publications/#Arxiv-26) — LLM-powered semantic operators inside DuckDB/SQL.
 
+Recent writing: [Context Management 的下一代：维护模型可感知的世界](/blog/2026/next-gen-agent-zh/) ([English](/blog/2026/next-gen-agent-en/)).
+
 ### Retrieval and storage substrates
 
-The retrieval-aware knowledge substrate above is physically built on storage, indexing, and retrieval infrastructure. My work here targets the infrastructure layer — dynamic graph stores, vector indexes, and hybrid query engines — where correctness under concurrent updates and retrieval throughput are the primary design constraints.
+The knowledge substrates above sit on storage, indexing, and retrieval infrastructure. My work here targets dynamic graph stores, vector indexes, and hybrid query engines, where correctness under concurrent updates and retrieval throughput are the primary design constraints.
 
 Representative work:
 
@@ -72,7 +74,7 @@ Representative work:
 
 ### Accelerator-aware query execution
 
-I also work on accelerator-aware query processing as a separate systems direction: using tensor runtimes such as PyTorch and TensorFlow to execute SQL and graph operators on GPUs and heterogeneous hardware. The core problems are tensorizing irregular relational and graph operators, managing memory across XPU backends, and making query execution portable across different accelerator stacks.
+I also work on accelerator-aware query execution: using tensor runtimes (PyTorch, TensorFlow) to execute SQL and graph operators on GPUs and heterogeneous hardware. The core problems are tensorizing irregular relational and graph operators, managing memory across XPU backends, and making query execution portable across accelerator stacks.
 
 Representative work:
 
@@ -102,4 +104,4 @@ Representative work:
 
 ## Collaboration
 
-**Open to collaboration** on technically ambitious problems in agentic data integration and knowledge extraction, retrieval-aware knowledge representation, retrieval systems, and vector/graph engines. Internship openings in Shenzhen — [email](mailto:zhanghao.ai@bytedance.com) with `[Intern]` in the subject line.
+**Open to collaboration** on agentic data integration, knowledge extraction, retrieval-aware knowledge representation, and vector/graph engines. Internship openings in Shenzhen — [email](mailto:zhanghao.ai@bytedance.com) with `[Intern]` in the subject line.

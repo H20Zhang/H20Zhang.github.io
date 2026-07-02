@@ -23,7 +23,7 @@ System design and architecture for the semantic query-engine direction, includin
 
 ## Evidence
 
-- [ArXiv paper](/publications/#Arxiv-26)
+- [Paper](/publications/#VLDB-26-2)
 - First-class LLM semantic operators inside DuckDB-style query plans.
 - Adaptive execution techniques including operator reordering, semantic fusion, and prompt batching.
 

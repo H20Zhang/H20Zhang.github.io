@@ -53,7 +53,7 @@ Agents depend on integrated knowledge views over heterogeneous sources — docum
 
 Representative work:
 
-- [**Sema, arXiv'26**](/publications/#Arxiv-26) — LLM-powered semantic operators inside DuckDB/SQL.
+- [**Sema, PVLDB'26**](/publications/#Arxiv-26) — LLM-powered semantic operators inside DuckDB/SQL.
 
 Recent writing: [Context Management 的下一代：维护模型可感知的世界](/blog/2026/next-gen-agent-zh/) ([English](/blog/2026/next-gen-agent-en/)).
 

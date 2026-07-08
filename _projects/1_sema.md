@@ -23,8 +23,8 @@ System design and architecture for the semantic query-engine direction, includin
 
 ## Evidence
 
-- [Sema, PVLDB 2026](/publications/#VLDB-26-2)
-- [CoreSemDB, COLM 2026](/publications/)
+- [Sema, PVLDB 2026, to appear](/publications/#VLDB-26-2)
+- [CoreSemDB, COLM 2026, to appear](/publications/)
 - First-class LLM semantic operators inside DuckDB-style query plans.
 - Adaptive execution techniques including operator reordering, semantic fusion, and prompt batching.
 

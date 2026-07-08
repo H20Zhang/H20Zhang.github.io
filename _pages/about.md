@@ -97,7 +97,7 @@ Representative work:
 
 ## News
 
-- **2026** — Semantic query processing line: **Sema** accepted by PVLDB'26 and **CoreSemDB** accepted by COLM'26.
+- **07/2026** — Semantic query processing line: **Sema** accepted by PVLDB'26 and **CoreSemDB** accepted by COLM'26.
 - **11/2025** — LDBC SNB Interactive imperative track world record (#1).
 
 [→ All news](/news/)

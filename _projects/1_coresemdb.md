@@ -23,7 +23,7 @@ Benchmark framing and research positioning for semantic-relational query process
 
 ## Evidence
 
-- [CoreSemDB, COLM 2026](/publications/)
+- [CoreSemDB, COLM 2026, to appear](/publications/)
 - Focuses on hybrid semantic-relational query processing.
 - Targets databases whose records contain substantial textual content.
 

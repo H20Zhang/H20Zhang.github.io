@@ -53,8 +53,8 @@ Agents depend on integrated knowledge views over heterogeneous sources — docum
 
 Representative work:
 
-- [**Sema, PVLDB'26**](/publications/#VLDB-26-2) — LLM-powered semantic operators inside DuckDB/SQL.
-- [**CoreSemDB, COLM'26**](/publications/) — benchmark for hybrid semantic-relational query processing over text-rich databases.
+- [**Sema, PVLDB'26, to appear**](/publications/#VLDB-26-2) — LLM-powered semantic operators inside DuckDB/SQL.
+- [**CoreSemDB, COLM'26, to appear**](/publications/) — benchmark for hybrid semantic-relational query processing over text-rich databases.
 
 Recent writing: [Context Management 的下一代：维护模型可感知的世界](/blog/2026/next-gen-agent-zh/) ([English](/blog/2026/next-gen-agent-en/)).
 
@@ -98,8 +98,8 @@ Representative work:
 ## News
 
 - **2026** — **CoreSemDB: Benchmarking Hybrid Semantic-Relational Query Processing over Text-Rich Databases**, accepted by COLM'26.
+- **2026** — **Sema: A High-performance System for LLM-based Semantic Query Processing**, accepted by PVLDB'26.
 - **11/2025** — LDBC SNB Interactive imperative track world record (#1).
-- **10/2025** — **Accelerating Triangle-Connected Truss Community Search Across Heterogeneous Hardware**, accepted by SIGMOD'26.
 
 [→ All news](/news/)
 

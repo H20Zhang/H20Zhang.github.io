@@ -4,8 +4,8 @@ title: About
 seo_title: Hao Zhang — Agentic Data Management, Retrieval-Aware Knowledge Representation, and Graph/Vector Infrastructure
 permalink: /
 subtitle: Research Scientist at ByteDance
-description: Research Scientist at ByteDance working on agentic data management, retrieval-aware knowledge representation, agentic data integration and knowledge extraction, semantic query processing, vector/graph retrieval systems, and accelerator-aware query execution.
-keywords: Hao Zhang, ByteDance, agentic data management, agentic data integration, knowledge extraction, retrieval-aware knowledge representation, semantic query processing, vector search, graph database, AI-native data systems
+description: Research Scientist at ByteDance working on agentic data management, retrieval-aware knowledge representation, agentic data integration and knowledge extraction, semantic query processing, semantic-relational query processing benchmarks, vector/graph retrieval systems, and accelerator-aware query execution.
+keywords: Hao Zhang, ByteDance, agentic data management, agentic data integration, knowledge extraction, retrieval-aware knowledge representation, semantic query processing, semantic-relational query processing, vector search, graph database, AI-native data systems
 
 profile:
   align: right
@@ -31,19 +31,19 @@ latest_posts:
   limit: 3
 ---
 
-I am a Research Scientist at ByteDance, building **data systems for AI-native and data-intensive workloads**. My current focus is **agentic data management** — the systems layer beneath LLM agents that turns scattered enterprise and multimodal data into structured, retrieval-optimized knowledge substrates. This includes **agentic data integration & knowledge extraction** and **graph/vector retrieval infrastructure**. Beyond this focus, I also work on accelerator-aware query execution, and distributed query processing.
+I am a Research Scientist at ByteDance, building **data systems for AI-native and data-intensive workloads**. My current focus is **agentic data management** — the systems layer beneath LLM agents that turns scattered enterprise and multimodal data into structured, retrieval-optimized knowledge substrates. This includes **agentic data integration & knowledge extraction** and **graph/vector retrieval infrastructure**. Beyond this focus, I also work on semantic query processing, accelerator-aware query execution, and distributed query processing.
 
 I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
 
 ## Highlights
 
-- **25+ publications** across database systems, graph/vector retrieval, and Data+AI infrastructure, including papers in **SIGMOD, VLDB, ICDE, TKDE, and The VLDB Journal**.
+- **25+ publications** across database systems, graph/vector retrieval, and Data+AI infrastructure, including papers in **SIGMOD, VLDB, ICDE, COLM, TKDE, and The VLDB Journal**.
 - Designed and architected systems including **Sema, GES, SeccoSQL, DISC, and Crystal** — from research prototypes to production infrastructure. [→ Projects](/projects/)
 - **LDBC SNB Interactive world-record results** in both the declarative track ([2024, **3,000× over #2**](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/)) and the imperative track ([2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/)).
 
 ## Current Focus: Agentic Data Management
 
-My research asks how data systems should manage heterogeneous information for LLM agents: integrating scattered sources, extracting reliable knowledge, and maintaining it as queryable substrates. A central question is **retrieval-aware knowledge representation**: what form should extracted knowledge take so that downstream retrieval is accurate, efficient, attributable, and fresh? The agenda is data-centric rather than LLM-centric: agents should operate over curated knowledge substrates whose structure is explicit, queryable, and system-maintained.
+My research asks how data systems should manage heterogeneous information for LLM agents: integrating scattered sources, extracting reliable knowledge, and maintaining it as queryable substrates. A central question is **retrieval-aware knowledge representation**: what form should extracted knowledge take so that downstream retrieval is accurate, efficient, attributable, and fresh? The agenda is data-centric rather than LLM-centric: agents should operate over curated knowledge substrates whose structure is explicit, queryable, and system-maintained. I also study how semantic and relational query processing should be evaluated over text-rich databases, where correctness depends on both structured predicates and semantic interpretation.
 
 This focus spans two layers: **agentic data integration & knowledge extraction** (what knowledge to extract and how to maintain it) and **retrieval & storage substrates** (the infrastructure that physically supports these substrates).
 
@@ -54,6 +54,7 @@ Agents depend on integrated knowledge views over heterogeneous sources — docum
 Representative work:
 
 - [**Sema, PVLDB'26**](/publications/#VLDB-26-2) — LLM-powered semantic operators inside DuckDB/SQL.
+- [**CoreSemDB, COLM'26**](/publications/) — benchmark for hybrid semantic-relational query processing over text-rich databases.
 
 Recent writing: [Context Management 的下一代：维护模型可感知的世界](/blog/2026/next-gen-agent-zh/) ([English](/blog/2026/next-gen-agent-en/)).
 
@@ -96,9 +97,9 @@ Representative work:
 
 ## News
 
+- **2026** — **CoreSemDB: Benchmarking Hybrid Semantic-Relational Query Processing over Text-Rich Databases**, accepted by COLM'26.
 - **11/2025** — LDBC SNB Interactive imperative track world record (#1).
 - **10/2025** — **Accelerating Triangle-Connected Truss Community Search Across Heterogeneous Hardware**, accepted by SIGMOD'26.
-- **09/2025** — **Aquila: a high-concurrency system for incremental graph query**, accepted by VLDB'26.
 
 [→ All news](/news/)
 

@@ -97,8 +97,7 @@ Representative work:
 
 ## News
 
-- **2026** — **CoreSemDB: Benchmarking Hybrid Semantic-Relational Query Processing over Text-Rich Databases**, accepted by COLM'26.
-- **2026** — **Sema: A High-performance System for LLM-based Semantic Query Processing**, accepted by PVLDB'26.
+- **2026** — Semantic query processing line: **Sema** accepted by PVLDB'26 and **CoreSemDB** accepted by COLM'26.
 - **11/2025** — LDBC SNB Interactive imperative track world record (#1).
 
 [→ All news](/news/)

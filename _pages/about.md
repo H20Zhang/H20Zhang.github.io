@@ -35,9 +35,10 @@ I am a Research Scientist at ByteDance, building **data systems for AI-native an
 
 I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
 
-## Collaboration
+## Collaboration & Internship
 
-**Open to collaboration** on agentic data management, retrieval-aware knowledge representation, agentic data integration and knowledge extraction, and vector/graph engines. Internship openings in Shenzhen — [email](mailto:zhanghao.ai@bytedance.com) with `[Intern]` in the subject line.
+**Open to collaboration** on agentic data management, retrieval-aware knowledge representation, agentic data integration and knowledge extraction, and vector/graph engines. 
+**Internship** openings in Shenzhen — [email](mailto:zhanghao.ai@bytedance.com) with `[Intern]` in the subject line.
 
 ## Highlights
 

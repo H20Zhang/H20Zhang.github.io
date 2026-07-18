@@ -37,9 +37,9 @@ I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advise
 
 ## Collaboration & Internship
 
-**Open to collaboration** on agentic data management, retrieval-aware knowledge representation, agentic data integration and knowledge extraction, and vector/graph engines. 
+I welcome **collaboration** of all kinds on agentic data management, and vector/graph engines, and hardware accelerated query processing. 
 
-**Internship** openings in Shenzhen — [email](mailto:zhanghao.ai@bytedance.com) with `[Intern]` in the subject line.
+I am currently recruiting **interns** in Shenzhen. To apply, please email zhanghao.ai [at] bytedance [dot] com with [Intern] in the subject line.
 
 ## Highlights
 

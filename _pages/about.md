@@ -59,6 +59,7 @@ Agents depend on integrated knowledge views over heterogeneous sources — docum
 
 Representative work:
 
+- [**AdaMM, arXiv'26**](https://arxiv.org/abs/2607.29440) — complements retrieval memory with queryable analytic memory over recurring multimodal observations.
 - [**Sema, PVLDB'26, to appear**](/publications/#VLDB-26-2) — LLM-powered semantic operators inside DuckDB/SQL.
 - [**CoreSemDB, COLM'26, to appear**](/publications/) — benchmark for hybrid semantic-relational query processing over text-rich databases.
 
@@ -103,6 +104,7 @@ Representative work:
 
 ## News
 
+- **07/2026** — **AdaMM** released on arXiv: analytic memory for multimodal agents.
 - **07/2026** — Semantic query processing line: **Sema** accepted by PVLDB'26 and **CoreSemDB** accepted by COLM'26.
 - **11/2025** — LDBC SNB Interactive imperative track world record (#1).
 

@@ -96,7 +96,7 @@ My earlier work focused on distributed query processing, subgraph analytics, and
 
 Representative work:
 
-- [**Secco, SIGMOD'22**](/publication/SIGMOD-22-1) — distributed SQL execution by explicitly separating communication and computation.
+- [**Secco, SIGMOD'22**](/publication/SIGMOD-22-1) — distributed query processing with communication separated from local computation.
 - [**DISC, VLDB'20**](/publication/VLDB-20) — distributed local subgraph counting via relational query processing.
 - [**Crystal, VLDB'18**](/publication/VLDB-18) — compressed subgraph matching without materializing all matches.
 - [**ALSS, SIGMOD'21**](/publication/SIGMOD-21) — a learned sketch for approximate subgraph counting.

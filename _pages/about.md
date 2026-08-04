@@ -15,7 +15,7 @@ profile:
   more_info: >
     <p>Research Scientist, ByteDance</p>
     <p>AI-native Data Systems</p>
-    <p><a href="mailto:zhanghao.ai@bytedance.com">zhanghao.ai@bytedance.com</a></p>
+    <p><a href="mailto:zhanghaowuda12@gmail.com">zhanghaowuda12@gmail.com</a></p>
 
 recent_publications: false
 social: true
@@ -39,7 +39,7 @@ I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advise
 
 I welcome **collaboration** of all kinds on agentic data management, and vector/graph engines, and hardware accelerated query processing. 
 
-I am currently recruiting **interns** in Shenzhen. To apply, please email zhanghao.ai [at] bytedance [dot] com with [Intern] in the subject line.
+I am currently recruiting **interns** in Shenzhen. To apply, please email zhanghaowuda12 [at] gmail [dot] com with [Intern] in the subject line.
 
 ## Highlights
 

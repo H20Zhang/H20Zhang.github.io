@@ -11,6 +11,7 @@ nav_order: 1
 
 ## Selected Publications
 
+- **DocNavRAG: Document-Structured Graph RAG with Stateful Evidence Construction for Complex Document Question Answering** (arXiv'26) — A document-structured graph RAG framework that navigates document structure and incrementally constructs evidence states for complex document QA. [Paper](https://arxiv.org/abs/2608.01565)
 - **Beyond Retrieval: Analytic Memory for Multimodal Agents** (arXiv'26) — Introduces AdaMM, which complements retrieval memory with queryable analytic memory for recurring multimodal observations. [Paper](https://arxiv.org/abs/2607.29440)
 - **Sema: A High-performance System for LLM-based Semantic Query Processing** (PVLDB'26, to appear) — Semantic operators and cost-aware execution for LLM-based semantic query processing. [Paper](https://arxiv.org/abs/2603.11622)
 - **CoreSemDB: Benchmarking Hybrid Semantic-Relational Query Processing over Text-Rich Databases** (COLM'26, to appear) — Benchmarking hybrid semantic-relational query processing over databases with rich textual content. [Search](https://scholar.google.com/scholar?q=CoreSemDB+Benchmarking+Hybrid+Semantic-Relational+Query+Processing+over+Text-Rich+Databases)
@@ -25,5 +26,5 @@ nav_order: 1
 {% include bib_search.liquid %}
 
 <div class="publications">
-{% bibliography --file papers --file adamm %}
+{% bibliography --file papers --file adamm --file docnavrag %}
 </div>

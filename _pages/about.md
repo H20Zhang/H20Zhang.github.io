@@ -61,8 +61,8 @@ Representative work:
 
 - [**DocNavRAG, arXiv'26**](https://arxiv.org/abs/2608.01565) — organizes document-native hierarchy and cross-region relations into a navigable graph for stateful, agentic evidence construction over complex document QA.
 - [**AdaMM, arXiv'26**](https://arxiv.org/abs/2607.29440) — complements retrieval memory with queryable analytic memory over recurring multimodal observations.
-- [**Sema, PVLDB'26, to appear**](/publications/#VLDB-26-2) — LLM-powered semantic operators inside DuckDB/SQL.
-- [**CoreSemDB, COLM'26, to appear**](/publications/) — benchmark for hybrid semantic-relational query processing over text-rich databases.
+- [**Sema, PVLDB'26**](/publications/#VLDB-26-2) — LLM-powered semantic operators inside DuckDB/SQL.
+- [**CoreSemDB, COLM'26**](/publications/) — benchmark for hybrid semantic-relational query processing over text-rich databases.
 
 Recent writing: [Context Management 的下一代：维护模型可感知的世界](/blog/2026/next-gen-agent-zh/) ([English](/blog/2026/next-gen-agent-en/)).
 

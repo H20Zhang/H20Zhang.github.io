@@ -1,7 +1,7 @@
 ---
 layout: about
 title: About
-seo_title: Hao Zhang — Data Systems for Agents and Self-Improving Context Infrastructure
+seo_title: Hao Zhang — Data Systems for Agents
 permalink: /
 subtitle: Research Scientist at ByteDance
 description: Research Scientist at ByteDance building data systems for agents, with a focus on self-improving context infrastructure, agentic data integration, retrieval-aware knowledge representation, and graph/vector retrieval systems.
@@ -31,7 +31,7 @@ latest_posts:
   limit: 3
 ---
 
-I am a Research Scientist at ByteDance working on **data systems for agents**. My research studies how to turn heterogeneous enterprise and multimodal data into structured, queryable, and task-relevant context, enabling agents to access the information they need and execute tasks more reliably. I am particularly interested in **self-improving context infrastructure** that uses feedback from agent execution to continuously refine how information is integrated, organized, retrieved, and maintained. This work spans agentic data integration, context infrastructure, and graph/vector retrieval systems. Beyond this focus, I also work on accelerator-aware query execution and distributed data systems.
+I am a Research Scientist at ByteDance working on **data systems for agents**. My research studies how to turn heterogeneous enterprise and multimodal data into structured, queryable, and task-relevant context, enabling agents to access the information they need and execute tasks more reliably. I am particularly interested in **self-improving context infrastructure** that uses feedback from agent execution to improve information integration, organization, retrieval, and maintenance over time. This work spans agentic data integration, context infrastructure, and graph/vector retrieval systems. Beyond this focus, I also work on accelerator-aware query execution and distributed data systems.
 
 I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
 
@@ -48,7 +48,7 @@ At ByteDance, I am currently recruiting **research interns** in Shenzhen. To app
 
 ## Current Focus: Agentic Data Management
 
-My research asks how data systems can provide agents with the information they need to execute tasks reliably. This involves turning heterogeneous sources into structured, queryable information; organizing that information into task-relevant context; maintaining it as underlying data changes; and using feedback from agent execution to improve integration, representation, retrieval, and maintenance. A central question is **retrieval-aware knowledge representation**: how should information be structured so agents can retrieve task-relevant context accurately and efficiently, with clear attribution and freshness? The agenda is data-centric rather than model-centric: reliable agent execution depends not only on stronger models, but also on inspectable information substrates whose organization, access, and evolution are managed by data systems.
+My research asks how data systems can provide agents with the information they need to execute tasks reliably. This involves turning heterogeneous sources into structured, queryable information; organizing that information into task-relevant context; maintaining it as underlying data changes; and using feedback from agent execution to improve integration, representation, retrieval, and maintenance. A central question is **retrieval-aware knowledge representation**: how should information be structured so agents can retrieve task-relevant context accurately and efficiently while preserving attribution and freshness? The agenda is data-centric rather than model-centric: reliable agent execution depends not only on stronger models, but also on inspectable information substrates whose organization, access, and evolution are managed by data systems.
 
 This focus spans two layers: **agentic data integration, context infrastructure & self-improving systems** (how information is integrated and organized into task-relevant context, and how execution feedback improves the system) and **retrieval & storage substrates** (the infrastructure that stores and serves that information efficiently).
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AutoIA
-description: Next-generation infrastructure for agentic context search, observability, and continuous system improvement.
+description: Internal infrastructure connecting agent context, execution, observability, evaluation, and feedback-driven system improvement.
 importance: 1
 category: systems
 external_url: https://www.volcengine.com/docs/6465/2096539
@@ -9,17 +9,17 @@ external_label: Volcano Engine ContextSearch
 related_publications: false
 ---
 
-AutoIA is an internal system for building **next-generation agentic context-search infrastructure**. It connects heterogeneous knowledge access with retrieval/runtime execution, observability, evaluation, and reusable capability evolution.
+AutoIA is an internal system for building **self-improving information and context infrastructure for agents**. It connects heterogeneous data integration and retrieval with agent runtime execution, observability, evaluation, and feedback-driven improvement.
 
 ## Problem
 
-Agent systems increasingly depend on context assembled from documents, tables, multimodal data, memory, indexes, and external knowledge sources. Improving an agent therefore requires more than a stronger retriever: the surrounding system must understand workloads, diagnose failures, and evolve the way information is organized and accessed.
+Agents can execute reliably only when they receive the right information in a form suited to the task. That context may be assembled from documents, tables, multimodal data, memory, indexes, and external knowledge sources. Improving an agent therefore requires more than a stronger retriever: the surrounding system must organize and maintain task-relevant context, observe how it is used, and learn from execution failures.
 
 ## Core idea
 
-AutoIA closes the loop between **context infrastructure and agent execution**. The system combines retrieval and runtime infrastructure with trace-based observability, evaluation, and mechanisms for refining retrieval pipelines, tools, skills, and execution strategies from accumulated evidence.
+AutoIA closes the loop between **information and context infrastructure, agent execution, and system improvement**. It constructs and serves context, observes how agents use it during execution, evaluates the resulting behavior, and uses accumulated evidence to refine information integration, organization, retrieval, and maintenance, as well as the tools, skills, and strategies used to act on that context.
 
-The current focus is **self-evolving infrastructure**: using workloads, execution traces, and evaluation signals to improve system capabilities over time. A longer-term research question is **recursive self-improvement** — whether the mechanisms that generate, evaluate, and select improvements can themselves become objects of optimization.
+The current focus is **feedback-driven self-improvement**: using workloads, execution traces, and evaluation signals to improve system capabilities over time. A longer-term research question is **recursive self-improvement** — whether the mechanisms that propose, evaluate, and select improvements can themselves become objects of optimization.
 
 ## Research role
 

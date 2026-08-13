@@ -1,11 +1,11 @@
 ---
 layout: about
 title: About
-seo_title: Hao Zhang — Agentic Data Management, Context Infrastructure, and Graph/Vector Systems
+seo_title: Hao Zhang — Data Systems for Agents
 permalink: /
 subtitle: Research Scientist at ByteDance
-description: Research Scientist at ByteDance working on agentic data management, agentic context infrastructure, self-evolving systems, retrieval-aware knowledge representation, semantic query processing, vector/graph retrieval systems, and accelerator-aware query execution.
-keywords: Hao Zhang, ByteDance, agentic data management, agentic data integration, context search, agent infrastructure, self-evolving systems, knowledge extraction, retrieval-aware knowledge representation, semantic query processing, vector search, graph database, AI-native data systems
+description: Research Scientist at ByteDance building data systems for agents, with a focus on self-improving context infrastructure, agentic data integration, retrieval-aware knowledge representation, and graph/vector retrieval systems.
+keywords: Hao Zhang, ByteDance, data systems for agents, agentic data management, agentic data integration, context infrastructure, self-improving systems, knowledge extraction, retrieval-aware knowledge representation, semantic query processing, vector search, graph database, AI-native data systems
 
 profile:
   align: right
@@ -31,13 +31,13 @@ latest_posts:
   limit: 3
 ---
 
-I am a Research Scientist at ByteDance, building **data systems for AI-native and data-intensive workloads**. My current focus is **agentic data management** — the systems layer beneath LLM agents that turns scattered enterprise and multimodal data into structured, retrieval-optimized context and improves how agents access it over time. This includes **agentic data integration, context infrastructure & self-evolving systems** and **graph/vector retrieval infrastructure**. Beyond this focus, I also work on accelerator-aware query execution and distributed query processing.
+I am a Research Scientist at ByteDance working on **data systems for agents**. My research studies how to turn heterogeneous enterprise and multimodal data into structured, queryable, and task-relevant context, enabling agents to access the information they need and execute tasks more reliably. I am particularly interested in **self-improving context infrastructure** that uses feedback from agent execution to improve information integration, organization, retrieval, and maintenance over time. This work spans agentic data integration, context infrastructure, and graph/vector retrieval systems. Beyond this focus, I also work on accelerator-aware query execution and distributed data systems.
 
 I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from the **[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)** at Wuhan University in 2017.
 
 ## Collaboration & Internship
 
-I welcome **collaboration** of all kinds on agentic data management, self-evolving agent infrastructure, vector/graph engines, and hardware-accelerated query processing.
+I welcome **collaboration** on agentic data management, self-improving context infrastructure, graph/vector retrieval systems, and accelerator-aware query execution.
 
 At ByteDance, I am currently recruiting **research interns** in Shenzhen. To apply, please email zhanghaowuda12 [at] gmail [dot] com with [Intern] in the subject line.
 
@@ -48,17 +48,17 @@ At ByteDance, I am currently recruiting **research interns** in Shenzhen. To app
 
 ## Current Focus: Agentic Data Management
 
-My research asks how data systems should manage the information substrate for LLM agents: integrating heterogeneous sources, extracting reliable knowledge, maintaining it as queryable context, and improving access mechanisms from execution feedback. A central question is **retrieval-aware knowledge representation**: what form should extracted knowledge take so that downstream retrieval is accurate, efficient, attributable, and fresh? The agenda is data-centric rather than model-centric: agents should operate over inspectable substrates whose structure, retrieval interfaces, and evolution are system-managed.
+My research asks how data systems can provide agents with the information they need to execute tasks reliably. This involves turning heterogeneous sources into structured, queryable information; organizing that information into task-relevant context; maintaining it as underlying data changes; and using feedback from agent execution to improve integration, representation, retrieval, and maintenance. A central question is **retrieval-aware knowledge representation**: how should information be structured so agents can retrieve task-relevant context accurately and efficiently while preserving attribution and freshness? The agenda is data-centric rather than model-centric: reliable agent execution depends not only on stronger models, but also on inspectable information substrates whose organization, access, and evolution are managed by data systems.
 
-This focus spans two layers: **agentic data integration, context infrastructure & self-evolving systems** (what knowledge and capabilities to construct, how agents access them, and how the system improves) and **retrieval & storage substrates** (the infrastructure that physically supports those capabilities).
+This focus spans two layers: **agentic data integration, context infrastructure & self-improving systems** (how information is integrated and organized into task-relevant context, and how execution feedback improves the system) and **retrieval & storage substrates** (the infrastructure that stores and serves that information efficiently).
 
-### Agentic data integration, context infrastructure & self-evolving systems
+### Agentic data integration, context infrastructure & self-improving systems
 
-Agents depend on integrated knowledge views over heterogeneous sources — documents, tables, vector indexes, knowledge bases, memory, and multimodal content. Rather than treating documents as opaque context or chunking by layout heuristics, the system derives knowledge units, relations, provenance, temporal scopes, and materialized views driven by downstream retrieval objectives and agent workloads. Unlike classical virtual integration that defers everything to query time, agentic integration must extract, align, and maintain knowledge between queries: schema and semantic alignment, entity/relation extraction, semantic joins, versioning, deduplication, conflict detection, and freshness.
+Agents need more than access to raw data: they need information organized into context that matches the task and supports reliable execution. Across heterogeneous sources — documents, tables, vector indexes, knowledge bases, memory, and multimodal content — the system must derive and maintain knowledge units, relations, provenance, temporal scopes, and materialized views according to downstream retrieval objectives and agent workloads. Unlike classical virtual integration that defers most work to query time, agentic integration must continuously extract, align, and maintain information between queries through schema and semantic alignment, entity/relation extraction, semantic joins, versioning, deduplication, conflict detection, and freshness management.
 
-[**AutoIA**]({% link _projects/1_autoia.md %}) is the systems vehicle for this agenda: an internal, next-generation infrastructure for agentic context search that connects retrieval/runtime execution with observability, evaluation, and continuous capability improvement. It provides a concrete setting for studying how retrieval pipelines, tools, skills, and execution strategies can improve from workloads and execution traces. Product context: [Volcano Engine ContextSearch](https://www.volcengine.com/docs/6465/2096539).
+[**AutoIA**]({% link _projects/1_autoia.md %}) is the systems vehicle for this agenda: an internal system that connects context construction and retrieval with agent runtime execution, observability, and evaluation. It provides a concrete setting for studying how workloads, execution traces, and evaluation signals can improve how information is integrated, organized, retrieved, and maintained, as well as the tools, skills, and execution strategies agents use to act on that context. Product context: [Volcano Engine ContextSearch](https://www.volcengine.com/docs/6465/2096539).
 
-Longer term, I am interested in **recursive self-improvement (RSI)** as a systems question: moving beyond improving task-level retrieval, tools, or plans toward improving the mechanisms that generate, evaluate, and select those improvements themselves.
+Longer term, I am interested in **recursive self-improvement (RSI)** as a systems question: moving from feedback-driven improvement of context, retrieval, tools, and execution strategies toward systems that can also improve the mechanisms used to propose, evaluate, and select those improvements.
 
 Representative work:
 
@@ -71,7 +71,7 @@ Selected writing: [**The Next Generation of Context Management: Maintaining the 
 
 ### Retrieval and storage substrates
 
-The knowledge and context substrates above sit on storage, indexing, and retrieval infrastructure. My work here targets dynamic graph stores, vector indexes, and hybrid query engines, where correctness under concurrent updates and retrieval throughput are the primary design constraints.
+The information and context systems above depend on storage, indexing, and retrieval substrates that can serve the right information under changing workloads. My work here targets dynamic graph stores, vector indexes, and hybrid query engines, where correctness under concurrent updates and retrieval throughput are the primary design constraints.
 
 Representative work:
 
@@ -96,7 +96,7 @@ Representative work:
 
 ### Earlier foundations
 
-My earlier work focused on distributed query processing, subgraph analytics, and learned query optimization. These techniques — efficient joins, cardinality estimation, communication–computation separation, and distributed graph execution — form a systems foundation that I continue to build on today.
+My earlier work focused on distributed query processing, subgraph analytics, and learned query optimization. These techniques — efficient joins, cardinality estimation, communication–computation separation, and distributed graph execution — form the systems foundations for scalable retrieval and context infrastructure.
 
 Representative work:
 

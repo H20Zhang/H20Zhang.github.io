@@ -1,4 +1,4 @@
-Huawei GES:
+"GES @ Huawei Cloud":
   - area: Service architecture & execution
     papers:
       - name: GES
@@ -18,7 +18,7 @@ Huawei GES:
         url: /publications/#VLDB-26
         role: extends the research line toward high-concurrency incremental graph query processing
 
-Database & Graph Research Systems:
+"Database & Graph Research Systems @ CUHK":
   - area: Distributed query execution
     papers:
       - name: Secco

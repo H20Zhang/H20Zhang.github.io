@@ -4,7 +4,7 @@ title: About
 seo_title: Hao Zhang — Data Systems for Agents
 permalink: /
 subtitle: Research Scientist at ByteDance
-description: Research Scientist at ByteDance building data systems that construct, maintain, and evolve the information environment for AI agents.
+description: Research Scientist at ByteDance building data systems for agents, with a focus on agentic data management, context infrastructure, and self-evolving systems.
 keywords: Hao Zhang, ByteDance, data systems for agents, agentic data management, context infrastructure, self-evolving systems, context search, vector search, graph database, semantic query processing, AI-native data systems
 
 profile:
@@ -31,7 +31,7 @@ latest_posts:
   limit: 3
 ---
 
-I am a Research Scientist at ByteDance building **data systems for agents**. I study how systems can construct, maintain, and improve the information environment agents operate over. I also work on graph/vector retrieval and accelerator-aware data systems.
+I am a Research Scientist at ByteDance building **data systems for agents**. My work spans agentic data management, graph/vector retrieval, and accelerator-aware data systems.
 
 I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from Wuhan University in 2017.
 
@@ -42,9 +42,11 @@ I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advise
 
 ## Current Research
 
-My research asks: **how should data systems maintain the information environment that agents operate over?** I focus on turning heterogeneous information into useful context, giving agents effective ways to access it, and improving that environment from execution feedback.
+My research asks: **how should data systems build and maintain the information environment that agents operate over?** I study how heterogeneous information should be organized and exposed as context, and how that environment should evolve from execution feedback.
 
-[**AutoIA @ ByteDance**](/projects/1_autoia/) is the systems vehicle for this agenda, connecting context infrastructure with agent execution, observability, evaluation, and continuous improvement. Longer term, I am interested in **recursive self-improvement (RSI)**: systems that improve not only agent capabilities, but also how those improvements are generated and evaluated.
+[**AutoIA @ ByteDance**](/projects/1_autoia/) is the systems vehicle for this agenda. It connects context infrastructure with agent execution and closes the loop through observability, evaluation, and continuous improvement.
+
+Longer term, I am interested in **recursive self-improvement (RSI)**: systems that improve not just agent behavior, but the mechanisms that generate and evaluate improvements.
 
 Selected writing: [**The Next Generation of Context Management: Maintaining the Model's Perceivable World**](/blog/2026/next-gen-agent-en/) · [中文版](/blog/2026/next-gen-agent-zh/).
 

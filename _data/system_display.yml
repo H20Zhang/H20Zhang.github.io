@@ -1,3 +1,9 @@
-AutoIA: ByteDance
-GES: Huawei Cloud
-Database & Graph Research Systems: CUHK
+AutoIA:
+  name: AutoIA
+  at: ByteDance
+"Huawei GES":
+  name: GES
+  at: Huawei Cloud
+"Database & Graph Research Systems":
+  name: Database & Graph Research Systems
+  at: CUHK

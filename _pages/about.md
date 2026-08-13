@@ -4,8 +4,8 @@ title: About
 seo_title: Hao Zhang — Data Systems for Agents
 permalink: /
 subtitle: Research Scientist at ByteDance
-description: Research Scientist at ByteDance building data systems for agents, with a focus on agentic data management, context infrastructure, and self-evolving systems.
-keywords: Hao Zhang, ByteDance, data systems for agents, agentic data management, context infrastructure, self-evolving systems, context search, vector search, graph database, semantic query processing, AI-native data systems
+description: Research Scientist at ByteDance building data systems for agents, with a focus on context infrastructure, vector search, graph systems, and hardware-accelerated data systems.
+keywords: Hao Zhang, ByteDance, data systems for agents, context infrastructure, context management, agent memory, context search, vector search, graph systems, semantic query processing, hardware-accelerated data systems, AI-native data systems
 
 profile:
   align: right
@@ -31,7 +31,7 @@ latest_posts:
   limit: 3
 ---
 
-I am a Research Scientist at ByteDance building **data systems for agents**. My work spans agentic data management, graph/vector retrieval, and accelerator-aware data systems.
+I am a Research Scientist at ByteDance building **data systems for agents**. My work focuses on context infrastructure, vector search, graph systems, and hardware-accelerated data systems.
 
 I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from Wuhan University in 2017.
 
@@ -42,17 +42,15 @@ I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advise
 
 ## Current Research
 
-My research asks: **how should data systems build and maintain the information environment that agents operate over?** I study how heterogeneous information should be organized and exposed as context, and how that environment should evolve from execution feedback.
+My research asks: **how should data systems build and maintain the context agents need to operate effectively over time?** I study how heterogeneous information is organized, retrieved, and maintained as context, and how execution feedback can continuously improve these mechanisms.
 
-[**AutoIA @ ByteDance**](/projects/1_autoia/) is the systems vehicle for this agenda. It connects context infrastructure with agent execution and closes the loop through observability, evaluation, and continuous improvement.
-
-Longer term, I am interested in **recursive self-improvement (RSI)**: systems that improve not just agent behavior, but the mechanisms that generate and evaluate improvements.
+[**AutoIA @ ByteDance**](/projects/1_autoia/) is the systems platform for this agenda, connecting context infrastructure with agent execution, observability, and evaluation. Longer term, I am interested in **self-improving agent infrastructure** and **recursive self-improvement (RSI)**: improving not only agent capabilities, but also the mechanisms that generate and evaluate improvements.
 
 Selected writing: [**The Next Generation of Context Management: Maintaining the Model's Perceivable World**](/blog/2026/next-gen-agent-en/) · [中文版](/blog/2026/next-gen-agent-zh/).
 
 ## Selected Systems
 
-- [**AutoIA @ ByteDance**](/projects/1_autoia/) — agentic context infrastructure and self-evolving systems.
+- [**AutoIA @ ByteDance**](/projects/1_autoia/) — context infrastructure and self-improving agent systems.
 - [**GES @ Huawei Cloud**](/projects/3_ges/) — production graph database infrastructure.
 - [**Database & Graph Research Systems @ CUHK**](/projects/4_database_graph_systems/) — distributed query processing and graph systems.
 
@@ -60,7 +58,7 @@ Selected writing: [**The Next Generation of Context Management: Maintaining the 
 
 ## Collaboration & Internship
 
-I welcome collaboration on agentic data management, self-evolving infrastructure, and retrieval systems. I am also recruiting **research interns** at ByteDance in Shenzhen; email zhanghaowuda12 [at] gmail [dot] com with `[Intern]` in the subject.
+I welcome collaboration on context infrastructure, retrieval systems, graph/vector systems, and self-improving agent infrastructure. I am also recruiting **research interns** at ByteDance in Shenzhen; email zhanghaowuda12 [at] gmail [dot] com with `[Intern]` in the subject.
 
 ## Recent News
 

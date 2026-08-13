@@ -15,10 +15,14 @@
         </div>
       </div>
     </a>
-    {% if project.research_support %}
+    {% assign research_support = project.research_support %}
+    {% unless research_support %}
+      {% assign research_support = site.data.system_research[project.title] %}
+    {% endunless %}
+    {% if research_support %}
       <div class="mx-3 pt-3 pb-1 border-top">
         <div class="small font-weight-bold text-muted mb-2">Research threads</div>
-        {% for support in project.research_support %}
+        {% for support in research_support %}
           <div class="small mb-2">
             <strong>{{ support.area }}</strong>:
             {% for paper in support.papers %}

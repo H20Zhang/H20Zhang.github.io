@@ -7,6 +7,25 @@ category: systems
 external_url: https://www.volcengine.com/docs/6465/2096539
 external_label: Volcano Engine ContextSearch
 related_publications: false
+research_support:
+  - area: Knowledge organization
+    papers:
+      - name: DocNavRAG
+        url: https://arxiv.org/abs/2608.01565
+        role: supports stateful evidence construction through navigable document structure
+  - area: Agent memory
+    papers:
+      - name: AdaMM
+        url: https://arxiv.org/abs/2607.29440
+        role: supports query-adaptive memory through analytic views over multimodal histories
+  - area: Semantic query layer
+    papers:
+      - name: Sema
+        url: /publications/#VLDB-26-2
+        role: provides first-class semantic operators and adaptive execution
+      - name: CoreSemDB
+        url: /publications/#COLM-26
+        role: defines hybrid semantic-relational workloads for evaluating this layer
 ---
 
 AutoIA is an internal system for building **next-generation agentic context-search infrastructure**. It connects heterogeneous knowledge access with retrieval/runtime execution, observability, evaluation, and reusable capability evolution.

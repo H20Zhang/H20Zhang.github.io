@@ -1,21 +1,23 @@
 ---
 layout: page
-title: GES
-description: Benchmark-leading graph database service architecture for high-throughput interactive workloads.
-importance: 3
+title: Huawei GES
+description: Production graph database service for high-throughput interactive graph workloads.
+importance: 2
 category: systems
+external_url: https://support.huaweicloud.com/productdesc-ges/ges_04_0001.html
+external_label: Huawei GES
 related_publications: false
 ---
 
-GES is a production graph database service architecture developed at Huawei for high-throughput interactive graph workloads.
+Huawei GES is a production graph database service for high-throughput interactive graph workloads.
 
 ## Problem
 
-Interactive graph services need to serve complex graph queries with high concurrency, predictable latency, and production-grade manageability. Traditional graph engines often optimize for either offline graph analytics or isolated benchmark kernels, but production services must combine query throughput, maintainability, and extensibility.
+Interactive graph services need to serve complex graph queries with high concurrency, predictable latency, and production-grade manageability. Production systems must combine query throughput with maintainability, extensibility, and operational robustness rather than optimize only isolated benchmark kernels.
 
 ## Core idea
 
-The newer GES line uses a composable service architecture and factorized execution to improve high-concurrency query processing. The goal is to make graph query execution fast without turning the system into a benchmark-only prototype.
+The newer GES line uses a composable service architecture and factorized execution to improve high-concurrency query processing while retaining a production-oriented system design.
 
 ## My role
 
@@ -23,6 +25,7 @@ Research and system architecture for graph database infrastructure and the GES l
 
 ## Evidence
 
+- [Huawei Cloud Graph Engine Service](https://support.huaweicloud.com/productdesc-ges/ges_04_0001.html)
 - [SIGMOD 2025 paper](/publications/#SIGMOD-25-1)
 - [LDBC SNB Interactive declarative result, 2024](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/)
 - [LDBC SNB Interactive imperative result, 2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/)

@@ -2,11 +2,13 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: Selected research and production systems.
+description: Selected systems spanning current agentic infrastructure, production graph systems, and earlier database/graph research.
 nav: true
 nav_order: 2
 horizontal: true
 ---
+
+A selective systems portfolio: **AutoIA** represents my current direction in agentic context infrastructure, **Huawei GES** demonstrates production-scale system impact, and the earlier database/graph systems capture the systems foundation behind this trajectory.
 
 <div class="projects">
 {% assign sorted_projects = site.projects | sort: "importance" %}

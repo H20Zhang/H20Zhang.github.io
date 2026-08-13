@@ -15,16 +15,23 @@
         </div>
       </div>
     </a>
-    {% if project.github %}
+    {% if project.github or project.external_url %}
       <div class="project-card-actions px-3 pb-3">
-        <a class="github-icon" href="https://github.com/{{ project.github }}" target="_blank" rel="noopener noreferrer" title="Code Repository">
-          <i class="fa-brands fa-github gh-icon"></i> Code
-        </a>
-        {% if project.github_stars %}
-          <span class="stars" data-toggle="tooltip" title="GitHub Stars">
-            <i class="fa-solid fa-star"></i>
-            <span id="{{ project.github_stars }}-stars"></span>
-          </span>
+        {% if project.external_url %}
+          <a class="github-icon" href="{{ project.external_url }}" target="_blank" rel="noopener noreferrer" title="{{ project.external_label | default: 'External project link' }}">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> {{ project.external_label | default: "Project" }}
+          </a>
+        {% endif %}
+        {% if project.github %}
+          <a class="github-icon" href="https://github.com/{{ project.github }}" target="_blank" rel="noopener noreferrer" title="Code Repository">
+            <i class="fa-brands fa-github gh-icon"></i> Code
+          </a>
+          {% if project.github_stars %}
+            <span class="stars" data-toggle="tooltip" title="GitHub Stars">
+              <i class="fa-solid fa-star"></i>
+              <span id="{{ project.github_stars }}-stars"></span>
+            </span>
+          {% endif %}
         {% endif %}
       </div>
     {% endif %}

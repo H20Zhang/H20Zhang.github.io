@@ -14,7 +14,7 @@ profile:
   image_circular: false
   more_info: >
     <p>Research Scientist, ByteDance</p>
-    <p>AI-native Data Systems</p>
+    <p>Data systems for agents.</p>
     <p><a href="mailto:zhanghaowuda12@gmail.com">zhanghaowuda12@gmail.com</a></p>
 
 recent_publications: false
@@ -39,12 +39,11 @@ I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advise
 
 I welcome **collaboration** of all kinds on agentic data management, self-evolving agent infrastructure, vector/graph engines, and hardware-accelerated query processing.
 
-I am currently recruiting **interns** in Shenzhen. To apply, please email zhanghaowuda12 [at] gmail [dot] com with [Intern] in the subject line.
+At ByteDance, I am currently recruiting **research interns** in Shenzhen. To apply, please email zhanghaowuda12 [at] gmail [dot] com with [Intern] in the subject line.
 
 ## Highlights
 
 - **25+ publications** across database systems, graph/vector retrieval, and Data+AI infrastructure, including papers in **SIGMOD, VLDB, ICDE, COLM, TKDE, and The VLDB Journal**.
-- Building **AutoIA**, an internal next-generation infrastructure for agentic context search, while studying how context and retrieval systems can improve from workloads, execution traces, and evaluation. Earlier systems include production-scale **Huawei GES** and database/graph research systems **SeccoSQL, DISC, and Crystal**. [→ Projects](/projects/)
 - **LDBC SNB Interactive world-record results** in both the declarative track ([2024, **3,000× over #2**](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/)) and the imperative track ([2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/)).
 
 ## Current Focus: Agentic Data Management
@@ -66,9 +65,9 @@ Representative work:
 - [**DocNavRAG, arXiv'26**](https://arxiv.org/abs/2608.01565) — organizes document-native hierarchy and cross-region relations into a navigable graph for stateful, agentic evidence construction over complex document QA.
 - [**AdaMM, arXiv'26**](https://arxiv.org/abs/2607.29440) — complements retrieval memory with queryable analytic memory over recurring multimodal observations.
 - [**Sema, PVLDB'26**](/publications/#VLDB-26-2) — LLM-powered semantic operators inside DuckDB/SQL.
-- [**CoreSemDB, COLM'26**](/publications/) — benchmark for hybrid semantic-relational query processing over text-rich databases.
+- [**CoreSemDB, COLM'26**](/publications/#COLM-26) — benchmark for hybrid semantic-relational query processing over text-rich databases.
 
-Recent writing: [Context Management 的下一代：维护模型可感知的世界](/blog/2026/next-gen-agent-zh/) ([English](/blog/2026/next-gen-agent-en/)).
+Selected writing: [**The Next Generation of Context Management: Maintaining the Model's Perceivable World**](/blog/2026/next-gen-agent-en/) · [中文版](/blog/2026/next-gen-agent-zh/).
 
 ### Retrieval and storage substrates
 

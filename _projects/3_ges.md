@@ -6,6 +6,11 @@ importance: 2
 category: systems
 external_url: https://support.huaweicloud.com/productdesc-ges/ges_04_0001.html
 external_label: Huawei GES
+secondary_links:
+  - label: LDBC Declarative #1
+    url: https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/
+  - label: LDBC Imperative #1
+    url: https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/
 related_publications: false
 ---
 

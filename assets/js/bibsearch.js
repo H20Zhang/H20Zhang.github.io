@@ -52,7 +52,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const updateInputField = () => {
     const hashValue = decodeURIComponent(window.location.hash.substring(1)); // Remove the '#' character
-    document.getElementById("bibsearch").value = hashValue;
+    const bibsearch = document.getElementById("bibsearch");
+    const anchorTarget = hashValue ? document.getElementById(hashValue) : null;
+
+    // BibTeX keys are also used as publication anchors. Prefer anchor navigation
+    // when the hash identifies a bibliography entry; otherwise keep hash-as-search.
+    if (anchorTarget?.closest(".bibliography > li")) {
+      bibsearch.value = "";
+      filterItems("");
+      requestAnimationFrame(() => anchorTarget.scrollIntoView({ block: "start" }));
+      return;
+    }
+
+    bibsearch.value = hashValue;
     filterItems(hashValue);
   };
 
@@ -61,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("bibsearch").addEventListener("input", function () {
     clearTimeout(timeoutId); // Clear the previous timeout
     const searchTerm = this.value.toLowerCase();
-    timeoutId = setTimeout(filterItems(searchTerm), 300);
+    timeoutId = setTimeout(() => filterItems(searchTerm), 300);
   });
 
   window.addEventListener("hashchange", updateInputField); // Update the filter when the hash changes

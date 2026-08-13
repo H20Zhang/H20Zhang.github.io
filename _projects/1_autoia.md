@@ -9,7 +9,7 @@ external_label: Volcano Engine ContextSearch
 related_publications: false
 ---
 
-AutoIA is an internal system for building **self-improving information and context infrastructure for agents**. It connects heterogeneous data integration and retrieval with agent runtime execution, observability, evaluation, and capability improvement.
+AutoIA is an internal system for building **self-improving information and context infrastructure for agents**. It connects heterogeneous data integration and retrieval with agent runtime execution, observability, evaluation, and feedback-driven improvement.
 
 ## Problem
 

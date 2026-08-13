@@ -2,19 +2,19 @@
 layout: page
 title: Systems
 permalink: /projects/
-description: Selected systems spanning current agentic infrastructure, production graph systems, and earlier database/graph research.
+description: Selected systems spanning context infrastructure for agents, production graph systems, and earlier database/graph research.
 nav: true
 nav_order: 2
 ---
 
-A selective systems portfolio: **AutoIA @ ByteDance** represents my current direction in agentic context infrastructure, **GES @ Huawei Cloud** demonstrates production-scale system impact, and **Database & Graph Research Systems @ CUHK** capture the systems foundation behind this trajectory.
+A selective systems portfolio: **AutoIA @ ByteDance** develops context infrastructure for agents, **GES @ Huawei Cloud** demonstrates production-scale graph-system impact, and **Database & Graph Research Systems @ CUHK** capture the systems foundation behind this trajectory.
 
 <div class="row row-cols-1 row-cols-md-2">
   <div class="col mb-4">
     <div class="card h-100 hoverable">
       <div class="card-body">
         <h3 class="card-title"><a href="/projects/1_autoia/">AutoIA @ ByteDance</a></h3>
-        <p class="card-text">Next-generation infrastructure for agentic context search, observability, and continuous system improvement.</p>
+        <p class="card-text">Context infrastructure for agents, connecting retrieval and runtime execution with observability, evaluation, and continuous improvement.</p>
         <hr>
         <p class="small"><strong>Knowledge organization</strong>: <a href="https://arxiv.org/abs/2608.01565">DocNavRAG</a> — stateful evidence construction through navigable document structure.</p>
         <p class="small"><strong>Agent memory</strong>: <a href="https://arxiv.org/abs/2607.29440">AdaMM</a> — query-adaptive memory through analytic views over multimodal histories.</p>

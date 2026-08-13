@@ -75,12 +75,12 @@ The knowledge and context substrates above sit on storage, indexing, and retriev
 
 Representative work:
 
-- [**VeloANN, arXiv'26**](/publication/Arxiv-26-2) — SSD-resident graph indexing for high-throughput vector search.
-- [**SQLVec, ICDE'26**](/publication/ICDE-26) — SQL-native vector similarity search.
-- [**GES, SIGMOD'25**](/publication/SIGMOD-25-1) — a production graph database service for interactive graph workloads.
-- [**RapidStore, VLDB'25**](/publication/VLDB-25) — dynamic graph storage for concurrent read/write workloads.
-- [**Dynamic Graph Storage Study, SIGMOD'25**](/publication/SIGMOD-25-3) — a systematic study of in-memory dynamic graph storage designs.
-- [**Aquila, VLDB'26**](/publication/VLDB-26) — high-concurrency incremental graph query processing.
+- [**VeloANN, arXiv'26**](/publications/#Arxiv-26-2) — SSD-resident graph indexing for high-throughput vector search.
+- [**SQLVec, ICDE'26**](/publications/#ICDE-26) — SQL-native vector similarity search.
+- [**GES, SIGMOD'25**](/publications/#SIGMOD-25-1) — a production graph database service for interactive graph workloads.
+- [**RapidStore, VLDB'25**](/publications/#VLDB-25) — dynamic graph storage for concurrent read/write workloads.
+- [**Dynamic Graph Storage Study, SIGMOD'25**](/publications/#SIGMOD-25-3) — a systematic study of in-memory dynamic graph storage designs.
+- [**Aquila, VLDB'26**](/publications/#VLDB-26) — high-concurrency incremental graph query processing.
 
 ## Broader Systems Work
 
@@ -90,9 +90,9 @@ I also work on accelerator-aware query execution: using tensor runtimes (PyTorch
 
 Representative work:
 
-- [**TQEx(SQL), SIGMOD'26**](/publication/SIGMOD-26-2) — tensor-based SQL execution over heterogeneous accelerators.
-- [**TenGraph, VLDB'24**](/publication/VLDB-24) — tensor-based graph query processing on PyTorch.
-- [**TGraph, SIGMOD'25**](/publication/SIGMOD-25-2) — tensor-centric graph processing across tensor runtimes and accelerators.
+- [**TQEx(SQL), SIGMOD'26**](/publications/#SIGMOD-26-2) — tensor-based SQL execution over heterogeneous accelerators.
+- [**TenGraph, VLDB'24**](/publications/#VLDB-24) — tensor-based graph query processing on PyTorch.
+- [**TGraph, SIGMOD'25**](/publications/#SIGMOD-25-2) — tensor-centric graph processing across tensor runtimes and accelerators.
 
 ### Earlier foundations
 
@@ -100,11 +100,11 @@ My earlier work focused on distributed query processing, subgraph analytics, and
 
 Representative work:
 
-- [**Secco, SIGMOD'22**](/publication/SIGMOD-22-1) — distributed query processing with communication separated from local computation.
-- [**DISC, VLDB'20**](/publication/VLDB-20) — distributed local subgraph counting via relational query processing.
-- [**Crystal, VLDB'18**](/publication/VLDB-18) — compressed subgraph matching without materializing all matches.
-- [**ALSS, SIGMOD'21**](/publication/SIGMOD-21) — a learned sketch for approximate subgraph counting.
-- [**NNGP-Card, SIGMOD'22**](/publication/SIGMOD-22-2) — uncertainty-aware learned cardinality estimation.
+- [**Secco, SIGMOD'22**](/publications/#SIGMOD-22-1) — distributed query processing with communication separated from local computation.
+- [**DISC, VLDB'20**](/publications/#VLDB-20) — distributed local subgraph counting via relational query processing.
+- [**Crystal, VLDB'18**](/publications/#VLDB-18) — compressed subgraph matching without materializing all matches.
+- [**ALSS, SIGMOD'21**](/publications/#SIGMOD-21) — a learned sketch for approximate subgraph counting.
+- [**NNGP-Card, SIGMOD'22**](/publications/#SIGMOD-22-2) — uncertainty-aware learned cardinality estimation.
 
 ## News
 

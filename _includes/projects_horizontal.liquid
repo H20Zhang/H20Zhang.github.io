@@ -15,6 +15,19 @@
         </div>
       </div>
     </a>
+    {% if project.research_support %}
+      <div class="mx-3 pt-3 pb-1 border-top">
+        <div class="small font-weight-bold text-muted mb-2">Research threads</div>
+        {% for support in project.research_support %}
+          <div class="small mb-2">
+            <strong>{{ support.area }}</strong>:
+            {% for paper in support.papers %}
+              <a href="{{ paper.url }}">{{ paper.name }}</a> — {{ paper.role }}{% unless forloop.last %}; {% endunless %}
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
     {% if project.github or project.external_url or project.secondary_links %}
       <div class="project-card-actions px-3 pb-3">
         {% if project.external_url %}

@@ -1,0 +1,36 @@
+Huawei GES:
+  - area: Service architecture & execution
+    papers:
+      - name: GES
+        url: /publications/#SIGMOD-25-1
+        role: presents the composable service architecture and factorized executor behind the production system
+  - area: Dynamic storage
+    papers:
+      - name: RapidStore
+        url: /publications/#VLDB-25
+        role: develops read-write separation for scalable concurrent dynamic graph storage
+      - name: DGS Study
+        url: /publications/#SIGMOD-25-3
+        role: identifies storage and concurrency bottlenecks that motivate this design space
+  - area: Incremental graph queries
+    papers:
+      - name: Aquila
+        url: /publications/#VLDB-26
+        role: extends the research line toward high-concurrency incremental graph query processing
+
+Database & Graph Research Systems:
+  - area: Distributed query execution
+    papers:
+      - name: Secco
+        url: /publications/#SIGMOD-22-1
+        role: separates communication from local computation to enlarge the optimization space for distributed queries
+  - area: Distributed graph analytics
+    papers:
+      - name: DISC
+        url: /publications/#VLDB-20
+        role: maps local subgraph counting to relational execution so database techniques can drive graph analytics
+  - area: Compressed graph processing
+    papers:
+      - name: Crystal
+        url: /publications/#VLDB-18
+        role: computes compressed matching results to avoid materializing large intermediate and output sets

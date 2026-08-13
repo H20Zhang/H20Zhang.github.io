@@ -2,7 +2,6 @@
 layout: about
 title: About
 seo_title: Hao Zhang — Data Systems for Agents
-title: About
 permalink: /
 subtitle: Research Scientist at ByteDance
 description: Research Scientist at ByteDance working on data systems for agents, including agentic data management, context infrastructure, self-evolving systems, vector/graph retrieval, and accelerator-aware data systems.

@@ -175,6 +175,18 @@ class BuiltSiteContractTest(unittest.TestCase):
         )
         self.assertTrue(og_image.startswith("https://"), og_image)
 
+    def test_generated_main_stylesheet_uses_build_specific_cache_key(self):
+        homepage_html = (SITE / "index.html").read_text(encoding="utf-8")
+        stylesheet = re.search(
+            r'href="/assets/css/main\.css\?v=([^"]+)"', homepage_html
+        )
+
+        self.assertIsNotNone(stylesheet)
+        self.assertRegex(stylesheet.group(1), r"^\d{10}$")
+        self.assertNotEqual(
+            stylesheet.group(1), "d41d8cd98f00b204e9800998ecf8427e"
+        )
+
     def test_owned_identity_links_are_followable(self):
         anchors_by_href = {
             anchor.get("href"): anchor

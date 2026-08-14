@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     } else {
       // Simply add unloaded class to all non-matching items if Browser does not support CSS highlights
-      document.querySelectorAll(".bibliography > li").forEach((element, index) => {
+      document.querySelectorAll(".bibliography > li").forEach((element) => {
         const text = element.innerText.toLowerCase();
         if (text.indexOf(searchTerm) == -1) {
           element.classList.add("unloaded");
@@ -50,33 +50,62 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
+  const bibsearch = document.getElementById("bibsearch");
+  let activePublicationTarget = null;
+
+  const scrollToPublication = (targetId) => {
+    const anchorTarget = targetId ? document.getElementById(targetId) : null;
+    const entry = anchorTarget?.closest(".bibliography > li");
+    if (!entry) return false;
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        const navbarHeight = document.getElementById("navbar")?.getBoundingClientRect().height || 0;
+        const top = entry.getBoundingClientRect().top + window.scrollY - navbarHeight - 16;
+        window.scrollTo({ top, behavior: "auto" });
+      });
+    });
+    return true;
+  };
+
   const updateInputField = () => {
     const hashValue = decodeURIComponent(window.location.hash.substring(1)); // Remove the '#' character
-    const bibsearch = document.getElementById("bibsearch");
-    const anchorTarget = hashValue ? document.getElementById(hashValue) : null;
+    const queryTarget = new URLSearchParams(window.location.search).get("paper");
+    const publicationTarget = queryTarget || hashValue;
+    const anchorTarget = publicationTarget ? document.getElementById(publicationTarget) : null;
 
     // BibTeX keys are also used as publication anchors. Prefer anchor navigation
-    // when the hash identifies a bibliography entry; otherwise keep hash-as-search.
+    // when the URL identifies a bibliography entry; otherwise keep hash-as-search.
     if (anchorTarget?.closest(".bibliography > li")) {
+      activePublicationTarget = publicationTarget;
       bibsearch.value = "";
       filterItems("");
-      requestAnimationFrame(() => anchorTarget.scrollIntoView({ block: "start" }));
+      scrollToPublication(publicationTarget);
       return;
     }
 
+    activePublicationTarget = null;
     bibsearch.value = hashValue;
     filterItems(hashValue);
   };
 
   // Sensitive search. Only start searching if there's been no input for 300 ms
   let timeoutId;
-  document.getElementById("bibsearch").addEventListener("input", function () {
+  bibsearch.addEventListener("input", function () {
     clearTimeout(timeoutId); // Clear the previous timeout
     const searchTerm = this.value.toLowerCase();
     timeoutId = setTimeout(() => filterItems(searchTerm), 300);
   });
 
   window.addEventListener("hashchange", updateInputField); // Update the filter when the hash changes
+
+  // Re-apply anchor positioning after all page assets have loaded, since fonts/images
+  // above the bibliography can otherwise shift the target after the initial scroll.
+  window.addEventListener("load", () => {
+    if (activePublicationTarget) {
+      scrollToPublication(activePublicationTarget);
+    }
+  });
 
   updateInputField(); // Update filter when page loads
 });

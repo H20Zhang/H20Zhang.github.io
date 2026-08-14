@@ -217,6 +217,28 @@ class BuiltSiteContractTest(unittest.TestCase):
             contact_rule.get("color"), "var(--global-theme-color)"
         )
 
+    def test_bold_text_inside_links_inherits_link_color(self):
+        linked_emphasis_rule = compiled_css_cascade_rule(self.css, "a strong")
+
+        self.assertEqual(linked_emphasis_rule.get("color"), "inherit")
+
+    def test_site_body_uses_regular_weight(self):
+        body_rule = compiled_css_cascade_rule(self.css, "body")
+
+        self.assertEqual(body_rule.get("font-weight"), "400")
+
+    def test_table_prose_uses_regular_weight(self):
+        table_cell_rule = compiled_css_cascade_rule(self.css, "table td")
+
+        self.assertEqual(table_cell_rule.get("font-weight"), "400")
+
+    def test_system_index_titles_use_regular_weight(self):
+        title_rule = compiled_css_cascade_rule(
+            self.css, ".projects .system-entry-title"
+        )
+
+        self.assertEqual(title_rule.get("font-weight"), "400")
+
     def test_theme_toggle_has_descriptive_accessible_name(self):
         theme_toggle = next(
             button

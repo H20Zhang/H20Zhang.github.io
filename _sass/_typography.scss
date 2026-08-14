@@ -30,6 +30,10 @@ table {
     padding: 1px 1rem 1px 0;
   }
 
+  td {
+    font-weight: 400;
+  }
+
   th {
     font-weight: bold;
   }
@@ -47,6 +51,10 @@ table.table a {
   &:hover:after :not(.nav-item.dropdown) {
     width: 100%;
   }
+}
+
+a strong {
+  color: inherit;
 }
 
 // Inline prose links need a persistent non-color affordance so linked papers,

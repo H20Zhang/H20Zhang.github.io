@@ -206,6 +206,15 @@ class BuiltSiteContractTest(unittest.TestCase):
             with self.subTest(property_name=property_name):
                 self.assertEqual(root_rule.get(property_name), value)
 
+    def test_homepage_profile_contact_uses_primary_interaction_color(self):
+        contact_rule = compiled_css_cascade_rule(
+            self.css, ".profile .more-info a"
+        )
+
+        self.assertEqual(
+            contact_rule.get("color"), "var(--global-theme-color)"
+        )
+
     def test_owned_identity_links_are_followable(self):
         anchors_by_href = {
             anchor.get("href"): anchor

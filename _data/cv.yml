@@ -56,12 +56,10 @@ cv:
       - title: ByteDance Soaring Star Talent Program
         date: 2025-01-01
         awarder: ByteDance
-        summary: Talent program award.
 
       - title: Huawei Gold Award for Individual Excellence
         date: 2025-02-01
         awarder: Huawei
-        summary: Individual excellence award.
 
       - title: LDBC SNB Interactive benchmark world record, imperative systems leaderboard
         date: 2025-12-01
@@ -76,7 +74,6 @@ cv:
       - title: TopMinds Talent Program (First Class)
         date: 2022-01-01
         awarder: Huawei
-        summary: Talent program award.
 
       - title: Meritorious Winner, International Mathematical Contest in Modeling
         date: 2016-01-01

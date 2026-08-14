@@ -266,6 +266,126 @@ class BuiltSiteContractTest(unittest.TestCase):
         hrefs = {anchor.get("href") for anchor in tqex_page.anchors}
         self.assertTrue(TQEX_PAPERS.issubset(hrefs), TQEX_PAPERS - hrefs)
 
+    def test_cv_renders_as_flat_editorial_document(self):
+        cv_html = (SITE / "cv" / "index.html").read_text(encoding="utf-8")
+
+        self.assertIn('class="cv-intro"', cv_html)
+        self.assertIn('class="cv-section"', cv_html)
+        self.assertNotIn("Contact Information", cv_html)
+        self.assertNotIn("Professional Summary", cv_html)
+        self.assertNotIn('class="card mt-3 p-3"', cv_html)
+        self.assertNotIn('class="badge ', cv_html)
+        self.assertIn('<h2 class="cv-section-title" id="experience">', cv_html)
+        self.assertNotIn('<h3 class="cv-section-title"', cv_html)
+        self.assertNotIn('<h4 class="cv-entry-title"', cv_html)
+        for retained_content in (
+            "ByteDance",
+            "Huawei Cloud Database Innovation Lab",
+            "The Chinese University of Hong Kong",
+            "LDBC SNB Interactive benchmark world record",
+        ):
+            self.assertIn(retained_content, cv_html)
+
+        section_rule = compiled_css_rule(self.css, ".cv-editorial .cv-section")
+        self.assertEqual(
+            section_rule.get("border-bottom"),
+            "1px solid var(--global-divider-color)",
+        )
+
+    def test_systems_page_is_a_hierarchical_index(self):
+        systems_html = (SITE / "projects" / "index.html").read_text(
+            encoding="utf-8"
+        )
+
+        for label in ("Current", "Huawei Systems", "Earlier Research"):
+            self.assertIn(f">{label}<", systems_html)
+        for system in (
+            "AutoIA @ ByteDance",
+            "GES @ Huawei",
+            "TQEX @ Huawei",
+            "Database &amp; Graph Research Systems @ CUHK",
+        ):
+            self.assertIn(system, systems_html)
+        self.assertNotIn("Research threads", systems_html)
+        self.assertNotIn("system-entry-research", systems_html)
+
+        for detail_path in (
+            "1_autoia",
+            "2_tqex",
+            "3_ges",
+            "4_database_graph_systems",
+        ):
+            detail_html = (
+                SITE / "projects" / detail_path / "index.html"
+            ).read_text(encoding="utf-8")
+            with self.subTest(detail_path=detail_path):
+                self.assertIn("Research Threads", detail_html)
+
+    def test_writing_index_uses_a_flat_editorial_entry(self):
+        writing_html = (SITE / "blog" / "index.html").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn("<h1>Writing</h1>", writing_html)
+        self.assertIn("<title>Writing | Hao Zhang</title>", writing_html)
+        self.assertIn('class="blog-translation-link"', writing_html)
+        self.assertNotIn("blog-year-chip", writing_html)
+        self.assertNotIn("blog-tag-chips", writing_html)
+        self.assertNotIn("#RAG", writing_html)
+        self.assertNotIn("#Information Architecture", writing_html)
+        self.assertFalse((SITE / "blog" / "tag" / "rag" / "index.html").exists())
+        self.assertFalse(
+            (SITE / "blog" / "tag" / "information-architecture" / "index.html").exists()
+        )
+        self.assertTrue(
+            (SITE / "blog" / "tag" / "agent-infrastructure" / "index.html").exists()
+        )
+        self.assertTrue(
+            (SITE / "blog" / "tag" / "knowledge-organization" / "index.html").exists()
+        )
+
+        entry_rule = compiled_css_rule(self.css, ".blog-index .blog-post-entry")
+        self.assertEqual(entry_rule.get("background"), "rgba(0,0,0,0)")
+        self.assertEqual(entry_rule.get("border-radius"), "0")
+        self.assertNotIn("box-shadow", entry_rule)
+
+    def test_publication_controls_use_descriptive_labels(self):
+        publications_html = (SITE / "publications" / "index.html").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertNotIn("Full List", publications_html)
+        self.assertIn(">Abstract</button>", publications_html)
+        self.assertIn(">BibTeX</button>", publications_html)
+        self.assertIn('type="button" aria-expanded="false"', publications_html)
+        self.assertIn('aria-controls="ICDE-26-abstract"', publications_html)
+        self.assertIn('id="ICDE-26-abstract" hidden', publications_html)
+        self.assertNotIn('<a class="abstract btn', publications_html)
+        self.assertNotIn('<a class="bibtex btn', publications_html)
+        self.assertIn('placeholder="Filter publications"', publications_html)
+
+        button_rule = compiled_css_rule(
+            self.css, ".publications ol.bibliography li .links .btn"
+        )
+        self.assertEqual(button_rule.get("font-size"), ".8rem")
+
+    def test_homepage_profile_metadata_avoids_repeating_the_hero(self):
+        homepage_html = (SITE / "index.html").read_text(encoding="utf-8")
+        more_info = re.search(
+            r'<div class="more-info">(.*?)</div>', homepage_html, re.DOTALL
+        )
+        self.assertIsNotNone(more_info)
+        profile_metadata = more_info.group(1)
+
+        self.assertIn("zhanghaowuda12@gmail.com", profile_metadata)
+        self.assertNotIn("Research Scientist, ByteDance", profile_metadata)
+        self.assertNotIn("Data systems for agents.", profile_metadata)
+
+        social_rule = compiled_css_rule(
+            self.css, ".about-footer-social .contact-icons"
+        )
+        self.assertEqual(social_rule.get("font-size"), "1.1rem")
+
 
 if __name__ == "__main__":
     unittest.main()

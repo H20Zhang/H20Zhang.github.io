@@ -8,17 +8,28 @@ nav_order: 2
 horizontal: true
 ---
 
-A selective systems portfolio: **AutoIA @ ByteDance** develops context infrastructure for agents; **GES @ Huawei** demonstrates production-scale graph-system impact; **TQEX @ Huawei** maps SQL and graph workloads onto heterogeneous accelerators; and **Database & Graph Research Systems @ CUHK** capture the systems foundation behind this trajectory.
+Current work centers on self-improving context infrastructure; earlier systems established the production graph and accelerator-aware execution foundations behind it.
 
 <div class="projects">
 {% assign sorted_projects = site.projects | sort: "importance" %}
 {% if page.horizontal %}
-  <div class="container px-0">
-    <div class="row row-cols-1 systems-list">
+  <div class="systems-list">
     {% for project in sorted_projects %}
+      {% if project.importance == 1 %}
+        <section class="systems-group systems-group--current" aria-labelledby="systems-current">
+          <h2 class="systems-group-label" id="systems-current">Current</h2>
+      {% elsif project.importance == 2 %}
+        </section>
+        <section class="systems-group systems-group--huawei" aria-labelledby="systems-huawei">
+          <h2 class="systems-group-label" id="systems-huawei">Huawei Systems</h2>
+      {% elsif project.importance == 4 %}
+        </section>
+        <section class="systems-group systems-group--earlier" aria-labelledby="systems-earlier">
+          <h2 class="systems-group-label" id="systems-earlier">Earlier Research</h2>
+      {% endif %}
       {% include projects_horizontal.liquid %}
     {% endfor %}
-    </div>
+    </section>
   </div>
 {% else %}
   <div class="row row-cols-1 row-cols-md-3">

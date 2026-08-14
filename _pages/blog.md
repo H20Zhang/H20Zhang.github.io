@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /blog/
-title: Blog
+title: Writing
 nav: true
 nav_order: 4
 pagination:
@@ -118,8 +118,6 @@ pagination:
     {% else %}
       {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
     {% endif %}
-    {% assign year = post.date | date: "%Y" %}
-    {% assign tags = post.tags | join: "" %}
     {% assign summary = post.description %}
     {% if summary == blank %}
       {% assign summary = post.excerpt | strip_html | strip_newlines | truncate: 220 %}
@@ -151,25 +149,13 @@ pagination:
           {% endif %}
 
           <div class="blog-post-footer">
-            <a class="blog-year-chip" href="{{ year | prepend: '/blog/' | relative_url }}">
-              <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
-            </a>
             {% if post.translation_url %}
-              <a class="blog-year-chip" href="{{ post.translation_url | relative_url }}">
-                {{ post.translation_label | default: 'Translation' }}
+              <a class="blog-translation-link" href="{{ post.translation_url | relative_url }}">
+                {{ post.translation_label | default: 'Translation' }} →
               </a>
             {% elsif post.url contains '-en/' %}
               {% assign chinese_url = post.url | replace: '-en/', '-zh/' %}
-              <a class="blog-year-chip" href="{{ chinese_url | relative_url }}">中文</a>
-            {% endif %}
-            {% if tags != "" %}
-              <div class="blog-tag-chips">
-                {% for tag in post.tags %}
-                  <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">
-                    #{{ tag }}
-                  </a>
-                {% endfor %}
-              </div>
+              <a class="blog-translation-link" href="{{ chinese_url | relative_url }}">中文 →</a>
             {% endif %}
           </div>
         </div>

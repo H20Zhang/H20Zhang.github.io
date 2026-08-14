@@ -16,8 +16,6 @@ profile:
   image_alt: Hao Zhang cycling on the Tianfu Greenway
   image_circular: false
   more_info: >
-    <p>Research Scientist, ByteDance</p>
-    <p>Data systems for agents.</p>
     <p><a href="mailto:zhanghaowuda12@gmail.com">zhanghaowuda12@gmail.com</a></p>
 
 recent_publications: false

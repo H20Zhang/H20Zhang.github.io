@@ -10,9 +10,9 @@ lang: en
 tags:
   - Context Management
   - Agent
-  - RAG
+  - Agent Infrastructure
   - Memory
-  - Information Architecture
+  - Knowledge Organization
 description: "Next-generation context management is not just about putting information into the window, but about maintaining the information environment the model can perceive."
 key_points:
   - Context is not input. It is the model's reality for the current step.

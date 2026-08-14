@@ -12,9 +12,9 @@ translation_label: English
 tags:
   - Context Management
   - Agent
-  - RAG
+  - Agent Infrastructure
   - Memory
-  - Information Architecture
+  - Knowledge Organization
 description: "下一代 Context Management 不只是把信息放进窗口，而是持续维护模型可感知的信息环境。"
 key_points:
   - Context 不是输入，而是模型这一轮的现实。

@@ -1,5 +1,10 @@
-<div class="col-12">
-  <section class="system-entry">
+{% assign entry_modifier = '' %}
+{% if project.importance == 1 %}
+  {% assign entry_modifier = ' system-entry--primary' %}
+{% elsif project.importance == 4 %}
+  {% assign entry_modifier = ' system-entry--earlier' %}
+{% endif %}
+  <article class="system-entry{{ entry_modifier }}">
     <a class="system-entry-main" href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
       <div class="system-entry-heading">
         <h3 class="system-entry-title">{{ project.title }}</h3>
@@ -7,24 +12,6 @@
       </div>
       <p class="system-entry-description">{{ project.description }}</p>
     </a>
-
-    {% if project.research_support %}
-      <div class="system-entry-research">
-        <div class="system-entry-label">Research threads</div>
-        {% for support in project.research_support %}
-          <div class="system-thread">
-            <div class="system-thread-area">{{ support.area }}</div>
-            <div class="system-thread-papers">
-              {% for paper in support.papers %}
-                <div class="system-paper-ref">
-                  <a href="{{ paper.url }}">{{ paper.name }}</a><span class="system-paper-role"> — {{ paper.role }}</span>
-                </div>
-              {% endfor %}
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
 
     {% if project.github or project.external_url or project.secondary_links %}
       <div class="project-card-actions">
@@ -51,5 +38,4 @@
         {% endif %}
       </div>
     {% endif %}
-  </section>
-</div>
+  </article>

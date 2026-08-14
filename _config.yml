@@ -78,7 +78,7 @@ bing_site_verification:
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Hao Zhang
+blog_name: Writing
 blog_description: Notes on data systems for agents, context infrastructure, retrieval, and system design.
 permalink: /blog/:year/:title/
 lsi: false

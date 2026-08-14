@@ -9,8 +9,6 @@ nav_order: 1
 
 <p><sup>^</sup> indicates first author or corresponding author where applicable.</p>
 
-## Full List
-
 {% include bib_search.liquid %}
 
 <div class="publications">

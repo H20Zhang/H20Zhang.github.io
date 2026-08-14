@@ -139,18 +139,21 @@
         gap: 0.32rem;
         margin-top: 0.5rem;
 
-        a.btn {
+        .btn {
           margin: 0;
-          padding: 0.16rem 0.5rem;
+          padding: 0.2rem 0.55rem;
           border: 1px solid var(--global-divider-color);
           border-radius: 999px;
           background: transparent;
           box-shadow: none;
           color: var(--global-text-color-light);
-          font-size: 0.74rem;
+          font-size: 0.8rem;
           font-weight: 500;
+          font-family: inherit;
           line-height: 1.45;
           text-decoration: none;
+          text-transform: none;
+          cursor: pointer;
 
           &:hover,
           &:focus-visible {
@@ -160,7 +163,7 @@
           }
         }
 
-        a.award.btn {
+        .award.btn {
           border-color: color-mix(in srgb, var(--global-highlight-color) 45%, var(--global-divider-color));
           color: var(--global-highlight-color);
         }
@@ -233,7 +236,32 @@
   }
 }
 
+#bibsearch.bibsearch-form-input {
+  max-width: 420px;
+  margin: 0.6rem 0 0;
+  padding: 0.58rem 0.7rem;
+  border-color: var(--global-divider-color);
+  border-radius: 0;
+  background: transparent;
+  color: var(--global-text-color);
+  font-size: 0.88rem;
+
+  &::placeholder {
+    color: var(--global-text-color-light);
+  }
+
+  &:focus {
+    border-color: var(--global-theme-color);
+  }
+}
+
 .citation,
 .citation-number {
   color: var(--global-theme-color);
+}
+
+@media print {
+  .publications .award.hidden[hidden] {
+    display: inline !important;
+  }
 }

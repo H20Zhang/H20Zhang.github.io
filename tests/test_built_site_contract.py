@@ -3,6 +3,7 @@ from __future__ import annotations
 from html.parser import HTMLParser
 import json
 from pathlib import Path
+import re
 import unittest
 
 
@@ -99,6 +100,21 @@ def parse_page(path: Path) -> PageParser:
     return parser
 
 
+def compiled_css_rule(css: str, selector: str) -> dict[str, str]:
+    pattern = re.compile(rf"(?<![\w-]){re.escape(selector)}\{{([^{{}}]+)\}}")
+    match = pattern.search(css)
+    if match is None:
+        raise AssertionError(f"compiled CSS rule not found: {selector}")
+
+    declarations: dict[str, str] = {}
+    for declaration in match.group(1).split(";"):
+        if ":" not in declaration:
+            continue
+        property_name, value = declaration.split(":", 1)
+        declarations[property_name.strip()] = value.strip()
+    return declarations
+
+
 class BuiltSiteContractTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -106,6 +122,9 @@ class BuiltSiteContractTest(unittest.TestCase):
         if not homepage.exists():
             raise AssertionError("run the Jekyll build before built-site contract tests")
         cls.homepage = parse_page(homepage)
+        cls.css = (SITE / "assets" / "css" / "main.css").read_text(
+            encoding="utf-8"
+        )
 
     def test_homepage_schema_identifies_hao_zhang(self):
         self.assertEqual(
@@ -199,6 +218,45 @@ class BuiltSiteContractTest(unittest.TestCase):
             cycling_images[0].get("alt"),
             "Hao Zhang cycling on the Tianfu Greenway",
         )
+
+    def test_homepage_full_bleed_sections_do_not_use_scrollbar_width(self):
+        rule = compiled_css_rule(self.css, ".about-section")
+
+        self.assertEqual(
+            rule.get("background-color"), "var(--about-section-background)"
+        )
+        self.assertEqual(rule.get("clip-path"), "inset(0 -100vmax)")
+        self.assertEqual(
+            rule.get("box-shadow"),
+            "0 0 0 100vmax var(--about-section-background)",
+        )
+        self.assertNotIn(".about-section::before", self.css)
+
+    def test_long_text_uses_regular_weight_readability_styles(self):
+        expected = {
+            ".about-intro": {
+                "font-size": "1rem",
+                "font-weight": "400",
+                "line-height": "1.62",
+            },
+            ".about-section-content": {
+                "font-size": ".96rem",
+                "font-weight": "400",
+                "line-height": "1.62",
+            },
+            ".publications ol.bibliography li .author": {
+                "font-weight": "400",
+            },
+            ".publications ol.bibliography li .periodical": {
+                "font-weight": "400",
+            },
+        }
+
+        for selector, properties in expected.items():
+            rule = compiled_css_rule(self.css, selector)
+            with self.subTest(selector=selector):
+                for property_name, value in properties.items():
+                    self.assertEqual(rule.get(property_name), value)
 
     def test_tqex_page_links_all_four_research_threads(self):
         tqex_path = SITE / "projects" / "2_tqex" / "index.html"

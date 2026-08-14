@@ -1,7 +1,7 @@
 ---
 layout: about
 title: About
-seo_title: Hao Zhang — Data Systems for Agents
+seo_title: Hao Zhang — Research Scientist at ByteDance | Data Systems for Agents
 permalink: /
 subtitle: Research Scientist at ByteDance
 description: Research Scientist at ByteDance building data systems for agents, with a focus on context infrastructure, vector search, graph systems, and hardware-accelerated data systems.
@@ -51,7 +51,7 @@ Selected writing: [**The Next Generation of Context Management: Maintaining the 
 <div class="about-section-content" markdown="1">
 
 - [**AutoIA @ ByteDance**](/projects/1_autoia/) — self-improving context infrastructure that evolves both external data environments and the retrieval pipelines built for them.
-- [**GES @ Huawei Cloud**](/projects/3_ges/) — production graph database infrastructure.
+- **Huawei-era systems** — [**GES @ Huawei**](/projects/3_ges/) for production graph database infrastructure, and [**TQEX @ Huawei**](/projects/2_tqex/) for tensor-centric SQL and graph execution across heterogeneous accelerators.
 - [**Database & Graph Research Systems @ CUHK**](/projects/4_database_graph_systems/) — distributed query processing and graph systems.
 
 [**Systems**](/projects/) maps these systems to the research behind them. [**Publications**](/publications/) contains the full research record.

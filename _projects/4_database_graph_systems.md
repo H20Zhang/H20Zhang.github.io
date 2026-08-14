@@ -2,7 +2,7 @@
 layout: page
 title: Database & Graph Research Systems @ CUHK
 description: Earlier research systems spanning distributed SQL execution, graph analytics, and compressed subgraph processing.
-importance: 3
+importance: 4
 category: systems
 related_publications: false
 research_support:

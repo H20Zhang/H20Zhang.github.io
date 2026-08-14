@@ -3,7 +3,7 @@ cv:
   label: Research Scientist
   email: zhanghaowuda12@gmail.com
   website: https://h20zhang.github.io
-  summary: Research scientist building data systems for agents and data-intensive workloads, spanning context infrastructure, vector search, graph systems, semantic query processing, hardware-accelerated data systems, and distributed query processing.
+  summary: Research scientist building data systems for agents, with a current focus on self-improving context infrastructure and a broader research record in vector search, graph systems, semantic query processing, and hardware-accelerated data systems.
 
   social_networks:
     - network: GitHub
@@ -17,17 +17,16 @@ cv:
         position: Research Scientist
         start_date: 2025
         highlights:
-          - Building context infrastructure and Data+AI systems for retrieval, analytics, vector search, agent workflows, and multimodal data.
-          - Working on semantic query processing and AI-native infrastructure over heterogeneous data.
+          - Leading the research and system architecture of AutoIA, which uses task-level evaluation to optimize retrieval pipelines and, when failures persist, improve data integration, representation, indexing, and storage.
+          - Building vector-search and semantic-query infrastructure for large-scale heterogeneous and multimodal data.
 
       - company: Huawei Cloud Database Innovation Lab
         position: Research Scientist
         start_date: 2022
         end_date: 2025
         highlights:
-          - Researched graph database infrastructure, relational database kernels, tensor-centric data systems, and overall system architecture.
-          - Contributed to the GES line of work behind benchmark-leading graph systems and LDBC SNB Interactive results.
-          - Worked on systems connecting database research prototypes with production-oriented infrastructure.
+          - Researched and designed graph database infrastructure for GES, spanning high-concurrency query execution, dynamic graph storage, and benchmark-driven system optimization.
+          - Developed tensor-centric SQL, graph-query, graph-processing, and graph-search systems across heterogeneous accelerators, including TQEx(SQL), TenGraph, TGraph, and tensorized k-TTC search.
 
     Education:
       - institution: The Chinese University of Hong Kong

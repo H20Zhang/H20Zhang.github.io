@@ -10,6 +10,7 @@
 {% endif %}
 
 {% capture author_name %}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{% endcapture %}
+{% assign author_name = author_name | strip | strip_newlines %}
 {% if site.title == 'blank' %}
   {% capture site_title %}{{ author_name }}{% endcapture %}
 {% else %}
@@ -34,6 +35,18 @@
 {% assign computed_title = computed_title | strip | strip_newlines %}
 {% assign computed_description = page.description | default: site.description | strip | strip_newlines %}
 {% assign computed_keywords = page.keywords | default: site.keywords %}
+{% assign canonical_url = page.url | replace: 'index.html', '' | absolute_url %}
+{% assign site_home_url = '/' | absolute_url %}
+{% assign website_id = site_home_url | append: '#website' %}
+{% assign profile_id = site_home_url | append: '#profile' %}
+{% assign person_id = site_home_url | append: '#person' %}
+{% assign social_image = page.og_image | default: site.og_image | absolute_url %}
+{% capture github_url %}https://github.com/{{ site.data.socials.github_username }}{% endcapture %}
+{% assign github_url = github_url | strip %}
+{% capture scholar_url %}https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}{% endcapture %}
+{% assign scholar_url = scholar_url | strip %}
+{% capture linkedin_url %}https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}{% endcapture %}
+{% assign linkedin_url = linkedin_url | strip %}
 
 <!-- Standard metadata -->
 <meta charset="utf-8">
@@ -47,10 +60,8 @@
 {% endif %}
 
 {% assign is_blog_post = false %}
-{% if page.url != '/blog/index.html' and page.url contains '/blog/' %}
-  {% unless page.url contains '/tag/' or page.url contains '/category/' %}
-    {% assign is_blog_post = true %}
-  {% endunless %}
+{% if page.collection == 'posts' %}
+  {% assign is_blog_post = true %}
 {% endif %}
 
 {% if site.serve_og_meta %}
@@ -58,10 +69,10 @@
   <meta property="og:site_name" content="{{ site_title }}">
   <meta property="og:type" content="{% if is_blog_post %}article{% else %}website{% endif %}">
   <meta property="og:title" content="{{ computed_title }}">
-  <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
+  <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:description" content="{{ computed_description }}">
   {% if page.og_image or site.og_image %}
-    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
+    <meta property="og:image" content="{{ social_image }}">
   {% endif %}
   <meta property="og:locale" content="{{ site.lang }}">
 
@@ -70,7 +81,7 @@
   <meta name="twitter:title" content="{{ computed_title }}">
   <meta name="twitter:description" content="{{ computed_description }}">
   {% if page.og_image or site.og_image %}
-    <meta name="twitter:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
+    <meta name="twitter:image" content="{{ social_image }}">
   {% endif %}
   {% if site.x_username %}
     <meta name="twitter:site" content="@{{ site.x_username }}">
@@ -80,18 +91,99 @@
 
 {% if site.serve_schema_org %}
   <!-- Schema.org -->
+  {% if page.url == '/' %}
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
-      "name": "{{ computed_title }}",
-      "headline": "{{ computed_title }}",
-      "description": "{{ computed_description }}",
-      "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-      "author": {
-        "@type": "Person",
-        "name": "{{ author_name }}"
-      }
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": {{ website_id | jsonify }},
+          "url": {{ site_home_url | jsonify }},
+          "name": {{ author_name | jsonify }},
+          "alternateName": "H20Zhang",
+          "publisher": { "@id": {{ person_id | jsonify }} }
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": {{ profile_id | jsonify }},
+          "url": {{ canonical_url | jsonify }},
+          "name": {{ computed_title | jsonify }},
+          "headline": {{ computed_title | jsonify }},
+          "description": {{ computed_description | jsonify }},
+          "isPartOf": { "@id": {{ website_id | jsonify }} },
+          "mainEntity": { "@id": {{ person_id | jsonify }} }
+        },
+        {
+          "@type": "Person",
+          "@id": {{ person_id | jsonify }},
+          "name": {{ author_name | jsonify }},
+          "alternateName": ["张颢", "H20Zhang"],
+          "url": {{ site_home_url | jsonify }},
+          "image": {{ social_image | jsonify }},
+          "jobTitle": "Research Scientist",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "ByteDance",
+            "url": "https://www.bytedance.com/"
+          },
+          "alumniOf": [
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "The Chinese University of Hong Kong",
+              "url": "https://www.cuhk.edu.hk/"
+            },
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "Wuhan University",
+              "url": "https://en.whu.edu.cn/"
+            }
+          ],
+          "sameAs": [
+            {{ github_url | jsonify }},
+            {{ scholar_url | jsonify }},
+            {{ linkedin_url | jsonify }}
+          ]
+        }
+      ]
     }
   </script>
+  {% elsif is_blog_post %}
+    {% assign article_id = canonical_url | append: '#article' %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": {{ article_id | jsonify }},
+        "url": {{ canonical_url | jsonify }},
+        "name": {{ computed_title | jsonify }},
+        "headline": {{ computed_title | jsonify }},
+        "description": {{ computed_description | jsonify }},
+        "mainEntityOfPage": {{ canonical_url | jsonify }},
+        "isPartOf": { "@id": {{ website_id | jsonify }} },
+        "author": {
+          "@type": "Person",
+          "@id": {{ person_id | jsonify }},
+          "name": {{ author_name | jsonify }},
+          "url": {{ site_home_url | jsonify }}
+        },
+        "publisher": { "@id": {{ person_id | jsonify }} }
+      }
+    </script>
+  {% else %}
+    {% assign webpage_id = canonical_url | append: '#webpage' %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": {{ webpage_id | jsonify }},
+        "url": {{ canonical_url | jsonify }},
+        "name": {{ computed_title | jsonify }},
+        "headline": {{ computed_title | jsonify }},
+        "description": {{ computed_description | jsonify }},
+        "isPartOf": { "@id": {{ website_id | jsonify }} },
+        "author": { "@id": {{ person_id | jsonify }} }
+      }
+    </script>
+  {% endif %}
 {% endif %}

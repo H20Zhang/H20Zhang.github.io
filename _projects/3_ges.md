@@ -1,6 +1,6 @@
 ---
 layout: page
-title: GES @ Huawei Cloud
+title: GES @ Huawei
 description: Production graph database service for high-throughput interactive graph workloads.
 importance: 2
 category: systems

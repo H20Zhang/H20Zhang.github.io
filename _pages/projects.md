@@ -2,13 +2,13 @@
 layout: page
 title: Systems
 permalink: /projects/
-description: Selected systems spanning context infrastructure for agents, production graph systems, and earlier database/graph research.
+description: Selected systems spanning context infrastructure for agents, production graph systems, tensor-centric execution, and earlier database/graph research.
 nav: true
 nav_order: 2
 horizontal: true
 ---
 
-A selective systems portfolio: **AutoIA @ ByteDance** develops context infrastructure for agents, **GES @ Huawei Cloud** demonstrates production-scale graph-system impact, and **Database & Graph Research Systems @ CUHK** capture the systems foundation behind this trajectory.
+A selective systems portfolio: **AutoIA @ ByteDance** develops context infrastructure for agents; **GES @ Huawei** demonstrates production-scale graph-system impact; **TQEX @ Huawei** maps SQL and graph workloads onto heterogeneous accelerators; and **Database & Graph Research Systems @ CUHK** capture the systems foundation behind this trajectory.
 
 <div class="projects">
 {% assign sorted_projects = site.projects | sort: "importance" %}

@@ -278,9 +278,13 @@ enable_publication_thumbnails: true
 
 external_links:
   enabled: true
-  rel: external nofollow noopener
+  rel:
+    value: external nofollow noopener
+    exclude:
+      - 'https://github\.com/H20Zhang'
+      - 'https://scholar\.google\.com/citations\?user=PLwImrcAAAAJ'
+      - 'https://www\.linkedin\.com/in/hao-zhang-ab18b413b'
   target: _blank
-  exclude:
 
 imagemagick:
   enabled: false

@@ -9,7 +9,7 @@
       <summary><strong>{{ paper.name }}</strong>{% if paper.venue %}<span class="text-muted"> · {{ paper.venue }}</span>{% endif %}</summary>
       <div class="small ml-3 mt-2 mb-2">
         {% if paper.summary %}<p class="mb-1">{{ paper.summary }}</p>{% endif %}
-        <p class="mb-1"><strong>System connection:</strong> {{ paper.role }}.</p>
+        <p class="mb-1"><strong>System connection:</strong> {{ paper.role }}</p>
         <a href="{{ paper.url | relative_url }}">View publication →</a>{% if paper.code %} · <a href="{{ paper.code }}">Code ↗</a>{% endif %}
       </div>
     </details>

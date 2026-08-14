@@ -187,6 +187,24 @@ class BuiltSiteContractTest(unittest.TestCase):
             stylesheet.group(1), "d41d8cd98f00b204e9800998ecf8427e"
         )
 
+    def test_light_theme_uses_silver_iris_palette(self):
+        root_rule = compiled_css_rule(self.css, ":root")
+        expected = {
+            "--global-bg-color": "#f8f9fb",
+            "--global-surface-color": "#f8f9fb",
+            "--global-section-alt-color": "#eceff4",
+            "--global-navbar-bg-color": "#f8f9fb",
+            "--global-text-color": "#20252d",
+            "--global-text-color-light": "#656b75",
+            "--global-theme-color": "#445b8c",
+            "--global-hover-color": "#293a5a",
+            "--global-divider-color": "rgba(68, 91, 140, 0.22)",
+        }
+
+        for property_name, value in expected.items():
+            with self.subTest(property_name=property_name):
+                self.assertEqual(root_rule.get(property_name), value)
+
     def test_owned_identity_links_are_followable(self):
         anchors_by_href = {
             anchor.get("href"): anchor

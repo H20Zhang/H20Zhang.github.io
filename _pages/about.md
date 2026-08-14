@@ -33,13 +33,6 @@ latest_posts:
 
 I am a Research Scientist at ByteDance building **data systems for agents**. My work focuses on context infrastructure, vector search, graph systems, and hardware-accelerated data systems.
 
-I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from Wuhan University in 2017.
-
-## Highlights
-
-- **25+ publications** in database systems and Data+AI, including **SIGMOD, VLDB, ICDE, COLM, TKDE, and The VLDB Journal**.
-- **#1 on both LDBC SNB Interactive tracks**, including a 2024 declarative result over **3,000×** the previous #2.
-
 ## Current Research
 
 My research asks: **how should data systems build and maintain the context agents need to operate effectively over time?** I study how heterogeneous information is organized, retrieved, and maintained as context, and how execution feedback can continuously improve these mechanisms.
@@ -56,14 +49,21 @@ Selected writing: [**The Next Generation of Context Management: Maintaining the 
 
 [**Systems**](/projects/) maps these systems to the research behind them. [**Publications**](/publications/) contains the full research record.
 
+## Highlights
+
+- **25+ publications** in database systems and Data+AI, including **SIGMOD, VLDB, ICDE, COLM, TKDE, and The VLDB Journal**.
+- **#1 on both LDBC SNB Interactive tracks**: [declarative, 2024](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/) (**3,000× over #2**) and [imperative, 2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/).
+
+I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from Wuhan University in 2017.
+
 ## Collaboration & Internship
 
 I welcome collaboration on context infrastructure, retrieval systems, graph/vector systems, and self-improving agent infrastructure. I am also recruiting **research interns** at ByteDance in Shenzhen; email zhanghaowuda12 [at] gmail [dot] com with `[Intern]` in the subject.
 
 ## Recent News
 
-- **08/2026** — **DocNavRAG** released on arXiv.
-- **07/2026** — **AdaMM** released on arXiv.
-- **07/2026** — **Sema** accepted by PVLDB'26; **CoreSemDB** accepted by COLM'26.
+- **08/2026** — [**DocNavRAG**](/publications/#Arxiv-26-4) released on arXiv.
+- **07/2026** — [**AdaMM**](/publications/#Arxiv-26-3) released on arXiv.
+- **07/2026** — [**Sema**](/publications/#VLDB-26-2) accepted by PVLDB'26; [**CoreSemDB**](/publications/#COLM-26) accepted by COLM'26.
 
 [→ All news](/news/)

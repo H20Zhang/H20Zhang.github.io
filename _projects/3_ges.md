@@ -12,6 +12,25 @@ secondary_links:
   - label: LDBC Imperative #1
     url: https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/
 related_publications: false
+research_support:
+  - area: Service architecture & execution
+    papers:
+      - name: GES
+        url: /publications/#SIGMOD-25-1
+        role: presents the composable service architecture and factorized executor behind the production system
+  - area: Dynamic storage
+    papers:
+      - name: RapidStore
+        url: /publications/#VLDB-25
+        role: develops read-write separation for scalable concurrent dynamic graph storage
+      - name: DGS Study
+        url: /publications/#SIGMOD-25-3
+        role: identifies storage and concurrency bottlenecks that motivate this design space
+  - area: Incremental graph queries
+    papers:
+      - name: Aquila
+        url: /publications/#VLDB-26
+        role: extends the research line toward high-concurrency incremental graph query processing
 ---
 
 Huawei GES is a production graph database service for high-throughput interactive graph workloads.
@@ -31,7 +50,6 @@ Research and system architecture for graph database infrastructure and the GES l
 ## Evidence
 
 - [Huawei Cloud Graph Engine Service](https://support.huaweicloud.com/productdesc-ges/ges_04_0001.html)
-- [SIGMOD 2025 paper](/publications/#SIGMOD-25-1)
 - [LDBC SNB Interactive declarative result, 2024](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/)
 - [LDBC SNB Interactive imperative result, 2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/)
 

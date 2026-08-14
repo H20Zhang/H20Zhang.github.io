@@ -18,24 +18,18 @@ layout: default
     {{ content }}
   </article>
 
-  {% if page.category == 'systems' %}
-    {% assign research_support = page.research_support %}
-    {% unless research_support %}
-      {% assign research_support = site.data.system_research[page.title] %}
-    {% endunless %}
-    {% if research_support %}
-      <h2>Research Threads</h2>
-      {% for support in research_support %}
-        <div class="mb-3">
-          <strong>{{ support.area }}</strong>
-          <ul>
-            {% for paper in support.papers %}
-              <li><a href="{{ paper.url | relative_url }}"><strong>{{ paper.name }}</strong></a> — {{ paper.role }}.</li>
-            {% endfor %}
-          </ul>
-        </div>
-      {% endfor %}
-    {% endif %}
+  {% if page.category == 'systems' and page.research_support %}
+    <h2>Research Threads</h2>
+    {% for support in page.research_support %}
+      <div class="mb-3">
+        <strong>{{ support.area }}</strong>
+        <ul>
+          {% for paper in support.papers %}
+            <li><a href="{{ paper.url | relative_url }}"><strong>{{ paper.name }}</strong></a> — {{ paper.role }}.</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
   {% endif %}
 
   {% if page.related_publications %}

@@ -60,7 +60,7 @@ pagination:
     {% assign is_even = featured_posts.size | modulo: 2 %}
     <div class="row row-cols-{% if featured_posts.size <= 2 or is_even == 0 %}2{% else %}3{% endif %}">
       {% for post in featured_posts %}
-        {% if post.hide_from_blog or post.url contains '-en/' %}
+        {% if post.hide_from_blog or post.url contains '-zh/' %}
           {% continue %}
         {% endif %}
         <div class="col mb-4">
@@ -84,10 +84,10 @@ pagination:
                         <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
                       </a>
                       {% if post.translation_url %}
-                        &nbsp; &middot; &nbsp;<a href="{{ post.translation_url | relative_url }}">{{ post.translation_label | default: 'English' }}</a>
-                      {% elsif post.url contains '-zh/' %}
-                        {% assign english_url = post.url | replace: '-zh/', '-en/' %}
-                        &nbsp; &middot; &nbsp;<a href="{{ english_url | relative_url }}">English</a>
+                        &nbsp; &middot; &nbsp;<a href="{{ post.translation_url | relative_url }}">{{ post.translation_label | default: 'Translation' }}</a>
+                      {% elsif post.url contains '-en/' %}
+                        {% assign chinese_url = post.url | replace: '-en/', '-zh/' %}
+                        &nbsp; &middot; &nbsp;<a href="{{ chinese_url | relative_url }}">中文</a>
                       {% endif %}
                     </p>
                   </div>
@@ -110,7 +110,7 @@ pagination:
   {% endif %}
 
   {% for post in postlist %}
-    {% if post.hide_from_blog or post.url contains '-en/' %}
+    {% if post.hide_from_blog or post.url contains '-zh/' %}
       {% continue %}
     {% endif %}
     {% if post.external_source == blank %}
@@ -134,9 +134,6 @@ pagination:
             {% if post.lang %}
               <span class="blog-lang-badge">{{ post.lang | upcase }}</span>
             {% endif %}
-            {% if post.translation_url or post.url contains '-zh/' %}
-              <span class="blog-lang-badge">EN</span>
-            {% endif %}
           </div>
 
           <h2 class="blog-post-title">
@@ -159,11 +156,11 @@ pagination:
             </a>
             {% if post.translation_url %}
               <a class="blog-year-chip" href="{{ post.translation_url | relative_url }}">
-                {{ post.translation_label | default: 'English' }} version
+                {{ post.translation_label | default: 'Translation' }}
               </a>
-            {% elsif post.url contains '-zh/' %}
-              {% assign english_url = post.url | replace: '-zh/', '-en/' %}
-              <a class="blog-year-chip" href="{{ english_url | relative_url }}">English version</a>
+            {% elsif post.url contains '-en/' %}
+              {% assign chinese_url = post.url | replace: '-en/', '-zh/' %}
+              <a class="blog-year-chip" href="{{ chinese_url | relative_url }}">中文</a>
             {% endif %}
             {% if tags != "" %}
               <div class="blog-tag-chips">

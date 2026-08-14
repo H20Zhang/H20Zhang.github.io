@@ -49,6 +49,38 @@ table.table a {
   }
 }
 
+// Inline prose links need a persistent non-color affordance so linked papers,
+// systems, people, and writing are distinguishable from ordinary bold text.
+.post article {
+  p a,
+  li a {
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+    text-underline-offset: 0.16em;
+    text-decoration-skip-ink: auto;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration-color: currentColor;
+      text-decoration-thickness: 1.5px;
+    }
+  }
+
+  // Components with an existing interaction treatment should not inherit the
+  // prose underline merely because they are rendered inside a list or paragraph.
+  .publications a,
+  .post-list a,
+  .blog-post-list a,
+  .featured-posts a,
+  .blog-post-footer a,
+  .social a,
+  a.btn,
+  a.badge {
+    text-decoration: none;
+  }
+}
+
 .table-dark {
   background-color: transparent;
   &.table-bordered {

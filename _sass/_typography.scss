@@ -50,10 +50,14 @@ table.table a {
 }
 
 // Inline prose links need a persistent non-color affordance so linked papers,
-// systems, people, and writing are distinguishable from ordinary bold text.
+// systems, people, writing, and table-style text links are distinguishable from
+// ordinary emphasis. Component-like interactions keep their own visual language.
 .post article {
   p a,
-  li a {
+  li a,
+  .news td a,
+  &.archive td a,
+  .projects .small a:not(.github-icon) {
     text-decoration-line: underline;
     text-decoration-thickness: 1px;
     text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);

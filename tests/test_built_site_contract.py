@@ -37,6 +37,7 @@ class PageParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
         self.anchors: list[dict[str, str]] = []
+        self.buttons: list[dict[str, str]] = []
         self.images: list[dict[str, str]] = []
         self.json_ld: list[str] = []
         self.metas: list[dict[str, str]] = []
@@ -55,6 +56,8 @@ class PageParser(HTMLParser):
 
         if tag == "a":
             self.anchors.append(attributes)
+        elif tag == "button":
+            self.buttons.append(attributes)
         elif tag == "img":
             self.images.append(attributes)
         elif tag == "meta":
@@ -213,6 +216,17 @@ class BuiltSiteContractTest(unittest.TestCase):
 
         self.assertEqual(
             contact_rule.get("color"), "var(--global-theme-color)"
+        )
+
+    def test_theme_toggle_has_descriptive_accessible_name(self):
+        theme_toggle = next(
+            button
+            for button in self.homepage.buttons
+            if button.get("id") == "light-toggle"
+        )
+
+        self.assertEqual(
+            theme_toggle.get("aria-label"), "Change color theme"
         )
 
     def test_owned_identity_links_are_followable(self):

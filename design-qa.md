@@ -4,53 +4,50 @@
 
 - Source visual truth: `/workspace/scratch/ecbaf0f6ddaf/generated_images/exec-eeba2f37-a396-44c9-ae96-3972b489e093.png`.
 - Source pixels: `1514 × 1039`.
-- Intended CSS viewport: `1514 × 1039`, light theme, homepage root route.
-- Implementation: freshly generated `_site/` from the current worktree.
-- Implementation screenshot: unavailable because the cloud browser rejected the otherwise healthy local preview before rendering it.
-- Density normalization: not performed because no browser-rendered implementation capture was produced.
+- Implementation: `https://h20zhang.github.io/?palette=19560b9`, light theme, homepage root route.
+- Browser-rendered implementation pixels and CSS viewport: `1363 × 936` at `devicePixelRatio: 1`.
+- Density normalization: the source was proportionally normalized to `1363 × 936`; source and implementation were then opened together in the same comparison input.
+- Implementation screenshot path: the browser capture was rendered and inspected in-session, but a durable file path could not be written because the browser share directory returned `EROFS`.
 
 ## Evidence captured
 
-- The source visual was opened at original detail before implementation.
-- The Jekyll build completed successfully and compiled the selected semantic palette into `_site/assets/css/main.css`.
-- The local preview service reported a healthy running state.
-- The cloud browser failed to open the local preview with `net::ERR_BLOCKED_BY_CLIENT`; therefore the required same-viewport implementation screenshot, interaction pass, and console inspection could not be completed.
-- Automated verification covered 22 design and built-site contract tests, 41 generated HTML files and their internal anchors, JavaScript syntax, and diff whitespace.
+- Full-view comparison: normalized source and live implementation were compared together at `1363 × 936` after the Pages deployment completed.
+- Focused color comparison: the first live pass exposed one cascade mismatch in the profile email; computed styles confirmed that the profile contact used the muted token while section links already used cobalt.
+- Post-fix evidence: the deployed profile contact, body links, active navigation, and semantic interaction token all resolve to `#3f5fcc`; section labels resolve to `#cc4b00`; the page background resolves to `#fdfdfd`.
+- Primary interactions: the theme toggle switched themes and was restored to light; the Systems navigation opened `/projects/` and returned successfully.
+- Console inspection: no site-origin errors or warnings remained; a browser-extension-only metadata error was excluded from the site result.
+- Automated verification covers 24 design and built-site contract tests, 41 generated HTML files and their internal anchors, JavaScript syntax, and diff whitespace.
 
 ## Required fidelity surfaces
 
-- Fonts and typography: unchanged in source; browser-rendered visual comparison blocked.
-- Spacing and layout rhythm: unchanged in source; browser-rendered visual comparison blocked.
-- Colors and visual tokens: compiled output is covered by the Cobalt Mandarin regression tests, but raster fidelity comparison is blocked.
-- Image quality and asset fidelity: the existing cycling portrait asset is unchanged; rendered crop and sharpness comparison is blocked.
-- Copy and content: unchanged and covered by existing built-site contract tests; visual wrapping comparison is blocked.
-- Responsiveness and interactions: existing behavior is unchanged, but browser interaction testing is blocked.
-- Accessibility: existing link underlines and semantic behavior are unchanged; browser focus-state inspection is blocked.
+- Fonts and typography: the same production type scale, weights, line heights, and wrapping are preserved; no actionable drift was visible.
+- Spacing and layout rhythm: hero proportions, two-column alignment, section rhythm, dividers, image radius, and whitespace match the selected direction at the normalized viewport.
+- Colors and visual tokens: neutral white surfaces, cobalt interaction states, mandarin section labels, graphite text, and neutral dividers match the target hierarchy.
+- Image quality and asset fidelity: the selected Tianfu Greenway cycling photo is present, sharp, and uses the intended `4 / 3` crop without distortion.
+- Copy and content: the selected homepage copy and section ordering match the target; no unintended wrapping or truncation was visible.
+- Responsiveness and interactions: desktop navigation and theme switching were exercised; responsive Sass contracts remain covered automatically. A separate mobile raster comparison was not required because the selected source has no mobile state.
+- Accessibility: visible links remain underlined, the theme control now has the descriptive name `Change color theme`, and semantic navigation remains keyboard-addressable.
 
 ## Findings
 
-- [P1] Required implementation capture is unavailable.
-  - Location: local homepage preview.
-  - Evidence: the preview service is healthy, but the cloud browser rejected the local preview before page rendering.
-  - Impact: the selected visual and implementation cannot be placed in the same comparison input, so Product Design visual fidelity cannot be certified.
-  - Fix: verify the same commit in a browser-accessible environment, capture the light-theme homepage at `1514 × 1039`, and compare it with the source visual before publication.
-
-## Open questions
-
-- None about the selected palette or implementation scope. The only blocker is browser access to the local preview.
+- No actionable P0, P1, or P2 findings remain.
+- [P3] The browser-generated screenshot could not be persisted to a durable shared-file path because the browser share mount was read-only. This affects artifact retention, not the rendered site.
 
 ## Implementation checklist
 
 - [x] Apply the selected Cobalt Mandarin semantic tokens.
 - [x] Use cobalt for interaction states and reserve mandarin for small homepage section labels.
-- [x] Preserve the dark theme and all non-color source behavior.
+- [x] Correct the profile-contact cascade so the email uses the primary interaction color.
+- [x] Give the theme toggle a descriptive accessible name.
+- [x] Compare the normalized source and deployed implementation in the same visual input.
+- [x] Exercise navigation and theme switching; inspect site console output.
 - [x] Build and run automated validation.
-- [ ] Capture the browser-rendered implementation at the target viewport.
-- [ ] Compare source and implementation in the same visual input.
-- [ ] Exercise navigation, theme toggle, and visible link states; check console errors.
 
 ## Comparison history
 
-- Initial pass: blocked before implementation capture; no visual fixes were made because no reliable rendered evidence was available.
+- Initial local pass: blocked because the cloud browser rejected the local preview with `net::ERR_BLOCKED_BY_CLIENT`.
+- First deployed pass: [P1] the profile email appeared muted because `.profile .more-info a` overrode the intended homepage cobalt rule. `_sass/_components.scss` was corrected and a regression test was added.
+- Interaction pass: [P2] the theme button exposed icon glyphs as its accessible name. `_includes/header.liquid` now supplies `aria-label="Change color theme"`, covered by a built-site contract test.
+- Final pass: the normalized full-view comparison showed no remaining P0/P1/P2 visual differences; computed color tokens, navigation, theme switching, and console state were verified.
 
-final result: blocked
+final result: passed

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AutoIA @ ByteDance
-description: Context infrastructure for agents, connecting retrieval and runtime execution with observability, evaluation, and continuous improvement.
+description: Task- and feedback-driven context infrastructure that improves data preparation and indexing, retrieval pipelines, and agent skills.
 importance: 1
 category: systems
 external_url: https://www.volcengine.com/docs/6465/2096539

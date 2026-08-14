@@ -38,9 +38,9 @@ latest_posts:
 <h2 class="about-section-label" id="current-research">Current Research</h2>
 <div class="about-section-content" markdown="1">
 
-My research asks: **how should data systems build and maintain the context agents need to operate effectively over time?** I study how heterogeneous information is organized, retrieved, and maintained as context, and how execution feedback can continuously improve these mechanisms.
+My research asks: **how can data systems continuously improve the context agents use to complete tasks?** Rather than treating context retrieval as fixed, I study how task outcomes and execution traces can guide the preparation, indexing, and retrieval of heterogeneous data.
 
-[**AutoIA @ ByteDance**](/projects/1_autoia/) is the systems platform for this agenda, connecting context infrastructure with agent execution, observability, and evaluation. Longer term, I am interested in **self-improving agent infrastructure** and **recursive self-improvement (RSI)**: improving not only agent capabilities, but also the mechanisms that generate and evaluate improvements.
+[**AutoIA @ ByteDance**](/projects/1_autoia/) is the systems platform for this agenda. It closes this loop: evaluation and failure analysis improve retrieval pipelines and agent skills, while persistent failures trigger changes to data preparation, indexing, and storage. This is a concrete path toward **self-improving agent infrastructure**.
 
 Selected writing: [**The Next Generation of Context Management: Maintaining the Model's Perceivable World**](/blog/2026/next-gen-agent-en/) · [中文版](/blog/2026/next-gen-agent-zh/).
 </div>
@@ -50,7 +50,7 @@ Selected writing: [**The Next Generation of Context Management: Maintaining the 
 <h2 class="about-section-label" id="selected-systems">Selected Systems</h2>
 <div class="about-section-content" markdown="1">
 
-- [**AutoIA @ ByteDance**](/projects/1_autoia/) — context infrastructure and self-improving agent systems.
+- [**AutoIA @ ByteDance**](/projects/1_autoia/) — task- and feedback-driven context infrastructure that improves data preparation and indexing, retrieval pipelines, and agent skills.
 - [**GES @ Huawei Cloud**](/projects/3_ges/) — production graph database infrastructure.
 - [**Database & Graph Research Systems @ CUHK**](/projects/4_database_graph_systems/) — distributed query processing and graph systems.
 
@@ -62,7 +62,7 @@ Selected writing: [**The Next Generation of Context Management: Maintaining the 
 <h2 class="about-section-label" id="highlights">Highlights</h2>
 <div class="about-section-content" markdown="1">
 
-- **25+ publications** in database systems and Data+AI, including **SIGMOD, VLDB, ICDE, COLM, TKDE, and The VLDB Journal**.
+- **25+ publications** in database systems and AI, including **SIGMOD, VLDB, ICDE, COLM, TKDE, and The VLDB Journal**.
 - **#1 on both LDBC SNB Interactive tracks**: [declarative, 2024](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/) (**3,000× over #2**) and [imperative, 2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/).
 
 I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from Wuhan University in 2017.

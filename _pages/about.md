@@ -8,7 +8,7 @@ description: Research Scientist at ByteDance building data systems for agents, w
 keywords: Hao Zhang, ByteDance, data systems for agents, context infrastructure, context management, agent memory, context search, vector search, graph systems, semantic query processing, hardware-accelerated data systems, AI-native data systems
 hero_title: Data systems for agents.
 hero_intro: >
-  I am a Research Scientist at ByteDance building **data systems for agents**. My work focuses on context infrastructure, vector search, graph systems, and hardware-accelerated data systems.
+  I am a Research Scientist at ByteDance building **data systems for agents**, with a current focus on **self-improving context infrastructure**. My broader work spans vector search, graph systems, and hardware-accelerated data systems.
 
 profile:
   align: right

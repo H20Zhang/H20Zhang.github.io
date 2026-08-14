@@ -73,13 +73,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const queryTarget = new URLSearchParams(window.location.search).get("paper");
     const publicationTarget = queryTarget || hashValue;
     const anchorTarget = publicationTarget ? document.getElementById(publicationTarget) : null;
+    const entry = anchorTarget?.closest(".bibliography > li");
 
     // BibTeX keys are also used as publication anchors. Prefer anchor navigation
-    // when the URL identifies a bibliography entry; otherwise keep hash-as-search.
-    if (anchorTarget?.closest(".bibliography > li")) {
+    // when the hash identifies a bibliography entry; otherwise keep hash-as-search.
+    if (entry) {
       activePublicationTarget = publicationTarget;
-      bibsearch.value = "";
-      filterItems("");
+      const title = entry.querySelector(".title")?.innerText.trim() || publicationTarget;
+      bibsearch.value = title;
+      filterItems(title.toLowerCase());
       scrollToPublication(publicationTarget);
       return;
     }
@@ -93,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let timeoutId;
   bibsearch.addEventListener("input", function () {
     clearTimeout(timeoutId); // Clear the previous timeout
+    activePublicationTarget = null;
     const searchTerm = this.value.toLowerCase();
     timeoutId = setTimeout(() => filterItems(searchTerm), 300);
   });

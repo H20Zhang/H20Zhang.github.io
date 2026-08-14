@@ -11,12 +11,12 @@ research_support:
   - area: Knowledge organization
     papers:
       - name: DocNavRAG
-        url: https://arxiv.org/abs/2608.01565
+        url: /publications/#Arxiv-26-4
         role: supports stateful evidence construction through navigable document structure
   - area: Agent memory
     papers:
       - name: AdaMM
-        url: https://arxiv.org/abs/2607.29440
+        url: /publications/#Arxiv-26-3
         role: supports query-adaptive memory through analytic views over multimodal histories
   - area: Semantic query layer
     papers:

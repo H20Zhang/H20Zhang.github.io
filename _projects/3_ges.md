@@ -39,6 +39,23 @@ research_support:
         url: /publications/#VLDB-26
         summary: Develops high-concurrency incremental graph query processing for evolving graph data.
         role: Extends the system line toward incremental processing under concurrent updates.
+  - area: Related Huawei-era graph research
+    papers:
+      - name: Time-dependent label-constrained reachability
+        venue: ICDE 2024
+        url: /publications/#ICDE-24-1
+        summary: Studies reachability under ordered label and time-dependent constraints, with indexing strategies that balance construction cost and query efficiency.
+        role: Extends the Huawei-era graph research portfolio toward indexed graph reachability queries.
+      - name: SANE
+        venue: ICDE 2024
+        url: /publications/#ICDE-24-2
+        summary: Updates attributed-network embeddings in a streaming style while retaining information from previously observed attributes.
+        role: Represents adjacent work on evolving attributed graphs rather than a component of GES.
+      - name: Unsupervised graph-classification attack
+        venue: DASFAA 2025
+        url: /publications/#DASFAA-25
+        summary: Develops a label-free adversarial attack for graph classification using contrastive representations and learned edge perturbations.
+        role: Represents adjacent graph-learning research and is not presented as part of the GES implementation.
 ---
 
 Huawei GES is a production graph database service for high-throughput interactive graph workloads.

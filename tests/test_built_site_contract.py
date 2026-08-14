@@ -22,6 +22,11 @@ TQEX_PAPERS = {
     "/publications/#SIGMOD-25-2",
     "/publications/#SIGMOD-26-1",
 }
+GES_RELATED_GRAPH_PAPERS = {
+    "/publications/#ICDE-24-1",
+    "/publications/#ICDE-24-2",
+    "/publications/#DASFAA-25",
+}
 BLOG_POST_PATHS = (
     Path("blog/2026/next-gen-agent-en/index.html"),
     Path("blog/2026/next-gen-agent-zh/index.html"),
@@ -112,6 +117,22 @@ def compiled_css_rule(css: str, selector: str) -> dict[str, str]:
             continue
         property_name, value = declaration.split(":", 1)
         declarations[property_name.strip()] = value.strip()
+    return declarations
+
+
+def compiled_css_cascade_rule(css: str, selector: str) -> dict[str, str]:
+    pattern = re.compile(rf"(?<![\w-]){re.escape(selector)}\{{([^{{}}]+)\}}")
+    matches = pattern.findall(css)
+    if not matches:
+        raise AssertionError(f"compiled CSS rule not found: {selector}")
+
+    declarations: dict[str, str] = {}
+    for block in matches:
+        for declaration in block.split(";"):
+            if ":" not in declaration:
+                continue
+            property_name, value = declaration.split(":", 1)
+            declarations[property_name.strip()] = value.strip()
     return declarations
 
 
@@ -240,7 +261,7 @@ class BuiltSiteContractTest(unittest.TestCase):
                 "line-height": "1.62",
             },
             ".about-section-content": {
-                "font-size": ".96rem",
+                "font-size": ".94rem",
                 "font-weight": "400",
                 "line-height": "1.62",
             },
@@ -265,6 +286,39 @@ class BuiltSiteContractTest(unittest.TestCase):
         tqex_page = parse_page(tqex_path)
         hrefs = {anchor.get("href") for anchor in tqex_page.anchors}
         self.assertTrue(TQEX_PAPERS.issubset(hrefs), TQEX_PAPERS - hrefs)
+
+    def test_ges_page_separates_related_huawei_graph_research(self):
+        ges_path = SITE / "projects" / "3_ges" / "index.html"
+        ges_html = ges_path.read_text(encoding="utf-8")
+        ges_page = parse_page(ges_path)
+        hrefs = {anchor.get("href") for anchor in ges_page.anchors}
+
+        self.assertIn("Related Huawei-era graph research", ges_html)
+        self.assertTrue(GES_RELATED_GRAPH_PAPERS.issubset(hrefs))
+        self.assertTrue(TQEX_PAPERS.isdisjoint(hrefs))
+
+    def test_editorial_typography_uses_four_consistent_roles(self):
+        expected = {
+            "html": {"font-size": "17px"},
+            ".post-description": {"font-size": ".94rem"},
+            ".projects .systems-group-label": {"font-size": ".75rem"},
+            ".projects .project-card-actions": {"font-size": ".84rem"},
+            ".research-thread-label": {"font-size": ".75rem"},
+            ".research-paper-venue": {"font-size": ".84rem"},
+            ".research-paper-body": {"font-size": ".94rem"},
+            ".cv-editorial .cv-section-title": {"font-size": ".75rem"},
+            ".cv-editorial .cv-entry-date": {"font-size": ".84rem"},
+            ".cv-editorial .cv-entry-highlights": {"font-size": ".94rem"},
+            ".publications ol.bibliography li .links .btn": {
+                "font-size": ".84rem"
+            },
+        }
+
+        for selector, properties in expected.items():
+            rule = compiled_css_cascade_rule(self.css, selector)
+            with self.subTest(selector=selector):
+                for property_name, value in properties.items():
+                    self.assertEqual(rule.get(property_name), value)
 
     def test_cv_renders_as_flat_editorial_document(self):
         cv_html = (SITE / "cv" / "index.html").read_text(encoding="utf-8")
@@ -367,7 +421,7 @@ class BuiltSiteContractTest(unittest.TestCase):
         button_rule = compiled_css_rule(
             self.css, ".publications ol.bibliography li .links .btn"
         )
-        self.assertEqual(button_rule.get("font-size"), ".8rem")
+        self.assertEqual(button_rule.get("font-size"), ".84rem")
 
     def test_homepage_profile_metadata_avoids_repeating_the_hero(self):
         homepage_html = (SITE / "index.html").read_text(encoding="utf-8")

@@ -52,13 +52,13 @@
 
     .post-meta {
       color: var(--global-text-color-light);
-      font-size: 0.875rem;
+      font-size: 0.84rem;
       margin-bottom: 0;
     }
 
     .post-tags {
       color: var(--global-text-color-light);
-      font-size: 0.875rem;
+      font-size: 0.84rem;
       padding-top: 0.25rem;
       padding-bottom: 0;
     }
@@ -103,13 +103,13 @@
 .post {
   .post-meta {
     color: var(--global-text-color-light);
-    font-size: 0.875rem;
+    font-size: 0.84rem;
     margin-bottom: 0;
   }
 
   .post-tags {
     color: var(--global-text-color-light);
-    font-size: 0.875rem;
+    font-size: 0.84rem;
     padding-top: 0.25rem;
     padding-bottom: 1rem;
 
@@ -146,7 +146,7 @@
 
   .post-meta {
     color: var(--global-text-color-light);
-    font-size: 0.875rem;
+    font-size: 0.84rem;
     margin-bottom: 0;
     padding-top: 0.5rem;
   }
@@ -154,7 +154,7 @@
 
 .post-description {
   margin-bottom: 2rem;
-  font-size: 0.875rem;
+  font-size: 0.94rem;
 
   a {
     color: inherit;
@@ -223,7 +223,7 @@
         border-radius: 999px;
         color: var(--global-text-color-light);
         text-decoration: none;
-        font-size: 0.82rem;
+        font-size: 0.84rem;
         background: var(--global-card-bg-color);
 
         &:hover {
@@ -280,7 +280,7 @@
     gap: 0.45rem;
     margin-bottom: 0.35rem;
     color: var(--global-text-color-light);
-    font-size: 0.78rem;
+    font-size: 0.84rem;
     letter-spacing: 0.01em;
 
     span:not(:last-child)::after {
@@ -336,7 +336,7 @@
 
   .blog-translation-link {
     color: var(--global-text-color-light);
-    font-size: 0.8rem;
+    font-size: 0.84rem;
     font-weight: 500;
     text-decoration: none;
 

@@ -12,24 +12,24 @@ research_support:
         venue: SIGMOD 2022
         url: /publications/#SIGMOD-22-1
         code: https://github.com/H20Zhang/SeccoSQL
-        summary: separates communication from local computation in distributed query plans to expose a larger optimization space
-        role: separates communication from local computation to enlarge the optimization space for distributed queries
+        summary: Separates communication from local computation in distributed query plans to expose a larger optimization space.
+        role: Provides the distributed query-execution foundation for this systems line.
   - area: Distributed graph analytics
     papers:
       - name: DISC
         venue: VLDB 2020
         url: /publications/#VLDB-20
         code: https://github.com/H20Zhang/DISC
-        summary: expresses local subgraph counting as relational queries so distributed query-processing techniques can be reused
-        role: maps local subgraph counting to relational execution so database techniques can drive graph analytics
+        summary: Expresses local subgraph counting as relational queries so distributed query-processing techniques can be reused.
+        role: Connects graph analytics to relational execution in this systems line.
   - area: Compressed graph processing
     papers:
       - name: Crystal
         venue: VLDB 2018
         url: /publications/#VLDB-18
         code: https://github.com/H20Zhang/Crystal
-        summary: computes compressed subgraph-matching results directly to avoid large intermediate and output materialization
-        role: computes compressed matching results to avoid materializing large intermediate and output sets
+        summary: Computes compressed subgraph-matching results directly to avoid large intermediate and output materialization.
+        role: Introduces compressed execution to control intermediate and output explosion.
 ---
 
 These earlier research systems form the database and graph-systems foundation behind my later work on production data infrastructure and AI-native systems.

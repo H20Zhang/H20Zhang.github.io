@@ -12,8 +12,8 @@ hero_intro: >
 
 profile:
   align: right
-  image: bio-photo.jpeg
-  image_alt: Hao Zhang portrait
+  image: homepage-cycling.jpeg
+  image_alt: Hao Zhang cycling on the Tianfu Greenway
   image_circular: false
   more_info: >
     <p>Research Scientist, ByteDance</p>
@@ -51,7 +51,8 @@ Selected writing: [**The Next Generation of Context Management: Maintaining the 
 <div class="about-section-content" markdown="1">
 
 - [**AutoIA @ ByteDance**](/projects/1_autoia/) — self-improving context infrastructure that evolves both external data environments and the retrieval pipelines built for them.
-- **Huawei-era systems** — [**GES @ Huawei**](/projects/3_ges/) for production graph database infrastructure, and [**TQEX @ Huawei**](/projects/2_tqex/) for tensor-centric SQL and graph execution across heterogeneous accelerators.
+- [**GES @ Huawei**](/projects/3_ges/) — production graph database infrastructure.
+- [**TQEX @ Huawei**](/projects/2_tqex/) — tensor-centric SQL and graph execution across heterogeneous accelerators.
 - [**Database & Graph Research Systems @ CUHK**](/projects/4_database_graph_systems/) — distributed query processing and graph systems.
 
 [**Systems**](/projects/) maps these systems to the research behind them. [**Publications**](/publications/) contains the full research record.

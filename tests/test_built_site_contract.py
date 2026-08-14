@@ -31,9 +31,11 @@ class PageParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
         self.anchors: list[dict[str, str]] = []
+        self.images: list[dict[str, str]] = []
         self.json_ld: list[str] = []
         self.metas: list[dict[str, str]] = []
         self.title_parts: list[str] = []
+        self.selected_systems_text_parts: list[str] = []
         self.selected_systems_items = 0
         self._in_json_ld = False
         self._json_ld_parts: list[str] = []
@@ -47,6 +49,8 @@ class PageParser(HTMLParser):
 
         if tag == "a":
             self.anchors.append(attributes)
+        elif tag == "img":
+            self.images.append(attributes)
         elif tag == "meta":
             self.metas.append(attributes)
         elif tag == "title":
@@ -77,10 +81,16 @@ class PageParser(HTMLParser):
             self.title_parts.append(data)
         if self._in_json_ld:
             self._json_ld_parts.append(data)
+        if self._selected_systems_depth:
+            self.selected_systems_text_parts.append(data)
 
     @property
     def title(self) -> str:
         return "".join(self.title_parts).strip()
+
+    @property
+    def selected_systems_text(self) -> str:
+        return " ".join("".join(self.selected_systems_text_parts).split())
 
 
 def parse_page(path: Path) -> PageParser:
@@ -170,8 +180,25 @@ class BuiltSiteContractTest(unittest.TestCase):
                 self.assertEqual(schema["@type"], "WebPage")
                 self.assertEqual(og_type, "website")
 
-    def test_homepage_keeps_three_selected_systems_items(self):
-        self.assertEqual(self.homepage.selected_systems_items, 3)
+    def test_homepage_presents_huawei_systems_as_independent_items(self):
+        self.assertEqual(self.homepage.selected_systems_items, 4)
+        self.assertIn("GES @ Huawei", self.homepage.selected_systems_text)
+        self.assertIn("TQEX @ Huawei", self.homepage.selected_systems_text)
+        self.assertNotIn("Huawei-era systems", self.homepage.selected_systems_text)
+
+    def test_homepage_uses_cycling_profile_photo(self):
+        cycling_images = [
+            image
+            for image in self.homepage.images
+            if image.get("src", "").split("?", 1)[0].endswith(
+                "/assets/img/homepage-cycling.jpeg"
+            )
+        ]
+        self.assertEqual(len(cycling_images), 1)
+        self.assertEqual(
+            cycling_images[0].get("alt"),
+            "Hao Zhang cycling on the Tianfu Greenway",
+        )
 
     def test_tqex_page_links_all_four_research_threads(self):
         tqex_path = SITE / "projects" / "2_tqex" / "index.html"

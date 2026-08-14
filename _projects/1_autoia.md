@@ -11,20 +11,28 @@ research_support:
   - area: Knowledge organization
     papers:
       - name: DocNavRAG
+        venue: arXiv 2026
         url: /publications/#Arxiv-26-4
+        summary: builds a document-structured graph and maintains evolving evidence state for navigation over long documents
         role: supports stateful evidence construction through navigable document structure
   - area: Agent memory
     papers:
       - name: AdaMM
+        venue: arXiv 2026
         url: /publications/#Arxiv-26-3
+        summary: adds queryable analytic memory alongside retrieval memory for filtering, aggregation, ranking, and temporal comparison over multimodal histories
         role: supports query-adaptive memory through analytic views over multimodal histories
   - area: Semantic query layer
     papers:
       - name: Sema
+        venue: PVLDB 2026
         url: /publications/#VLDB-26-2
+        summary: brings LLM-powered semantic operators into SQL with optimization and adaptive execution
         role: provides first-class semantic operators and adaptive execution
       - name: CoreSemDB
+        venue: COLM 2026
         url: /publications/#COLM-26
+        summary: benchmarks hybrid semantic-relational queries combining structured predicates with semantic interpretation over text-rich data
         role: defines hybrid semantic-relational workloads for evaluating this layer
 ---
 

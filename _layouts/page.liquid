@@ -18,18 +18,8 @@ layout: default
     {{ content }}
   </article>
 
-  {% if page.category == 'systems' and page.research_support %}
-    <h2>Research Threads</h2>
-    {% for support in page.research_support %}
-      <div class="mb-3">
-        <strong>{{ support.area }}</strong>
-        <ul>
-          {% for paper in support.papers %}
-            <li><a href="{{ paper.url | relative_url }}"><strong>{{ paper.name }}</strong></a> — {{ paper.role }}.</li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endfor %}
+  {% if page.category == 'systems' %}
+    {% include system_research_details.liquid %}
   {% endif %}
 
   {% if page.related_publications %}

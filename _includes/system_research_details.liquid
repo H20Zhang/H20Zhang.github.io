@@ -1,0 +1,20 @@
+{% if page.research_support %}
+<h2>Research Threads</h2>
+{% for support in page.research_support %}
+<div class="mb-3">
+  <strong>{{ support.area }}</strong>
+  <div class="mt-2">
+    {% for paper in support.papers %}
+    <details class="mb-2">
+      <summary><strong>{{ paper.name }}</strong>{% if paper.venue %}<span class="text-muted"> · {{ paper.venue }}</span>{% endif %}</summary>
+      <div class="small ml-3 mt-2 mb-2">
+        {% if paper.summary %}<p class="mb-1">{{ paper.summary }}</p>{% endif %}
+        <p class="mb-1"><strong>System connection:</strong> {{ paper.role }}.</p>
+        <a href="{{ paper.url | relative_url }}">View publication →</a>{% if paper.code %} · <a href="{{ paper.code }}">Code ↗</a>{% endif %}
+      </div>
+    </details>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}
+{% endif %}

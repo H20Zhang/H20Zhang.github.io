@@ -8,7 +8,7 @@ description: Research Scientist at ByteDance building data systems for agents, w
 keywords: Hao Zhang, ByteDance, data systems for agents, context infrastructure, context management, agent memory, context search, vector search, graph systems, semantic query processing, hardware-accelerated data systems, AI-native data systems
 hero_title: Data systems for agents.
 hero_intro: >
-  I am a Research Scientist at ByteDance building **data systems for agents**, with a current focus on **self-improving context infrastructure**. My broader work spans vector search, graph systems, and hardware-accelerated data systems.
+  I am a Research Scientist at ByteDance building **data systems for agents**. I believe progress toward **AGI** will depend on more than stronger models: agents also need systems that continuously construct and improve the **context they act on**. My current focus is **self-improving context infrastructure**.
 
 profile:
   align: right
@@ -32,11 +32,13 @@ latest_posts:
   limit: 3
 ---
 
-<section class="about-section" aria-labelledby="current-research">
-<h2 class="about-section-label" id="current-research">Current Research</h2>
+<section class="about-section" aria-labelledby="current-focus">
+<h2 class="about-section-label" id="current-focus">Current Focus</h2>
 <div class="about-section-content" markdown="1">
 
-My research focuses on **self-improving context infrastructure for agents**: evolving both how an agent's external data environment is constructed and how information is retrieved from it. Evaluation feedback improves retrieval pipelines within a given environment, while persistent failures drive changes to data integration, indexing, and storage.
+Models do not act on the world directly; they act on the context made available to them. As model capabilities grow, I expect this context layer—what information is available, how it is organized, and how it changes with feedback—to become an increasingly important systems bottleneck on the path toward **AGI**.
+
+My research focuses on **self-improving context infrastructure for agents**: evolving both how an agent's external data environment is constructed and how information is retrieved from it. Task-level feedback improves retrieval pipelines, while persistent failures drive changes to data integration, organization, indexing, and storage.
 
 [**AutoIA @ ByteDance**](/projects/1_autoia/) is the systems platform for this agenda. Its inner loop evolves environment-specific retrieval pipelines through task-level evaluation; its outer loop uses persistent failures to improve data integration and rebuild the environment itself.
 

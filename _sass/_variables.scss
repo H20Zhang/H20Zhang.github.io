@@ -24,16 +24,26 @@ $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;
 $yellow-color: #efcc00 !default;
 
-// Shared site accent: same indigo family in light and dark themes.
-$accent-color-light: #4f46e5 !default;
-$accent-color-dark: #818cf8 !default;
+// Warm editorial system selected for the site redesign.
+$paper-cream-light: #fbf2e7 !default;
+$paper-sand-light: #f8ebde !default;
+$accent-color-light: #a2472f !default;
+$accent-hover-light: #783322 !default;
+$ink-color-light: #2c211c !default;
+$text-muted-light: #75645b !default;
+
+$paper-espresso-dark: #241a16 !default;
+$paper-surface-dark: #2e211c !default;
+$paper-sand-dark: #36251f !default;
+$ink-color-dark: #f4eadf !default;
+$text-muted-dark: #c2b2a7 !default;
+$accent-color-dark: #e58b6d !default;
+$accent-hover-dark: #f0a084 !default;
 
 $grey-color: #828282 !default;
 $grey-color-light: color.adjust($grey-color, $lightness: 40%);
 $grey-color-dark: #1c1c1d;
 $grey-900: #212529;
-$text-muted-light: #6b7280 !default;
-$text-muted-dark: #a3a3a3 !default;
 
 $white-color: #ffffff !default;
 $black-color: #000000 !default;
@@ -41,7 +51,7 @@ $black-color: #000000 !default;
 // Theme colors
 
 $code-bg-color-light: rgba($accent-color-light, 0.05);
-$code-bg-color-dark: #2c3237 !default;
+$code-bg-color-dark: $paper-surface-dark !default;
 
 // Font awesome location
 $fa-font-path: "../webfonts";

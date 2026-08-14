@@ -1,78 +1,97 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
+<div class="about-page">
+  <div class="post">
+    <article>
+    <section class="about-hero" aria-labelledby="about-name">
+      <div class="about-hero-copy">
+        <header class="post-header">
+          <h1 class="post-title about-name" id="about-name">
+            {% if site.title == 'blank' %}
+              <span class="about-first-name">{{ site.first_name }}</span>
+              {% if site.middle_name %}{{ site.middle_name }}{% endif %}
+              {{ site.last_name }}
+            {% else %}
+              {{ site.title }}
+            {% endif %}
+          </h1>
+          <p class="desc">{{ page.subtitle }}</p>
+        </header>
+
+        <h2 class="about-tagline">{{ page.hero_title }}</h2>
+        <div class="about-intro">{{ page.hero_intro | markdownify }}</div>
+      </div>
+
+      {% if page.profile %}
+        <aside class="about-hero-profile" aria-label="Profile">
+          <div class="profile">
+            {% if page.profile.image %}
+              {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+              {% if page.profile.image_circular %}
+                {% assign profile_image_class = 'img-fluid profile-image rounded-circle' %}
+              {% else %}
+                {% assign profile_image_class = 'img-fluid profile-image' %}
+              {% endif %}
+              {% assign profile_image_alt = page.profile.image_alt | default: page.profile.image %}
+              {% capture sizes %}(min-width: 930px) 272px, (min-width: 768px) 28vw, 100vw{% endcapture %}
+              {%
+                include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile_image_alt
+                cache_bust=true
+              %}
+            {% endif %}
+            {% if page.profile.more_info %}
+              <div class="more-info">{{ page.profile.more_info }}</div>
+            {% endif %}
+          </div>
+        </aside>
       {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
+    </section>
 
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid profile-image rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid profile-image rounded' %}
-          {% endif %}
-          {% assign profile_image_alt = page.profile.image_alt | default: page.profile.image %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile_image_alt
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
+    <div class="about-sections">{{ content }}</div>
 
-    <div class="clearfix">{{ content }}</div>
+    <div class="about-extras">
+      <!-- News -->
+      {% if page.announcements and page.announcements.enabled %}
+        <h2>
+          <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
+        </h2>
+        {% include news.liquid limit=true %}
+      {% endif %}
 
-    <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
-      </h2>
-      {% include news.liquid limit=true %}
-    {% endif %}
+      <!-- Latest posts -->
+      {% if page.latest_posts and page.latest_posts.enabled %}
+        <h2>
+          <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest Posts</a>
+        </h2>
+        {% include latest_posts.liquid %}
+      {% endif %}
 
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest Posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
+      <!-- Recent publications -->
+      {% if page.recent_publications %}
+        <h2>
+          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Recent Publications</a>
+        </h2>
+        <p><sup>^</sup> indicates first author or corresponding author.</p>
+        {% include recent_publications.liquid %}
+      {% endif %}
+    </div>
 
-    <!-- Recent publications -->
-    {% if page.recent_publications %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Recent Publications</a>
-      </h2>
-      <p><sup>^</sup> indicates first author or corresponding author.</p>
-      {% include recent_publications.liquid %}
-    {% endif %}
+    <div class="about-footer-row">
+      <p class="about-updated">Last updated: {{ site.time | date: '%B %-d, %Y' }}</p>
 
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% social_links %}</div>
-      </div>
-    {% endif %}
+      {% if page.social %}
+        <div class="about-footer-social social" aria-label="Social links">
+          <div class="contact-icons">{% social_links %}</div>
+        </div>
+      {% endif %}
+
+      <span class="about-footer-spacer" aria-hidden="true"></span>
+    </div>
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% include newsletter.liquid center=true %}
     {% endif %}
-  </article>
+    </article>
+  </div>
 </div>

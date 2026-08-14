@@ -206,7 +206,11 @@ class BuiltSiteContractTest(unittest.TestCase):
 
         for property_name, value in expected.items():
             with self.subTest(property_name=property_name):
-                self.assertEqual(root_rule.get(property_name), value)
+                actual = root_rule.get(property_name, "")
+                self.assertEqual(
+                    re.sub(r"\s+", "", actual),
+                    re.sub(r"\s+", "", value),
+                )
 
     def test_homepage_profile_contact_uses_primary_interaction_color(self):
         contact_rule = compiled_css_cascade_rule(

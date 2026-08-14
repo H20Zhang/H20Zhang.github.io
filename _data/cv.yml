@@ -3,7 +3,7 @@ cv:
   label: Research Scientist
   email: zhanghao.ai@bytedance.com
   website: https://h20zhang.github.io
-  summary: Research scientist building database, retrieval, and Data+AI infrastructure for AI-native and data-intensive workloads, spanning agentic data management, retrieval-aware knowledge representation, graph/vector retrieval, semantic query processing, accelerator-aware execution, and distributed query processing.
+  summary: Research scientist building data systems for agents and data-intensive workloads, spanning context infrastructure, vector search, graph systems, semantic query processing, hardware-accelerated data systems, and distributed query processing.
 
   social_networks:
     - network: GitHub
@@ -17,8 +17,8 @@ cv:
         position: Research Scientist
         start_date: 2025
         highlights:
-          - Building Data+AI systems for retrieval, analytics, vector search, agentic workflows, and multimodal data processing.
-          - Working on semantic data processing and AI-native infrastructure for heterogeneous data and LLM-based workflows.
+          - Building context infrastructure and Data+AI systems for retrieval, analytics, vector search, agent workflows, and multimodal data.
+          - Working on semantic query processing and AI-native infrastructure over heterogeneous data.
 
       - company: Huawei Cloud Database Innovation Lab
         position: Research Scientist
@@ -47,13 +47,11 @@ cv:
           - "[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)."
 
     Research Areas:
-      - bullet: Agentic data management, integration, and knowledge extraction
-      - bullet: Retrieval-aware knowledge representation
-      - bullet: Vector and graph retrieval infrastructure
+      - bullet: Context infrastructure for agents, including context management, memory, and knowledge organization
+      - bullet: Vector search and retrieval systems
+      - bullet: Graph systems and dynamic graph storage
       - bullet: Semantic query processing and AI-native data systems
-      - bullet: Graph database systems and dynamic graph storage
-      - bullet: Accelerator-aware SQL and graph query execution
-      - bullet: Distributed query processing and AI4DB
+      - bullet: Hardware-accelerated and distributed query execution
 
     Honors and Awards:
       - title: ByteDance Soaring Star Talent Program

@@ -13,27 +13,27 @@ research_support:
       - name: DocNavRAG
         venue: arXiv 2026
         url: /publications/#Arxiv-26-4
-        summary: builds a document-structured graph and maintains evolving evidence state for navigation over long documents
-        role: supports stateful evidence construction through navigable document structure
+        summary: Builds a document-structured graph and maintains an evolving evidence state for navigation over long documents.
+        role: Supports stateful evidence construction through navigable document structure.
   - area: Agent memory
     papers:
       - name: AdaMM
         venue: arXiv 2026
         url: /publications/#Arxiv-26-3
-        summary: adds queryable analytic memory alongside retrieval memory for filtering, aggregation, ranking, and temporal comparison over multimodal histories
-        role: supports query-adaptive memory through analytic views over multimodal histories
+        summary: Adds queryable analytic memory alongside retrieval memory to support filtering, aggregation, ranking, and temporal comparison over multimodal histories.
+        role: Supports query-adaptive memory through analytic views over multimodal histories.
   - area: Semantic query layer
     papers:
       - name: Sema
         venue: PVLDB 2026
         url: /publications/#VLDB-26-2
-        summary: brings LLM-powered semantic operators into SQL with optimization and adaptive execution
-        role: provides first-class semantic operators and adaptive execution
+        summary: Introduces LLM-powered semantic operators in SQL with optimization and adaptive execution.
+        role: Provides the semantic query layer with first-class operators and adaptive execution.
       - name: CoreSemDB
         venue: COLM 2026
         url: /publications/#COLM-26
-        summary: benchmarks hybrid semantic-relational queries combining structured predicates with semantic interpretation over text-rich data
-        role: defines hybrid semantic-relational workloads for evaluating this layer
+        summary: Benchmarks hybrid semantic-relational queries that combine structured predicates with semantic interpretation over text-rich data.
+        role: Defines workloads for evaluating the semantic query layer.
 ---
 
 AutoIA is an internal system for building **context infrastructure for agents**. It connects context retrieval over heterogeneous data with agent execution, observability, evaluation, and continuous improvement.

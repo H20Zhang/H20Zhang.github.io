@@ -14,12 +14,13 @@ class HomepageDesignContractTest(unittest.TestCase):
         variables = read("_sass/_variables.scss").lower()
 
         light_palette = (
-            "#f7f5f2",
-            "#efeae4",
-            "#984936",
-            "#733527",
-            "#2b2623",
-            "#6f6661",
+            "#fdfdfd",
+            "#f7f7f7",
+            "#3f5fcc",
+            "#273f9f",
+            "#1a1a1a",
+            "#6b7280",
+            "#cc4b00",
         )
         dark_palette = (
             "#241a16",
@@ -41,13 +42,14 @@ class HomepageDesignContractTest(unittest.TestCase):
             "--global-surface-color",
             "--global-section-alt-color",
             "--global-navbar-bg-color",
+            "--global-section-accent-color",
         ):
             with self.subTest(token=token):
                 self.assertGreaterEqual(themes.count(token), 2)
 
         self.assertIn("v.$accent-hover-light", themes)
         self.assertIn("v.$accent-hover-dark", themes)
-        self.assertIn("rgba(83, 66, 56, 0.16)", themes)
+        self.assertIn("rgba(229, 231, 235, 1)", themes)
         self.assertNotIn("rgba(120, 51, 34, 0.18)", themes)
 
     def test_homepage_uses_selected_editorial_structure(self):
@@ -77,6 +79,7 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertIn("grid-template-columns: minmax(0, 2fr) minmax(230px, 0.9fr)", styles)
         self.assertIn("grid-template-columns: 176px minmax(0, 1fr)", styles)
         self.assertIn("var(--global-section-alt-color)", styles)
+        self.assertIn("color: var(--global-section-accent-color)", styles)
         self.assertIn("@media (max-width: 767px)", styles)
         self.assertIn("@media (max-width: 575px)", styles)
 

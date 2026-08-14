@@ -15,12 +15,13 @@
   --global-text-color-light: #{v.$text-muted-light};
   --global-theme-color: #{v.$accent-color-light};
   --global-hover-color: #{v.$accent-hover-light};
+  --global-section-accent-color: #{v.$section-accent-light};
   --global-hover-text-color: #{v.$paper-cream-light};
   --global-footer-bg-color: #{v.$ink-color-light};
   --global-footer-text-color: #{v.$paper-sand-light};
   --global-footer-link-color: #{v.$paper-cream-light};
   --global-distill-app-color: #{v.$grey-color};
-  --global-divider-color: rgba(68, 91, 140, 0.22);
+  --global-divider-color: rgba(229, 231, 235, 1);
   --global-card-bg-color: #{v.$paper-cream-light};
   --global-highlight-color: #{v.$accent-hover-light};
   --global-back-to-top-bg-color: rgba(
@@ -88,6 +89,7 @@ html[data-theme="dark"] {
   --global-text-color-light: #{v.$text-muted-dark};
   --global-theme-color: #{v.$accent-color-dark};
   --global-hover-color: #{v.$accent-hover-dark};
+  --global-section-accent-color: #{v.$accent-color-dark};
   --global-hover-text-color: #{v.$paper-espresso-dark};
   --global-footer-bg-color: #{v.$ink-color-dark};
   --global-footer-text-color: #{v.$paper-espresso-dark};

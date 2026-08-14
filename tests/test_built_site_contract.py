@@ -138,7 +138,6 @@ def compiled_css_cascade_rule(css: str, selector: str) -> dict[str, str]:
             declarations[property_name.strip()] = value.strip()
     return declarations
 
-
 class BuiltSiteContractTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -153,7 +152,7 @@ class BuiltSiteContractTest(unittest.TestCase):
     def test_homepage_schema_identifies_hao_zhang(self):
         self.assertEqual(
             self.homepage.title,
-            "Hao Zhang — Research Scientist at ByteDance | Data Systems for Agents",
+            "Hao Zhang — Research Scientist at ByteDance | Context Infrastructure for Agents",
         )
         self.assertEqual(len(self.homepage.json_ld), 1)
 

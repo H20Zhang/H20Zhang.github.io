@@ -16,20 +16,28 @@ research_support:
   - area: Service architecture & execution
     papers:
       - name: GES
+        venue: SIGMOD 2025
         url: /publications/#SIGMOD-25-1
+        summary: production graph service architecture with composable components and factorized execution for high-concurrency interactive workloads
         role: presents the composable service architecture and factorized executor behind the production system
   - area: Dynamic storage
     papers:
       - name: RapidStore
+        venue: VLDB 2025
         url: /publications/#VLDB-25
+        summary: separates reads and writes and decouples version data for concurrent queries and updates on dynamic graphs
         role: develops read-write separation for scalable concurrent dynamic graph storage
       - name: DGS Study
+        venue: SIGMOD 2025
         url: /publications/#SIGMOD-25-3
+        summary: compares in-memory dynamic graph storage designs and identifies storage and concurrency bottlenecks
         role: identifies storage and concurrency bottlenecks that motivate this design space
   - area: Incremental graph queries
     papers:
       - name: Aquila
+        venue: VLDB 2026
         url: /publications/#VLDB-26
+        summary: high-concurrency incremental graph query processing as graph data evolves
         role: extends the research line toward high-concurrency incremental graph query processing
 ---
 

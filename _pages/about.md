@@ -38,9 +38,9 @@ latest_posts:
 <h2 class="about-section-label" id="current-research">Current Research</h2>
 <div class="about-section-content" markdown="1">
 
-My research asks: **how can data systems continuously improve the context agents use to complete tasks?** Rather than treating context retrieval as fixed, I study how task outcomes and execution traces can guide the preparation, indexing, and retrieval of heterogeneous data.
+My research focuses on **self-improving context infrastructure for agents**: evolving both how an agent's external data environment is constructed and how information is retrieved from it. Evaluation feedback improves retrieval pipelines within a given environment, while persistent failures drive changes to data integration, indexing, and storage.
 
-[**AutoIA @ ByteDance**](/projects/1_autoia/) is the systems platform for this agenda. It closes this loop: evaluation and failure analysis improve retrieval pipelines and agent skills, while persistent failures trigger changes to data preparation, indexing, and storage. This is a concrete path toward **self-improving agent infrastructure**.
+[**AutoIA @ ByteDance**](/projects/1_autoia/) is the systems platform for this agenda. Its inner loop evolves environment-specific retrieval pipelines through task-level evaluation; its outer loop uses persistent failures to improve data integration and rebuild the environment itself.
 
 Selected writing: [**The Next Generation of Context Management: Maintaining the Model's Perceivable World**](/blog/2026/next-gen-agent-en/) · [中文版](/blog/2026/next-gen-agent-zh/).
 </div>
@@ -50,7 +50,7 @@ Selected writing: [**The Next Generation of Context Management: Maintaining the 
 <h2 class="about-section-label" id="selected-systems">Selected Systems</h2>
 <div class="about-section-content" markdown="1">
 
-- [**AutoIA @ ByteDance**](/projects/1_autoia/) — task- and feedback-driven context infrastructure that improves data preparation and indexing, retrieval pipelines, and agent skills.
+- [**AutoIA @ ByteDance**](/projects/1_autoia/) — self-improving context infrastructure that evolves both external data environments and the retrieval pipelines built for them.
 - [**GES @ Huawei Cloud**](/projects/3_ges/) — production graph database infrastructure.
 - [**Database & Graph Research Systems @ CUHK**](/projects/4_database_graph_systems/) — distributed query processing and graph systems.
 
@@ -73,7 +73,7 @@ I received my **Ph.D.** from the Chinese University of Hong Kong in 2022, advise
 <h2 class="about-section-label" id="collaboration-internship">Collaboration &amp; Internship</h2>
 <div class="about-section-content" markdown="1">
 
-I welcome collaboration on context infrastructure, retrieval systems, graph/vector systems, and self-improving agent infrastructure. I am also recruiting **research interns** at ByteDance in Shenzhen; email zhanghaowuda12 [at] gmail [dot] com with `[Intern]` in the subject.
+I welcome collaboration on context infrastructure, retrieval systems, graph/vector systems, and self-improving context infrastructure. I am also recruiting **research interns** at ByteDance in Shenzhen; email zhanghaowuda12 [at] gmail [dot] com with `[Intern]` in the subject.
 </div>
 </section>
 

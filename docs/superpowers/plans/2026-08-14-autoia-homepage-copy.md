@@ -14,7 +14,8 @@
 - Do not use `RAG` as an AutoIA positioning term; describe the broader context-retrieval problem directly.
 - Keep the homepage structure and section count unchanged.
 - Use `database systems and AI`, not `database systems and Data+AI`.
-- Keep `context infrastructure` and `agent skills`; use concrete terms such as data preparation, indexing, storage, and retrieval pipelines for the data-system choices previously described as information architecture.
+- Use `self-improving context infrastructure` as the umbrella term and make the two coupled optimization objects explicit: external data-environment construction and environment-specific retrieval pipelines.
+- Treat agent skills as a downstream packaging layer rather than a primary optimization object in the homepage positioning.
 - Do not publish the result.
 
 ---
@@ -24,10 +25,11 @@
 **Files:**
 - Modify: `_pages/about.md`
 - Modify: `_projects/1_autoia.md`
+- Modify: `docs/superpowers/specs/2026-08-14-autoia-homepage-positioning-design.md`
 
 **Interfaces:**
 - Consumes: the existing About-page sections and the `description` front-matter field rendered by `_includes/projects.liquid` and `_includes/projects_horizontal.liquid`.
-- Produces: concise public AutoIA positioning on the homepage and Systems card.
+- Produces: concise public AutoIA positioning on the homepage and Systems card, plus a detail-page explanation of the nested optimization loop.
 
 - [x] **Step 1: Confirm the validation boundary**
 
@@ -35,7 +37,7 @@ Do not add an exact-copy unit test. The production change is human-facing prose,
 
 - [x] **Step 2: Apply the approved copy**
 
-Replace only the two Current Research paragraphs, the AutoIA Selected Systems bullet, the Highlights research-area phrase, and the AutoIA front-matter description with the exact copy from the design specification.
+Replace the two Current Research paragraphs, the AutoIA Selected Systems bullet, the collaboration phrase, and the AutoIA front-matter description with the exact copy from the design specification. Update the AutoIA detail-page introduction, problem statement, core idea, and research role to distinguish inner-loop pipeline evolution from outer-loop environment reconstruction.
 
 - [x] **Step 3: Run the existing structural tests**
 
@@ -51,4 +53,4 @@ Expected: the build succeeds, all generated HTML files pass the link check, and 
 
 - [x] **Step 5: Commit the scoped change**
 
-Stage only the two content files, this corrected plan, and the synchronized design specification. Commit with `Refine AutoIA public positioning`.
+Stage only the two content files, this corrected plan, and the synchronized design specification. Commit with `Clarify AutoIA environment evolution`.

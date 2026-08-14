@@ -62,7 +62,7 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertIn('class="about-hero-profile"', layout)
         self.assertIn('class="about-sections"', layout)
         self.assertIn('class="about-footer-row"', layout)
-        self.assertIn("hero_title: Data systems for agents.", page)
+        self.assertIn("hero_title: Context infrastructure for agents.", page)
         self.assertIn("hero_intro:", page)
         self.assertEqual(page.count('class="about-section"'), 5)
         self.assertEqual(page.count('class="about-section-label"'), 5)

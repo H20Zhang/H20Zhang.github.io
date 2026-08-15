@@ -19,6 +19,12 @@
     }
   }
 
+  .system-entry-arrow:hover,
+  .system-entry-arrow:focus-visible {
+    color: var(--global-theme-color);
+    transform: translateX(3px);
+  }
+
   .system-entry-narrative {
     max-width: 830px;
     margin: 0.2rem 0 0;

@@ -283,7 +283,7 @@ external_links:
     exclude:
       - 'https://github\.com/H20Zhang'
       - 'https://scholar\.google\.com/citations\?user=PLwImrcAAAAJ'
-      - 'https://www\.linkedin\.com/in/hao-zhang-ab18b413b'
+      - 'https://www\.linkedin\.com/in/hao-zhang-ai'
   target: _blank
 
 imagemagick:
@@ -344,7 +344,7 @@ third_party_libraries:
     version: "4.4.1"
   d3:
     integrity:
-      js: "sha256-1rA678n2xEx7x4cTZ5x4wpUCj6kUMZEZ5cxLSVSFWxw="
+      js: "sha256-1rA678n2xExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     url:
       js: "https://cdn.jsdelivr.net/npm/d3@{{version}}/dist/d3.min.js"
     version: "7.8.5"
@@ -389,7 +389,7 @@ third_party_libraries:
     integrity:
       css: "sha256-3qTIuuUWIFnnU3LpQMjqiXc0p09rvd0dmj+WkpQXSR8="
       js: "sha256-EXHg3x1K4oIWdyohPeKX2ZS++Wxt/FRPH7Nl01nat1o="
-      map: "sha256-3wfqS2WU5kGA/ePcgFzJXl5oSN1QsgZI4/edprTgX8w="
+      map: "sha256-3wfqS2WU5kGA/ePcgFzJXl5oSN1QsgZI4/edprTgX8w"
     url:
       css: "https://cdn.jsdelivr.net/npm/img-comparison-slider@{{version}}/dist/styles.min.css"
       js: "https://cdn.jsdelivr.net/npm/img-comparison-slider@{{version}}/dist/index.js"

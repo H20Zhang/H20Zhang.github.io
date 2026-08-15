@@ -9,7 +9,7 @@ cv:
     - network: GitHub
       username: H20Zhang
     - network: LinkedIn
-      username: hao-zhang-ab18b413b
+      username: hao-zhang-ai
 
   sections:
     Experience:
@@ -20,7 +20,7 @@ cv:
           - Leading the research and system architecture of AutoIA, which uses task-level evaluation to optimize retrieval pipelines and, when failures persist, improve data integration, representation, indexing, and storage.
           - Building vector-search and semantic-query infrastructure for large-scale heterogeneous and multimodal data.
 
-      - company: Huawei Cloud Database Innovation Lab
+      - company: Huawei
         position: Research Scientist
         start_date: 2022
         end_date: 2025

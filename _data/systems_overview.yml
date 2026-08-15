@@ -1,0 +1,55 @@
+"AutoIA @ ByteDance":
+  story: >-
+    Agents are limited not only by model capability, but by the external information environment available to them and the task-specific context constructed from it. AutoIA treats both as optimizable state: an inner loop improves environment-specific retrieval pipelines from task-level evaluation, while an outer loop uses persistent failures to change data integration, organization, indexing, and storage. It is the systems platform for my current self-improving context-infrastructure agenda.
+  core_idea: >-
+    Nested optimization over both retrieval pipelines and the external information environment they operate on.
+  research:
+    - name: DocNavRAG
+      url: /publications/#Arxiv-26-4
+    - name: AdaMM
+      url: /publications/#Arxiv-26-3
+    - name: Sema
+      url: /publications/#VLDB-26-2
+    - name: CoreSemDB
+      url: /publications/#COLM-26
+
+"GES @ Huawei":
+  story: >-
+    GES is a production graph database service for high-concurrency interactive workloads, where throughput, latency, extensibility, and operational robustness must hold together. The research line combines composable service architecture, factorized execution, dynamic graph storage, and incremental processing. It reached #1 on both LDBC SNB Interactive declarative and imperative tracks, with the declarative result reporting more than 3,000× the throughput of the previous #2 system.
+  core_idea: >-
+    Composable service architecture and factorized execution for high-concurrency interactive graph workloads.
+  research:
+    - name: GES
+      url: /publications/#SIGMOD-25-1
+    - name: RapidStore
+      url: /publications/#VLDB-25
+    - name: Aquila
+      url: /publications/#VLDB-26
+
+"TQEX @ Huawei":
+  story: >-
+    TQEX asks how SQL and graph systems can benefit from rapidly evolving accelerators without becoming hardware-specific codebases. The line uses tensor runtimes as a portable execution layer, then closes the mismatch between irregular data workloads and uniform tensor operations through compact representations, workload-specific operators, batching, compression, and out-of-memory execution. It spans SQL, graph queries, graph processing, and graph search.
+  core_idea: >-
+    Use tensor runtimes as the portability layer, then bridge irregular data workloads to uniform tensor operations with data-system-specific representations and operators.
+  research:
+    - name: TQEx(SQL)
+      url: /publications/#SIGMOD-26-2
+    - name: TenGraph
+      url: /publications/#VLDB-24
+    - name: TGraph
+      url: /publications/#SIGMOD-25-2
+    - name: Tensorized k-TTC
+      url: /publications/#SIGMOD-26-1
+
+"Database & Graph Research Systems @ CUHK":
+  story: >-
+    These systems established the database and graph-processing foundations behind my later work: SeccoSQL separates communication from local computation in distributed query plans; DISC recasts graph analytics as relational execution; Crystal computes compressed subgraph results directly. Together they explore how changing the execution abstraction exposes better optimization opportunities and controls intermediate-state growth.
+  core_idea: >-
+    Reformulate distributed SQL and graph workloads so reusable execution, optimization, and compression techniques become available at the system level.
+  research:
+    - name: SeccoSQL
+      url: /publications/#SIGMOD-22-1
+    - name: DISC
+      url: /publications/#VLDB-20
+    - name: Crystal
+      url: /publications/#VLDB-18

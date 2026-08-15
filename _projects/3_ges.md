@@ -4,7 +4,7 @@ title: GES @ Huawei
 description: Production graph database service for high-throughput interactive graph workloads.
 importance: 2
 category: systems
-external_url: https://support.huaweicloud.com/productdesc-ges/ges_04_0001.html
+external_url: https://www.huaweicloud.com/product/ges.html
 external_label: Huawei GES
 secondary_links:
   - label: LDBC Declarative #1
@@ -74,7 +74,7 @@ Research and system architecture for graph database infrastructure and the GES l
 
 ## Evidence
 
-- [Huawei Cloud Graph Engine Service](https://support.huaweicloud.com/productdesc-ges/ges_04_0001.html)
+- [Huawei Cloud Graph Engine Service](https://www.huaweicloud.com/product/ges.html)
 - [LDBC SNB Interactive declarative result, 2024](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/)
 - [LDBC SNB Interactive imperative result, 2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/)
 

@@ -266,12 +266,12 @@ class BuiltSiteContractTest(unittest.TestCase):
         self.assertRegex(
             cv_html,
             r'<a href="https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/"[^>]*>'
-            r'Prof. Jeffrey Xu Yu</a>',
+            r'<strong>Prof. Jeffrey Xu Yu</strong></a>',
         )
         self.assertRegex(
             cv_html,
             r'<a href="https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/"[^>]*>'
-            r'Prof. Hong Cheng</a>',
+            r'<strong>Prof. Hong Cheng</strong></a>',
         )
 
     def test_systems_content_links_share_about_underline_affordance(self):
@@ -303,7 +303,7 @@ class BuiltSiteContractTest(unittest.TestCase):
         tagline_rule = compiled_css_rule(self.css, ".about-tagline")
         self.assertEqual(
             re.sub(r"\s+", "", tagline_rule.get("font-size", "")),
-            "clamp(2rem,3.6vw,2.35rem)",
+            "clamp(1.85rem,3vw,2.15rem)",
         )
         self.assertEqual(tagline_rule.get("font-weight"), "400")
         self.assertEqual(tagline_rule.get("line-height"), "1.14")
@@ -651,6 +651,22 @@ class BuiltSiteContractTest(unittest.TestCase):
         self.assertIn("Related Huawei-era graph research", ges_html)
         self.assertTrue(GES_RELATED_GRAPH_PAPERS.issubset(hrefs))
         self.assertTrue(TQEX_PAPERS.isdisjoint(hrefs))
+
+    def test_product_context_links_point_to_product_homepages(self):
+        autoia_page = parse_page(SITE / "projects" / "1_autoia" / "index.html")
+        ges_page = parse_page(SITE / "projects" / "3_ges" / "index.html")
+        autoia_hrefs = {anchor.get("href") for anchor in autoia_page.anchors}
+        ges_hrefs = {anchor.get("href") for anchor in ges_page.anchors}
+
+        self.assertIn("https://www.volcengine.com/product/es", autoia_hrefs)
+        self.assertNotIn(
+            "https://www.volcengine.com/docs/6465/2096539", autoia_hrefs
+        )
+        self.assertIn("https://www.huaweicloud.com/product/ges.html", ges_hrefs)
+        self.assertNotIn(
+            "https://support.huaweicloud.com/productdesc-ges/ges_04_0001.html",
+            ges_hrefs,
+        )
 
     def test_editorial_typography_uses_four_consistent_roles(self):
         expected = {

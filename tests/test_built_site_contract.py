@@ -109,7 +109,9 @@ def parse_page(path: Path) -> PageParser:
 
 
 def compiled_css_rule(css: str, selector: str) -> dict[str, str]:
-    pattern = re.compile(rf"(?<![\w-]){re.escape(selector)}\{{([^{{}}]+)\}}")
+    pattern = re.compile(
+        rf"(?:^|\ufeff|(?<=[{{}},;]))\s*{re.escape(selector)}\{{([^{{}}]+)\}}"
+    )
     match = pattern.search(css)
     if match is None:
         raise AssertionError(f"compiled CSS rule not found: {selector}")
@@ -124,7 +126,9 @@ def compiled_css_rule(css: str, selector: str) -> dict[str, str]:
 
 
 def compiled_css_cascade_rule(css: str, selector: str) -> dict[str, str]:
-    pattern = re.compile(rf"(?<![\w-]){re.escape(selector)}\{{([^{{}}]+)\}}")
+    pattern = re.compile(
+        rf"(?:^|\ufeff|(?<=[{{}},;]))\s*{re.escape(selector)}\{{([^{{}}]+)\}}"
+    )
     matches = pattern.findall(css)
     if not matches:
         raise AssertionError(f"compiled CSS rule not found: {selector}")
@@ -140,7 +144,9 @@ def compiled_css_cascade_rule(css: str, selector: str) -> dict[str, str]:
 
 
 def compiled_css_optional_cascade_rule(css: str, selector: str) -> dict[str, str]:
-    pattern = re.compile(rf"(?<![\w-]){re.escape(selector)}\{{([^{{}}]+)\}}")
+    pattern = re.compile(
+        rf"(?:^|\ufeff|(?<=[{{}},;]))\s*{re.escape(selector)}\{{([^{{}}]+)\}}"
+    )
     declarations: dict[str, str] = {}
     for block in pattern.findall(css):
         for declaration in block.split(";"):
@@ -237,6 +243,71 @@ class BuiltSiteContractTest(unittest.TestCase):
         linked_emphasis_rule = compiled_css_cascade_rule(self.css, "a strong")
 
         self.assertEqual(linked_emphasis_rule.get("color"), "inherit")
+
+    def test_about_and_cv_render_requested_emphasis_and_advisor_links(self):
+        homepage_html = (SITE / "index.html").read_text(encoding="utf-8")
+        cv_html = (SITE / "cv" / "index.html").read_text(encoding="utf-8")
+
+        self.assertRegex(
+            homepage_html,
+            r'<a href="https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/"[^>]*>'
+            r'<strong>declarative</strong>, 2024</a>',
+        )
+        self.assertRegex(
+            homepage_html,
+            r'<a href="https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/"[^>]*>'
+            r'<strong>imperative</strong>, 2025</a>',
+        )
+        self.assertRegex(
+            cv_html,
+            r'<a href="https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82"[^>]*>'
+            r'<strong>Hongyi Honor School</strong></a>',
+        )
+        self.assertRegex(
+            cv_html,
+            r'<a href="https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/"[^>]*>'
+            r'Prof. Jeffrey Xu Yu</a>',
+        )
+        self.assertRegex(
+            cv_html,
+            r'<a href="https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/"[^>]*>'
+            r'Prof. Hong Cheng</a>',
+        )
+
+    def test_systems_content_links_share_about_underline_affordance(self):
+        expected = {
+            "text-decoration-line": "underline",
+            "text-decoration-thickness": "1px",
+            "text-decoration-color": "color-mix(in srgb,currentColor 45%,transparent)",
+            "text-underline-offset": ".16em",
+            "text-decoration-skip-ink": "auto",
+        }
+        for selector in (
+            ".post article .projects .system-entry-paper-links a",
+            ".post .system-research .research-paper-actions a",
+        ):
+            rule = compiled_css_rule(self.css, selector)
+            with self.subTest(selector=selector):
+                for property_name, value in expected.items():
+                    self.assertEqual(
+                        re.sub(r"\s+", "", rule.get(property_name, "")),
+                        re.sub(r"\s+", "", value),
+                    )
+
+        title_rule = compiled_css_cascade_rule(
+            self.css, ".projects .system-entry-title-link"
+        )
+        self.assertEqual(title_rule.get("text-decoration"), "none")
+
+    def test_about_tagline_uses_refined_scale(self):
+        tagline_rule = compiled_css_rule(self.css, ".about-tagline")
+        self.assertEqual(
+            re.sub(r"\s+", "", tagline_rule.get("font-size", "")),
+            "clamp(2rem,3.6vw,2.35rem)",
+        )
+        self.assertEqual(tagline_rule.get("font-weight"), "400")
+        self.assertEqual(tagline_rule.get("line-height"), "1.14")
+        self.assertEqual(tagline_rule.get("letter-spacing"), "-0.035em")
 
     def test_site_body_uses_regular_weight(self):
         body_rule = compiled_css_cascade_rule(self.css, "body")

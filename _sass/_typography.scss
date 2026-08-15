@@ -57,6 +57,20 @@ a strong {
   color: inherit;
 }
 
+@mixin editorial-inline-link {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+  text-underline-offset: 0.16em;
+  text-decoration-skip-ink: auto;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration-color: currentColor;
+    text-decoration-thickness: 1.5px;
+  }
+}
+
 // Inline prose links need a persistent non-color affordance so linked papers,
 // systems, people, writing, and table-style text links are distinguishable from
 // ordinary emphasis. Component-like interactions keep their own visual language.
@@ -66,17 +80,7 @@ a strong {
   .news td a,
   &.archive td a,
   .projects .small a:not(.github-icon) {
-    text-decoration-line: underline;
-    text-decoration-thickness: 1px;
-    text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
-    text-underline-offset: 0.16em;
-    text-decoration-skip-ink: auto;
-
-    &:hover,
-    &:focus-visible {
-      text-decoration-color: currentColor;
-      text-decoration-thickness: 1.5px;
-    }
+    @include editorial-inline-link;
   }
 
   // Components with an existing interaction treatment should not inherit the
@@ -91,6 +95,14 @@ a strong {
   a.badge {
     text-decoration: none;
   }
+}
+
+.post article .projects .system-entry-paper-links a {
+  @include editorial-inline-link;
+}
+
+.post .system-research .research-paper-actions a {
+  @include editorial-inline-link;
 }
 
 .table-dark {

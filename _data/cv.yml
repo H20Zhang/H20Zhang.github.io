@@ -35,7 +35,7 @@ cv:
         start_date: 2017
         end_date: 2022
         highlights:
-          - "Advisors: Prof. Jeffrey Xu Yu and Prof. Hong Cheng."
+          - "Advisors: [Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/) and [Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)."
 
       - institution: Wuhan University
         area: Computer Science
@@ -43,7 +43,7 @@ cv:
         start_date: 2013
         end_date: 2017
         highlights:
-          - "[Hongyi Honor School](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)."
+          - "[**Hongyi Honor School**](https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82)."
 
     Research Areas:
       - bullet: Context infrastructure for agents, including context management, memory, and knowledge organization

@@ -3,7 +3,7 @@ cv:
   label: Research Scientist
   email: zhanghaowuda12@gmail.com
   website: https://h20zhang.github.io
-  summary: Research scientist building data systems for agents, with a current focus on self-improving context infrastructure and a broader research record in vector search, graph systems, semantic query processing, and hardware-accelerated data systems.
+  summary: Research scientist building context infrastructure for agents, with a current focus on self-improving systems that connect external information environments to task-specific model context. Broader work spans vector search, graph systems, semantic query processing, and hardware-accelerated data systems.
 
   social_networks:
     - network: GitHub

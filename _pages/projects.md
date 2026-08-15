@@ -8,7 +8,7 @@ nav_order: 2
 horizontal: true
 ---
 
-Current work centers on self-improving context infrastructure; earlier systems established the production graph and accelerator-aware execution foundations behind it.
+These systems trace a line from distributed query and graph execution, through production graph services and accelerator-aware execution, to **self-improving context infrastructure for agents**. Each entry summarizes the problem and core system thesis; the detail pages connect that thesis to architecture, research threads, evidence, and system boundaries.
 
 <div class="projects">
 {% assign sorted_projects = site.projects | sort: "importance" %}

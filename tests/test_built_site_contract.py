@@ -303,7 +303,7 @@ class BuiltSiteContractTest(unittest.TestCase):
         tagline_rule = compiled_css_rule(self.css, ".about-tagline")
         self.assertEqual(
             re.sub(r"\s+", "", tagline_rule.get("font-size", "")),
-            "clamp(1.85rem,3vw,2.15rem)",
+            "clamp(1.75rem,2.8vw,2rem)",
         )
         self.assertEqual(tagline_rule.get("font-weight"), "400")
         self.assertEqual(tagline_rule.get("line-height"), "1.14")

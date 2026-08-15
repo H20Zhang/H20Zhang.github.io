@@ -374,8 +374,12 @@ class BuiltSiteContractTest(unittest.TestCase):
         grid_rule = compiled_css_rule(self.css, ".publications")
         self.assertEqual(grid_rule.get("display"), "grid")
         self.assertEqual(
-            grid_rule.get("grid-template-columns"),
-            "6rem minmax(0, 1fr)",
+            re.sub(
+                r"\s+",
+                "",
+                grid_rule.get("grid-template-columns", ""),
+            ),
+            "6remminmax(0,1fr)",
         )
         self.assertEqual(grid_rule.get("column-gap"), "2rem")
 
@@ -403,8 +407,12 @@ class BuiltSiteContractTest(unittest.TestCase):
             self.css, ".publications"
         )
         self.assertEqual(
-            responsive_grid_rule.get("grid-template-columns"),
-            "minmax(0, 1fr)",
+            re.sub(
+                r"\s+",
+                "",
+                responsive_grid_rule.get("grid-template-columns", ""),
+            ),
+            "minmax(0,1fr)",
         )
         self.assertEqual(responsive_grid_rule.get("column-gap"), "0")
 

@@ -4,38 +4,72 @@
 {% elsif project.importance == 4 %}
   {% assign entry_modifier = ' system-entry--earlier' %}
 {% endif %}
-  <article class="system-entry{{ entry_modifier }}">
-    <a class="system-entry-main" href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
-      <div class="system-entry-heading">
-        <h3 class="system-entry-title">{{ project.title }}</h3>
-        <span class="system-entry-arrow" aria-hidden="true">→</span>
-      </div>
-      <p class="system-entry-description">{{ project.description }}</p>
-    </a>
 
-    {% if project.github or project.external_url or project.secondary_links %}
-      <div class="project-card-actions">
-        {% if project.external_url %}
-          <a class="github-icon" href="{{ project.external_url }}" target="_blank" rel="noopener noreferrer" title="{{ project.external_label | default: 'External project link' }}">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> {{ project.external_label | default: "Project" }}
-          </a>
-        {% endif %}
-        {% for link in project.secondary_links %}
-          <a class="github-icon" href="{{ link.url }}" target="_blank" rel="noopener noreferrer" title="{{ link.label }}">
-            <i class="fa-solid fa-chart-line"></i> {{ link.label }}
-          </a>
+{% if project.redirect %}
+  {% assign system_href = project.redirect %}
+{% else %}
+  {% assign system_href = project.url | relative_url %}
+{% endif %}
+
+{% assign overview = site.data.systems_overview[project.title] %}
+
+<article class="system-entry{{ entry_modifier }}">
+  <div class="system-entry-heading">
+    <h3 class="system-entry-title">
+      <a class="system-entry-title-link" href="{{ system_href }}">{{ project.title }}</a>
+    </h3>
+    <a class="system-entry-arrow" href="{{ system_href }}" aria-label="Explore {{ project.title }}">→</a>
+  </div>
+
+  {% if overview and overview.story %}
+    <p class="system-entry-narrative">{{ overview.story }}</p>
+  {% else %}
+    <p class="system-entry-description">{{ project.description }}</p>
+  {% endif %}
+
+  {% if overview and overview.core_idea %}
+    <div class="system-entry-meta system-entry-core-idea">
+      <span class="system-entry-meta-label">Core idea</span>
+      <span class="system-entry-meta-content">{{ overview.core_idea }}</span>
+    </div>
+  {% endif %}
+
+  {% if overview and overview.research %}
+    <div class="system-entry-meta system-entry-research-links">
+      <span class="system-entry-meta-label">Research</span>
+      <span class="system-entry-meta-content system-entry-paper-links">
+        {% for paper in overview.research %}
+          <a href="{{ paper.url | relative_url }}">{{ paper.name }}</a>{% unless forloop.last %}<span class="system-entry-link-separator" aria-hidden="true">·</span>{% endunless %}
         {% endfor %}
-        {% if project.github %}
-          <a class="github-icon" href="https://github.com/{{ project.github }}" target="_blank" rel="noopener noreferrer" title="Code Repository">
-            <i class="fa-brands fa-github gh-icon"></i> Code
-          </a>
-          {% if project.github_stars %}
-            <span class="stars" data-toggle="tooltip" title="GitHub Stars">
-              <i class="fa-solid fa-star"></i>
-              <span id="{{ project.github_stars }}-stars"></span>
-            </span>
-          {% endif %}
-        {% endif %}
-      </div>
+      </span>
+    </div>
+  {% endif %}
+
+  <div class="system-entry-actions">
+    <a class="system-entry-explore" href="{{ system_href }}">Explore system <span aria-hidden="true">→</span></a>
+
+    {% if project.external_url %}
+      <a class="github-icon" href="{{ project.external_url }}" target="_blank" rel="noopener noreferrer" title="{{ project.external_label | default: 'External project link' }}">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> {{ project.external_label | default: "Project" }}
+      </a>
     {% endif %}
-  </article>
+
+    {% for link in project.secondary_links %}
+      <a class="github-icon" href="{{ link.url }}" target="_blank" rel="noopener noreferrer" title="{{ link.label }}">
+        <i class="fa-solid fa-chart-line"></i> {{ link.label }}
+      </a>
+    {% endfor %}
+
+    {% if project.github %}
+      <a class="github-icon" href="https://github.com/{{ project.github }}" target="_blank" rel="noopener noreferrer" title="Code Repository">
+        <i class="fa-brands fa-github gh-icon"></i> Code
+      </a>
+      {% if project.github_stars %}
+        <span class="stars" data-toggle="tooltip" title="GitHub Stars">
+          <i class="fa-solid fa-star"></i>
+          <span id="{{ project.github_stars }}-stars"></span>
+        </span>
+      {% endif %}
+    {% endif %}
+  </div>
+</article>

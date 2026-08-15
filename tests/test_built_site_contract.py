@@ -14,7 +14,7 @@ PERSON_ID = "https://h20zhang.github.io/#person"
 IDENTITY_URLS = {
     "https://github.com/H20Zhang",
     "https://scholar.google.com/citations?user=PLwImrcAAAAJ",
-    "https://www.linkedin.com/in/hao-zhang-ab18b413b",
+    "https://www.linkedin.com/in/hao-zhang-ai",
 }
 TQEX_PAPERS = {
     "/publications/#SIGMOD-26-2",
@@ -413,7 +413,7 @@ class BuiltSiteContractTest(unittest.TestCase):
         self.assertNotIn('<h4 class="cv-entry-title"', cv_html)
         for retained_content in (
             "ByteDance",
-            "Huawei Cloud Database Innovation Lab",
+            "Huawei",
             "The Chinese University of Hong Kong",
             "LDBC SNB Interactive benchmark world record",
         ):

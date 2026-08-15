@@ -255,6 +255,49 @@ class BuiltSiteContractTest(unittest.TestCase):
 
         self.assertEqual(title_rule.get("font-weight"), "400")
 
+    def test_system_metadata_uses_about_editorial_hierarchy(self):
+        meta_rule = compiled_css_rule(self.css, ".projects .system-entry-meta")
+        self.assertEqual(meta_rule.get("font-size"), ".94rem")
+        self.assertEqual(meta_rule.get("line-height"), "1.62")
+
+        label_rule = compiled_css_rule(
+            self.css, ".projects .system-entry-meta-label"
+        )
+        expected_label = {
+            "color": "var(--global-section-accent-color)",
+            "font-size": ".75rem",
+            "font-weight": "600",
+            "letter-spacing": ".015em",
+            "line-height": "1.45",
+            "text-transform": "uppercase",
+        }
+        for property_name, value in expected_label.items():
+            with self.subTest(property_name=property_name):
+                self.assertEqual(label_rule.get(property_name), value)
+
+        core_idea_rule = compiled_css_rule(
+            self.css,
+            ".projects .system-entry-core-idea .system-entry-meta-content",
+        )
+        self.assertEqual(
+            core_idea_rule.get("color"), "var(--global-text-color)"
+        )
+
+        research_link_rule = compiled_css_rule(
+            self.css, ".projects .system-entry-paper-links a"
+        )
+        self.assertEqual(
+            research_link_rule.get("color"), "var(--global-theme-color)"
+        )
+        self.assertEqual(research_link_rule.get("font-weight"), "500")
+
+        separator_rule = compiled_css_rule(
+            self.css, ".projects .system-entry-link-separator"
+        )
+        self.assertEqual(
+            separator_rule.get("color"), "var(--global-text-color-light)"
+        )
+
     def test_systems_and_writing_share_editorial_list_typography(self):
         expected_titles = {
             "font-size": "1.55rem",
@@ -317,6 +360,65 @@ class BuiltSiteContractTest(unittest.TestCase):
                     rule.get("color"),
                     "var(--global-section-accent-color)",
                 )
+
+    def test_publication_years_share_rows_with_their_lists(self):
+        publications_html = (SITE / "publications" / "index.html").read_text(
+            encoding="utf-8"
+        )
+        self.assertRegex(
+            publications_html,
+            r'<h2 class="bibliography">2026</h2>\s*'
+            r'<ol class="bibliography">',
+        )
+
+        grid_rule = compiled_css_rule(self.css, ".publications")
+        self.assertEqual(grid_rule.get("display"), "grid")
+        self.assertEqual(
+            grid_rule.get("grid-template-columns"),
+            "6rem minmax(0, 1fr)",
+        )
+        self.assertEqual(grid_rule.get("column-gap"), "2rem")
+
+        year_rule = compiled_css_rule(
+            self.css, ".publications h2.bibliography"
+        )
+        list_rule = compiled_css_rule(
+            self.css, ".publications ol.bibliography"
+        )
+        self.assertEqual(year_rule.get("grid-column"), "1")
+        self.assertEqual(list_rule.get("grid-column"), "2")
+        self.assertEqual(year_rule.get("font-size"), ".75rem")
+        self.assertEqual(year_rule.get("letter-spacing"), ".015em")
+        self.assertEqual(year_rule.get("line-height"), "1.45")
+        self.assertEqual(year_rule.get("margin"), "2.35rem 0 0")
+        self.assertEqual(list_rule.get("margin"), year_rule.get("margin"))
+        self.assertEqual(year_rule.get("padding"), ".8rem 0 0")
+        self.assertEqual(list_rule.get("padding"), year_rule.get("padding"))
+        self.assertEqual(
+            list_rule.get("border-top"), year_rule.get("border-top")
+        )
+        self.assertEqual(list_rule.get("min-width"), "0")
+
+        responsive_grid_rule = compiled_css_cascade_rule(
+            self.css, ".publications"
+        )
+        self.assertEqual(
+            responsive_grid_rule.get("grid-template-columns"),
+            "minmax(0, 1fr)",
+        )
+        self.assertEqual(responsive_grid_rule.get("column-gap"), "0")
+
+        responsive_year_rule = compiled_css_cascade_rule(
+            self.css, ".publications h2.bibliography"
+        )
+        responsive_list_rule = compiled_css_cascade_rule(
+            self.css, ".publications ol.bibliography"
+        )
+        self.assertEqual(responsive_year_rule.get("grid-column"), "1")
+        self.assertEqual(responsive_year_rule.get("margin"), "2rem 0 0")
+        self.assertEqual(responsive_list_rule.get("grid-column"), "1")
+        self.assertEqual(responsive_list_rule.get("margin"), "0")
+        self.assertEqual(responsive_list_rule.get("border-top"), "0")
 
     def test_theme_toggle_has_descriptive_accessible_name(self):
         theme_toggle = next(

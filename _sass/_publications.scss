@@ -5,6 +5,9 @@
 @use "variables" as v;
 
 .publications {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  column-gap: 2rem;
   margin-top: 1.5rem;
 
   h1 {
@@ -24,22 +27,27 @@
   }
 
   h2.bibliography {
-    margin-top: 2.35rem;
-    margin-bottom: 1.1rem;
-    padding-top: 0.8rem;
+    grid-column: 1;
+    align-self: start;
+    margin: 2.35rem 0 0;
+    padding: 0.8rem 0 0;
     border-top: 1px solid var(--global-divider-color);
     color: var(--global-section-accent-color);
-    font-size: 0.76rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    letter-spacing: 0.09em;
+    line-height: 1.45;
+    letter-spacing: 0.015em;
     text-align: left;
     text-transform: uppercase;
   }
 
   ol.bibliography {
+    grid-column: 2;
+    min-width: 0;
     list-style: none;
-    padding: 0;
-    margin-top: 0;
+    margin: 2.35rem 0 0;
+    padding: 0.8rem 0 0;
+    border-top: 1px solid var(--global-divider-color);
 
     li {
       margin-bottom: 1.25rem;
@@ -232,6 +240,26 @@
 
     div.award.hidden.open {
       border-color: var(--global-highlight-color);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .publications {
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 0;
+
+    h2.bibliography {
+      grid-column: 1;
+      margin: 2rem 0 0;
+      padding: 0.7rem 0 0;
+    }
+
+    ol.bibliography {
+      grid-column: 1;
+      margin: 0;
+      padding: 0.9rem 0 0;
+      border-top: 0;
     }
   }
 }

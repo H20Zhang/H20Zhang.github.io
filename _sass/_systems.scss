@@ -62,12 +62,12 @@
     gap: 0.15rem 0.4rem;
 
     a {
-      color: var(--global-theme-color);
+      color: var(--global-text-color-light);
       font-weight: 500;
 
       &:hover,
       &:focus-visible {
-        color: var(--global-hover-color);
+        color: var(--global-theme-color);
       }
     }
   }

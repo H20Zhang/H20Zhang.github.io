@@ -101,6 +101,8 @@ pagination:
   </div>
 {% endif %}
 
+<h2 class="blog-section-label">Essays</h2>
+
 <ul class="post-list blog-post-list">
 
   {% if page.pagination.enabled %}

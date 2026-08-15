@@ -26,17 +26,12 @@
   }
 
   .system-entry-narrative {
-    max-width: 830px;
-    margin: 0.2rem 0 0;
-    color: var(--global-text-color-light);
-    font-size: 0.94rem;
-    line-height: 1.68;
-  }
-
-  .system-entry--primary .system-entry-narrative {
     max-width: 850px;
+    margin: 0.2rem 0 0;
     color: var(--global-text-color);
     font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.68;
   }
 
   .system-entry-meta {
@@ -115,6 +110,10 @@
 
 @media (max-width: 575px) {
   .projects {
+    .system-entry-title {
+      font-size: 1.35rem;
+    }
+
     .system-entry-meta {
       display: block;
     }

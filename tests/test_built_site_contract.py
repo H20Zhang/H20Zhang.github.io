@@ -138,6 +138,18 @@ def compiled_css_cascade_rule(css: str, selector: str) -> dict[str, str]:
             declarations[property_name.strip()] = value.strip()
     return declarations
 
+
+def compiled_css_optional_cascade_rule(css: str, selector: str) -> dict[str, str]:
+    pattern = re.compile(rf"(?<![\w-]){re.escape(selector)}\{{([^{{}}]+)\}}")
+    declarations: dict[str, str] = {}
+    for block in pattern.findall(css):
+        for declaration in block.split(";"):
+            if ":" not in declaration:
+                continue
+            property_name, value = declaration.split(":", 1)
+            declarations[property_name.strip()] = value.strip()
+    return declarations
+
 class BuiltSiteContractTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -242,6 +254,89 @@ class BuiltSiteContractTest(unittest.TestCase):
         )
 
         self.assertEqual(title_rule.get("font-weight"), "400")
+
+    def test_systems_and_writing_share_editorial_list_typography(self):
+        expected_titles = {
+            "font-size": "1.55rem",
+            "font-weight": "400",
+            "line-height": "1.3",
+        }
+        expected_narratives = {
+            "font-size": "1rem",
+            "font-weight": "400",
+            "line-height": "1.68",
+            "color": "var(--global-text-color)",
+        }
+
+        for selector in (
+            ".projects .system-entry-title",
+            ".blog-index .blog-post-title",
+        ):
+            rule = compiled_css_rule(self.css, selector)
+            with self.subTest(selector=selector):
+                for property_name, value in expected_titles.items():
+                    self.assertEqual(rule.get(property_name), value)
+
+                responsive_rule = compiled_css_cascade_rule(self.css, selector)
+                self.assertEqual(responsive_rule.get("font-size"), "1.35rem")
+
+        for selector in (
+            ".projects .system-entry-narrative",
+            ".blog-index .blog-post-description",
+        ):
+            rule = compiled_css_cascade_rule(self.css, selector)
+            with self.subTest(selector=selector):
+                for property_name, value in expected_narratives.items():
+                    self.assertEqual(rule.get(property_name), value)
+
+        forbidden_modifier_properties = {
+            ".projects .system-entry--primary .system-entry-title": {"font-size"},
+            ".projects .system-entry--earlier .system-entry-title": {"font-size"},
+            ".projects .system-entry--primary .system-entry-narrative": {
+                "color",
+                "font-size",
+            },
+        }
+        for selector, forbidden_properties in forbidden_modifier_properties.items():
+            rule = compiled_css_optional_cascade_rule(self.css, selector)
+            with self.subTest(selector=selector):
+                self.assertTrue(forbidden_properties.isdisjoint(rule))
+
+    def test_structural_labels_use_mandarin_accent(self):
+        for selector in (
+            ".projects .systems-group-label",
+            ".blog-index .blog-section-label",
+            ".publications h2.bibliography",
+            ".cv-editorial .cv-section-title",
+            ".research-thread-label",
+            ".essay-page .essay-sidebar-label",
+        ):
+            rule = compiled_css_cascade_rule(self.css, selector)
+            with self.subTest(selector=selector):
+                self.assertEqual(
+                    rule.get("color"),
+                    "var(--global-section-accent-color)",
+                )
+
+    def test_theme_toggle_has_descriptive_accessible_name(self):
+        theme_toggle = next(
+            button
+            for button in self.homepage.buttons
+            if button.get("id") == "light-toggle"
+        )
+
+        self.assertEqual(
+            theme_toggle.get("aria-label"), "Change color theme"
+        )
+
+    def test_homepage_profile_contact_uses_primary_interaction_color(self):
+        contact_rule = compiled_css_cascade_rule(
+            self.css, ".profile .more-info a"
+        )
+
+        self.assertEqual(
+            contact_rule.get("color"), "var(--global-theme-color)"
+        )
 
     def test_theme_toggle_has_descriptive_accessible_name(self):
         theme_toggle = next(
@@ -461,6 +556,7 @@ class BuiltSiteContractTest(unittest.TestCase):
 
         self.assertIn("<h1>Writing</h1>", writing_html)
         self.assertIn("<title>Writing | Hao Zhang</title>", writing_html)
+        self.assertIn('<h2 class="blog-section-label">Essays</h2>', writing_html)
         self.assertIn('class="blog-translation-link"', writing_html)
         self.assertNotIn("blog-year-chip", writing_html)
         self.assertNotIn("blog-tag-chips", writing_html)

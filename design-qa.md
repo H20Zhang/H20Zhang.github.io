@@ -68,3 +68,23 @@
 - Final pass: all twelve routes passed computed-style, overflow, and visual inspection; the homepage/source comparison showed no remaining P0/P1/P2 visual differences.
 
 final result: passed
+
+## Structural label and list consistency follow-up
+
+### Scope
+
+- Systems: all overview entries now share AutoIA's title and narrative roles; group labels alone use mandarin.
+- Writing: article titles and summaries now reuse the Systems list roles; `ESSAYS` provides the structural label.
+- Publications and CV: year dividers and CV section titles use the same restrained mandarin label role.
+- System details and essays: research-thread labels and article-sidebar labels use the same role without changing prose, metadata, or link colors.
+
+### Local verification
+
+- The production build completes successfully.
+- All 33 contract tests pass, including dedicated assertions for shared Systems/Writing typography and the six structural-label selectors.
+- Internal links and anchors are valid across all 41 generated HTML files.
+- JavaScript syntax, deployment workflow YAML, and whitespace checks pass.
+- Desktop and mobile typography contracts require `1.55rem` and `1.35rem` titles respectively, with regular-weight graphite narratives at `1rem / 1.68`.
+- Published visual inspection remains the release gate because the selected cloud browser cannot access the isolated local worktree preview.
+
+follow-up result: implementation verified locally; published visual QA pending release

@@ -87,4 +87,21 @@ final result: passed
 - Desktop and mobile typography contracts require `1.55rem` and `1.35rem` titles respectively, with regular-weight graphite narratives at `1rem / 1.68`.
 - Published visual inspection remains the release gate because the selected cloud browser cannot access the isolated local worktree preview.
 
-follow-up result: implementation verified locally; published visual QA pending release
+follow-up result: passed in the subsequent published release
+
+## Publication year rail and Systems metadata follow-up
+
+### Published result
+
+- Release commit: `188aa9443f0976fb6ffdec5cf8ab62b2c535535f`.
+- GitHub Actions run `31855673379`: build, 35 contract tests, internal-link validation, artifact upload, and deployment all completed successfully.
+- `/publications/` at a `1363 × 936` browser viewport resolves to a `102px / 764px` grid with a `34px` gap, matching the intended `6rem / 2rem` rail contract.
+- The first four year/list pairs share identical top coordinates. Both divider segments resolve to `1px solid rgb(229, 231, 235)`.
+- Year labels resolve to `12.75px`, weight `600`, `18.4875px` line height, restrained `0.19125px` letter spacing, and mandarin `rgb(204, 75, 0)`, matching About.
+- `/projects/` resolves `Core idea` and `Research` to the same About label values. Metadata copy resolves to `15.98px`, weight `400`, and `25.8876px` line height.
+- Research links resolve to cobalt `rgb(63, 95, 204)` while explanatory copy remains graphite.
+- Both audited pages report `scrollWidth == clientWidth == 1348`; no horizontal overflow is present.
+- Published screenshots confirm readable long-title wrapping, intact venue labels and actions, clear year-to-list association, and a stronger but still restrained Systems metadata hierarchy.
+- The `767px` single-column publication fallback and `575px` stacked Systems metadata fallback are covered by the production CSS contracts; the selected cloud browser does not expose viewport resizing for a second mobile screenshot.
+
+follow-up result: passed

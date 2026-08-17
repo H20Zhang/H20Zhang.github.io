@@ -32,7 +32,7 @@
   core_idea: >-
     Use tensor runtimes as the portability layer, then bridge irregular data workloads to uniform tensor operations with data-system-specific representations and operators.
   research:
-    - name: TQEx(SQL)
+    - name: TQEx
       url: /publications/#SIGMOD-26-2
     - name: TenGraph
       url: /publications/#VLDB-24

@@ -4,7 +4,7 @@ title: AutoIA @ ByteDance
 description: Self-improving context infrastructure that evolves both external data environments and the retrieval pipelines built for them.
 importance: 1
 category: systems
-external_url: https://www.volcengine.com/product/es
+external_url: https://www.volcengine.com/product/context-search?_vtm_=a441938.b105878.0_0.0_0.0.133_11_000J33hNUY2PtPrMwlQ3ilQxfn2UtC
 external_label: Volcano Engine ContextSearch
 related_publications: false
 research_support:
@@ -58,6 +58,6 @@ AutoIA is the systems platform connecting my work on data integration, knowledge
 
 ## Product context
 
-- [Volcano Engine ContextSearch](https://www.volcengine.com/product/es) — the surrounding product context for context-search workloads.
+- [Volcano Engine ContextSearch](https://www.volcengine.com/product/context-search?_vtm_=a441938.b105878.0_0.0_0.0.133_11_000J33hNUY2PtPrMwlQ3ilQxfn2UtC) — the surrounding product context for context-search workloads.
 
 This link provides product context rather than a claim about the current deployment architecture of AutoIA.

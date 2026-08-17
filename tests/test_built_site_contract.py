@@ -658,7 +658,15 @@ class BuiltSiteContractTest(unittest.TestCase):
         autoia_hrefs = {anchor.get("href") for anchor in autoia_page.anchors}
         ges_hrefs = {anchor.get("href") for anchor in ges_page.anchors}
 
-        self.assertIn("https://www.volcengine.com/product/es", autoia_hrefs)
+        self.assertTrue(
+            any(
+                href and href.startswith(
+                    "https://www.volcengine.com/product/context-search"
+                )
+                for href in autoia_hrefs
+            )
+        )
+        self.assertNotIn("https://www.volcengine.com/product/es", autoia_hrefs)
         self.assertNotIn(
             "https://www.volcengine.com/docs/6465/2096539", autoia_hrefs
         )

@@ -4,8 +4,9 @@ title: About
 seo_title: Hao Zhang — Research Scientist at ByteDance | Context Infrastructure for Agents
 permalink: /
 subtitle: Research Scientist at ByteDance
-description: Research Scientist at ByteDance working on context infrastructure for agents, with a focus on self-improving context infrastructure, retrieval systems, graph/vector systems, and hardware-accelerated data systems.
+description: Hao Zhang is a Research Scientist at ByteDance building self-improving context infrastructure for agents, retrieval systems, vector search, and graph systems.
 keywords: Hao Zhang, ByteDance, data systems for agents, context infrastructure, context management, agent memory, context search, vector search, graph systems, semantic query processing, hardware-accelerated data systems, AI-native data systems
+last_modified_at: 2026-08-18
 hero_title: Context infrastructure for agents.
 hero_intro: >
   I am a Research Scientist at ByteDance. I believe progress toward **AGI** will depend not only on stronger models, but on systems that can build and continuously improve an agent's **external information environment**, then turn it into the **right context for each task**. My current focus is **self-improving context infrastructure** across both layers.

@@ -111,6 +111,7 @@
           "name": {{ computed_title | jsonify }},
           "headline": {{ computed_title | jsonify }},
           "description": {{ computed_description | jsonify }},
+          {% if page.last_modified_at %}"dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }},{% endif %}
           "isPartOf": { "@id": {{ website_id | jsonify }} },
           "mainEntity": { "@id": {{ person_id | jsonify }} }
         },
@@ -121,7 +122,21 @@
           "alternateName": ["张颢", "H20Zhang"],
           "url": {{ site_home_url | jsonify }},
           "image": {{ social_image | jsonify }},
+          "description": {{ computed_description | jsonify }},
           "jobTitle": "Research Scientist",
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "ORCID",
+            "value": "0000-0002-0026-9283",
+            "url": "https://orcid.org/0000-0002-0026-9283"
+          },
+          "knowsAbout": [
+            "Context infrastructure for AI agents",
+            "Information retrieval",
+            "Vector search",
+            "Graph database systems",
+            "Hardware-accelerated data systems"
+          ],
           "worksFor": {
             "@type": "Organization",
             "name": "ByteDance",

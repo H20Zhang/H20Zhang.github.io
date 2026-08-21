@@ -6,7 +6,7 @@ permalink: /
 subtitle: Research Scientist at ByteDance
 description: Hao Zhang is a Research Scientist at ByteDance building self-improving context infrastructure for agents, retrieval systems, vector search, and graph systems.
 keywords: Hao Zhang, ByteDance, data systems for agents, context infrastructure, context management, agent memory, context search, vector search, graph systems, semantic query processing, hardware-accelerated data systems, AI-native data systems
-last_modified_at: 2026-08-18
+last_modified_at: 2026-08-21
 hero_title: Context infrastructure for agents.
 hero_intro: >
   I am a Research Scientist at ByteDance. I believe progress toward **AGI** will depend not only on stronger models, but on systems that can build and continuously improve an agent's **external information environment**, then turn it into the **right context for each task**. My current focus is **self-improving context infrastructure** across both layers.
@@ -64,7 +64,7 @@ Selected writing: [**The Next Generation of Context Management: Maintaining the 
 <h2 class="about-section-label" id="highlights">Highlights</h2>
 <div class="about-section-content" markdown="1">
 
-- **25+ publications** in database systems and AI, including **SIGMOD, VLDB, ICDE, COLM, TKDE, and The VLDB Journal**.
+- **25+ publications** in database systems and AI, including **SIGMOD, VLDB, ICDE, EMNLP, COLM, TKDE, and The VLDB Journal**.
 - **#1 on both LDBC SNB Interactive tracks**: [**declarative**, 2024](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/) (**3,000× over #2**) and [**imperative**, 2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/).
 
 I received my **Ph.D.** from the Chinese University of Hong Kong, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from Wuhan University.

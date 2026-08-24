@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AutoIA @ ByteDance
-description: Self-improving context infrastructure that evolves both external data environments and the retrieval pipelines built for them.
+description: Self-improving context infrastructure that uses task-level feedback to optimize retrieval pipelines first and, when needed, the underlying information environment.
 importance: 1
 category: systems
 external_url: https://www.volcengine.com/product/context-search?_vtm_=a441938.b105878.0_0.0_0.0.133_11_000J33hNUY2PtPrMwlQ3ilQxfn2UtC
@@ -36,19 +36,19 @@ research_support:
         role: Defines workloads for evaluating the semantic query layer.
 ---
 
-AutoIA extends the agent harness beyond loop orchestration to the **external data environment** in which the agent operates. It evolves both environment construction and environment-specific retrieval pipelines through task-level evaluation.
+AutoIA extends the agent harness beyond loop orchestration to the **external information environment** in which the agent operates. It uses task-level evaluation to optimize environment-specific retrieval pipelines first and, when needed, improve the underlying information environment itself.
 
 ## Problem
 
-Agents depend on context assembled from documents, tables, multimodal data, memory, indexes, and external knowledge sources. Better agents therefore require more than stronger retrieval: retrieval pipelines must be optimized for the environment they operate over, and persistent failures must feed back into how that environment is constructed.
+Agents depend on context assembled from documents, tables, multimodal data, memory, indexes, and external knowledge sources. Better agents therefore require more than a fixed retrieval pipeline: task-level feedback should first improve how context is retrieved and assembled and, when retrieval remains insufficient, drive changes to how the underlying information environment is integrated, organized, indexed, and stored.
 
 ## Core idea
 
 AutoIA treats context infrastructure as a **nested optimization loop**.
 
-**Inner loop.** With the external data environment fixed, task-level evaluations and execution traces guide the evolution of environment-specific retrieval pipelines.
+**Inner loop.** With the external information environment fixed, task-level evaluations and execution traces guide the optimization of environment-specific retrieval pipelines.
 
-**Outer loop.** When pipeline-level optimization converges but failures persist, those failures drive changes to data integration, representation, indexing, and storage, rebuilding the environment itself.
+**Outer loop.** When retrieval-level optimization is no longer sufficient, the same feedback drives changes to data integration, organization, representation, indexing, and storage, improving the underlying information environment itself.
 
 Together, these loops form **self-improving context infrastructure**. A longer-term question is **recursive self-improvement (RSI)** — whether the mechanisms that generate, evaluate, and select improvements can themselves be improved.
 

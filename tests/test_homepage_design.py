@@ -64,9 +64,22 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertIn('class="about-footer-row"', layout)
         self.assertIn("hero_title: Context infrastructure for agents.", page)
         self.assertIn("hero_intro:", page)
-        self.assertEqual(page.count('class="about-section"'), 5)
-        self.assertEqual(page.count('class="about-section-label"'), 5)
-        self.assertEqual(page.count('class="about-section-content"'), 5)
+
+        section_ids = (
+            "current-focus",
+            "selected-systems",
+            "highlights",
+            "honors-awards",
+            "collaboration-internship",
+            "recent-news",
+        )
+        for section_id in section_ids:
+            with self.subTest(section_id=section_id):
+                self.assertIn(f'id="{section_id}"', page)
+
+        self.assertEqual(page.count('class="about-section"'), len(section_ids))
+        self.assertEqual(page.count('class="about-section-label"'), len(section_ids))
+        self.assertEqual(page.count('class="about-section-content"'), len(section_ids))
 
     def test_homepage_styles_are_wired_and_responsive(self):
         main = read("assets/css/main.scss")

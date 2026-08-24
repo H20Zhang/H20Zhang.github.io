@@ -9,7 +9,7 @@ keywords: Hao Zhang, ByteDance, AI agents, context infrastructure, shared inform
 last_modified_at: 2026-08-24
 hero_title: Context infrastructure for agents.
 hero_intro: >
-  I am a Research Scientist at ByteDance. **I expect intelligence to become increasingly abundant.** As large populations of long-lived agents collaborate with each other and with humans, **organizing and maintaining their shared information will become a fundamental systems bottleneck**. I build **self-improving context infrastructure** for that world.
+  I am a Research Scientist at ByteDance. I expect intelligence to become increasingly abundant, with much of it instantiated as **long-lived agents that collaborate with each other and with humans**. As these agents continuously read from and write to shared information environments, **organizing that information—and turning it into the right context for each task—will become a fundamental systems problem**. I build **self-improving context infrastructure** toward that future.
 
 profile:
   align: right
@@ -37,9 +37,9 @@ latest_posts:
 <h2 class="about-section-label" id="current-focus">Current Focus</h2>
 <div class="about-section-content" markdown="1">
 
-**Context infrastructure is the systems layer between agents and the information they depend on.** My research improves both sides: the information environment—through integration, organization, indexing, and storage—and the pipelines that turn it into task-specific context.
+My current work focuses on **the systems between agents and external information**: how information is integrated, organized, indexed, retrieved, and assembled into task-specific context.
 
-[**AutoIA @ ByteDance**](/projects/1_autoia/) is the platform for this agenda: task feedback evolves retrieval pipelines and, when failures persist, drives changes to the underlying information environment.
+[**AutoIA @ ByteDance**](/projects/1_autoia/) is the platform for this agenda, using task-level feedback to improve retrieval pipelines and, when failures persist, the information environments they operate over.
 
 Longer-term view: [**When Intelligence Becomes Abundant: Organizing the Shared Information World of Humans and AI Agents**](/blog/2026/shared-information-world-ai-agents/) · [**The Next Generation of Context Management**](/blog/2026/next-gen-agent-en/).
 </div>

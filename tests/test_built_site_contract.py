@@ -244,9 +244,8 @@ class BuiltSiteContractTest(unittest.TestCase):
 
         self.assertEqual(linked_emphasis_rule.get("color"), "inherit")
 
-    def test_about_and_cv_render_requested_emphasis_and_advisor_links(self):
+    def test_about_renders_requested_emphasis(self):
         homepage_html = (SITE / "index.html").read_text(encoding="utf-8")
-        cv_html = (SITE / "cv" / "index.html").read_text(encoding="utf-8")
 
         self.assertRegex(
             homepage_html,
@@ -257,21 +256,6 @@ class BuiltSiteContractTest(unittest.TestCase):
             homepage_html,
             r'<a href="https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/"[^>]*>'
             r'<strong>imperative</strong>, 2025</a>',
-        )
-        self.assertRegex(
-            cv_html,
-            r'<a href="https://zh.wikipedia.org/zh-cn/%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%E5%BC%98%E6%AF%85%E5%AD%A6%E5%A0%82"[^>]*>'
-            r'<strong>Hongyi Honor School</strong></a>',
-        )
-        self.assertRegex(
-            cv_html,
-            r'<a href="https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/"[^>]*>'
-            r'<strong>Prof. Jeffrey Xu Yu</strong></a>',
-        )
-        self.assertRegex(
-            cv_html,
-            r'<a href="https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/"[^>]*>'
-            r'<strong>Prof. Hong Cheng</strong></a>',
         )
 
     def test_systems_content_links_share_about_underline_affordance(self):
@@ -699,31 +683,8 @@ class BuiltSiteContractTest(unittest.TestCase):
                 for property_name, value in properties.items():
                     self.assertEqual(rule.get(property_name), value)
 
-    def test_cv_renders_as_flat_editorial_document(self):
-        cv_html = (SITE / "cv" / "index.html").read_text(encoding="utf-8")
-
-        self.assertIn('class="cv-intro"', cv_html)
-        self.assertIn('class="cv-section"', cv_html)
-        self.assertNotIn("Contact Information", cv_html)
-        self.assertNotIn("Professional Summary", cv_html)
-        self.assertNotIn('class="card mt-3 p-3"', cv_html)
-        self.assertNotIn('class="badge ', cv_html)
-        self.assertIn('<h2 class="cv-section-title" id="experience">', cv_html)
-        self.assertNotIn('<h3 class="cv-section-title"', cv_html)
-        self.assertNotIn('<h4 class="cv-entry-title"', cv_html)
-        for retained_content in (
-            "ByteDance",
-            "Huawei",
-            "The Chinese University of Hong Kong",
-            "LDBC SNB Interactive benchmark world record",
-        ):
-            self.assertIn(retained_content, cv_html)
-
-        section_rule = compiled_css_rule(self.css, ".cv-editorial .cv-section")
-        self.assertEqual(
-            section_rule.get("border-bottom"),
-            "1px solid var(--global-divider-color)",
-        )
+    def test_cv_page_is_not_published(self):
+        self.assertFalse((SITE / "cv" / "index.html").exists())
 
     def test_systems_page_is_a_hierarchical_index(self):
         systems_html = (SITE / "projects" / "index.html").read_text(

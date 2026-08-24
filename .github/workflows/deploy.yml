@@ -1,5 +1,6 @@
 name: Deploy site
 
+# Merged pull requests publish the default branch even when an integration-originated merge does not emit a deployable push run.
 on:
   push:
     branches:

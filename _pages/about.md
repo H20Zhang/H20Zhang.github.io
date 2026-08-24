@@ -9,7 +9,7 @@ keywords: Hao Zhang, ByteDance, AI agents, context infrastructure, shared inform
 last_modified_at: 2026-08-24
 hero_title: Context infrastructure for agents.
 hero_intro: >
-  I am a Research Scientist at ByteDance. I believe progress toward **AGI** will increasingly depend on how we organize and maintain the **shared information world of humans and intelligent agents**, then turn that world into the **right context for each task**. My current focus is **self-improving context infrastructure** for this problem.
+  I am a Research Scientist at ByteDance. As models become more capable and agent ecosystems grow, **organizing the information they depend on becomes a systems bottleneck**. I build **self-improving context infrastructure** to maintain this information world and construct the **right context for each task**.
 
 profile:
   align: right
@@ -37,13 +37,11 @@ latest_posts:
 <h2 class="about-section-label" id="current-focus">Current Focus</h2>
 <div class="about-section-content" markdown="1">
 
-Even a capable model depends on information outside its weights and on how that information is retrieved and assembled into **task-specific context**. As agents become more capable and numerous, the systems problem expands: humans and agents need a coherent **shared information world**, while each task still needs a compact, trustworthy view of that world. I expect this information layer to become an increasingly important bottleneck on the path toward **AGI**.
+**Context infrastructure is the systems layer between agents and the information they depend on.** My research improves both sides: the information environment—through integration, organization, indexing, and storage—and the pipelines that turn it into task-specific context.
 
-My research focuses on **self-improving context infrastructure for agents** as a systems entry point to this problem: jointly evolving the external information environment—through data integration, organization, indexing, and storage—and the pipelines that retrieve and assemble task-relevant context from it. Task-level feedback improves these pipelines, while persistent failures drive changes to the underlying environment itself.
+[**AutoIA @ ByteDance**](/projects/1_autoia/) is the platform for this agenda: task feedback evolves retrieval pipelines and, when failures persist, drives changes to the underlying information environment.
 
-[**AutoIA @ ByteDance**](/projects/1_autoia/) is the systems platform for this agenda. Its inner loop evolves environment-specific retrieval pipelines through task-level evaluation; its outer loop uses persistent failures to improve data integration and rebuild the environment itself.
-
-Selected writing: [**When Intelligence Becomes Abundant: Organizing the Shared Information World of Humans and AI Agents**](/blog/2026/shared-information-world-ai-agents/) · [**The Next Generation of Context Management**](/blog/2026/next-gen-agent-en/).
+Longer-term view: [**When Intelligence Becomes Abundant: Organizing the Shared Information World of Humans and AI Agents**](/blog/2026/shared-information-world-ai-agents/) · [**The Next Generation of Context Management**](/blog/2026/next-gen-agent-en/).
 </div>
 </section>
 
@@ -51,12 +49,12 @@ Selected writing: [**When Intelligence Becomes Abundant: Organizing the Shared I
 <h2 class="about-section-label" id="selected-systems">Selected Systems</h2>
 <div class="about-section-content" markdown="1">
 
-- [**AutoIA @ ByteDance**](/projects/1_autoia/) — self-improving context infrastructure that evolves both external data environments and the retrieval pipelines built for them.
+- [**AutoIA @ ByteDance**](/projects/1_autoia/) — self-improving context infrastructure.
 - [**GES @ Huawei**](/projects/3_ges/) — production graph database infrastructure.
-- [**TQEX @ Huawei**](/projects/2_tqex/) — tensor-centric SQL and graph execution across heterogeneous accelerators.
+- [**TQEX @ Huawei**](/projects/2_tqex/) — tensor-centric SQL and graph execution on heterogeneous accelerators.
 - [**Database & Graph Research Systems @ CUHK**](/projects/4_database_graph_systems/) — distributed query processing and graph systems.
 
-[**Systems**](/projects/) maps these systems to the research behind them. [**Publications**](/publications/) contains the full research record.
+[**Publications**](/publications/) contains the full research record.
 </div>
 </section>
 
@@ -75,7 +73,7 @@ I received my **Ph.D.** from the Chinese University of Hong Kong, advised by **[
 <h2 class="about-section-label" id="collaboration-internship">Collaboration &amp; Internship</h2>
 <div class="about-section-content" markdown="1">
 
-I welcome collaboration on context infrastructure, retrieval systems, graph/vector systems, and self-improving context infrastructure. I am also recruiting **research interns** at ByteDance in Shenzhen; email zhanghaowuda12 [at] gmail [dot] com with `[Intern]` in the subject.
+I welcome collaboration on context infrastructure, retrieval systems, and graph/vector systems. I am also recruiting **research interns** at ByteDance in Shenzhen; email zhanghaowuda12 [at] gmail [dot] com with `[Intern]` in the subject.
 </div>
 </section>
 

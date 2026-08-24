@@ -9,7 +9,7 @@ keywords: Hao Zhang, ByteDance, AI agents, context infrastructure, shared inform
 last_modified_at: 2026-08-24
 hero_title: Context infrastructure for agents.
 hero_intro: >
-  I am a Research Scientist at ByteDance. As models become more capable and agent ecosystems grow, **organizing the information they depend on becomes a systems bottleneck**. I build **self-improving context infrastructure** to maintain this information world and construct the **right context for each task**.
+  I am a Research Scientist at ByteDance. **I expect intelligence to become increasingly abundant.** As large populations of long-lived agents collaborate with each other and with humans, **organizing and maintaining their shared information will become a fundamental systems bottleneck**. I build **self-improving context infrastructure** for that world.
 
 profile:
   align: right

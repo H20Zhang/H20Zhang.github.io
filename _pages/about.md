@@ -6,7 +6,7 @@ permalink: /
 subtitle: Research Scientist at ByteDance
 description: Hao Zhang is a Research Scientist at ByteDance building self-improving context infrastructure for AI agents, focused on organizing shared information environments and constructing task-specific context.
 keywords: Hao Zhang, ByteDance, AI agents, context infrastructure, shared information state, information organization, context management, agent memory, context search, vector search, graph systems, semantic query processing, hardware-accelerated data systems
-last_modified_at: 2026-08-24 22:35:00 +0800
+last_modified_at: 2026-08-24 22:38:00 +0800
 hero_title: Context infrastructure for agents.
 hero_intro: >
   I am a Research Scientist at ByteDance. I expect intelligence to become increasingly abundant, with much of it instantiated as **long-lived agents that collaborate with each other and with humans**. As these agents continuously read from and write to shared information environments, **organizing that information—and turning it into the right context for each task—will become a fundamental systems problem**. I build **self-improving context infrastructure** toward that future.
@@ -65,8 +65,8 @@ My current work focuses on **the systems between agents and external information
 <h2 class="about-section-label" id="highlights">Highlights</h2>
 <div class="about-section-content" markdown="1">
 
-- **25+ publications** in database systems and AI, including **SIGMOD, VLDB, ICDE, EMNLP, COLM, TKDE, and The VLDB Journal**.
-- **#1 on both LDBC SNB Interactive tracks**: [**declarative**, 2024](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/) (**3,000× over #2**) and [**imperative**, 2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/).
+- **30+ publications** in database systems and AI, including **SIGMOD, VLDB, ICDE, EMNLP, COLM, TKDE, and The VLDB Journal**.
+- **#1 on both tracks of [LDBC SNB Interactive](https://ldbcouncil.org/benchmarks/snb/interactive/), the leading audited benchmark for graph database systems:** [**Declarative**, 2024](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/) (**3,000× over #2**) and [**Imperative**, 2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/).
 
 I received my **Ph.D.** from the Chinese University of Hong Kong, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from Wuhan University.
 </div>

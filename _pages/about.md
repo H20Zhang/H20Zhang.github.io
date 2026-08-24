@@ -41,7 +41,10 @@ My current work focuses on **the systems between agents and external information
 
 [**AutoIA @ ByteDance**](/projects/1_autoia/) is the platform for this agenda, using task-level feedback to improve retrieval pipelines and, when failures persist, the information environments they operate over.
 
-Longer-term view: [**When Intelligence Becomes Abundant: Organizing the Shared Information World of Humans and AI Agents**](/blog/2026/shared-information-world-ai-agents/) · [**The Next Generation of Context Management**](/blog/2026/next-gen-agent-en/).
+**Longer-term view**
+
+- [**When Intelligence Becomes Abundant: Organizing the Shared Information World of Humans and AI Agents**](/blog/2026/shared-information-world-ai-agents/) — why shared information becomes a systems bottleneck as intelligence scales.
+- [**The Next Generation of Context Management**](/blog/2026/next-gen-agent-en/) — why context management should maintain the model's perceivable world, not just retrieve documents.
 </div>
 </section>
 

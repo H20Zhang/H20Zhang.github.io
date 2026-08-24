@@ -37,7 +37,7 @@ jobs:
           bundler-cache: true
 
       - name: Build site
-        run: bundle exec jekyll build
+        run: bundle exec jekyll build --config _config.yml,_config_search_console.yml
 
       - name: Run site contract tests
         run: python3 -m unittest discover -s tests -p 'test_*.py'

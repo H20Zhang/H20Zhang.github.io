@@ -43,8 +43,8 @@ My current work focuses on **the systems between agents and external information
 
 **Longer-term view**
 
-- [**When Intelligence Becomes Abundant: Organizing the Shared Information World of Humans and AI Agents**](/blog/2026/shared-information-world-ai-agents/) — why shared information becomes a systems bottleneck as intelligence scales.
-- [**The Next Generation of Context Management**](/blog/2026/next-gen-agent-en/) — why context management should maintain the model's perceivable world, not just retrieve documents.
+- [**When Intelligence Becomes Abundant: Organizing the Shared Information World of Humans and AI Agents**](/blog/2026/shared-information-world-ai-agents/)
+- [**The Next Generation of Context Management**](/blog/2026/next-gen-agent-en/)
 </div>
 </section>
 

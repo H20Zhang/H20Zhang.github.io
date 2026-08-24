@@ -250,12 +250,12 @@ class BuiltSiteContractTest(unittest.TestCase):
         self.assertRegex(
             homepage_html,
             r'<a href="https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/"[^>]*>'
-            r'<strong>declarative</strong>, 2024</a>',
+            r'<strong>Declarative</strong>, 2024</a>',
         )
         self.assertRegex(
             homepage_html,
             r'<a href="https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/"[^>]*>'
-            r'<strong>imperative</strong>, 2025</a>',
+            r'<strong>Imperative</strong>, 2025</a>',
         )
 
     def test_systems_content_links_share_about_underline_affordance(self):

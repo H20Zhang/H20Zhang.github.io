@@ -13,6 +13,11 @@ on:
       - opened
       - synchronize
       - reopened
+  pull_request_target:
+    branches:
+      - master
+      - main
+    types:
       - closed
   workflow_dispatch:
 
@@ -25,7 +30,7 @@ permissions:
 
 jobs:
   build:
-    if: github.event_name != 'pull_request' || github.event.action != 'closed' || github.event.pull_request.merged == true
+    if: github.event_name != 'pull_request_target' || github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     env:
       JEKYLL_ENV: production
@@ -52,13 +57,13 @@ jobs:
         run: python3 scripts/check_internal_links.py _site
 
       - name: Upload Pages artifact
-        if: github.event_name != 'pull_request' || (github.event.action == 'closed' && github.event.pull_request.merged == true)
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4
         with:
           path: _site
 
   deploy:
-    if: github.event_name != 'pull_request' || (github.event.action == 'closed' && github.event.pull_request.merged == true)
+    if: github.event_name != 'pull_request' && (github.event_name != 'pull_request_target' || github.event.pull_request.merged == true)
     needs: build
     permissions:
       pages: write

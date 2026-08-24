@@ -72,6 +72,16 @@ I received my **Ph.D.** from the Chinese University of Hong Kong, advised by **[
 </div>
 </section>
 
+<section class="about-section" aria-labelledby="honors-awards">
+<h2 class="about-section-label" id="honors-awards">Honors &amp; Awards</h2>
+<div class="about-section-content" markdown="1">
+
+- **ByteDance Soaring Star Talent Program**, 2025
+- **Huawei Gold Award for Individual Excellence** — Top 1%, 2025
+- **Huawei TopMinds Talent Program — First Class (highest tier)**, 2022
+</div>
+</section>
+
 <section class="about-section" aria-labelledby="collaboration-internship">
 <h2 class="about-section-label" id="collaboration-internship">Collaboration &amp; Internship</h2>
 <div class="about-section-content" markdown="1">

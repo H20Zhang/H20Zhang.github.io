@@ -94,7 +94,6 @@ I welcome collaboration on context infrastructure, retrieval systems, and graph/
 <h2 class="about-section-label" id="recent-news">Recent News</h2>
 <div class="about-section-content" markdown="1">
 
-- **09/2026** — [**ByteX**](/publications/#Arxiv-26-6) released on arXiv.
 - **08/2026** — [**DocNavRAG**](/publications/#Arxiv-26-4) released on arXiv.
 - **07/2026** — [**AdaMM**](/publications/#Arxiv-26-3) released on arXiv.
 - **07/2026** — [**Sema**](/publications/#VLDB-26-2) accepted by PVLDB'26; [**CoreSemDB**](/publications/#COLM-26) accepted by COLM'26.

@@ -7,7 +7,7 @@ nav: true
 nav_order: 1
 ---
 
-<p><sup>^</sup> indicates first author or corresponding author where applicable.</p>
+<p><sup>^</sup> marks papers where Hao Zhang is a first author or corresponding author.</p>
 
 {% include bib_search.liquid %}
 

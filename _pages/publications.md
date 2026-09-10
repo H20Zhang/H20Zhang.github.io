@@ -12,5 +12,5 @@ nav_order: 1
 {% include bib_search.liquid %}
 
 <div class="publications">
-{% bibliography --file papers --file adamm --file docnavrag --file rwttt --file bytex %}
+{% bibliography --file icde27 --file papers --file adamm --file docnavrag --file rwttt --file bytex %}
 </div>

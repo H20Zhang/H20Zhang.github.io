@@ -1,17 +1,22 @@
+"Independent Research":
+  story: >-
+    Independent research projects and academic collaborations across data systems and AI, including semantic query processing, document retrieval, and hardware-efficient graph algorithms. These are separate projects with their own research questions, alongside longer-term exploration of shared context for collaboration among humans and multiple agents.
+  research:
+    - name: Sema
+      url: /publications/#VLDB-26-2
+    - name: DocNavRAG
+      url: /publications/#Arxiv-26-4
+    - name: Tensorized k-TTC
+      url: /publications/#SIGMOD-26-1
+
 "AutoIA @ ByteDance":
   story: >-
-    Agents are limited not only by model capability, but by the external information environment available to them and the task-specific context constructed from it. AutoIA treats both as optimizable state: an inner loop improves environment-specific retrieval pipelines from task-level evaluation, while an outer loop uses persistent failures to change data integration, organization, indexing, and storage. It is the systems platform for my current self-improving context-infrastructure agenda.
+    Agents are limited not only by model capability, but by the external information environment available to them and the task-specific context constructed from it. AutoIA treats both as optimizable state: an inner loop improves environment-specific retrieval pipelines from task-level evaluation, while an outer loop uses persistent failures to change data integration, organization, indexing, and storage. This is my context-infrastructure systems work at ByteDance.
   core_idea: >-
     Nested optimization over both retrieval pipelines and the external information environment they operate on.
   research:
-    - name: DocNavRAG
-      url: /publications/#Arxiv-26-4
     - name: AdaMM
       url: /publications/#Arxiv-26-3
-    - name: Sema
-      url: /publications/#VLDB-26-2
-    - name: CoreSemDB
-      url: /publications/#COLM-26
 
 "GES @ Huawei":
   story: >-
@@ -28,7 +33,7 @@
 
 "TQEX @ Huawei":
   story: >-
-    TQEX asks how SQL and graph systems can benefit from rapidly evolving accelerators without becoming hardware-specific codebases. The line uses tensor runtimes as a portable execution layer, then closes the mismatch between irregular data workloads and uniform tensor operations through compact representations, workload-specific operators, batching, compression, and out-of-memory execution. It spans SQL, graph queries, graph processing, and graph search.
+    TQEX asks how SQL and graph systems can benefit from rapidly evolving accelerators without becoming hardware-specific codebases. The line uses tensor runtimes as a portable execution layer, then closes the mismatch between irregular data workloads and uniform tensor operations through compact representations, workload-specific operators, batching, compression, and out-of-memory execution. This Huawei-affiliated line spans SQL, graph queries, and graph processing.
   core_idea: >-
     Use tensor runtimes as the portability layer, then bridge irregular data workloads to uniform tensor operations with data-system-specific representations and operators.
   research:
@@ -38,8 +43,6 @@
       url: /publications/#VLDB-24
     - name: TGraph
       url: /publications/#SIGMOD-25-2
-    - name: Tensorized k-TTC
-      url: /publications/#SIGMOD-26-1
 
 "Database & Graph Research Systems @ CUHK":
   story: >-

@@ -4,12 +4,16 @@ title: About
 seo_title: Hao Zhang — Research Scientist at ByteDance | Context Infrastructure for Agents
 permalink: /
 subtitle: Research Scientist at ByteDance
-description: Hao Zhang is a Research Scientist at ByteDance building self-improving context infrastructure for AI agents, focused on organizing shared information environments and constructing task-specific context.
-keywords: Hao Zhang, ByteDance, AI agents, context infrastructure, shared information state, information organization, context management, agent memory, context search, vector search, graph systems, semantic query processing, hardware-accelerated data systems
-last_modified_at: 2026-09-11 07:16:00 +0800
+description: Hao Zhang builds self-improving context infrastructure for multi-agent and human–agent collaboration, alongside independent research and academic collaborations across data systems and AI.
+keywords: Hao Zhang, ByteDance, independent research, multi-agent collaboration, human-agent collaboration, AI agents, context infrastructure, shared information state, information organization, context management, agent memory, context search, vector search, graph systems, semantic query processing, hardware-accelerated data systems
+last_modified_at: 2026-09-12
 hero_title: Context infrastructure for agents.
-hero_intro: >
-  I am a Research Scientist at ByteDance. I expect intelligence to become increasingly abundant, with much of it instantiated as **long-lived agents that collaborate with each other and with humans**. As these agents continuously read from and write to shared information environments, **organizing that information—and turning it into the right context for each task—will become a fundamental systems problem**. I build **self-improving context infrastructure** toward that future.
+hero_intro: |
+  **Shared information environments for multi-agent and human–agent collaboration.**
+
+  I am a Research Scientist at ByteDance. I build **self-improving context infrastructure** toward a future where AI agents collaborate with one another and with humans.
+
+  My focus is the shared, evolving information environments behind this collaboration: how knowledge, memory, and work artifacts are organized, maintained, and turned into the right context for each participant and task. The goal is to let people and agents **build on one another's work over time**, while keeping track of changing information and human decisions.
 
 profile:
   align: right
@@ -37,9 +41,11 @@ latest_posts:
 <h2 class="about-section-label" id="current-focus">Current Focus</h2>
 <div class="about-section-content" markdown="1">
 
-My current work focuses on **the systems between agents and external information**: how information is integrated, organized, indexed, retrieved, and assembled into task-specific context.
+My current research studies how to organize heterogeneous information into **reusable representations and access paths**, and improve them through task-level feedback. The longer-term goal is sustained collaboration among humans and multiple agents: a shared information environment, with the right context for each participant.
 
-[**AutoIA @ ByteDance**](/projects/1_autoia/) is the platform for this work, using task-level feedback to optimize retrieval pipelines first and, when needed, the underlying information environments they rely on.
+At ByteDance, I develop [**AutoIA**](/projects/1_autoia/), focusing on how task-level feedback can improve retrieval pipelines and the underlying information environments.
+
+My [**Independent Research**](/projects/5_independent_research/) spans separate projects and academic collaborations across data systems and AI, including semantic query processing, document retrieval, and hardware-efficient graph algorithms.
 
 **Longer-term view**
 
@@ -49,9 +55,10 @@ My current work focuses on **the systems between agents and external information
 </section>
 
 <section class="about-section" aria-labelledby="selected-systems">
-<h2 class="about-section-label" id="selected-systems">Selected Systems</h2>
+<h2 class="about-section-label" id="selected-systems">Selected Projects</h2>
 <div class="about-section-content" markdown="1">
 
+- [**Independent Research**](/projects/5_independent_research/) — research projects and academic collaborations across data systems and AI.
 - [**AutoIA @ ByteDance**](/projects/1_autoia/) — self-improving context infrastructure.
 - [**GES @ Huawei**](/projects/3_ges/) — production graph database infrastructure.
 - [**TQEX @ Huawei**](/projects/2_tqex/) — tensor-centric SQL and graph execution on heterogeneous accelerators.

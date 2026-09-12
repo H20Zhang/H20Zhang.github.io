@@ -4,17 +4,11 @@ title: AutoIA @ ByteDance
 description: Self-improving context infrastructure that uses task-level feedback to optimize retrieval pipelines first and, when needed, the underlying information environment.
 importance: 1
 category: systems
+project_group: bytedance
 external_url: https://www.volcengine.com/product/context-search?_vtm_=a441938.b105878.0_0.0_0.0.133_11_000J33hNUY2PtPrMwlQ3ilQxfn2UtC
 external_label: Volcano Engine ContextSearch
 related_publications: false
 research_support:
-  - area: Knowledge organization
-    papers:
-      - name: DocNavRAG
-        venue: arXiv 2026
-        url: /publications/#Arxiv-26-4
-        summary: Builds a document-structured graph and maintains an evolving evidence state for navigation over long documents.
-        role: Supports stateful evidence construction through navigable document structure.
   - area: Agent memory
     papers:
       - name: AdaMM
@@ -22,18 +16,7 @@ research_support:
         url: /publications/#Arxiv-26-3
         summary: Adds queryable analytic memory alongside retrieval memory to support filtering, aggregation, ranking, and temporal comparison over multimodal histories.
         role: Supports query-adaptive memory through analytic views over multimodal histories.
-  - area: Semantic query layer
-    papers:
-      - name: Sema
-        venue: PVLDB 2026
-        url: /publications/#VLDB-26-2
-        summary: Introduces LLM-powered semantic operators in SQL with optimization and adaptive execution.
-        role: Provides the semantic query layer with first-class operators and adaptive execution.
-      - name: CoreSemDB
-        venue: COLM 2026
-        url: /publications/#COLM-26
-        summary: Benchmarks hybrid semantic-relational queries that combine structured predicates with semantic interpretation over text-rich data.
-        role: Defines workloads for evaluating the semantic query layer.
+
 ---
 
 AutoIA extends the agent harness beyond loop orchestration to the **external information environment** in which the agent operates. It uses task-level evaluation to optimize environment-specific retrieval pipelines first and, when needed, improve the underlying information environment itself.
@@ -54,7 +37,9 @@ Together, these loops form **self-improving context infrastructure**. A longer-t
 
 ## Research role
 
-AutoIA is the systems platform connecting my work on data integration, knowledge organization, agent memory, semantic query processing, retrieval, and context management.
+AutoIA is my context-infrastructure systems work at ByteDance. It studies how task-level feedback can improve retrieval and the information environment behind it—a practical step toward supporting sustained collaboration among humans and multiple agents.
+
+The research linked below has ByteDance author affiliations and is relevant to this systems work. My broader research agenda and independent academic collaborations are presented separately under [Independent Research](/projects/5_independent_research/).
 
 ## Product context
 

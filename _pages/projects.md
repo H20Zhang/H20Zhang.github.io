@@ -1,35 +1,41 @@
 ---
 layout: page
-title: Systems
+title: Research & Systems
 permalink: /projects/
-description: Selected systems spanning context infrastructure for agents, production graph systems, tensor-centric execution, and earlier database/graph research.
+description: Independent research and academic collaborations across data systems and AI, alongside systems developed at ByteDance, Huawei, and CUHK.
 nav: true
 nav_order: 2
 horizontal: true
+project_groups:
+  - id: independent
+    label: Independent Research
+  - id: bytedance
+    label: ByteDance
+  - id: huawei
+    label: Huawei
+  - id: cuhk
+    label: CUHK
 ---
 
-These systems trace a line from distributed query and graph execution, through production graph services and accelerator-aware execution, to **self-improving context infrastructure for agents**. Each entry summarizes the problem and core system thesis; the detail pages connect that thesis to architecture, research threads, evidence, and system boundaries.
+My work spans context infrastructure, retrieval, semantic query processing, graph systems, and hardware-efficient execution. **Independent research and academic collaborations** are presented separately from projects at ByteDance, Huawei, and CUHK.
+
+Paper associations follow the affiliations in the original publications and the scope of each project, rather than publication dates or topic similarity alone.
 
 <div class="projects">
 {% assign sorted_projects = site.projects | sort: "importance" %}
 {% if page.horizontal %}
   <div class="systems-list">
-    {% for project in sorted_projects %}
-      {% if project.importance == 1 %}
-        <section class="systems-group systems-group--current" aria-labelledby="systems-current">
-          <h2 class="systems-group-label" id="systems-current">Current</h2>
-      {% elsif project.importance == 2 %}
+    {% for group in page.project_groups %}
+      {% assign group_projects = sorted_projects | where: "project_group", group.id %}
+      {% if group_projects.size > 0 %}
+        <section class="systems-group systems-group--{{ group.id }}" aria-labelledby="systems-{{ group.id }}">
+          <h2 class="systems-group-label" id="systems-{{ group.id }}">{{ group.label }}</h2>
+          {% for project in group_projects %}
+            {% include projects_horizontal.liquid %}
+          {% endfor %}
         </section>
-        <section class="systems-group systems-group--huawei" aria-labelledby="systems-huawei">
-          <h2 class="systems-group-label" id="systems-huawei">Huawei Systems</h2>
-      {% elsif project.importance == 4 %}
-        </section>
-        <section class="systems-group systems-group--earlier" aria-labelledby="systems-earlier">
-          <h2 class="systems-group-label" id="systems-earlier">Earlier Research</h2>
       {% endif %}
-      {% include projects_horizontal.liquid %}
     {% endfor %}
-    </section>
   </div>
 {% else %}
   <div class="row row-cols-1 row-cols-md-3">

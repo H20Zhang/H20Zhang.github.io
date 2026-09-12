@@ -4,6 +4,7 @@ title: GES @ Huawei
 description: Production graph database service for high-throughput interactive graph workloads.
 importance: 2
 category: systems
+project_group: huawei
 external_url: https://www.huaweicloud.com/product/ges.html
 external_label: Huawei GES
 secondary_links:
@@ -39,13 +40,13 @@ research_support:
         url: /publications/#VLDB-26
         summary: Develops high-concurrency incremental graph query processing for evolving graph data.
         role: Extends the system line toward incremental processing under concurrent updates.
-  - area: Related Huawei-era graph research
+  - area: Related Huawei graph research
     papers:
       - name: Time-dependent label-constrained reachability
         venue: ICDE 2024
         url: /publications/#ICDE-24-1
         summary: Studies reachability under ordered label and time-dependent constraints, with indexing strategies that balance construction cost and query efficiency.
-        role: Extends the Huawei-era graph research portfolio toward indexed graph reachability queries.
+        role: Extends the Huawei-affiliated graph research portfolio toward indexed graph reachability queries.
       - name: SANE
         venue: ICDE 2024
         url: /publications/#ICDE-24-2

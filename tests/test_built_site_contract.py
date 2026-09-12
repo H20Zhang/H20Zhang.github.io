@@ -20,7 +20,6 @@ TQEX_PAPERS = {
     "/publications/#SIGMOD-26-2",
     "/publications/#VLDB-24",
     "/publications/#SIGMOD-25-2",
-    "/publications/#SIGMOD-26-1",
 }
 GES_RELATED_GRAPH_PAPERS = {
     "/publications/#ICDE-24-1",
@@ -559,8 +558,10 @@ class BuiltSiteContractTest(unittest.TestCase):
                 self.assertEqual(schema["@type"], "WebPage")
                 self.assertEqual(og_type, "website")
 
-    def test_homepage_presents_huawei_systems_as_independent_items(self):
-        self.assertEqual(self.homepage.selected_systems_items, 4)
+    def test_homepage_presents_independent_research_and_institutional_projects(self):
+        self.assertEqual(self.homepage.selected_systems_items, 5)
+        self.assertIn("Independent Research", self.homepage.selected_systems_text)
+        self.assertIn("Selected Projects", self.homepage.selected_systems_text)
         self.assertIn("GES @ Huawei", self.homepage.selected_systems_text)
         self.assertIn("TQEX @ Huawei", self.homepage.selected_systems_text)
         self.assertNotIn("Huawei-era systems", self.homepage.selected_systems_text)
@@ -618,13 +619,14 @@ class BuiltSiteContractTest(unittest.TestCase):
                 for property_name, value in properties.items():
                     self.assertEqual(rule.get(property_name), value)
 
-    def test_tqex_page_links_all_four_research_threads(self):
+    def test_tqex_page_links_huawei_affiliated_research_threads(self):
         tqex_path = SITE / "projects" / "2_tqex" / "index.html"
         self.assertTrue(tqex_path.exists(), "TQEX system detail page must be generated")
 
         tqex_page = parse_page(tqex_path)
         hrefs = {anchor.get("href") for anchor in tqex_page.anchors}
         self.assertTrue(TQEX_PAPERS.issubset(hrefs), TQEX_PAPERS - hrefs)
+        self.assertNotIn("/publications/#SIGMOD-26-1", hrefs)
 
     def test_ges_page_separates_related_huawei_graph_research(self):
         ges_path = SITE / "projects" / "3_ges" / "index.html"
@@ -632,7 +634,7 @@ class BuiltSiteContractTest(unittest.TestCase):
         ges_page = parse_page(ges_path)
         hrefs = {anchor.get("href") for anchor in ges_page.anchors}
 
-        self.assertIn("Related Huawei-era graph research", ges_html)
+        self.assertIn("Related Huawei graph research", ges_html)
         self.assertTrue(GES_RELATED_GRAPH_PAPERS.issubset(hrefs))
         self.assertTrue(TQEX_PAPERS.isdisjoint(hrefs))
 
@@ -691,9 +693,10 @@ class BuiltSiteContractTest(unittest.TestCase):
             encoding="utf-8"
         )
 
-        for label in ("Current", "Huawei Systems", "Earlier Research"):
+        for label in ("Independent Research", "ByteDance", "Huawei", "CUHK"):
             self.assertIn(f">{label}<", systems_html)
         for system in (
+            "Independent Research",
             "AutoIA @ ByteDance",
             "GES @ Huawei",
             "TQEX @ Huawei",
@@ -704,6 +707,7 @@ class BuiltSiteContractTest(unittest.TestCase):
         self.assertNotIn("system-entry-research", systems_html)
 
         for detail_path in (
+            "5_independent_research",
             "1_autoia",
             "2_tqex",
             "3_ges",
@@ -714,6 +718,23 @@ class BuiltSiteContractTest(unittest.TestCase):
             ).read_text(encoding="utf-8")
             with self.subTest(detail_path=detail_path):
                 self.assertIn("Research Threads", detail_html)
+
+    def test_independent_papers_are_separate_from_autoia(self):
+        independent_page = parse_page(
+            SITE / "projects" / "5_independent_research" / "index.html"
+        )
+        independent_hrefs = {a.get("href") for a in independent_page.anchors}
+        expected = {
+            "/publications/#VLDB-26-2",
+            "/publications/#Arxiv-26-4",
+            "/publications/#SIGMOD-26-1",
+        }
+        self.assertTrue(expected.issubset(independent_hrefs))
+        autoia_page = parse_page(SITE / "projects" / "1_autoia" / "index.html")
+        autoia_hrefs = {a.get("href") for a in autoia_page.anchors}
+        self.assertTrue(expected.isdisjoint(autoia_hrefs))
+        self.assertIn("/publications/#Arxiv-26-3", autoia_hrefs)
+        self.assertNotIn("/publications/#COLM-26", autoia_hrefs)
 
     def test_writing_index_uses_a_flat_editorial_entry(self):
         writing_html = (SITE / "blog" / "index.html").read_text(

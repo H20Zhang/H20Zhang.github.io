@@ -4,6 +4,7 @@ title: TQEX @ Huawei
 description: Tensor-centric SQL, graph-query, and graph-processing systems across heterogeneous accelerators.
 importance: 3
 category: systems
+project_group: huawei
 external_url: https://doi.org/10.1145/3769835
 external_label: TQEx(SQL), SIGMOD 2026
 related_publications: false
@@ -29,13 +30,7 @@ research_support:
         url: /publications/#SIGMOD-25-2
         summary: Provides tensor-based graph operators, compression, and out-of-memory execution across multiple tensor runtimes and accelerator backends.
         role: Generalizes the approach from graph queries to graph algorithms.
-  - area: Tensorized graph search
-    papers:
-      - name: Tensorized k-TTC search
-        venue: SIGMOD 2026
-        url: /publications/#SIGMOD-26-1
-        summary: Uses a tensor-based framework for index construction, online community search, and maintenance on heterogeneous GPUs.
-        role: Applies the tensor-runtime approach to an irregular graph-search workload.
+
 ---
 
 TQEX anchors a broader **tensor-centric execution line** that maps irregular SQL and graph workloads onto portable tensor runtimes and heterogeneous accelerators. The individual systems are related research threads, not components of a single codebase.
@@ -48,24 +43,22 @@ Specialized accelerators offer substantial compute capacity, but hardware-specif
 
 Use tensor computation runtimes as the portability layer, then bridge the workload–tensor gap with data-system techniques: compact representations, workload-specific tensor operators, batched execution, compression, and out-of-memory strategies.
 
-This research line spans four workloads:
+This Huawei-affiliated research line spans three workloads:
 
 - **TQEx(SQL)** bridges relational storage and operators with tensor execution, including variable-length data, joins, aggregates, and multi-XPU processing.
 - **TenGraph** maps interactive graph queries to compact tensor representations and batched tensor computation.
 - **TGraph** provides a tensor-centric programming and execution framework for graph algorithms across tensor runtimes and accelerator backends.
-- **Tensorized k-TTC search** applies tensor execution to index construction, online triangle-connected truss community search, and index maintenance.
 
 ## My role
 
-Research and system architecture across this Huawei-era tensor-centric data-systems line, spanning query/runtime design and execution over heterogeneous accelerators.
+Research and system architecture across this Huawei-affiliated tensor-centric data-systems line, spanning query/runtime design and execution over heterogeneous accelerators.
 
 ## Evidence
 
 - [TQEx(SQL), SIGMOD 2026](https://doi.org/10.1145/3769835)
 - [TenGraph, PVLDB 2024](https://doi.org/10.14778/3704965.3704967)
 - [TGraph, SIGMOD 2025](https://doi.org/10.1145/3709731)
-- [Tensorized k-TTC search, SIGMOD 2026](https://doi.org/10.1145/3786620)
 
 ## System boundary
 
-**TQEx(SQL)** is the named tensor-based SQL engine. TenGraph, TGraph, and tensorized k-TTC search are adjacent systems and applications that share the tensor-runtime thesis; they are not presented here as modules of TQEx(SQL).
+**TQEx(SQL)** is the named tensor-based SQL engine. TenGraph and TGraph are adjacent systems that share the tensor-runtime thesis; they are not presented here as modules of TQEx(SQL).

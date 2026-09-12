@@ -46,7 +46,7 @@
   {% endif %}
 
   <div class="system-entry-actions">
-    <a class="system-entry-explore" href="{{ system_href }}">Explore system <span aria-hidden="true">→</span></a>
+    <a class="system-entry-explore" href="{{ system_href }}">{{ project.explore_label | default: 'Explore system' }} <span aria-hidden="true">→</span></a>
 
     {% if project.external_url %}
       <a class="github-icon" href="{{ project.external_url }}" target="_blank" rel="noopener noreferrer" title="{{ project.external_label | default: 'External project link' }}">

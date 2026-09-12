@@ -64,6 +64,12 @@ class ProjectAttributionContractTest(unittest.TestCase):
                 self.assertNotIn("Huawei-era", page)
         self.assertNotIn("/publications/#COLM-26", overview)
 
+    def test_research_details_are_not_limited_to_systems_category(self):
+        layout = read("_layouts/page.liquid")
+        self.assertIn("{% if page.research_support %}", layout)
+        self.assertNotIn("{% if page.category == 'systems' %}", layout)
+        self.assertIn("{% include system_research_details.liquid %}", layout)
+
     def test_independent_research_spans_multiple_directions(self):
         path = ROOT / "_projects/5_independent_research.md"
         self.assertTrue(path.exists())

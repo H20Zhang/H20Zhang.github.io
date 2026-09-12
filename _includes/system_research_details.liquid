@@ -14,7 +14,7 @@
             </summary>
             <div class="research-paper-body">
               {% if paper.summary %}<p class="mb-1">{{ paper.summary }}</p>{% endif %}
-              <p class="mb-1"><strong>System connection:</strong> {{ paper.role }}</p>
+              <p class="mb-1"><strong>{% if page.category == 'systems' %}System connection{% else %}Research focus{% endif %}:</strong> {{ paper.role }}</p>
               <div class="research-paper-actions">
                 <a href="{{ paper.url | relative_url }}">View publication →</a>{% if paper.code %} · <a href="{{ paper.code }}">Code ↗</a>{% endif %}
               </div>

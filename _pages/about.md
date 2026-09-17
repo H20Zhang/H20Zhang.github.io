@@ -45,8 +45,6 @@ My current research studies how to organize heterogeneous information into **reu
 
 At ByteDance, I develop [**AutoIA**](/projects/1_autoia/), focusing on how task-level feedback can improve retrieval pipelines and the underlying information environments.
 
-My [**Independent Research**](/projects/5_independent_research/) spans separate projects and academic collaborations across data systems and AI, including semantic query processing, document retrieval, and hardware-efficient graph algorithms.
-
 **Longer-term view**
 
 - [**When Intelligence Becomes Abundant: Organizing the Shared Information World of Humans and AI Agents**](/blog/2026/shared-information-world-ai-agents/)
@@ -58,8 +56,8 @@ My [**Independent Research**](/projects/5_independent_research/) spans separate 
 <h2 class="about-section-label" id="selected-systems">Selected Projects</h2>
 <div class="about-section-content" markdown="1">
 
-- [**Independent Research**](/projects/5_independent_research/) — research projects and academic collaborations across data systems and AI.
 - [**AutoIA @ ByteDance**](/projects/1_autoia/) — self-improving context infrastructure.
+- [**Independent Research**](/projects/5_independent_research/) — research projects and academic collaborations across data systems and AI.
 - [**GES @ Huawei**](/projects/3_ges/) — production graph database infrastructure.
 - [**TQEX @ Huawei**](/projects/2_tqex/) — tensor-centric SQL and graph execution on heterogeneous accelerators.
 - [**Database & Graph Research Systems @ CUHK**](/projects/4_database_graph_systems/) — distributed query processing and graph systems.

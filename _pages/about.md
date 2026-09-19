@@ -6,7 +6,7 @@ permalink: /
 subtitle: Research Scientist at ByteDance
 description: Hao Zhang builds self-improving context infrastructure for multi-agent and human–agent collaboration, alongside independent research and academic collaborations across data systems and AI.
 keywords: Hao Zhang, ByteDance, independent research, multi-agent collaboration, human-agent collaboration, AI agents, context infrastructure, shared information state, information organization, context management, agent memory, context search, vector search, graph systems, semantic query processing, hardware-accelerated data systems
-last_modified_at: 2026-09-12
+last_modified_at: 2026-09-19
 hero_title: Context infrastructure for agents.
 hero_intro: |
   **Shared information environments for multi-agent and human–agent collaboration.**
@@ -70,7 +70,7 @@ At ByteDance, I develop [**AutoIA**](/projects/1_autoia/), focusing on how task-
 <h2 class="about-section-label" id="highlights">Highlights</h2>
 <div class="about-section-content" markdown="1">
 
-- **30+ publications** in database systems and AI, including **SIGMOD, VLDB, ICDE, EMNLP, COLM, TKDE, and The VLDB Journal**.
+- **30+ publications** in database systems and AI, including **ATC, SIGMOD, VLDB, ICDE, EMNLP, COLM, TKDE, and The VLDB Journal**.
 - **#1 on both tracks of [LDBC SNB Interactive](https://ldbcouncil.org/benchmarks/snb/interactive/), the leading audited benchmark for graph database systems:** [**Declarative**, 2024](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/) (**3,000× over #2**) and [**Imperative**, 2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/).
 
 I received my **Ph.D.** from the Chinese University of Hong Kong, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from Wuhan University.

@@ -70,7 +70,7 @@ At ByteDance, I develop [**AutoIA**](/projects/1_autoia/), focusing on how task-
 <h2 class="about-section-label" id="highlights">Highlights</h2>
 <div class="about-section-content" markdown="1">
 
-- **30+ publications** in database systems and AI, including **SIGMOD, VLDB, ICDE, EMNLP, COLM, ATC, TKDE, and The VLDB Journal**.
+- **30+ publications** in database systems and AI, including **SIGMOD, VLDB, ICDE, COLM, EMNLP, ATC, TKDE, and The VLDB Journal**.
 - **#1 on both tracks of [LDBC SNB Interactive](https://ldbcouncil.org/benchmarks/snb/interactive/), the leading audited benchmark for graph database systems:** [**Declarative**, 2024](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/) (**3,000× over #2**) and [**Imperative**, 2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/).
 
 I received my **Ph.D.** from the Chinese University of Hong Kong, advised by **[Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/)** and **[Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)**, and my **B.S. in Computer Science** from Wuhan University.

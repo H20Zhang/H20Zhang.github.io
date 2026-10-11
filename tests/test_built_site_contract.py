@@ -697,10 +697,12 @@ class BuiltSiteContractTest(unittest.TestCase):
             self.assertIn(f">{label}<", systems_html)
         for system in (
             "AutoIA @ ByteDance", "UBASE @ ByteDance", "Sema", "RW-TTT",
-            "VeloANN", "SQLVec", "DocNavRAG", "Vora", "GES @ Huawei",
-            "TQEX @ Huawei", "SeccoSQL @ CUHK", "DISC @ CUHK", "Crystal @ CUHK",
+            "Vora", "GES @ Huawei", "TQEX @ Huawei", "TGraph @ Huawei",
+            "TenGraph @ Huawei", "SeccoSQL @ CUHK", "DISC @ CUHK", "Crystal @ CUHK",
         ):
             self.assertIn(system, systems_html)
+        for excluded in ("DocNavRAG", "VeloANN", "SQLVec"):
+            self.assertNotIn(excluded, systems_html)
         self.assertNotIn("Independent Research", systems_html)
         self.assertNotIn("Research &amp; Systems", systems_html)
         self.assertNotIn("Research threads", systems_html)

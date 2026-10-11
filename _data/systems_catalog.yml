@@ -34,22 +34,6 @@
         - label: Paper
           url: /publications/#Arxiv-26-5
           primary: true
-    - id: docnavrag
-      name: DocNavRAG
-      url: /publications/#Arxiv-26-4
-      description: A document question-answering framework that navigates document-structured graphs and maintains an evolving evidence state across retrieval steps.
-      links:
-        - label: Paper
-          url: /publications/#Arxiv-26-4
-          primary: true
-    - id: veloann
-      name: VeloANN
-      url: /publications/#Arxiv-26-2
-      description: An SSD-resident graph indexing system that improves locality and asynchronous execution for high-throughput vector search.
-      links:
-        - label: Paper
-          url: /publications/#Arxiv-26-2
-          primary: true
 - id: query-graph-engines
   label: Query & graph engines
   systems:
@@ -60,14 +44,6 @@
       links:
         - label: Paper
           url: /publications/#VLDB-26-2
-          primary: true
-    - id: sqlvec
-      name: SQLVec
-      url: /publications/#ICDE-26
-      description: A SQL-based vector similarity search system that brings nearest-neighbor retrieval into relational query processing.
-      links:
-        - label: Paper
-          url: /publications/#ICDE-26
           primary: true
     - id: ges
       name: GES
@@ -97,10 +73,24 @@
           primary: true
         - label: TQEX(SQL) paper
           url: /publications/#SIGMOD-26-2
-        - label: Related · TenGraph
-          url: /publications/#VLDB-24
-        - label: Related · TGraph
+    - id: tgraph
+      name: TGraph
+      affiliation: Huawei
+      url: /publications/#SIGMOD-25-2
+      description: A tensor-centric graph processing framework with graph operators, compression, and out-of-memory execution across tensor runtimes and accelerator backends.
+      links:
+        - label: Paper
           url: /publications/#SIGMOD-25-2
+          primary: true
+    - id: tengraph
+      name: TenGraph
+      affiliation: Huawei
+      url: /publications/#VLDB-24
+      description: A PyTorch-based graph query engine using compact tensor representations of graph topology and batched graph-query operations.
+      links:
+        - label: Paper
+          url: /publications/#VLDB-24
+          primary: true
     - id: vora
       name: Vora
       url: /publications/#ICDE-27-2

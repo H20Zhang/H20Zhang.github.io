@@ -80,16 +80,21 @@ class SystemsCatalogTest(unittest.TestCase):
     def test_catalog_includes_systems_not_methods_or_benchmarks(self):
         names = {system['name'] for system in self.systems}
         self.assertTrue({
-            'AutoIA', 'UBASE', 'RW-TTT', 'DocNavRAG', 'VeloANN', 'Sema',
-            'SQLVec', 'GES', 'TQEX', 'Vora', 'SeccoSQL', 'DISC', 'Crystal',
+            'AutoIA', 'UBASE', 'RW-TTT', 'Sema', 'GES', 'TQEX',
+            'TGraph', 'TenGraph', 'Vora', 'SeccoSQL', 'DISC', 'Crystal',
         }.issubset(names))
-        self.assertTrue({'Independent Research', 'CoreSemDB', 'GATOR', 'IGMem', 'SSW'}.isdisjoint(names))
+        self.assertEqual(len(names), 12)
+        self.assertTrue({
+            'Independent Research', 'CoreSemDB', 'GATOR', 'IGMem', 'SSW',
+            'DocNavRAG', 'VeloANN', 'SQLVec',
+        }.isdisjoint(names))
 
     def test_affiliation_is_only_displayed_for_reviewed_systems(self):
         actual = {s['name']: s['affiliation'] for s in self.systems if s.get('affiliation')}
         self.assertEqual(actual, {
             'AutoIA': 'ByteDance', 'UBASE': 'ByteDance', 'GES': 'Huawei',
-            'TQEX': 'Huawei', 'SeccoSQL': 'CUHK', 'DISC': 'CUHK', 'Crystal': 'CUHK',
+            'TQEX': 'Huawei', 'TGraph': 'Huawei', 'TenGraph': 'Huawei',
+            'SeccoSQL': 'CUHK', 'DISC': 'CUHK', 'Crystal': 'CUHK',
         })
 
     def test_all_linked_papers_keep_their_existing_ids(self):

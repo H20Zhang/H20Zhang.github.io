@@ -47,7 +47,7 @@ class ProjectAttributionContractTest(unittest.TestCase):
         self.assertNotIn("project.importance ==", page)
         catalog = read("_data/systems_catalog.yml")
         self.assertNotIn("name: Independent Research", catalog)
-        for name in ("AutoIA", "Sema", "UBASE", "RW-TTT", "VeloANN", "SeccoSQL", "DISC", "Crystal"):
+        for name in ("AutoIA", "Sema", "UBASE", "RW-TTT", "TGraph", "TenGraph", "SeccoSQL", "DISC", "Crystal"):
             self.assertIn(f"name: {name}\n", catalog)
 
     def test_paper_associations_match_reviewed_project_boundaries(self):

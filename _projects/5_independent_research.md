@@ -8,7 +8,7 @@ project_group: independent
 explore_label: Explore research
 related_publications: false
 research_support:
-  - area: SEMAntic query processing
+  - area: Semantic query processing
     papers:
       - name: SEMA
         venue: PVLDB 2026
@@ -35,7 +35,7 @@ My independent research and academic collaborations span **data systems and AI**
 
 ## Research directions
 
-**SEMAntic query processing.** How can database systems combine relational operations with semantic reasoning while controlling execution cost? SEMA explores first-class semantic operators, query optimization, and adaptive execution.
+**Semantic query processing.** How can database systems combine relational operations with semantic reasoning while controlling execution cost? SEMA explores first-class semantic operators, query optimization, and adaptive execution.
 
 **Document retrieval.** How can agents navigate large document collections and accumulate the evidence needed for complex questions? DocNavRAG explores document-structured graphs and stateful evidence construction.
 
@@ -50,4 +50,4 @@ This is a longer-term research direction, rather than a claim that the projects 
 - [When Intelligence Becomes Abundant: Organizing the Shared Information World of Humans and AI Agents](/blog/2026/shared-information-world-ai-agents/)
 - [The Next Generation of Context Management](/blog/2026/next-gen-agent-en/)
 
-The original publications retain their author affiliations. [Publications](/publications/) contains the complete research record; [Research & Systems](/projects/) separates these collaborations from my institutional system projects.
+The original publications retain their author affiliations. [Publications](/publications/) contains the complete research record; [Systems](/projects/) separates these collaborations from my institutional system projects.

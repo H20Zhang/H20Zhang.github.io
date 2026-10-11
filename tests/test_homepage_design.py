@@ -89,7 +89,9 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertTrue(about_path.exists(), "homepage Sass partial must exist")
 
         styles = read("_sass/_about.scss")
-        self.assertIn("grid-template-columns: minmax(0, 2fr) minmax(230px, 0.9fr)", styles)
+        self.assertIn("grid-template-columns: minmax(0, 1.5fr) minmax(300px, 1fr)", styles)
+        self.assertIn("max-width: 340px;", styles)
+        self.assertIn("max-width: 320px;", styles)
         self.assertIn("grid-template-columns: 176px minmax(0, 1fr)", styles)
         self.assertIn("var(--global-section-alt-color)", styles)
         self.assertIn("color: var(--global-section-accent-color)", styles)

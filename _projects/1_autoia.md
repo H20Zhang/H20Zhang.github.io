@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AutoIA @ ByteDance
-description: Self-improving context infrastructure that uses task-level feedback to optimize retrieval pipelines first and, when needed, the underlying information environment.
+description: A self-evolving harness for AI agents, researching how task-level feedback can improve context, memory, and tools.
 importance: 1
 category: systems
 project_group: bytedance
@@ -19,27 +19,27 @@ research_support:
 
 ---
 
-AutoIA extends the agent harness beyond loop orchestration to the **external information environment** in which the agent operates. It uses task-level evaluation to optimize environment-specific retrieval pipelines first and, when needed, improve the underlying information environment itself.
+I am developing AutoIA as a **self-evolving harness for AI agents**. Its goal is to help agent teams build and continuously improve their context and tools, using task-level feedback to guide adaptation.
 
 ## Problem
 
-Agents depend on context assembled from documents, tables, multimodal data, memory, indexes, and external knowledge sources. Better agents therefore require more than a fixed retrieval pipeline: task-level feedback should first improve how context is retrieved and assembled and, when retrieval remains insufficient, drive changes to how the underlying information environment is integrated, organized, indexed, and stored.
+Agents work through memory, tool interfaces, and context assembled from documents, tables, multimodal data, and external knowledge. AutoIA studies how feedback from task execution can improve these capabilities over time. Its current context-centered approach starts with how agents retrieve and assemble evidence, then examines the information environment that makes this evidence available.
 
 ## Core idea
 
-AutoIA treats context infrastructure as a **nested optimization loop**.
+AutoIA's current context-centered approach uses a **nested optimization loop** within the agent harness.
 
 **Inner loop.** With the external information environment fixed, task-level evaluations and execution traces guide the optimization of environment-specific retrieval pipelines.
 
 **Outer loop.** When retrieval-level optimization is no longer sufficient, the same feedback drives changes to data integration, organization, representation, indexing, and storage, improving the underlying information environment itself.
 
-Together, these loops form **self-improving context infrastructure**. A longer-term question is **recursive self-improvement (RSI)** — whether the mechanisms that generate, evaluate, and select improvements can themselves be improved.
+These loops provide a context-centered basis for an **evolving agent harness**. A longer-term question is **recursive self-improvement (RSI)**: whether the mechanisms that generate, evaluate, and select improvements can themselves be improved.
 
 ## Research role
 
-AutoIA is my context-infrastructure systems work at ByteDance. It studies how task-level feedback can improve retrieval and the information environment behind it—a practical step toward supporting sustained collaboration among humans and multiple agents.
+AutoIA is my agent-harness research and development at ByteDance. It studies how agents can adapt through better context, memory, and task-level feedback. Data systems provide the supporting state and interfaces for this work, toward sustained collaboration among humans and multiple agents.
 
-The research linked below has ByteDance author affiliations and is relevant to this systems work. My broader research agenda and independent academic collaborations are presented separately under [Independent Research](/projects/5_independent_research/).
+The research linked below has ByteDance author affiliations and is relevant to this harness research. My broader research agenda and independent academic collaborations are presented separately under [Independent Research](/projects/5_independent_research/).
 
 ## Product context
 

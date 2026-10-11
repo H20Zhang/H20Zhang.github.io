@@ -11,9 +11,9 @@
 
 "AutoIA @ ByteDance":
   story: >-
-    Agents are limited not only by model capability, but by the external information environment available to them and the task-specific context constructed from it. AutoIA treats both as optimizable state: an inner loop improves environment-specific retrieval pipelines from task-level evaluation, while an outer loop uses persistent failures to change data integration, organization, indexing, and storage. This is my context-infrastructure systems work at ByteDance.
+    I am developing AutoIA as a self-evolving harness for AI agents, centered on context and memory. Its goal is to help agent teams improve their context and tools through task-level feedback. The current context-centered approach improves retrieval pipelines and, when needed, the external information environment behind them.
   core_idea: >-
-    Nested optimization over both retrieval pipelines and the external information environment they operate on.
+    An evolving agent harness with nested feedback loops over context construction and the external information environment.
   research:
     - name: AdaMM
       url: /publications/#Arxiv-26-3

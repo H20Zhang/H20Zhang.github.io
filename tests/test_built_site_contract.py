@@ -169,7 +169,7 @@ class BuiltSiteContractTest(unittest.TestCase):
     def test_homepage_schema_identifies_hao_zhang(self):
         self.assertEqual(
             self.homepage.title,
-            "Hao Zhang — Research Scientist at ByteDance | Context Infrastructure for Agents",
+            "Hao Zhang — Research Scientist at ByteDance | AI Agents, Harnesses, and Context",
         )
         self.assertEqual(len(self.homepage.json_ld), 1)
 

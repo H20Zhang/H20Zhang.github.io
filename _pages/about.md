@@ -1,19 +1,19 @@
 ---
 layout: about
 title: About
-seo_title: Hao Zhang — Research Scientist at ByteDance | Context Infrastructure for Agents
+seo_title: Hao Zhang — Research Scientist at ByteDance | AI Agents, Harnesses, and Context
 permalink: /
 subtitle: Research Scientist at ByteDance
-description: Hao Zhang builds self-improving context infrastructure for multi-agent and human–agent collaboration, alongside independent research and academic collaborations across data systems and AI.
-keywords: Hao Zhang, ByteDance, independent research, multi-agent collaboration, human-agent collaboration, AI agents, context infrastructure, shared information state, information organization, context management, agent memory, context search, vector search, graph systems, semantic query processing, hardware-accelerated data systems
-last_modified_at: 2026-09-19
-hero_title: Context infrastructure for agents.
+description: Hao Zhang researches self-improving AI agents through evolving harnesses, context, and memory, alongside independent research and academic collaborations across data systems and AI.
+keywords: Hao Zhang, ByteDance, independent research, multi-agent collaboration, human-agent collaboration, AI agents, self-improving agents, evolving harnesses, agent harness, context infrastructure, shared information state, information organization, context management, agent memory, context search, vector search, graph systems, semantic query processing, hardware-accelerated data systems
+last_modified_at: 2026-10-11
+hero_title: Self-improving AI agents through evolving harnesses and context.
 hero_intro: |
-  **Shared information environments for multi-agent and human–agent collaboration.**
+  **Agent memory, context representations, and feedback-driven adaptation.**
 
-  I am a Research Scientist at ByteDance. I build **self-improving context infrastructure** toward a future where AI agents collaborate with one another and with humans.
+  I am a Research Scientist at ByteDance. I study **self-improving AI agents**, with a focus on the harnesses, context, and memory that shape how they work.
 
-  My focus is the shared, evolving information environments behind this collaboration: how knowledge, memory, and work artifacts are organized, maintained, and turned into the right context for each participant and task. The goal is to let people and agents **build on one another's work over time**, while keeping track of changing information and human decisions.
+  The longer-term goal is **multi-agent and human–agent collaboration**: enabling people and agents to **build on one another's work over time**, while keeping track of changing information and human decisions.
 
 profile:
   align: right
@@ -41,9 +41,9 @@ latest_posts:
 <h2 class="about-section-label" id="current-focus">Current Focus</h2>
 <div class="about-section-content" markdown="1">
 
-My current research studies how to organize heterogeneous information into **reusable representations and access paths**, and improve them through task-level feedback. The longer-term goal is sustained collaboration among humans and multiple agents: a shared information environment, with the right context for each participant.
+At ByteDance, I am developing [**AutoIA**](/projects/1_autoia/), **a self-evolving harness for AI agents**. Its goal is to enable agent teams to build and continuously improve their context and tools through task-level feedback.
 
-At ByteDance, I develop [**AutoIA**](/projects/1_autoia/), focusing on how task-level feedback can improve retrieval pipelines and the underlying information environments.
+My current research studies how agents remember, organize information, retrieve evidence, and adapt how they work. Data systems support this agenda by making context and memory **reliable, reusable, and efficient**.
 
 **Longer-term view**
 
@@ -56,7 +56,7 @@ At ByteDance, I develop [**AutoIA**](/projects/1_autoia/), focusing on how task-
 <h2 class="about-section-label" id="selected-systems">Selected Projects</h2>
 <div class="about-section-content" markdown="1">
 
-- [**AutoIA @ ByteDance**](/projects/1_autoia/) — self-improving context infrastructure.
+- [**AutoIA @ ByteDance**](/projects/1_autoia/) — a self-evolving agent harness centered on context and memory.
 - [**Independent Research**](/projects/5_independent_research/) — research projects and academic collaborations across data systems and AI.
 - [**GES @ Huawei**](/projects/3_ges/) — production graph database infrastructure.
 - [**TQEX @ Huawei**](/projects/2_tqex/) — tensor-centric SQL and graph execution on heterogeneous accelerators.
@@ -91,7 +91,7 @@ I received my **Ph.D.** from the Chinese University of Hong Kong, advised by **[
 <h2 class="about-section-label" id="collaboration-internship">Collaboration &amp; Internship</h2>
 <div class="about-section-content" markdown="1">
 
-I welcome collaboration on context infrastructure, retrieval systems, and graph/vector systems. I am also recruiting **research interns** at ByteDance in Shenzhen; email zhanghaowuda12 [at] gmail [dot] com with `[Intern]` in the subject.
+I welcome collaboration on AI agents, agent memory, self-evolving harnesses, and graph/vector systems. I am also recruiting **research interns** at ByteDance in Shenzhen; email zhanghaowuda12 [at] gmail [dot] com with `[Intern]` in the subject.
 </div>
 </section>
 

@@ -2,13 +2,12 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: Research in agent memory and adaptation, retrieval and semantic queries, hardware-efficient execution, graph systems, and distributed analytics.
+description: Papers grouped by research area, with a chronological view and search.
 nav: true
 nav_order: 1
 ---
 
 <div id="publication-explorer" class="publication-explorer">
-  <p class="publication-intro">Papers are organized by their primary research area, with years retained within each area. This grouping does not imply project or institutional affiliation.</p>
   <nav class="research-area-nav" aria-label="Research areas">
     {% for area in site.data.research_areas %}
       <a href="#{{ area.id }}" data-research-area="{{ area.id }}">{{ area.short_title }} <span class="research-area-count">{{ area.papers.size }}</span></a>

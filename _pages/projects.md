@@ -2,12 +2,12 @@
 layout: page
 title: Systems
 permalink: /projects/
-description: Selected systems and research frameworks, from agent harnesses and vector search to query engines and distributed graph analytics.
+description: Agent harnesses, search platforms, and data-processing engines.
 nav: true
 nav_order: 2
 ---
 
-I build systems that turn research ideas into reusable capabilities. The selection below includes production platforms and research systems; [Publications](/publications/) contains the full research record, organized by area.
+[Papers by research area →](/publications/)
 
 <div class="projects">
   <div class="systems-list">

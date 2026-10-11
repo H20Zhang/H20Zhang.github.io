@@ -9,9 +9,7 @@ keywords: Hao Zhang, ByteDance, independent research, multi-agent collaboration,
 last_modified_at: 2026-10-11
 hero_title: Building AI agents that learn and improve.
 hero_intro: |
-  I am a Research Scientist at ByteDance. I develop AutoIA, a harness that helps agent teams build, use, and improve their context, memory, and tools.
-
-  The longer-term goal is **multi-agent and human–agent collaboration**: enabling people and agents to **build on one another's work over time**, while keeping track of changing information and human decisions.
+  I develop **AutoIA**, a harness that helps agent teams build, use, and improve their context, memory, and tools. My research asks how task feedback can turn individual executions into reusable knowledge and more capable agents.
 
 profile:
   align: right
@@ -26,8 +24,8 @@ social: true
 
 announcements:
   enabled: false
-  scrollable: true
-  limit: 5
+  scrollable: false
+  limit: 4
 
 latest_posts:
   enabled: false
@@ -36,17 +34,14 @@ latest_posts:
 ---
 
 <section class="about-section" aria-labelledby="current-focus">
-<h2 class="about-section-label" id="current-focus">Current Focus</h2>
+<h2 class="about-section-label" id="current-focus">Research Directions</h2>
 <div class="about-section-content" markdown="1">
 
-At ByteDance, I am developing [**AutoIA**](/projects/1_autoia/), **a self-evolving harness for AI agents**. Its goal is to enable agent teams to build and continuously improve their context and tools through task-level feedback.
+My current work connects [**agent memory and adaptation**](/publications/#memory-adaptation) with [**retrieval and semantic query processing**](/publications/#retrieval-semantics). It builds on my work in [hardware-efficient execution](/publications/#efficient-execution), [graph systems and learning](/publications/#graph-systems), and [query optimization and distributed analytics](/publications/#query-analytics).
 
-My current research studies how agents remember, organize information, retrieve evidence, and adapt how they work. Data systems support this agenda by making context and memory **reliable, reusable, and efficient**.
+The longer-term goal is **multi-agent and human–agent collaboration**: enabling people and agents to **build on one another's work over time**.
 
-**Longer-term view**
-
-- [**When Intelligence Becomes Abundant: Organizing the Shared Information World of Humans and AI Agents**](/blog/2026/shared-information-world-ai-agents/)
-- [**The Next Generation of Context Management**](/blog/2026/next-gen-agent-en/)
+**Research perspective:** [Organizing the Shared Information World of Humans and AI Agents](/blog/2026/shared-information-world-ai-agents/) · [The Next Generation of Context Management](/blog/2026/next-gen-agent-en/)
 </div>
 </section>
 
@@ -54,13 +49,13 @@ My current research studies how agents remember, organize information, retrieve 
 <h2 class="about-section-label" id="selected-systems">Selected Projects</h2>
 <div class="about-section-content" markdown="1">
 
-- [**AutoIA @ ByteDance**](/projects/1_autoia/) — a self-evolving agent harness centered on context and memory.
+- [**AutoIA @ ByteDance**](/projects/1_autoia/) — my current work on a self-evolving agent harness, connecting context representations, agent-team construction, and feedback-driven evolution.
 - [**Independent Research**](/projects/5_independent_research/) — research projects and academic collaborations across data systems and AI.
 - [**GES @ Huawei**](/projects/3_ges/) — production graph database infrastructure.
 - [**TQEX @ Huawei**](/projects/2_tqex/) — tensor-centric SQL and graph execution on heterogeneous accelerators.
 - [**Database & Graph Research Systems @ CUHK**](/projects/4_database_graph_systems/) — distributed query processing and graph systems.
 
-[**Publications**](/publications/) contains the full research record.
+[**Explore all research projects**](/projects/) · [**Papers by research area**](/publications/)
 </div>
 </section>
 
@@ -97,10 +92,7 @@ I welcome collaboration on AI agents, agent memory, self-evolving harnesses, and
 <h2 class="about-section-label" id="recent-news">Recent News</h2>
 <div class="about-section-content" markdown="1">
 
-- **09/2026** — Two papers accepted by **ICDE'27**: [**ISPG**](/publications/#ICDE-27-1) and [**Vora**](/publications/#ICDE-27-2).
-- **08/2026** — [**DocNavRAG**](/publications/#Arxiv-26-4) released on arXiv.
-- **07/2026** — [**AdaMM**](/publications/#Arxiv-26-3) released on arXiv.
-- **07/2026** — [**Sema**](/publications/#VLDB-26-2) accepted by PVLDB'26; [**CoreSemDB**](/publications/#COLM-26) accepted by COLM'26.
+{% include news.liquid limit=true %}
 
 [→ All news](/news/)
 </div>

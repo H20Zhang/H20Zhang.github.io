@@ -1,0 +1,75 @@
+// Scoped additions retain the site's existing editorial typography and palette.
+.research-area-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.15rem;
+  margin: 1.2rem 0 1.8rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+
+  a { text-underline-offset: 0.2em; }
+  .research-area-count { color: var(--global-text-color-light); margin-left: 0.2rem; font-size: 0.8rem; }
+}
+
+.publication-explorer {
+  [hidden] { display: none !important; }
+  .publication-intro { max-width: 70ch; }
+  .publication-tools { display: flex; align-items: flex-start; gap: 1.25rem; justify-content: space-between; }
+  .publication-search { flex: 1 1 22rem; min-width: 0; }
+  .bibsearch-form-input { width: 100%; margin: 0; }
+  .publication-search-hint { margin: 0.4rem 0 0; font-size: 0.8rem; color: var(--global-text-color-light); }
+  .publication-view-controls { display: flex; flex: 0 0 auto; gap: 0.3rem; }
+  .publication-view-controls button, #publication-reset {
+    font: inherit;
+    font-size: 0.84rem;
+    line-height: 1.4;
+    padding: 0.65rem 0.8rem;
+    min-height: 44px;
+    color: var(--global-text-color);
+    background: transparent;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .publication-view-controls button[aria-pressed="true"] {
+    color: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+    font-weight: 500;
+  }
+  button:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; }
+  .publication-status-row { display: flex; align-items: baseline; gap: 0.4rem 1rem; flex-wrap: wrap; margin: 1rem 0 2rem; }
+  .publication-status-row p { margin: 0; font-size: 0.8rem; color: var(--global-text-color-light); }
+  #publication-results { margin-left: auto; }
+  #publication-reset { border: 0; padding: 0.3rem 0; color: var(--global-theme-color); text-decoration: underline; }
+  .publication-group { margin: 0 0 3rem; }
+  .publication-group-title { margin: 0; font-size: 1.45rem; font-weight: 500; line-height: 1.35; letter-spacing: -0.02em; scroll-margin-top: 100px; }
+  .publication-group-description { margin: 0.55rem 0 0; max-width: 72ch; font-size: 0.94rem; line-height: 1.6; color: var(--global-text-color-light); }
+  .publication-group .publications h2.bibliography,
+  .publication-group .publications ol.bibliography { margin-top: 1rem; }
+  .publication-empty { padding: 2rem 0; }
+  li[data-paper-id] { scroll-margin-top: 100px; }
+}
+
+.about-hero-actions { display: flex; gap: 1.3rem; flex-wrap: wrap; margin: 1.1rem 0 0; font-size: 0.94rem; }
+.about-hero-actions a { min-height: 44px; display: inline-flex; align-items: center; text-underline-offset: 0.2em; }
+.about-research-links { line-height: 1.8; }
+.post--article .post-header h1.post-title { font-size: clamp(2rem, 3.4vw, 2.8rem); line-height: 1.14; max-width: 28ch; }
+
+@media (max-width: 767px) {
+  .publication-explorer {
+    .publication-tools { flex-direction: column; gap: 0.8rem; }
+    .publication-search { flex-basis: auto; width: 100%; }
+    .publication-view-controls { width: 100%; }
+    .publication-view-controls button { flex: 1; }
+    .publication-group-title { font-size: 1.3rem; }
+    .publication-status-row { margin-bottom: 1.5rem; }
+    #publication-results { margin-left: 0; }
+  }
+  .about-page .about-hero-profile { max-width: 240px; }
+}
+
+@media (max-width: 575px) {
+  .publication-explorer .publication-group .publications ol.bibliography { margin-top: 0; }
+  .research-area-nav { gap: 0.5rem 0.9rem; font-size: 0.84rem; }
+  .post--article .post-header h1.post-title { font-size: 2rem; }
+}

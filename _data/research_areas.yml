@@ -1,0 +1,63 @@
+# One primary area per paper. Keys refer to the unchanged BibTeX records.
+# Topic membership does not imply institutional or project affiliation.
+- id: memory-adaptation
+  title: Agent Memory & Adaptation
+  short_title: Memory & adaptation
+  description: Memory for multimodal agents, test-time learning, and the systems that support adaptation.
+  papers:
+    - Submitted-26-IGMem
+    - Submitted-26-SSW
+    - Arxiv-26-3
+    - Arxiv-26-5
+- id: retrieval-semantics
+  title: Retrieval & Semantic Query Processing
+  short_title: Retrieval & semantic queries
+  description: Multimodal retrieval, vector search, document question answering, and queries combining semantic and relational operations.
+  papers:
+    - Submitted-26-GATOR
+    - ICDE-26
+    - VLDB-26-2
+    - COLM-26
+    - Arxiv-26-2
+    - Arxiv-26-4
+    - ATC-26
+- id: efficient-execution
+  title: Hardware-Efficient Execution
+  short_title: Efficient execution
+  description: Tensor-based and GPU-accelerated execution of SQL, graph queries, and graph analytics.
+  papers:
+    - ICDE-27-2
+    - SIGMOD-26-1
+    - SIGMOD-26-2
+    - SIGMOD-25-2
+    - VLDB-24
+- id: graph-systems
+  title: Graph Systems & Learning
+  short_title: Graph systems & learning
+  description: Graph storage, concurrent and incremental queries, graph representations, and learning on graphs.
+  papers:
+    - ICDE-27-1
+    - VLDB-26
+    - DASFAA-25
+    - SIGMOD-25-1
+    - SIGMOD-25-3
+    - VLDB-25
+    - ICDE-24-1
+    - ICDE-24-2
+- id: query-analytics
+  title: Query Optimization & Distributed Analytics
+  short_title: Query optimization & analytics
+  description: Join processing, learned estimation, distributed execution, and large-scale subgraph analytics.
+  papers:
+    - VLDBJ-23
+    - ICDE-22
+    - SIGMOD-22-1
+    - SIGMOD-22-2
+    - ICDE-21
+    - SIGMOD-21
+    - VLDB-20
+    - TKDE-19
+    - VLDB-18
+    - DASFAA-17
+    - Distributed-And-Parallel-Database-17
+    - BigData-16

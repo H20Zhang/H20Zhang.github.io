@@ -2,24 +2,30 @@
 layout: page
 title: Research & Systems
 permalink: /projects/
-description: Independent research and academic collaborations across data systems and AI, alongside systems developed at ByteDance, Huawei, and CUHK.
+description: Current research on agents, context, and memory, alongside independent collaborations and earlier work in retrieval, graph systems, and efficient execution.
 nav: true
 nav_order: 2
 horizontal: true
 project_groups:
-  - id: independent
-    label: Independent Research
   - id: bytedance
     label: ByteDance
+  - id: independent
+    label: Independent Research
   - id: huawei
     label: Huawei
   - id: cuhk
     label: CUHK
 ---
 
-My work spans context infrastructure, retrieval, semantic query processing, graph systems, and hardware-efficient execution. **Independent research and academic collaborations** are presented separately from projects at ByteDance, Huawei, and CUHK.
+My current work studies how agents build and improve context, memory, and tools. It draws on a broader research record in retrieval, semantic queries, graph systems, and hardware-efficient execution.
 
-Paper associations follow the affiliations in the original publications and the scope of each project, rather than publication dates or topic similarity alone.
+<nav class="research-area-nav" aria-label="Papers by research area">
+  {% for area in site.data.research_areas %}
+    <a href="{{ '/publications/' | relative_url }}#{{ area.id }}">{{ area.short_title }}</a>
+  {% endfor %}
+</nav>
+
+Projects below retain their institutional or independent-research attribution. Paper associations follow the affiliations and scope of the original work, not topic similarity alone.
 
 <div class="projects">
 {% assign sorted_projects = site.projects | sort: "importance" %}

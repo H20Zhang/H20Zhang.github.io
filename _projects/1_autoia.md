@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AutoIA @ ByteDance
-description: A self-evolving harness for AI agents, researching how task-level feedback can improve context, memory, and tools.
+description: A self-evolving agent harness connecting context representations, agent-team construction, and feedback-driven evolution.
 importance: 1
 category: systems
 project_group: bytedance
@@ -16,16 +16,25 @@ research_support:
         url: /publications/#Arxiv-26-3
         summary: Adds queryable analytic memory alongside retrieval memory to support filtering, aggregation, ranking, and temporal comparison over multimodal histories.
         role: Supports query-adaptive memory through analytic views over multimodal histories.
-
 ---
 
-I am developing AutoIA as a **self-evolving harness for AI agents**. Its goal is to help agent teams build and continuously improve their context and tools, using task-level feedback to guide adaptation.
+I am developing AutoIA as a **self-evolving harness for AI agents** at ByteDance. It studies how agent teams can build and continuously improve their context, memory, and tools through task-level feedback.
 
 ## Problem
 
-Agents work through memory, tool interfaces, and context assembled from documents, tables, multimodal data, and external knowledge. AutoIA studies how feedback from task execution can improve these capabilities over time. Its current context-centered approach starts with how agents retrieve and assemble evidence, then examines the information environment that makes this evidence available.
+An agent's performance depends not only on its model, but also on the knowledge it can access, the tools it can use, and how these are organized. AutoIA studies how this information environment can improve across tasks, rather than being rebuilt from scratch for every execution.
 
-## Core idea
+## Three connected mechanisms
+
+| Mechanism | Research question |
+| --- | --- |
+| **Context IR** | How can heterogeneous sources and derived knowledge share a composable, queryable representation? |
+| **Context teams** | How can agent teams discover sources and construct useful context representations and tools? |
+| **Context evolution** | How can task feedback guide what to retain, revise, and reuse in later tasks? |
+
+Together, these mechanisms connect **agents improving their information environment** with **a better environment supporting more capable agents**. They describe the system's research design, not a claim of measured end-to-end gains.
+
+## Feedback-driven improvement
 
 AutoIA's current context-centered approach uses a **nested optimization loop** within the agent harness.
 
@@ -33,16 +42,14 @@ AutoIA's current context-centered approach uses a **nested optimization loop** w
 
 **Outer loop.** When retrieval-level optimization is no longer sufficient, the same feedback drives changes to data integration, organization, representation, indexing, and storage, improving the underlying information environment itself.
 
-These loops provide a context-centered basis for an **evolving agent harness**. A longer-term question is **recursive self-improvement (RSI)**: whether the mechanisms that generate, evaluate, and select improvements can themselves be improved.
+A longer-term question is **recursive self-improvement (RSI)**: whether the mechanisms that generate, evaluate, and select improvements can themselves be improved.
 
-## Research role
+## Research scope
 
-AutoIA is my agent-harness research and development at ByteDance. It studies how agents can adapt through better context, memory, and task-level feedback. Data systems provide the supporting state and interfaces for this work, toward sustained collaboration among humans and multiple agents.
+AutoIA is my agent-harness research and development at ByteDance. The research linked below has ByteDance author affiliations and supports specific parts of this agenda; it is not evidence that every component is deployed as part of AutoIA.
 
-The research linked below has ByteDance author affiliations and is relevant to this harness research. My broader research agenda and independent academic collaborations are presented separately under [Independent Research](/projects/5_independent_research/).
+My broader research agenda and independent academic collaborations are presented separately under [Independent Research](/projects/5_independent_research/).
 
 ## Product context
 
-- [Volcano Engine ContextSearch](https://www.volcengine.com/product/context-search?_vtm_=a441938.b105878.0_0.0_0.0.133_11_000J33hNUY2PtPrMwlQ3ilQxfn2UtC) — the surrounding product context for context-search workloads.
-
-This link provides product context rather than a claim about the current deployment architecture of AutoIA.
+[Volcano Engine ContextSearch](https://www.volcengine.com/product/context-search?_vtm_=a441938.b105878.0_0.0_0.0.133_11_000J33hNUY2PtPrMwlQ3ilQxfn2UtC) provides the surrounding product context for context-search workloads. This link is not a claim about the current deployment architecture of AutoIA.

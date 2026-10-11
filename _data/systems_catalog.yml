@@ -1,0 +1,156 @@
+# The Systems index lists concrete systems, not research-area or affiliation buckets.
+# Paper links remain the source of publication status and authorship. An omitted
+# affiliation makes no institutional claim. Related research is not a claim that
+# separate implementations are components of a single deployed system.
+- id: agents-retrieval
+  label: Agents & retrieval
+  systems:
+    - id: autoia
+      name: AutoIA
+      affiliation: ByteDance
+      url: /projects/1_autoia/
+      action: Explore
+      description: A self-evolving agent harness connecting context representations, agent-team construction, and feedback-driven improvement of context, memory, and tools.
+      links:
+        - label: Overview
+          url: /projects/1_autoia/
+          primary: true
+        - label: Related memory research · AdaMM
+          url: /publications/#Arxiv-26-3
+    - id: ubase
+      name: UBASE
+      affiliation: ByteDance
+      url: /publications/#ATC-26
+      description: A production AI search engine for trillion-scale vector data, combining graph-index construction with hybrid memory and SSD storage.
+      links:
+        - label: Paper
+          url: /publications/#ATC-26
+          primary: true
+    - id: rw-ttt
+      name: RW-TTT
+      url: /publications/#Arxiv-26-5
+      description: A test-time training serving framework that preserves request-owned mutable state while batching compatible decode phases.
+      links:
+        - label: Paper
+          url: /publications/#Arxiv-26-5
+          primary: true
+    - id: docnavrag
+      name: DocNavRAG
+      url: /publications/#Arxiv-26-4
+      description: A document question-answering framework that navigates document-structured graphs and maintains an evolving evidence state across retrieval steps.
+      links:
+        - label: Paper
+          url: /publications/#Arxiv-26-4
+          primary: true
+    - id: veloann
+      name: VeloANN
+      url: /publications/#Arxiv-26-2
+      description: An SSD-resident graph indexing system that improves locality and asynchronous execution for high-throughput vector search.
+      links:
+        - label: Paper
+          url: /publications/#Arxiv-26-2
+          primary: true
+- id: query-graph-engines
+  label: Query & graph engines
+  systems:
+    - id: sema
+      name: Sema
+      url: /publications/#VLDB-26-2
+      description: A semantic query engine built on DuckDB, integrating LLM-powered operators into SQL with query optimization and adaptive execution.
+      links:
+        - label: Paper
+          url: /publications/#VLDB-26-2
+          primary: true
+    - id: sqlvec
+      name: SQLVec
+      url: /publications/#ICDE-26
+      description: A SQL-based vector similarity search system that brings nearest-neighbor retrieval into relational query processing.
+      links:
+        - label: Paper
+          url: /publications/#ICDE-26
+          primary: true
+    - id: ges
+      name: GES
+      affiliation: Huawei
+      url: /projects/3_ges/
+      action: Explore
+      description: A production graph database service combining composable architecture and factorized execution for high-concurrency interactive graph workloads.
+      links:
+        - label: Overview
+          url: /projects/3_ges/
+          primary: true
+        - label: GES paper
+          url: /publications/#SIGMOD-25-1
+        - label: Related · RapidStore
+          url: /publications/#VLDB-25
+        - label: Related · Aquila
+          url: /publications/#VLDB-26
+    - id: tqex
+      name: TQEX
+      affiliation: Huawei
+      url: /projects/2_tqex/
+      action: Explore
+      description: A tensor-based SQL query engine using tensor runtimes as a portable execution layer across heterogeneous accelerators.
+      links:
+        - label: Overview
+          url: /projects/2_tqex/
+          primary: true
+        - label: TQEX(SQL) paper
+          url: /publications/#SIGMOD-26-2
+        - label: Related · TenGraph
+          url: /publications/#VLDB-24
+        - label: Related · TGraph
+          url: /publications/#SIGMOD-25-2
+    - id: vora
+      name: Vora
+      url: /publications/#ICDE-27-2
+      description: A vector-based engine for scalable GPU-accelerated subgraph query processing.
+      links:
+        - label: Paper
+          url: /publications/#ICDE-27-2
+          primary: true
+- id: distributed-analytics
+  label: Distributed analytics
+  systems:
+    - id: seccosql
+      name: SeccoSQL
+      affiliation: CUHK
+      url: /projects/4_database_graph_systems/#seccosql
+      action: Explore
+      description: A distributed SQL engine that separates communication from local computation to expose a larger query-optimization space.
+      links:
+        - label: Overview
+          url: /projects/4_database_graph_systems/#seccosql
+          primary: true
+        - label: Paper
+          url: /publications/#SIGMOD-22-1
+        - label: Code
+          url: https://github.com/H20Zhang/SeccoSQL
+    - id: disc
+      name: DISC
+      affiliation: CUHK
+      url: /projects/4_database_graph_systems/#disc
+      action: Explore
+      description: A distributed graph analytics system that expresses subgraph counting as relational queries, reusing query optimization and execution techniques.
+      links:
+        - label: Overview
+          url: /projects/4_database_graph_systems/#disc
+          primary: true
+        - label: Paper
+          url: /publications/#VLDB-20
+        - label: Code
+          url: https://github.com/H20Zhang/DISC
+    - id: crystal
+      name: Crystal
+      affiliation: CUHK
+      url: /projects/4_database_graph_systems/#crystal
+      action: Explore
+      description: A compressed subgraph-matching system that computes compressed results directly to reduce intermediate and output materialization.
+      links:
+        - label: Overview
+          url: /projects/4_database_graph_systems/#crystal
+          primary: true
+        - label: Paper
+          url: /publications/#VLDB-18
+        - label: Code
+          url: https://github.com/H20Zhang/Crystal

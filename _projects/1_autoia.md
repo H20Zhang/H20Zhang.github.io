@@ -48,7 +48,7 @@ A longer-term question is **recursive self-improvement (RSI)**: whether the mech
 
 AutoIA is my agent-harness research and development at ByteDance. The research linked below has ByteDance author affiliations and supports specific parts of this agenda; it is not evidence that every component is deployed as part of AutoIA.
 
-My broader research agenda and independent academic collaborations are presented separately under [Independent Research](/projects/5_independent_research/).
+[Publications](/publications/) contains my broader research record, including independent academic collaborations.
 
 ## Product context
 

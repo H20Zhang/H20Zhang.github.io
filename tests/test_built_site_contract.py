@@ -558,12 +558,12 @@ class BuiltSiteContractTest(unittest.TestCase):
                 self.assertEqual(schema["@type"], "WebPage")
                 self.assertEqual(og_type, "website")
 
-    def test_homepage_presents_independent_research_and_institutional_projects(self):
+    def test_homepage_presents_named_systems(self):
         self.assertEqual(self.homepage.selected_systems_items, 5)
-        self.assertIn("Independent Research", self.homepage.selected_systems_text)
-        self.assertIn("Selected Projects", self.homepage.selected_systems_text)
-        self.assertIn("GES @ Huawei", self.homepage.selected_systems_text)
-        self.assertIn("TQEX @ Huawei", self.homepage.selected_systems_text)
+        self.assertNotIn("Independent Research", self.homepage.selected_systems_text)
+        self.assertIn("Selected Systems", self.homepage.selected_systems_text)
+        for name in ("AutoIA @ ByteDance", "UBASE @ ByteDance", "Sema", "GES @ Huawei", "TQEX @ Huawei"):
+            self.assertIn(name, self.homepage.selected_systems_text)
         self.assertNotIn("Huawei-era systems", self.homepage.selected_systems_text)
 
     def test_homepage_uses_cycling_profile_photo(self):
@@ -688,29 +688,27 @@ class BuiltSiteContractTest(unittest.TestCase):
     def test_cv_page_is_not_published(self):
         self.assertFalse((SITE / "cv" / "index.html").exists())
 
-    def test_systems_page_is_a_hierarchical_index(self):
+    def test_systems_page_lists_systems_not_affiliation_buckets(self):
         systems_html = (SITE / "projects" / "index.html").read_text(
             encoding="utf-8"
         )
-
-        for label in ("Independent Research", "ByteDance", "Huawei", "CUHK"):
+        self.assertIn("<title>Systems | Hao Zhang</title>", systems_html)
+        for label in ("Agents &amp; retrieval", "Query &amp; graph engines", "Distributed analytics"):
             self.assertIn(f">{label}<", systems_html)
         for system in (
-            "Independent Research",
-            "AutoIA @ ByteDance",
-            "GES @ Huawei",
-            "TQEX @ Huawei",
-            "Database &amp; Graph Research Systems @ CUHK",
+            "AutoIA @ ByteDance", "UBASE @ ByteDance", "Sema", "RW-TTT",
+            "VeloANN", "SQLVec", "DocNavRAG", "Vora", "GES @ Huawei",
+            "TQEX @ Huawei", "SeccoSQL @ CUHK", "DISC @ CUHK", "Crystal @ CUHK",
         ):
             self.assertIn(system, systems_html)
+        self.assertNotIn("Independent Research", systems_html)
+        self.assertNotIn("Research &amp; Systems", systems_html)
         self.assertNotIn("Research threads", systems_html)
         self.assertNotIn("system-entry-research", systems_html)
 
+        # Keep existing detail URLs and paper-attribution boundaries intact.
         for detail_path in (
-            "5_independent_research",
-            "1_autoia",
-            "2_tqex",
-            "3_ges",
+            "5_independent_research", "1_autoia", "2_tqex", "3_ges",
             "4_database_graph_systems",
         ):
             detail_html = (

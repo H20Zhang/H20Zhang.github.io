@@ -1,4 +1,4 @@
-"""Keep independent work separate from company project paper associations."""
+"""Keep paper attribution independent of the system-oriented index layout."""
 from pathlib import Path
 import re
 import unittest
@@ -30,21 +30,25 @@ def paper_ids(text):
 
 
 class ProjectAttributionContractTest(unittest.TestCase):
-    def test_homepage_connects_context_to_collaboration(self):
+    def test_homepage_connects_context_to_collaboration_and_named_systems(self):
         page = read("_pages/about.md")
         self.assertIn("multi-agent and human–agent collaboration", page)
         self.assertIn("build on one another's work over time", page)
-        self.assertIn("Selected Projects", page)
-        self.assertIn(INDEPENDENT_URL, page)
+        self.assertIn("Selected Systems", page)
+        self.assertIn("[**Sema**](/projects/#sema)", page)
+        self.assertNotIn(INDEPENDENT_URL, page)
         self.assertNotIn("is the platform for this work", page)
 
-    def test_groups_are_explicit_not_inferred_from_sort_order(self):
+    def test_catalog_selection_is_explicit_not_inferred_from_affiliation(self):
         page = read("_pages/projects.md")
-        self.assertIn("title: Research & Systems", page)
-        self.assertIn('where: "project_group", group.id', page)
+        self.assertIn("title: Systems", page)
+        self.assertIn("site.data.systems_catalog", page)
+        self.assertNotIn('where: "project_group"', page)
         self.assertNotIn("project.importance ==", page)
-        for group in ("independent", "bytedance", "huawei", "cuhk"):
-            self.assertIn(f"- id: {group}", page)
+        catalog = read("_data/systems_catalog.yml")
+        self.assertNotIn("name: Independent Research", catalog)
+        for name in ("AutoIA", "Sema", "UBASE", "RW-TTT", "VeloANN", "SeccoSQL", "DISC", "Crystal"):
+            self.assertIn(f"name: {name}\n", catalog)
 
     def test_paper_associations_match_reviewed_project_boundaries(self):
         overview = read("_data/systems_overview.yml")
@@ -70,7 +74,7 @@ class ProjectAttributionContractTest(unittest.TestCase):
         self.assertNotIn("{% if page.category == 'systems' %}", layout)
         self.assertIn("{% include system_research_details.liquid %}", layout)
 
-    def test_independent_research_spans_multiple_directions(self):
+    def test_legacy_independent_research_page_retains_its_content(self):
         path = ROOT / "_projects/5_independent_research.md"
         self.assertTrue(path.exists())
         page = path.read_text(encoding="utf-8")

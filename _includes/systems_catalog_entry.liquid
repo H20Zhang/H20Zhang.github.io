@@ -1,0 +1,15 @@
+{% assign system = include.system %}
+<article class="system-entry{% if system.id == 'autoia' %} system-entry--primary{% endif %}" id="{{ system.id }}">
+  <div class="system-entry-heading">
+    <h3 class="system-entry-title">
+      <a class="system-entry-title-link" href="{{ system.url | relative_url }}">{{ system.name | escape }}{% if system.affiliation %} @ {{ system.affiliation | escape }}{% endif %}</a>
+    </h3>
+    <a class="system-entry-arrow" href="{{ system.url | relative_url }}" aria-label="{{ system.action | default: 'Read about' }} {{ system.name | escape }}">→</a>
+  </div>
+  <p class="system-entry-narrative">{{ system.description | escape }}</p>
+  <div class="system-entry-actions system-entry-paper-links">
+    {% for link in system.links %}
+      <a href="{{ link.url | relative_url }}"{% if link.primary %} class="system-entry-explore"{% endif %}>{{ link.label | escape }}</a>
+    {% endfor %}
+  </div>
+</article>

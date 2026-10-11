@@ -46,16 +46,16 @@ The longer-term goal is **multi-agent and human–agent collaboration**: enablin
 </section>
 
 <section class="about-section" aria-labelledby="selected-systems">
-<h2 class="about-section-label" id="selected-systems">Selected Projects</h2>
+<h2 class="about-section-label" id="selected-systems">Selected Systems</h2>
 <div class="about-section-content" markdown="1">
 
-- [**AutoIA @ ByteDance**](/projects/1_autoia/) — my current work on a self-evolving agent harness, connecting context representations, agent-team construction, and feedback-driven evolution.
-- [**Independent Research**](/projects/5_independent_research/) — research projects and academic collaborations across data systems and AI.
+- [**AutoIA @ ByteDance**](/projects/1_autoia/) — a self-evolving agent harness connecting context representations, agent-team construction, and feedback-driven evolution.
+- [**UBASE @ ByteDance**](/projects/#ubase) — a production AI search engine for large-scale vector data management.
+- [**Sema**](/projects/#sema) — a semantic query engine combining relational operations with LLM-powered reasoning.
 - [**GES @ Huawei**](/projects/3_ges/) — production graph database infrastructure.
-- [**TQEX @ Huawei**](/projects/2_tqex/) — tensor-centric SQL and graph execution on heterogeneous accelerators.
-- [**Database & Graph Research Systems @ CUHK**](/projects/4_database_graph_systems/) — distributed query processing and graph systems.
+- [**TQEX @ Huawei**](/projects/2_tqex/) — tensor-based SQL execution across heterogeneous accelerators.
 
-[**Explore all research projects**](/projects/) · [**Papers by research area**](/publications/)
+[**Explore all systems**](/projects/) · [**Papers by research area**](/publications/)
 </div>
 </section>
 

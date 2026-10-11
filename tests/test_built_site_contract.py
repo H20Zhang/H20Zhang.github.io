@@ -785,17 +785,19 @@ class BuiltSiteContractTest(unittest.TestCase):
         )
         self.assertEqual(button_rule.get("font-size"), ".84rem")
 
-    def test_homepage_profile_metadata_avoids_repeating_the_hero(self):
+    def test_homepage_keeps_contact_below_hero_without_photo_metadata(self):
         homepage_html = (SITE / "index.html").read_text(encoding="utf-8")
-        more_info = re.search(
-            r'<div class="more-info">(.*?)</div>', homepage_html, re.DOTALL
+        profile = re.search(
+            r'<aside class="about-hero-profile".*?</aside>',
+            homepage_html, re.DOTALL
         )
-        self.assertIsNotNone(more_info)
-        profile_metadata = more_info.group(1)
-
-        self.assertIn("zhanghaowuda12@gmail.com", profile_metadata)
-        self.assertNotIn("Research Scientist, ByteDance", profile_metadata)
-        self.assertNotIn("Data systems for agents.", profile_metadata)
+        self.assertIsNotNone(profile)
+        self.assertNotIn('class="more-info"', profile.group())
+        self.assertNotIn("mailto:", profile.group())
+        self.assertNotIn('class="about-hero-actions"', homepage_html)
+        self.assertIn('aria-labelledby="collaboration-internship"', homepage_html)
+        self.assertIn("zhanghaowuda12", homepage_html)
+        self.assertIn('class="about-footer-social social"', homepage_html)
 
         social_rule = compiled_css_rule(
             self.css, ".about-footer-social .contact-icons"

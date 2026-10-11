@@ -108,9 +108,11 @@ puts f.hao_date(Date.new(2026, 7, 1), '%B %Y')
                                 text=True, capture_output=True, check=True)
         self.assertEqual(result.stdout.splitlines(), ['2025-12-01', '2026-01-01', 'July 2026'])
 
-    def test_homepage_actions_precede_the_profile_and_404_does_not_redirect(self):
+    def test_homepage_uses_primary_navigation_only_and_404_does_not_redirect(self):
         home = (SITE / 'index.html').read_text()
-        self.assertLess(home.index('class="about-hero-actions"'), home.index('class="about-hero-profile"'))
+        self.assertNotIn('class="about-hero-actions"', home)
+        self.assertIn('id="navbar"', home)
+        self.assertIn('class="about-hero-profile"', home)
         error = (SITE / '404.html').read_text().lower()
         self.assertNotIn('http-equiv="refresh"', error)
         self.assertNotIn('within 3 seconds', error)

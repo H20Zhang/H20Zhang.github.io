@@ -16,8 +16,6 @@ profile:
   image: homepage-cycling.jpeg
   image_alt: Hao Zhang cycling on the Tianfu Greenway
   image_circular: false
-  more_info: >
-    <p><a href="mailto:zhanghaowuda12@gmail.com">zhanghaowuda12@gmail.com</a></p>
 
 recent_publications: false
 social: true

@@ -21,11 +21,6 @@ layout: default
 
         <h2 class="about-tagline">{{ page.hero_title }}</h2>
         <div class="about-intro">{{ page.hero_intro | markdownify }}</div>
-        <nav class="about-hero-actions" aria-label="Explore my work">
-          <a href="{{ '/projects/' | relative_url }}">Systems</a>
-          <a href="{{ '/publications/' | relative_url }}">Publications</a>
-          <a href="mailto:zhanghaowuda12@gmail.com">Contact</a>
-        </nav>
       </div>
 
       {% if page.profile %}
@@ -44,9 +39,6 @@ layout: default
                 include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile_image_alt
                 cache_bust=true
               %}
-            {% endif %}
-            {% if page.profile.more_info %}
-              <div class="more-info">{{ page.profile.more_info }}</div>
             {% endif %}
           </div>
         </aside>

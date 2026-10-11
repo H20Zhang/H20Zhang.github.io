@@ -7,11 +7,9 @@ subtitle: Research Scientist at ByteDance
 description: Hao Zhang researches self-improving AI agents through evolving harnesses, context, and memory, alongside independent research and academic collaborations across data systems and AI.
 keywords: Hao Zhang, ByteDance, independent research, multi-agent collaboration, human-agent collaboration, AI agents, self-improving agents, evolving harnesses, agent harness, context infrastructure, shared information state, information organization, context management, agent memory, context search, vector search, graph systems, semantic query processing, hardware-accelerated data systems
 last_modified_at: 2026-10-11
-hero_title: Self-improving AI agents through evolving harnesses and context.
+hero_title: Building AI agents that learn and improve.
 hero_intro: |
-  **Agent memory, context representations, and feedback-driven adaptation.**
-
-  I am a Research Scientist at ByteDance. I study **self-improving AI agents**, with a focus on the harnesses, context, and memory that shape how they work.
+  I am a Research Scientist at ByteDance. I develop AutoIA, a harness that helps agent teams build, use, and improve their context, memory, and tools.
 
   The longer-term goal is **multi-agent and human–agent collaboration**: enabling people and agents to **build on one another's work over time**, while keeping track of changing information and human decisions.
 

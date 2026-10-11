@@ -26,19 +26,11 @@
         - label: Paper
           url: /publications/#ATC-26
           primary: true
-    - id: rw-ttt
-      name: RW-TTT
-      url: /publications/#Arxiv-26-5
-      description: A test-time training serving framework that preserves request-owned mutable state while batching compatible decode phases.
-      links:
-        - label: Paper
-          url: /publications/#Arxiv-26-5
-          primary: true
 - id: query-graph-engines
   label: Query & graph engines
   systems:
     - id: sema
-      name: Sema
+      name: SEMA
       url: /publications/#VLDB-26-2
       description: A semantic query engine built on DuckDB, integrating LLM-powered operators into SQL with query optimization and adaptive execution.
       links:

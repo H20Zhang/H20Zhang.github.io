@@ -8,9 +8,9 @@ project_group: independent
 explore_label: Explore research
 related_publications: false
 research_support:
-  - area: Semantic query processing
+  - area: SEMAntic query processing
     papers:
-      - name: Sema
+      - name: SEMA
         venue: PVLDB 2026
         url: /publications/#VLDB-26-2
         summary: Introduces LLM-powered semantic operators in SQL with optimization and adaptive execution.
@@ -35,7 +35,7 @@ My independent research and academic collaborations span **data systems and AI**
 
 ## Research directions
 
-**Semantic query processing.** How can database systems combine relational operations with semantic reasoning while controlling execution cost? Sema explores first-class semantic operators, query optimization, and adaptive execution.
+**SEMAntic query processing.** How can database systems combine relational operations with semantic reasoning while controlling execution cost? SEMA explores first-class semantic operators, query optimization, and adaptive execution.
 
 **Document retrieval.** How can agents navigate large document collections and accumulate the evidence needed for complex questions? DocNavRAG explores document-structured graphs and stateful evidence construction.
 

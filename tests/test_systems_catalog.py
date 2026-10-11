@@ -80,13 +80,13 @@ class SystemsCatalogTest(unittest.TestCase):
     def test_catalog_includes_systems_not_methods_or_benchmarks(self):
         names = {system['name'] for system in self.systems}
         self.assertTrue({
-            'AutoIA', 'UBASE', 'RW-TTT', 'Sema', 'GES', 'TQEX',
+            'AutoIA', 'UBASE', 'SEMA', 'GES', 'TQEX',
             'TGraph', 'TenGraph', 'Vora', 'SeccoSQL', 'DISC', 'Crystal',
         }.issubset(names))
-        self.assertEqual(len(names), 12)
+        self.assertEqual(len(names), 11)
         self.assertTrue({
             'Independent Research', 'CoreSemDB', 'GATOR', 'IGMem', 'SSW',
-            'DocNavRAG', 'VeloANN', 'SQLVec',
+            'DocNavRAG', 'VeloANN', 'SQLVec', 'RW-TTT',
         }.isdisjoint(names))
 
     def test_affiliation_is_only_displayed_for_reviewed_systems(self):

@@ -61,6 +61,12 @@ class ResearchNavigationTest(unittest.TestCase):
         areas = re.findall(r'^- id: (\S+)$', data, re.M)
         page = parse('publications/index.html')
         self.assertEqual(page.areas, areas)
+        self.assertEqual(len(areas), 6)
+        self.assertEqual(len(keys), 36)
+        self.assertNotIn('short_title:', data)
+        template = (ROOT / '_pages/publications.md').read_text()
+        self.assertIn('{{ area.title }}', template)
+        self.assertNotIn('area.short_title', template)
         self.assertEqual(Counter(item['data-paper-id'] for item in page.papers), Counter(keys))
         self.assertEqual(len(keys), len(set(keys)))
         for key in keys:
@@ -76,6 +82,21 @@ class ResearchNavigationTest(unittest.TestCase):
         self.assertIn('Submitted to ICLR 2027, September 2026', html)
         self.assertIn('Hao Zhang is a corresponding author.', html)
         self.assertIn('data-publication-view="year"', html)
+
+    def test_iclr_submissions_hide_openreview_and_bibtex(self):
+        html = (SITE / 'publications/index.html').read_text()
+        for key in ('Submitted-26-IGMem', 'Submitted-26-GATOR', 'Submitted-26-SSW'):
+            entry = re.search(
+                rf'<li\b[^>]*data-paper-id="{re.escape(key)}"[^>]*>(.*?)</li>',
+                html, re.DOTALL,
+            )
+            self.assertIsNotNone(entry, key)
+            block = entry.group(1)
+            self.assertIn('Submitted to ICLR 2027', block)
+            self.assertNotIn('openreview.net', block)
+            self.assertNotIn('OpenReview', block)
+            self.assertNotIn('>BibTeX<', block)
+            self.assertNotIn(f'{key}-bibtex', block)
 
     def test_resource_labels_match_destinations(self):
         for href, label in parse('publications/index.html').links:

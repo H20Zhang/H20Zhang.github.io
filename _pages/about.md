@@ -35,7 +35,7 @@ latest_posts:
 <h2 class="about-section-label" id="current-focus">Research Directions</h2>
 <div class="about-section-content" markdown="1">
 
-My current work connects [**agent memory and adaptation**](/publications/#memory-adaptation) with [**retrieval and semantic query processing**](/publications/#retrieval-semantics). It builds on my work in [hardware-efficient execution](/publications/#efficient-execution), [graph systems and learning](/publications/#graph-systems), and [query optimization and distributed analytics](/publications/#query-analytics).
+My current work connects [**agent memory and retrieval**](/publications/#memory-adaptation), [**test-time learning and serving**](/publications/#test-time-learning-serving), and [**semantic queries and vector search**](/publications/#retrieval-semantics). It builds on my work in [hardware-efficient execution](/publications/#efficient-execution), [graph systems and learning](/publications/#graph-systems), and [query optimization and distributed analytics](/publications/#query-analytics).
 
 The longer-term goal is **multi-agent and human–agent collaboration**: enabling people and agents to **build on one another's work over time**.
 
@@ -48,8 +48,7 @@ The longer-term goal is **multi-agent and human–agent collaboration**: enablin
 <div class="about-section-content" markdown="1">
 
 - [**AutoIA @ ByteDance**](/projects/1_autoia/) — a self-evolving agent harness connecting context representations, agent-team construction, and feedback-driven evolution.
-- [**UBASE @ ByteDance**](/projects/#ubase) — a production AI search engine for large-scale vector data management.
-- [**Sema**](/projects/#sema) — a semantic query engine combining relational operations with LLM-powered reasoning.
+- [**SEMA**](/projects/#sema) — a semantic query engine combining relational operations with LLM-powered reasoning.
 - [**GES @ Huawei**](/projects/3_ges/) — production graph database infrastructure.
 - [**TQEX @ Huawei**](/projects/2_tqex/) — tensor-based SQL execution across heterogeneous accelerators.
 

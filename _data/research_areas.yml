@@ -1,29 +1,30 @@
 # One primary area per paper. Keys refer to the unchanged BibTeX records.
 # Topic membership does not imply institutional or project affiliation.
 - id: memory-adaptation
-  title: Agent Memory & Adaptation
-  short_title: Memory & adaptation
-  description: Memory for multimodal agents, test-time learning, and the systems that support adaptation.
+  title: Agent Memory & Retrieval
+  description: Multimodal agent memory, evidence retrieval, and stateful evidence construction.
   papers:
     - Submitted-26-IGMem
-    - Submitted-26-SSW
     - Arxiv-26-3
+    - Submitted-26-GATOR
+    - Arxiv-26-4
+- id: test-time-learning-serving
+  title: Test-Time Learning & Serving
+  description: Test-time learning, selective memory writing, and serving systems for adaptation.
+  papers:
+    - Submitted-26-SSW
     - Arxiv-26-5
 - id: retrieval-semantics
-  title: Retrieval & Semantic Query Processing
-  short_title: Retrieval & semantic queries
-  description: Multimodal retrieval, vector search, document question answering, and queries combining semantic and relational operations.
+  title: Semantic Queries & Vector Search
+  description: Semantic-relational queries, vector similarity search, and efficient AI search engines.
   papers:
-    - Submitted-26-GATOR
     - ICDE-26
     - VLDB-26-2
     - COLM-26
     - Arxiv-26-2
-    - Arxiv-26-4
     - ATC-26
 - id: efficient-execution
   title: Hardware-Efficient Execution
-  short_title: Efficient execution
   description: Tensor-based and GPU-accelerated execution of SQL, graph queries, and graph analytics.
   papers:
     - ICDE-27-2
@@ -33,7 +34,6 @@
     - VLDB-24
 - id: graph-systems
   title: Graph Systems & Learning
-  short_title: Graph systems & learning
   description: Graph storage, concurrent and incremental queries, graph representations, and learning on graphs.
   papers:
     - ICDE-27-1
@@ -46,7 +46,6 @@
     - ICDE-24-2
 - id: query-analytics
   title: Query Optimization & Distributed Analytics
-  short_title: Query optimization & analytics
   description: Join processing, learned estimation, distributed execution, and large-scale subgraph analytics.
   papers:
     - VLDBJ-23

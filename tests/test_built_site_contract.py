@@ -559,12 +559,13 @@ class BuiltSiteContractTest(unittest.TestCase):
                 self.assertEqual(og_type, "website")
 
     def test_homepage_presents_named_systems(self):
-        self.assertEqual(self.homepage.selected_systems_items, 5)
+        self.assertEqual(self.homepage.selected_systems_items, 4)
         self.assertNotIn("Independent Research", self.homepage.selected_systems_text)
         self.assertIn("Selected Systems", self.homepage.selected_systems_text)
-        for name in ("AutoIA @ ByteDance", "UBASE @ ByteDance", "Sema", "GES @ Huawei", "TQEX @ Huawei"):
+        for name in ("AutoIA @ ByteDance", "SEMA", "GES @ Huawei", "TQEX @ Huawei"):
             self.assertIn(name, self.homepage.selected_systems_text)
         self.assertNotIn("Huawei-era systems", self.homepage.selected_systems_text)
+        self.assertNotIn("UBASE", self.homepage.selected_systems_text)
 
     def test_homepage_uses_cycling_profile_photo(self):
         cycling_images = [
@@ -578,6 +579,18 @@ class BuiltSiteContractTest(unittest.TestCase):
         self.assertEqual(
             cycling_images[0].get("alt"),
             "Hao Zhang cycling on the Tianfu Greenway",
+        )
+
+    def test_homepage_photo_width_at_desktop_and_mobile_breakpoints(self):
+        desktop = compiled_css_rule(self.css, ".about-hero-profile")
+        mobile = compiled_css_cascade_rule(self.css, ".about-hero-profile")
+        self.assertEqual(desktop.get("max-width"), "340px")
+        self.assertEqual(mobile.get("max-width"), "320px")
+        self.assertNotIn(".about-page .about-hero-profile", self.css)
+        hero = compiled_css_rule(self.css, ".about-hero")
+        self.assertEqual(
+            re.sub(r"\s+", "", hero.get("grid-template-columns", "")),
+            "minmax(0,1.5fr)minmax(300px,1fr)",
         )
 
     def test_homepage_full_bleed_sections_do_not_use_scrollbar_width(self):
@@ -696,12 +709,11 @@ class BuiltSiteContractTest(unittest.TestCase):
         for label in ("Agents &amp; retrieval", "Query &amp; graph engines", "Distributed analytics"):
             self.assertIn(f">{label}<", systems_html)
         for system in (
-            "AutoIA @ ByteDance", "UBASE @ ByteDance", "Sema", "RW-TTT",
-            "Vora", "GES @ Huawei", "TQEX @ Huawei", "TGraph @ Huawei",
+            "AutoIA @ ByteDance", "UBASE @ ByteDance", "SEMA", "Vora", "GES @ Huawei", "TQEX @ Huawei", "TGraph @ Huawei",
             "TenGraph @ Huawei", "SeccoSQL @ CUHK", "DISC @ CUHK", "Crystal @ CUHK",
         ):
             self.assertIn(system, systems_html)
-        for excluded in ("DocNavRAG", "VeloANN", "SQLVec"):
+        for excluded in ("DocNavRAG", "VeloANN", "SQLVec", "RW-TTT"):
             self.assertNotIn(excluded, systems_html)
         self.assertNotIn("Independent Research", systems_html)
         self.assertNotIn("Research &amp; Systems", systems_html)

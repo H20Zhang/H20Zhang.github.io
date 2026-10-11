@@ -2,7 +2,7 @@
   story: >-
     Independent research projects and academic collaborations across data systems and AI, including semantic query processing, document retrieval, and hardware-efficient graph algorithms. These are separate projects with their own research questions, alongside longer-term exploration of shared context for collaboration among humans and multiple agents.
   research:
-    - name: Sema
+    - name: SEMA
       url: /publications/#VLDB-26-2
     - name: DocNavRAG
       url: /publications/#Arxiv-26-4

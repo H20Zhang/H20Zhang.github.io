@@ -34,7 +34,7 @@ layout: default
                 {% assign profile_image_class = 'img-fluid profile-image' %}
               {% endif %}
               {% assign profile_image_alt = page.profile.image_alt | default: page.profile.image %}
-              {% capture sizes %}(min-width: 930px) 272px, (min-width: 768px) 28vw, 240px{% endcapture %}
+              {% capture sizes %}(min-width: 930px) 340px, (min-width: 768px) 38vw, (min-width: 350px) 320px, 100vw{% endcapture %}
               {%
                 include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile_image_alt
                 cache_bust=true

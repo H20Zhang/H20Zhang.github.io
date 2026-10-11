@@ -10,7 +10,7 @@ nav_order: 1
 <div id="publication-explorer" class="publication-explorer">
   <nav class="research-area-nav" aria-label="Research areas">
     {% for area in site.data.research_areas %}
-      <a href="#{{ area.id }}" data-research-area="{{ area.id }}">{{ area.short_title }} <span class="research-area-count">{{ area.papers.size }}</span></a>
+      <a href="#{{ area.id }}" data-research-area="{{ area.id }}">{{ area.title }} <span class="research-area-count">{{ area.papers.size }}</span></a>
     {% endfor %}
   </nav>
   <div class="publication-tools">

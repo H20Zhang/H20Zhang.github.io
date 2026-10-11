@@ -35,7 +35,7 @@ class ProjectAttributionContractTest(unittest.TestCase):
         self.assertIn("multi-agent and human–agent collaboration", page)
         self.assertIn("build on one another's work over time", page)
         self.assertIn("Selected Systems", page)
-        self.assertIn("[**Sema**](/projects/#sema)", page)
+        self.assertIn("[**SEMA**](/projects/#sema)", page)
         self.assertNotIn(INDEPENDENT_URL, page)
         self.assertNotIn("is the platform for this work", page)
 
@@ -47,7 +47,7 @@ class ProjectAttributionContractTest(unittest.TestCase):
         self.assertNotIn("project.importance ==", page)
         catalog = read("_data/systems_catalog.yml")
         self.assertNotIn("name: Independent Research", catalog)
-        for name in ("AutoIA", "Sema", "UBASE", "RW-TTT", "TGraph", "TenGraph", "SeccoSQL", "DISC", "Crystal"):
+        for name in ("AutoIA", "SEMA", "UBASE", "RW-TTT", "TGraph", "TenGraph", "SeccoSQL", "DISC", "Crystal"):
             self.assertIn(f"name: {name}\n", catalog)
 
     def test_paper_associations_match_reviewed_project_boundaries(self):

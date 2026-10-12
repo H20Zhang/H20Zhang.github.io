@@ -47,10 +47,10 @@ The longer-term goal is **multi-agent and human–agent collaboration**: enablin
 <h2 class="about-section-label" id="selected-systems">Selected Systems</h2>
 <div class="about-section-content" markdown="1">
 
-- [**AutoIA @ ByteDance**](/projects/1_autoia/) — a self-evolving agent harness connecting context representations, agent-team construction, and feedback-driven evolution.
-- [**SEMA**](/projects/#sema) — a semantic query engine combining relational operations with LLM-powered reasoning.
-- [**GES @ Huawei**](/projects/3_ges/) — production graph database infrastructure.
-- [**TQEX @ Huawei**](/projects/2_tqex/) — tensor-based SQL execution across heterogeneous accelerators.
+- [**AutoIA @ ByteDance**](/projects/1_autoia/) — a self-evolving agent harness designed to improve the information environment itself, not just individual answers. Agent teams use a shared Context IR to build reusable context and tools, then refine them through task feedback.
+- [**SEMA**](/projects/#sema) — makes LLM-powered semantic operators first-class SQL primitives, enabling query optimization and adaptive execution. Its evaluation reports 2–10× speedups over three baselines on semantic-query workloads.
+- [**GES @ Huawei**](/projects/3_ges/) — a production graph database combining a composable service architecture with factorized execution. It achieved audited LDBC SNB Interactive #1 results on the declarative (2024) and imperative (2025) tracks.
+- [**TQEX @ Huawei**](/projects/2_tqex/) — maps irregular SQL operators onto portable tensor runtimes across heterogeneous accelerators. Its evaluation reports 12.2× over DuckDB and 22.7× over HeavyDB on supported TPC-H SF100 queries.
 
 [**Explore all systems**](/projects/) · [**Papers by research area**](/publications/)
 </div>

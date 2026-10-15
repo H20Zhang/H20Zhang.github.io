@@ -102,6 +102,7 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertIn("color: var(--global-section-accent-color)", styles)
         self.assertIn("@media (max-width: 767px)", styles)
         self.assertIn("@media (max-width: 575px)", styles)
+        self.assertIn(".about-tagline {\n    font-size: 1.45rem;", styles)
 
 
 if __name__ == "__main__":

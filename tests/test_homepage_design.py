@@ -67,7 +67,7 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertIn("external working environments", page)
         self.assertIn("agent evolution through environment evolution", page)
         self.assertIn("Context IR", page)
-        self.assertIn("managing documents, conversations, and app data", page)
+        self.assertIn("managing data from files, databases, and apps", page)
         self.assertIn("how agent teams turn source data and task experience into reusable context, memory, tools, and skills", page)
 
         section_ids = (

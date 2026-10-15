@@ -22,7 +22,8 @@ class SystemsOverviewContractTest(unittest.TestCase):
             with self.subTest(title=title):
                 self.assertIn(f'"{title}":', overview)
 
-        self.assertIn("external information environment", overview)
+        self.assertIn("external working environment", overview)
+        self.assertIn("data from files, databases, and apps", overview)
         self.assertIn("3,000×", overview)
         self.assertIn("tensor runtimes", overview)
         self.assertIn("SeccoSQL", overview)

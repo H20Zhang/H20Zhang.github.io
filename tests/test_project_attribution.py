@@ -33,7 +33,7 @@ class ProjectAttributionContractTest(unittest.TestCase):
     def test_homepage_connects_context_to_collaboration_and_named_systems(self):
         page = read("_pages/about.md")
         self.assertIn("multi-agent and human–agent collaboration", page)
-        self.assertIn("build on one another's work over time", page)
+        self.assertIn("build on one another's knowledge and work over time", page)
         self.assertIn("Selected Systems", page)
         self.assertIn("[**SEMA**](/projects/#sema)", page)
         self.assertNotIn(INDEPENDENT_URL, page)

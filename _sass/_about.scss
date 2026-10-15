@@ -48,7 +48,7 @@
 .about-tagline {
   margin: 0 0 1rem;
   color: var(--global-text-color);
-  font-size: clamp(1.75rem, 2.8vw, 2rem);
+  font-size: clamp(1.5rem, 2.2vw, 1.65rem);
   font-weight: 400;
   line-height: 1.14;
   letter-spacing: -0.035em;
@@ -267,7 +267,7 @@
   }
 
   .about-tagline {
-    font-size: 2rem;
+    font-size: 1.45rem;
   }
 
 }

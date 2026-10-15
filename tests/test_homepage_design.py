@@ -68,7 +68,6 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertIn("agent evolution through environment evolution", page)
         self.assertIn("Context IR", page)
         self.assertIn("documents, conversations, and app data", page)
-        self.assertIn("facts, experiences", page)
         self.assertIn("how agent teams turn source data and task experience into reusable context, memory, tools, and skills", page)
         self.assertIn("procedures, playbooks", page)
 

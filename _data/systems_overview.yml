@@ -11,7 +11,7 @@
 
 "AutoIA @ ByteDance":
   story: >-
-    I am developing AutoIA as a self-evolving harness for AI agents, centered on their persistent external working environments. A builder agent team uses a composable Context IR to organize data from files, databases, and apps and build derived context, memory, tools, and skills, then uses task feedback to improve the external information environment. The research goal is agent evolution through environment evolution.
+    I am developing AutoIA as a self-evolving harness for AI agents, centered on their persistent external working environments. A builder agent team uses a composable Context IR to organize data from files, databases, and apps, constructs reusable context, memory, tools, and skills, and applies task feedback to evolve the external working environment. The research goal is agent evolution through environment evolution.
   core_idea: >-
     Context IR, agent-team construction, and feedback-driven evolution of a persistent external working environment.
   research:

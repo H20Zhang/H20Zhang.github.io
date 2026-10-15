@@ -11,9 +11,9 @@
 
 "AutoIA @ ByteDance":
   story: >-
-    I am developing AutoIA as a self-evolving harness for AI agents, centered on context and memory. Its goal is to help agent teams improve their context and tools through task-level feedback. The current context-centered approach improves retrieval pipelines and, when needed, the external information environment behind them.
+    I am developing AutoIA as a self-evolving harness for AI agents, centered on their persistent external working environments. A builder agent team organizes knowledge over a composable Context IR, constructs reusable memory and tools, and uses task feedback to improve the external information environment. The research goal is agent evolution through environment evolution.
   core_idea: >-
-    An evolving agent harness with nested feedback loops over context construction and the external information environment.
+    Context IR, agent-team construction, and feedback-driven evolution of a persistent external working environment.
   research:
     - name: AdaMM
       url: /publications/#Arxiv-26-3

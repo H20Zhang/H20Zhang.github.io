@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AutoIA @ ByteDance
-description: A self-evolving agent harness connecting context representations, agent-team construction, and feedback-driven evolution.
+description: A self-evolving harness for agent-team construction and feedback-driven evolution of external working environments.
 importance: 1
 category: systems
 project_group: bytedance
@@ -18,35 +18,33 @@ research_support:
         role: Supports query-adaptive memory through analytic views over multimodal histories.
 ---
 
-I am developing AutoIA as a **self-evolving harness for AI agents** at ByteDance. It studies how agent teams can build and continuously improve their context, memory, and tools through task-level feedback.
+I am developing AutoIA as a **self-evolving harness for AI agents** at ByteDance. Its central thesis is **agent evolution through environment evolution**. A builder agent team constructs and improves a persistent **external working environment**—knowledge and derived views, memory, tools, workflows, and access paths—that task agents can reuse. Feedback from their executions guides what gets built or refined next.
 
 ## Problem
 
-An agent's performance depends not only on its model, but also on the knowledge it can access, the tools it can use, and how these are organized. AutoIA studies how this information environment can improve across tasks, rather than being rebuilt from scratch for every execution.
+A capable model can still be limited by fragmented knowledge, missing tools, or useful work discarded after each task. Prompt-level context is temporary; an external working environment is **persistent and reusable**. AutoIA studies how repeated reasoning and task-specific setup can be turned into queryable representations and reusable computation.
 
 ## Three connected mechanisms
 
-| Mechanism | Research question |
+| Mechanism | Research question and approach |
 | --- | --- |
-| **Context IR** | How can heterogeneous sources and derived knowledge share a composable, queryable representation? |
-| **Context teams** | How can agent teams discover sources and construct useful context representations and tools? |
-| **Context evolution** | How can task feedback guide what to retain, revise, and reuse in later tasks? |
+| **Context IR** | How can heterogeneous raw sources and derived knowledge share a composable, queryable representation? Summaries, entities, timelines, and memory can be derived relations; indexes and storage are physical access paths. |
+| **Agent-team construction** | How can builder agents discover unfamiliar sources and tasks, reuse seed specifications from successful cases, and construct context modules, tools, and ingestion workflows? |
+| **Environment evolution** | How can task feedback determine what knowledge, representations, memory, and tools should be created, reused, or refined for later work? |
 
-Together, these mechanisms connect **agents improving their information environment** with **a better environment supporting more capable agents**. They describe the system's research design, not a claim of measured end-to-end gains.
+**Task agents consume the environment; the builder team evolves it.** Improvements can persist beyond any one request. These are mechanisms under research and development, not a claim of measured end-to-end gains.
 
 ## Feedback-driven improvement
 
-AutoIA's current context-centered approach uses a **nested optimization loop** within the agent harness.
+**Task loop.** A consumer agent accesses the current environment for knowledge, memory, and tools. Its outcomes and execution traces reveal missing information, weak retrieval, and repeated operations.
 
-**Inner loop.** With the external information environment fixed, task-level evaluations and execution traces guide the optimization of environment-specific retrieval pipelines.
+**Environment loop.** The builder team first improves retrieval and tool-use procedures with existing representations. When failures indicate missing structure or capability, it changes derived relations, access paths, memory, or tools. This separates **using an environment better** from **making the environment itself better**.
 
-**Outer loop.** When retrieval-level optimization is no longer sufficient, the same feedback drives changes to data integration, organization, representation, indexing, and storage, improving the underlying information environment itself.
-
-A longer-term question is **recursive self-improvement (RSI)**: whether the mechanisms that generate, evaluate, and select improvements can themselves be improved.
+**Harness evolution (longer term).** The builder team's own construction strategies and evaluation procedures may also evolve. This is a research direction, not a claim of realized recursive self-improvement.
 
 ## Research scope
 
-AutoIA is my agent-harness research and development at ByteDance. The research linked below has ByteDance author affiliations and supports specific parts of this agenda; it is not evidence that every component is deployed as part of AutoIA.
+AutoIA is an ongoing research and development project at ByteDance. The linked research supports specific parts of this agenda, but it does not establish that every mechanism is deployed together or that end-to-end improvements have been measured.
 
 [Publications](/publications/) contains my broader research record, including independent academic collaborations.
 

@@ -1,15 +1,15 @@
 ---
 layout: about
 title: About
-seo_title: Hao Zhang — Research Scientist at ByteDance | AI Agents, Harnesses, and Context
+seo_title: Hao Zhang — Research Scientist at ByteDance | Evolving Agent Environments
 permalink: /
 subtitle: Research Scientist at ByteDance
-description: Hao Zhang researches self-improving AI agents through evolving harnesses, context, and memory, alongside independent research and academic collaborations across data systems and AI.
-keywords: Hao Zhang, ByteDance, independent research, multi-agent collaboration, human-agent collaboration, AI agents, self-improving agents, evolving harnesses, agent harness, context infrastructure, shared information state, information organization, context management, agent memory, context search, vector search, graph systems, semantic query processing, hardware-accelerated data systems
-last_modified_at: 2026-10-11
-hero_title: Building AI agents that learn and improve.
+description: Hao Zhang studies how AI agents improve through evolving external working environments, combining agent harnesses, context infrastructure, memory, tools, and data systems.
+keywords: Hao Zhang, ByteDance, AI agents, agent evolution, environment evolution, external working environments, self-evolving harnesses, agent teams, Context IR, context infrastructure, agent memory, multi-agent collaboration, human-agent collaboration, vector search, semantic query processing, graph systems, hardware-accelerated data systems
+last_modified_at: 2026-10-15
+hero_title: Helping AI agents improve by evolving their environments.
 hero_intro: |
-  I develop **AutoIA**, a harness that helps agent teams build, use, and improve their context, memory, and tools. My research asks how task feedback can turn individual executions into reusable knowledge and more capable agents.
+  I develop **AutoIA**, a self-evolving agent harness that enables agent teams to build and continuously improve the **external working environments** of AI agents—including context infrastructure, memory, and tools. My research asks how task feedback can turn one-off work into reusable capabilities that benefit future agents.
 
 profile:
   align: right
@@ -35,9 +35,11 @@ latest_posts:
 <h2 class="about-section-label" id="current-focus">Research Directions</h2>
 <div class="about-section-content" markdown="1">
 
-My current work connects [**agent memory and retrieval**](/publications/#memory-adaptation), [**test-time learning and serving**](/publications/#test-time-learning-serving), and [**semantic queries and vector search**](/publications/#retrieval-semantics). It builds on my work in [hardware-efficient execution](/publications/#efficient-execution), [graph systems and learning](/publications/#graph-systems), and [query optimization and distributed analytics](/publications/#query-analytics).
+My research asks three connected questions: **how to represent** heterogeneous data and derived knowledge through a composable Context IR, **how to construct** reusable memory and tools with agent teams, and **how to evolve** these resources using task feedback. This is my approach to **agent evolution through environment evolution**—improving what agents can access and do, not only what fits in a prompt.
 
-The longer-term goal is **multi-agent and human–agent collaboration**: enabling people and agents to **build on one another's work over time**.
+The work connects [**agent memory and retrieval**](/publications/#memory-adaptation), [**test-time learning and serving**](/publications/#test-time-learning-serving), and [**semantic queries and vector search**](/publications/#retrieval-semantics). It builds on my earlier work in [hardware-efficient execution](/publications/#efficient-execution), [graph systems and learning](/publications/#graph-systems), and [query optimization and distributed analytics](/publications/#query-analytics).
+
+My longer-term goal is **multi-agent and human–agent collaboration** through shared, evolving working environments, so people and agents can build on one another's knowledge and work over time.
 
 **Research perspective:** [Organizing the Shared Information World of Humans and AI Agents](/blog/2026/shared-information-world-ai-agents/) · [The Next Generation of Context Management](/blog/2026/next-gen-agent-en/)
 </div>
@@ -47,7 +49,7 @@ The longer-term goal is **multi-agent and human–agent collaboration**: enablin
 <h2 class="about-section-label" id="selected-systems">Selected Systems</h2>
 <div class="about-section-content" markdown="1">
 
-- [**AutoIA @ ByteDance**](/projects/1_autoia/) — a self-evolving agent harness designed to improve the information environment itself, not just individual answers. Agent teams use a shared Context IR to build reusable context and tools, then refine them through task feedback.
+- [**AutoIA @ ByteDance**](/projects/1_autoia/) — a self-evolving harness for constructing and improving **agents' external working environments**. Agent teams use a composable Context IR to organize knowledge, build memory and tools, and evolve these resources from task feedback.
 - [**SEMA**](/projects/#sema) — makes LLM-powered semantic operators first-class SQL primitives, enabling query optimization and adaptive execution. Its evaluation reports 2–10× speedups over three baselines on semantic-query workloads.
 - [**GES @ Huawei**](/projects/3_ges/) — a production graph database combining a composable service architecture with factorized execution. It achieved audited LDBC SNB Interactive #1 results on the declarative (2024) and imperative (2025) tracks.
 - [**TQEX @ Huawei**](/projects/2_tqex/) — maps irregular SQL operators onto portable tensor runtimes across heterogeneous accelerators. Its evaluation reports 12.2× over DuckDB and 22.7× over HeavyDB on supported TPC-H SF100 queries.
@@ -81,7 +83,7 @@ I received my **Ph.D.** from the Chinese University of Hong Kong, advised by **[
 <h2 class="about-section-label" id="collaboration-internship">Collaboration &amp; Internship</h2>
 <div class="about-section-content" markdown="1">
 
-I welcome collaboration on AI agents, agent memory, self-evolving harnesses, and graph/vector systems. I am also recruiting **research interns** at ByteDance in Shenzhen; email zhanghaowuda12 [at] gmail [dot] com with `[Intern]` in the subject.
+I welcome collaboration on self-improving agents, **environment and harness evolution**, context infrastructure, memory and retrieval, and graph/vector systems. I am also recruiting **research interns** at ByteDance in Shenzhen; email zhanghaowuda12 [at] gmail [dot] com with `[Intern]` in the subject.
 </div>
 </section>
 

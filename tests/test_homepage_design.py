@@ -62,8 +62,11 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertIn('class="about-hero-profile"', layout)
         self.assertIn('class="about-sections"', layout)
         self.assertIn('class="about-footer-row"', layout)
-        self.assertIn("hero_title: Building AI agents that learn and improve.", page)
+        self.assertIn("hero_title: Helping AI agents improve by evolving their environments.", page)
         self.assertIn("hero_intro:", page)
+        self.assertIn("external working environments", page)
+        self.assertIn("agent evolution through environment evolution", page)
+        self.assertIn("Context IR", page)
 
         section_ids = (
             "current-focus",

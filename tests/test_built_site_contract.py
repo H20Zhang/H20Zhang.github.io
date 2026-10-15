@@ -569,7 +569,7 @@ class BuiltSiteContractTest(unittest.TestCase):
         # Each highlight identifies its technical differentiator or scoped evidence.
         highlights = self.homepage.selected_systems_text
         for claim in (
-            "shared Context IR",
+            "composable Context IR",
             "task feedback",
             "first-class SQL primitives",
             "2–10× speedups",

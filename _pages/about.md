@@ -9,7 +9,7 @@ keywords: Hao Zhang, ByteDance, AI agents, agent evolution, environment evolutio
 last_modified_at: 2026-10-15
 hero_title: Helping AI agents improve by evolving their environments.
 hero_intro: |
-  I develop **AutoIA**, a self-evolving agent harness that enables agent teams to build and continuously improve the **external working environments** of AI agents—including **context infrastructure** (documents, tables, derived views, indexes), **memory** (facts, experiences), **tools** (search, analysis), and **skills** (procedures, playbooks). My research asks how task feedback can turn one-off work into reusable capabilities that benefit future agents.
+  I develop **AutoIA**, a self-evolving agent harness that enables agent teams to build and continuously improve the **external working environments** of AI agents—including **context infrastructure** (documents, conversations, and app data), **memory**, **tools**, and **skills**. My research asks how task feedback can turn one-off work into reusable capabilities that benefit future agents.
 
 profile:
   align: right

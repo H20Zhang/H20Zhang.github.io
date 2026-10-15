@@ -9,7 +9,7 @@ keywords: Hao Zhang, ByteDance, AI agents, agent evolution, environment evolutio
 last_modified_at: 2026-10-15
 hero_title: Helping AI agents improve by evolving their environments.
 hero_intro: |
-  I develop **AutoIA**, a self-evolving agent harness that enables agent teams to build and continuously improve the **external working environments** of AI agents—including context infrastructure, memory, and tools. My research asks how task feedback can turn one-off work into reusable capabilities that benefit future agents.
+  I develop **AutoIA**, a self-evolving agent harness that enables agent teams to build and continuously improve the **external working environments** of AI agents—including **context infrastructure** (documents, tables, derived views, indexes), **memory** (facts, experiences), and **tools** (search, analysis, workflows). My research asks how task feedback can turn one-off work into reusable capabilities that benefit future agents.
 
 profile:
   align: right
@@ -35,7 +35,7 @@ latest_posts:
 <h2 class="about-section-label" id="current-focus">Research Directions</h2>
 <div class="about-section-content" markdown="1">
 
-My research asks three connected questions: **how to represent** heterogeneous data and derived knowledge through a composable Context IR, **how to construct** reusable memory and tools with agent teams, and **how to evolve** these resources using task feedback. This is my approach to **agent evolution through environment evolution**—improving what agents can access and do, not only what fits in a prompt.
+My research asks three connected questions: **how to represent** source data and derived context through a composable Context IR, **how agent teams turn source data into reusable context, memory, and tools**, and **how to evolve** these resources using task feedback. This is my approach to **agent evolution through environment evolution**—improving what agents can access and do, not only what fits in a prompt.
 
 The work connects [**agent memory and retrieval**](/publications/#memory-adaptation), [**test-time learning and serving**](/publications/#test-time-learning-serving), and [**semantic queries and vector search**](/publications/#retrieval-semantics). It builds on my earlier work in [hardware-efficient execution](/publications/#efficient-execution), [graph systems and learning](/publications/#graph-systems), and [query optimization and distributed analytics](/publications/#query-analytics).
 
@@ -49,7 +49,7 @@ My longer-term goal is **multi-agent and human–agent collaboration** through s
 <h2 class="about-section-label" id="selected-systems">Selected Systems</h2>
 <div class="about-section-content" markdown="1">
 
-- [**AutoIA @ ByteDance**](/projects/1_autoia/) — a self-evolving harness for constructing and improving **agents' external working environments**. Agent teams use a composable Context IR to organize knowledge, build memory and tools, and evolve these resources from task feedback.
+- [**AutoIA @ ByteDance**](/projects/1_autoia/) — a self-evolving harness for constructing and improving **agents' external working environments**. Agent teams use a composable Context IR to organize source data, build derived context, memory, and tools, and evolve these resources through task feedback.
 - [**SEMA**](/projects/#sema) — makes LLM-powered semantic operators first-class SQL primitives, enabling query optimization and adaptive execution. Its evaluation reports 2–10× speedups over three baselines on semantic-query workloads.
 - [**GES @ Huawei**](/projects/3_ges/) — a production graph database combining a composable service architecture with factorized execution. It achieved audited LDBC SNB Interactive #1 results on the declarative (2024) and imperative (2025) tracks.
 - [**TQEX @ Huawei**](/projects/2_tqex/) — maps irregular SQL operators onto portable tensor runtimes across heterogeneous accelerators. Its evaluation reports 12.2× over DuckDB and 22.7× over HeavyDB on supported TPC-H SF100 queries.

@@ -10,7 +10,7 @@
       affiliation: ByteDance
       url: /projects/1_autoia/
       action: Explore
-      description: A self-evolving harness in which agent teams organize source data, construct reusable context, memory, and tools, and evolve the external working environment through task feedback.
+      description: A self-evolving harness in which agent teams organize source data, construct reusable context, memory, tools, and skills, and evolve the external working environment through task feedback.
       links:
         - label: Overview
           url: /projects/1_autoia/

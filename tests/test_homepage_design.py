@@ -69,7 +69,8 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertIn("Context IR", page)
         self.assertIn("documents, tables, derived views, indexes", page)
         self.assertIn("facts, experiences", page)
-        self.assertIn("how agent teams turn source data into reusable context, memory, and tools", page)
+        self.assertIn("how agent teams turn source data and task experience into reusable context, memory, tools, and skills", page)
+        self.assertIn("procedures, playbooks", page)
 
         section_ids = (
             "current-focus",

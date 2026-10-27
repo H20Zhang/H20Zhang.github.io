@@ -83,7 +83,9 @@ I received my **Ph.D.** from the Chinese University of Hong Kong, advised by **[
 <h2 class="about-section-label" id="collaboration-internship">Collaboration &amp; Internship</h2>
 <div class="about-section-content" markdown="1">
 
-I welcome collaboration on self-improving agents, **harness and shared-environment evolution**, experience-driven agent-team construction, context infrastructure, memory and retrieval, and graph/vector systems. I am also recruiting **research interns** at ByteDance in Shenzhen; email zhanghaowuda12 [at] gmail [dot] com with `[Intern]` in the subject.
+I welcome conversations with researchers and industry leaders working on self-evolving agentic systems, context infrastructure, and next-generation AI platforms. I am especially interested in collaborations on self-improving agents, **harness and shared-environment evolution**, experience-driven agent-team construction, memory and retrieval, and graph/vector systems.
+
+I am also recruiting **research interns** at ByteDance in Shenzhen; email zhanghaowuda12 [at] gmail [dot] com with `[Intern]` in the subject.
 </div>
 </section>
 

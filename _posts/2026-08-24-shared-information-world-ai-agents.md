@@ -3,7 +3,7 @@ layout: single
 title: "When Intelligence Becomes Abundant: Organizing the Shared Information World of Humans and AI Agents"
 seo_title: "Shared Information World for Humans and AI Agents | Hao Zhang"
 date: 2026-08-24 08:30:00 +0800
-last_modified_at: 2026-08-24
+last_modified_at: 2026-10-27
 permalink: /blog/2026/shared-information-world-ai-agents/
 categories:
   - Agent
@@ -147,7 +147,7 @@ Third is a **context plane**: retrieval, navigation, query planning, compression
 
 The most important design constraint is that these loops must not turn into automated self-contamination. A successful agent should be able to improve future information organization; an incorrect agent should not be able to promote its own mistake into the next generation of “ground truth.” That requires validation gates, provenance, authority, versioning, and evaluation that can trace failures back to information-state changes.
 
-My current work on [**AutoIA**](/projects/1_autoia/) is a practical entry point into this agenda: improve the external information environment and the pipelines that construct task-specific context from it, using task-level feedback to close the loop. My earlier essay, [**The Next Generation of Context Management: Maintaining the Model's Perceivable World**](/blog/2026/next-gen-agent-en/), focuses on that single-agent-facing boundary.
+My current work on [**AutoIA**](/projects/1_autoia/) studies how **agent harnesses and shared environments co-evolve**. Builder agents improve tools, skills, execution workflows, and persistent context infrastructure, while retaining successful projects and construction experience to guide future work. My earlier essay, [**The Next Generation of Context Management: Maintaining the Model's Perceivable World**](/blog/2026/next-gen-agent-en/), focuses on the single-agent-facing context boundary.
 
 The larger vision is what happens when that perceivable world is no longer maintained for one agent, but is **shared and continuously rewritten by humans and many agents together**.
 

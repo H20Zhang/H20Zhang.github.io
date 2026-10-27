@@ -62,13 +62,13 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertIn('class="about-hero-profile"', layout)
         self.assertIn('class="about-sections"', layout)
         self.assertIn('class="about-footer-row"', layout)
-        self.assertIn("hero_title: Helping AI agents improve by evolving their environments.", page)
+        self.assertIn("hero_title: Evolving agent harnesses and shared environments.", page)
         self.assertIn("hero_intro:", page)
-        self.assertIn("external working environments", page)
-        self.assertIn("agent evolution through environment evolution", page)
+        self.assertIn("shared working environments", page)
+        self.assertIn("co-evolution of their harnesses and shared environments", page)
         self.assertIn("Context IR", page)
-        self.assertIn("managing data from files, databases, and apps", page)
-        self.assertIn("how agent teams turn source data and task experience into reusable context, memory, tools, and skills", page)
+        self.assertIn("organizing data from files, databases, and apps", page)
+        self.assertIn("experience-driven evolution", page)
 
         section_ids = (
             "current-focus",

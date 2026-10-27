@@ -9,7 +9,7 @@ keywords: Hao Zhang, ByteDance, AI agents, harness evolution, environment evolut
 last_modified_at: 2026-10-27
 hero_title: Evolving agent harnesses and shared environments.
 hero_intro: |
-  I develop **AutoIA**, a system for **self-evolving agent harnesses and shared working environments**. Builder agent teams construct and improve **tools, skills, and execution strategies** alongside **context infrastructure, memory, and queryable data structures**. They also reuse successful projects and construction experience, so task feedback improves both what agents use and how these resources are built.
+  I develop **AutoIA**, a system for **self-evolving agent harnesses and shared working environments**. Builder agent teams construct and improve **tools, skills, and execution strategies** alongside **context infrastructure** (organizing data from files, databases, and apps), **memory**, and **queryable data structures**. They also reuse successful projects and construction experience, so task feedback improves both what agents use and how these resources are built.
 
 profile:
   align: right

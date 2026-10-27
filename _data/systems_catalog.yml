@@ -10,7 +10,7 @@
       affiliation: ByteDance
       url: /projects/1_autoia/
       action: Explore
-      description: A self-evolving harness in which agent teams organize data from files, databases, and apps, construct reusable context, memory, tools, and skills, and evolve the external working environment through task feedback.
+      description: AutoIA co-evolves agent harnesses and shared environments. Builder agent teams construct reusable context, memory, tools, and skills, then use task feedback and accumulated construction experience to improve future work.
       links:
         - label: Overview
           url: /projects/1_autoia/

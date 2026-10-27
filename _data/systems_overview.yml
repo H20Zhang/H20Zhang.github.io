@@ -11,7 +11,7 @@
 
 "AutoIA @ ByteDance":
   story: >-
-    I am developing AutoIA as a system for self-evolving agent harnesses and shared environments. A builder agent team uses a composable Context IR to organize data from files, databases, and apps, constructs reusable context, memory, tools, and skills, and uses task feedback to refine both agent execution and shared infrastructure. It retains successful projects and construction experience to improve how new harnesses and environments are built.
+    I am developing AutoIA as a self-evolving agentic system that constructs and improves agent harnesses and shared environments. It uses a composable Context IR to organize data from files, databases, and apps, builds reusable context, memory, tools, and skills, and learns from task feedback and previous projects to improve its own construction strategies.
   core_idea: >-
     Context IR, agent-team construction, and experience-driven co-evolution of agent harnesses and a persistent external working environment.
   research:

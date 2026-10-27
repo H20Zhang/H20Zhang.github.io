@@ -147,7 +147,7 @@ Third is a **context plane**: retrieval, navigation, query planning, compression
 
 The most important design constraint is that these loops must not turn into automated self-contamination. A successful agent should be able to improve future information organization; an incorrect agent should not be able to promote its own mistake into the next generation of “ground truth.” That requires validation gates, provenance, authority, versioning, and evaluation that can trace failures back to information-state changes.
 
-My current work on [**AutoIA**](/projects/1_autoia/) studies how **agent harnesses and shared environments co-evolve**. Builder agents improve tools, skills, execution workflows, and persistent context infrastructure, while retaining successful projects and construction experience to guide future work. My earlier essay, [**The Next Generation of Context Management: Maintaining the Model's Perceivable World**](/blog/2026/next-gen-agent-en/), focuses on the single-agent-facing context boundary.
+My current work on [**AutoIA**](/projects/1_autoia/) develops a **self-evolving agentic system** that improves both agent harnesses and shared environments. Task feedback and accumulated construction experience guide changes to tools, skills, execution workflows, and persistent context infrastructure—as well as the strategies used to build them. My earlier essay, [**The Next Generation of Context Management: Maintaining the Model's Perceivable World**](/blog/2026/next-gen-agent-en/), focuses on the single-agent-facing context boundary.
 
 The larger vision is what happens when that perceivable world is no longer maintained for one agent, but is **shared and continuously rewritten by humans and many agents together**.
 

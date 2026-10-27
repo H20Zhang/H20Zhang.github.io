@@ -10,7 +10,7 @@
       affiliation: ByteDance
       url: /projects/1_autoia/
       action: Explore
-      description: AutoIA co-evolves agent harnesses and shared environments. Builder agent teams construct reusable context, memory, tools, and skills, then use task feedback and accumulated construction experience to improve future work.
+      description: AutoIA is a self-evolving agentic system that improves agent harnesses and shared environments, using task feedback and accumulated construction experience to refine its own building strategies.
       links:
         - label: Overview
           url: /projects/1_autoia/

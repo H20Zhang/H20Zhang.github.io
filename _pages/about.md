@@ -1,15 +1,15 @@
 ---
 layout: about
 title: About
-seo_title: Hao Zhang — Research Scientist at ByteDance | Harness & Environment Evolution
+seo_title: Hao Zhang — Research Scientist at ByteDance | Self-Evolving Agentic Systems
 permalink: /
 subtitle: Research Scientist at ByteDance
-description: Hao Zhang studies self-evolving agent harnesses and shared working environments, combining context infrastructure, memory, tools, skills, and experience-driven agent-team construction.
-keywords: Hao Zhang, ByteDance, AI agents, harness evolution, environment evolution, shared agent environments, self-evolving harnesses, builder agents, experience-driven construction, Context IR, context infrastructure, agent memory, agent tools, agent skills, multi-agent collaboration, human-agent collaboration, vector search, semantic query processing, graph systems, hardware-accelerated data systems
+description: Hao Zhang studies self-evolving agentic systems that improve agent harnesses, shared environments, and their own construction strategies through accumulated experience.
+keywords: Hao Zhang, ByteDance, AI agents, self-evolving agentic systems, harness evolution, environment evolution, shared agent environments, self-evolving harnesses, experience-driven construction, Context IR, context infrastructure, agent memory, agent tools, agent skills, multi-agent collaboration, human-agent collaboration, vector search, semantic query processing, graph systems, hardware-accelerated data systems
 last_modified_at: 2026-10-27
 hero_title: Evolving agent harnesses and shared environments.
 hero_intro: |
-  I develop **AutoIA**, a system that constructs and evolves **agent harnesses** (tools, skills, and execution strategies) and **shared environments** (data, memory, and context infrastructure). Its builder agent teams learn from task feedback and past construction experience to improve both these resources and how they are built.
+  I develop **AutoIA**, a **self-evolving agentic system** that constructs and evolves **agent harnesses** (tools, skills, and execution strategies) and **shared environments** (data, memory, and context infrastructure). It learns from task feedback and past projects to improve **its own construction strategies**.
 
 profile:
   align: right
@@ -35,7 +35,7 @@ latest_posts:
 <h2 class="about-section-label" id="current-focus">Research Directions</h2>
 <div class="about-section-content" markdown="1">
 
-My research asks how agents can improve through the **co-evolution of their harnesses and shared environments**. I study a composable **Context IR** for heterogeneous data and derived context; **builder agent teams** that construct reusable tools, skills, memory, and context infrastructure; and **experience-driven evolution** that improves both these assets and the strategies used to build them.
+My research explores **self-evolving agentic systems** that continually improve **agent harnesses and shared environments**. The work combines a composable **Context IR** for heterogeneous data and derived context, agent-driven construction of reusable tools, skills, memory, and context infrastructure, and **experience-driven evolution** of the system's own construction strategies.
 
 The work connects [**agent memory and retrieval**](/publications/#memory-adaptation), [**test-time learning and serving**](/publications/#test-time-learning-serving), and [**semantic queries and vector search**](/publications/#retrieval-semantics). It builds on my earlier work in [hardware-efficient execution](/publications/#efficient-execution), [graph systems and learning](/publications/#graph-systems), and [query optimization and distributed analytics](/publications/#query-analytics).
 
@@ -49,7 +49,7 @@ My longer-term goal is **multi-agent and human–agent collaboration at scale** 
 <h2 class="about-section-label" id="selected-systems">Selected Systems</h2>
 <div class="about-section-content" markdown="1">
 
-- [**AutoIA @ ByteDance**](/projects/1_autoia/) — a system for **co-evolving agent harnesses and shared environments**. Builder agent teams use a composable Context IR to construct context, memory, tools, and skills, then improve these assets—and their construction strategies—through task feedback.
+- [**AutoIA @ ByteDance**](/projects/1_autoia/) — a **self-evolving agentic system** that builds and improves agent harnesses and shared environments. It uses a composable Context IR and task feedback to develop reusable context, memory, tools, and skills, while learning better ways to build them.
 - [**SEMA**](/projects/#sema) — makes LLM-powered semantic operators first-class SQL primitives, enabling query optimization and adaptive execution. Its evaluation reports 2–10× speedups over three baselines on semantic-query workloads.
 - [**GES @ Huawei**](/projects/3_ges/) — a production graph database combining a composable service architecture with factorized execution. It achieved audited LDBC SNB Interactive #1 results on the declarative (2024) and imperative (2025) tracks.
 - [**TQEX @ Huawei**](/projects/2_tqex/) — maps irregular SQL operators onto portable tensor runtimes across heterogeneous accelerators. Its evaluation reports 12.2× over DuckDB and 22.7× over HeavyDB on supported TPC-H SF100 queries.

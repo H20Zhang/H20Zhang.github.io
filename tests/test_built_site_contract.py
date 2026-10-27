@@ -169,7 +169,7 @@ class BuiltSiteContractTest(unittest.TestCase):
     def test_homepage_schema_identifies_hao_zhang(self):
         self.assertEqual(
             self.homepage.title,
-            "Hao Zhang — Research Scientist at ByteDance | Harness & Environment Evolution",
+            "Hao Zhang — Research Scientist at ByteDance | Self-Evolving Agentic Systems",
         )
         self.assertEqual(len(self.homepage.json_ld), 1)
 
@@ -197,9 +197,9 @@ class BuiltSiteContractTest(unittest.TestCase):
     def test_homepage_explains_harness_environment_and_builder_evolution(self):
         html = (SITE / "index.html").read_text(encoding="utf-8")
         for phrase in (
-            "self-evolving agent harnesses and shared working environments",
-            "construction experience",
-            "co-evolving agent harnesses and shared environments",
+            "self-evolving agentic system",
+            "construction strategies",
+            "agent harnesses and shared environments",
         ):
             with self.subTest(phrase=phrase):
                 self.assertIn(phrase, html)

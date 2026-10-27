@@ -155,7 +155,7 @@ context
 
 这里最重要的约束，是这些闭环不能变成自动化的 self-contamination。成功的 Agent 应该能够改善未来的信息组织，但失败的 Agent 不能轻易把自己的错误升级成下一轮的“ground truth”。这要求 validation gate、provenance、authority、versioning，以及能够把 failure 追溯到具体信息状态变化的 eval。
 
-我现在做的 [**AutoIA**](/projects/1_autoia/) 研究 **Agent Harness 与共享 Environment 如何共同演化**：Builder Agent Team 持续改进 Tools、Skills、执行流程和 Context Infrastructure，也沉淀成功项目、Seed Specs 与构建经验，指导未来面对新任务时如何构建和优化这些资源。之前的文章 [**《Context Management 的下一代：维护模型可感知的世界》**](/blog/2026/next-gen-agent-zh/) 主要讨论的是面向单个 Agent 的 Context 边界。
+我现在做的 [**AutoIA**](/projects/1_autoia/) 是一个 **self-evolving agentic system**：它持续改进 Agent Harness 与共享 Environment，包括 Tools、Skills、执行流程和 Context Infrastructure，并利用任务反馈、成功项目和构建经验，优化未来构建这些能力的方法。之前的文章 [**《Context Management 的下一代：维护模型可感知的世界》**](/blog/2026/next-gen-agent-zh/) 主要讨论的是面向单个 Agent 的 Context 边界。
 
 更大的问题是：当这个“可感知的世界”不再只服务一个 Agent，而是**由人和大量 Agent 共同读写、持续改写**时，系统应该长成什么样。
 

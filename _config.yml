@@ -11,13 +11,13 @@ contact_note: >
   memory, tools, skills, retrieval, and graph/vector systems. I am recruiting research interns
   at ByteDance in Shenzhen. Email is the fastest way to reach me.
 description: >
-  Personal website of Hao Zhang, a Research Scientist studying self-evolving agent
-  harnesses and shared environments, context infrastructure, memory, tools, skills,
-  experience-driven agent-team construction, and efficient data systems.
+  Personal website of Hao Zhang, a Research Scientist studying self-evolving agentic
+  systems, harness and shared-environment evolution, context infrastructure, memory,
+  retrieval, and efficient data systems.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with
   <a href="https://github.com/alshedivat/al-folio">al-folio</a>.
-keywords: Hao Zhang, self-improving agents, evolving agent harnesses, shared environments, environment evolution, agent harnesses, builder evolution, experience-driven construction, context infrastructure, Context IR, agent memory, agent skills, agent teams, vector search, graph systems, semantic query processing, hardware-accelerated data systems
+keywords: Hao Zhang, self-improving agents, self-evolving agentic systems, evolving agent harnesses, shared environments, environment evolution, agent harnesses, experience-driven construction, context infrastructure, Context IR, agent memory, agent skills, agent teams, vector search, graph systems, semantic query processing, hardware-accelerated data systems
 lang: en
 icon: ⚙️
 

@@ -43,14 +43,14 @@ class ProjectAttributionContractTest(unittest.TestCase):
         homepage = read("_pages/about.md")
         detail = read("_projects/1_autoia.md")
         catalog = read("_data/systems_catalog.yml")
-        self.assertIn("self-evolving agent harnesses and shared working environments", homepage)
+        self.assertIn("self-evolving agentic system", homepage)
         self.assertIn("Harness–environment co-evolution", detail)
-        self.assertIn("Experience-driven builder evolution", detail)
-        for section in ("**Harness evolution.**", "**Environment evolution.**", "**Builder evolution.**"):
+        self.assertIn("Experience-driven self-improvement", detail)
+        for section in ("**Harness evolution.**", "**Environment evolution.**", "**Construction-strategy evolution.**"):
             with self.subTest(section=section):
                 self.assertIn(section, detail)
         self.assertNotIn("Harness evolution (longer term)", detail)
-        self.assertIn("accumulated construction experience", catalog)
+        self.assertIn("self-evolving agentic system", catalog)
 
     def test_catalog_selection_is_explicit_not_inferred_from_affiliation(self):
         page = read("_pages/projects.md")

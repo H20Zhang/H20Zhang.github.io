@@ -169,7 +169,7 @@ class BuiltSiteContractTest(unittest.TestCase):
     def test_homepage_schema_identifies_hao_zhang(self):
         self.assertEqual(
             self.homepage.title,
-            "Hao Zhang — Research Scientist at ByteDance | Evolving Agent Environments",
+            "Hao Zhang — Research Scientist at ByteDance | Harness & Environment Evolution",
         )
         self.assertEqual(len(self.homepage.json_ld), 1)
 
@@ -193,6 +193,16 @@ class BuiltSiteContractTest(unittest.TestCase):
             if meta.get("property") == "og:image"
         )
         self.assertTrue(og_image.startswith("https://"), og_image)
+
+    def test_homepage_explains_harness_environment_and_builder_evolution(self):
+        html = (SITE / "index.html").read_text(encoding="utf-8")
+        for phrase in (
+            "self-evolving agent harnesses and shared working environments",
+            "construction experience",
+            "co-evolving agent harnesses and shared environments",
+        ):
+            with self.subTest(phrase=phrase):
+                self.assertIn(phrase, html)
 
     def test_generated_main_stylesheet_uses_build_specific_cache_key(self):
         homepage_html = (SITE / "index.html").read_text(encoding="utf-8")

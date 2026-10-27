@@ -137,7 +137,7 @@ class BlogSeoContractTest(unittest.TestCase):
                 self.assertEqual(schema["@type"], "BlogPosting")
                 self.assertEqual(schema["inLanguage"], language)
                 self.assertTrue(schema["datePublished"].startswith("2026-08-24"))
-                self.assertTrue(schema["dateModified"].startswith("2026-08-24"))
+                self.assertTrue(schema["dateModified"].startswith("2026-10-27"))
                 self.assertTrue(schema["image"].startswith("https://"))
                 self.assertIn("context infrastructure", schema["keywords"].lower())
                 self.assertEqual(
@@ -171,7 +171,7 @@ class BlogSeoContractTest(unittest.TestCase):
                 )
                 self.assertTrue(
                     meta_content(page, "property", "article:modified_time").startswith(
-                        "2026-08-24"
+                        "2026-10-27"
                     )
                 )
 

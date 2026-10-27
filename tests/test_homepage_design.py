@@ -67,7 +67,7 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertIn("shared working environments", page)
         self.assertIn("co-evolution of their harnesses and shared environments", page)
         self.assertIn("Context IR", page)
-        self.assertIn("organizing data from files, databases, and apps", page)
+        self.assertIn("**shared environments** (data, memory, and context infrastructure)", page)
         self.assertIn("experience-driven evolution", page)
 
         section_ids = (

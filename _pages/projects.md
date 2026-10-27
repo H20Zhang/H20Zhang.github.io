@@ -2,12 +2,12 @@
 layout: page
 title: Systems
 permalink: /projects/
-description: Systems for evolving agent working environments, semantic queries, graph databases, and accelerator-native execution.
+description: Systems for evolving agent harnesses and shared environments, semantic queries, graph databases, and accelerator-native execution.
 nav: true
 nav_order: 2
 ---
 
-My systems research spans **external working environments for AI agents**, semantic query processing, graph databases, and accelerator-native execution. These are distinct systems and research lines, not components of one deployed stack.
+My systems research spans **self-evolving agent harnesses and shared environments**, semantic query processing, graph databases, and accelerator-native execution. These are distinct systems and research lines, not components of one deployed stack.
 
 [Papers by research area →](/publications/)
 

@@ -73,7 +73,7 @@ I received my **Ph.D.** from the Chinese University of Hong Kong, advised by **[
 <h2 class="about-section-label" id="honors-awards">Selected Honors &amp; Awards</h2>
 <div class="about-section-content" markdown="1">
 
-- **ByteDance Soaring Star Talent Program**
+- **ByteDance Soaring Star Talent Program**（筋斗云人才计划）
 - **Huawei Gold Award for Individual Excellence** — Top 1%
 - **Huawei TopMinds Talent Program** — First Class (Highest Tier · 天才少年计划)
 </div>

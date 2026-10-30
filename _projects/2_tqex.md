@@ -1,7 +1,7 @@
 ---
 layout: page
 title: TQEX @ Huawei
-description: Tensor-centric SQL, graph-query, and graph-processing systems across heterogeneous accelerators.
+description: Hardware-portable database and graph acceleration through tensor runtimes across NVIDIA and AMD GPUs and Apple chips.
 importance: 3
 category: systems
 project_group: huawei

@@ -10,7 +10,7 @@
       affiliation: ByteDance
       url: /projects/1_autoia/
       action: Explore
-      description: AutoIA is a self-evolving agentic system that improves agent harnesses and shared environments, using task feedback and accumulated construction experience to refine its own building strategies.
+      description: AutoIA is a self-evolving agentic system that improves agent tools, skills, memory, and shared environments through structured, reusable IR-first evolution.
       links:
         - label: Overview
           url: /projects/1_autoia/
@@ -32,7 +32,7 @@
     - id: sema
       name: SEMA
       url: /publications/#VLDB-26-2
-      description: A semantic query engine built on DuckDB, integrating LLM-powered operators into SQL with query optimization and adaptive execution.
+      description: Brings LLM reasoning into databases so SQL can analyze structured and natural-language content together, with 2–10× faster semantic queries than three evaluated baselines.
       links:
         - label: Paper
           url: /publications/#VLDB-26-2
@@ -42,7 +42,7 @@
       affiliation: Huawei
       url: /projects/3_ges/
       action: Explore
-      description: A production graph database service combining composable architecture and factorized execution for high-concurrency interactive graph workloads.
+      description: A production graph database supporting hundreds of billions of edges and real-time queries, with audited #1 LDBC SNB Interactive results on both benchmark tracks (2024–2025).
       links:
         - label: Overview
           url: /projects/3_ges/
@@ -58,7 +58,7 @@
       affiliation: Huawei
       url: /projects/2_tqex/
       action: Explore
-      description: A tensor-based SQL query engine using tensor runtimes as a portable execution layer across heterogeneous accelerators.
+      description: Accelerates SQL analytics using portable tensor execution across NVIDIA and AMD GPUs and Apple chips, with 12.2× and 22.7× speedups over DuckDB and HeavyDB on supported TPC-H SF100 queries.
       links:
         - label: Overview
           url: /projects/2_tqex/

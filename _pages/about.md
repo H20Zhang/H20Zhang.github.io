@@ -51,10 +51,10 @@ My longer-term goal is **multi-agent and human–agent collaboration at scale** 
 <h2 class="about-section-label" id="selected-systems">Selected Systems</h2>
 <div class="about-section-content" markdown="1">
 
-- [**AutoIA @ ByteDance**](/projects/1_autoia/) — an **IR-first, self-evolving agentic system** that constructs and improves agent harnesses and shared environments. It combines composable representations, agent-driven construction, and experience-driven evolution to make capabilities reusable and verifiable.
-- [**SEMA**](/projects/#sema) — makes LLM-powered semantic operators first-class SQL primitives, enabling query optimization and adaptive execution. Its evaluation reports 2–10× speedups over three baselines on semantic-query workloads.
-- [**GES @ Huawei**](/projects/3_ges/) — a production graph database combining a composable service architecture with factorized execution. It achieved audited LDBC SNB Interactive #1 results on the declarative (2024) and imperative (2025) tracks.
-- [**TQEX @ Huawei**](/projects/2_tqex/) — maps irregular SQL operators onto portable tensor runtimes across heterogeneous accelerators. Its evaluation reports 12.2× over DuckDB and 22.7× over HeavyDB on supported TPC-H SF100 queries.
+- [**AutoIA @ ByteDance**](/projects/1_autoia/) — builds **self-evolving agentic systems** that improve tools, skills, memory, and shared environments over time. An **IR-first approach** makes this evolution more structured, reusable, and verifiable.
+- [**SEMA**](/projects/#sema) — brings **LLM reasoning into databases**, enabling SQL to analyze structured data alongside natural-language content. Achieves **2–10× faster semantic query processing** than three evaluated baselines.
+- [**GES @ Huawei**](/projects/3_ges/) — a production graph database supporting **hundreds of billions of edges** and high-performance, real-time graph queries. Earned **#1 audited LDBC SNB Interactive results on both benchmark tracks** (2024 and 2025).
+- [**TQEX @ Huawei**](/projects/2_tqex/) — accelerates **SQL analytics across heterogeneous AI hardware**, using portable tensor execution on NVIDIA and AMD GPUs and Apple chips. Achieves **12.2× over DuckDB and 22.7× over HeavyDB** on supported TPC-H SF100 queries.
 
 [**Explore all systems**](/projects/) · [**Papers by research area**](/publications/)
 </div>
@@ -85,9 +85,9 @@ I received my **Ph.D.** from the Chinese University of Hong Kong, advised by **[
 <h2 class="about-section-label" id="collaboration-internship">Collaboration &amp; Internship</h2>
 <div class="about-section-content" markdown="1">
 
-I welcome collaborations on **self-evolving agentic systems**, particularly **IR-based approaches to harness and environment evolution**, structured agent memory, and verifiable context infrastructure. I am also interested in bridging database systems, symbolic representations, and LLM-driven agents to build reusable intelligence across agents and tasks.
+I welcome research collaborations on **self-evolving agentic systems and context infrastructure**.
 
-I am also recruiting **research interns** at ByteDance in Shenzhen; email zhanghaowuda12 [at] gmail [dot] com with `[Intern]` in the subject.
+**Research internships** are available at ByteDance (Shenzhen). Contact: zhanghaowuda12 [at] gmail [dot] com (subject: `[Intern]`).
 </div>
 </section>
 

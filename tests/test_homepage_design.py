@@ -70,7 +70,8 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertIn("**shared environments** (data, memory, and context infrastructure)", page)
         self.assertIn("experience-driven evolution", page)
         self.assertIn("**IR-first, symbolic approach**", page)
-        self.assertIn("IR-based approaches to harness and environment evolution", page)
+        self.assertIn("I welcome research collaborations on", page)
+        self.assertIn("**Research internships** are available at ByteDance (Shenzhen)", page)
         self.assertIn("IR-first agentic systems", page)
 
         section_ids = (

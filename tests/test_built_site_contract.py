@@ -576,19 +576,17 @@ class BuiltSiteContractTest(unittest.TestCase):
             self.assertIn(name, self.homepage.selected_systems_text)
         self.assertNotIn("Huawei-era systems", self.homepage.selected_systems_text)
         self.assertNotIn("UBASE", self.homepage.selected_systems_text)
-        # Each highlight identifies its technical differentiator or scoped evidence.
+        # Lead with the outcome for each system, then use scoped evidence.
         highlights = self.homepage.selected_systems_text
         for claim in (
-            "IR-first, self-evolving agentic system",
-            "composable representations",
-            "experience-driven evolution",
-            "first-class SQL primitives",
-            "2–10× speedups",
-            "three baselines",
-            "factorized execution",
-            "audited LDBC SNB Interactive #1",
-            "declarative (2024)",
-            "imperative (2025)",
+            "self-evolving agentic systems",
+            "IR-first approach",
+            "LLM reasoning into databases",
+            "2–10× faster semantic query processing",
+            "three evaluated baselines",
+            "hundreds of billions of edges",
+            "#1 audited LDBC SNB Interactive results on both benchmark tracks",
+            "NVIDIA and AMD GPUs and Apple chips",
             "12.2× over DuckDB",
             "22.7× over HeavyDB",
             "supported TPC-H SF100 queries",

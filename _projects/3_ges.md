@@ -1,7 +1,7 @@
 ---
 layout: page
 title: GES @ Huawei
-description: Production graph database service for high-throughput interactive graph workloads.
+description: Production graph database supporting hundreds of billions of edges and high-performance real-time queries, with audited LDBC benchmark-leading results.
 importance: 2
 category: systems
 project_group: huawei
@@ -59,7 +59,7 @@ research_support:
         role: Represents adjacent graph-learning research and is not presented as part of the GES implementation.
 ---
 
-Huawei GES is a production graph database service for high-throughput interactive graph workloads.
+Huawei GES is a production graph database service supporting **graphs with hundreds of billions of edges** and high-performance, real-time graph queries. It earned audited **#1 LDBC SNB Interactive results** on the declarative (2024) and imperative (2025) tracks.
 
 ## Problem
 

@@ -579,8 +579,9 @@ class BuiltSiteContractTest(unittest.TestCase):
         # Each highlight identifies its technical differentiator or scoped evidence.
         highlights = self.homepage.selected_systems_text
         for claim in (
-            "composable Context IR",
-            "task feedback",
+            "IR-first, self-evolving agentic system",
+            "composable representations",
+            "experience-driven evolution",
             "first-class SQL primitives",
             "2–10× speedups",
             "three baselines",

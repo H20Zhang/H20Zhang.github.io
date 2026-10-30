@@ -1,7 +1,7 @@
 ---
 layout: page
 title: AutoIA @ ByteDance
-description: A self-evolving agentic system that improves agent harnesses, shared environments, and its own construction strategies.
+description: An IR-first, self-evolving agentic system using composable representations to improve agent harnesses, shared environments, and construction strategies.
 importance: 1
 category: systems
 project_group: bytedance
@@ -21,6 +21,14 @@ research_support:
 At ByteDance, I am developing **AutoIA**, a **self-evolving agentic system** that constructs and improves **agent harnesses and shared working environments**. An **agent harness** configures how an agent works—its tools, skills, execution strategies, and access to context. A **shared environment** persists beyond individual tasks and agents, providing reusable data, context, memory, and capabilities that multiple agents can use, and that people or other services could also access.
 
 AutoIA uses a composable **Context IR** and agent-based construction to discover unfamiliar sources and evolve both layers. It refines tools, skills, and workflows alongside derived relations, memory, indexes, and other shared assets. Task feedback guides these changes, while successful projects, seed specifications, and construction experience help the system improve its own construction strategies. The central thesis is **agent evolution through harness–environment co-evolution**.
+
+## Design Philosophy: IR-First Evolution
+
+AutoIA takes an **IR-first, symbolic approach** to self-evolving agentic systems. Instead of treating arbitrary generated code as the primary unit of evolution, it uses structured representations with explicit semantics to organize, compose, and validate evolving capabilities.
+
+The goal is not to eliminate code generation, but to separate **what the system represents and evolves** from **how those capabilities are executed**. LLM-driven agents explore unfamiliar workloads and propose changes, while the IR provides a common foundation for reasoning, reuse, validation, and optimization. In particular, **Context IR** structures heterogeneous source data and derived context; this does not imply that every harness tool or execution strategy is represented in that same IR.
+
+This design draws on a central lesson from database systems: **explicit intermediate representations make complex systems easier to reason about, optimize, and control.** These are design motivations to be tested, not established comparative performance claims.
 
 ## Problem
 

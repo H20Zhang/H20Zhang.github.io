@@ -69,6 +69,9 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertIn("Context IR", page)
         self.assertIn("**shared environments** (data, memory, and context infrastructure)", page)
         self.assertIn("experience-driven evolution", page)
+        self.assertIn("**IR-first, symbolic approach**", page)
+        self.assertIn("IR-based approaches to harness and environment evolution", page)
+        self.assertIn("IR-first agentic systems", page)
 
         section_ids = (
             "current-focus",

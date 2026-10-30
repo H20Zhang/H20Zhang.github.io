@@ -62,7 +62,7 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertIn('class="about-hero-profile"', layout)
         self.assertIn('class="about-sections"', layout)
         self.assertIn('class="about-footer-row"', layout)
-        self.assertIn("hero_title: Evolving agent harnesses and shared environments.", page)
+        self.assertIn("hero_title: Evolving Agent Harnesses and Shared Environments to Make Intelligence Cumulative.", page)
         self.assertIn("hero_intro:", page)
         self.assertIn("self-evolving agentic system", page)
         self.assertIn("agent harnesses and shared environments", page)

@@ -7,7 +7,7 @@ subtitle: Research Scientist at ByteDance
 description: Hao Zhang studies self-evolving agentic systems that improve agent harnesses, shared environments, and their own construction strategies through accumulated experience.
 keywords: Hao Zhang, ByteDance, AI agents, self-evolving agentic systems, harness evolution, environment evolution, shared agent environments, self-evolving harnesses, experience-driven construction, Context IR, context infrastructure, agent memory, agent tools, agent skills, multi-agent collaboration, human-agent collaboration, vector search, semantic query processing, graph systems, hardware-accelerated data systems
 last_modified_at: 2026-10-27
-hero_title: Evolving agent harnesses and shared environments.
+hero_title: Evolving Agent Harnesses and Shared Environments to Make Intelligence Cumulative.
 hero_intro: |
   I develop **AutoIA**, a **self-evolving agentic system** that constructs and evolves **agent harnesses** (tools, skills, and execution strategies) and **shared environments** (data, memory, and context infrastructure). It learns from task feedback and past projects to improve **its own construction strategies**.
 

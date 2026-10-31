@@ -164,6 +164,51 @@
   }
 }
 
+.about-research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem 2rem;
+}
+
+.about-research-area {
+  min-width: 0;
+}
+
+.about-section-content .about-research-area h3,
+.about-section-content .about-item-title {
+  margin: 0 0 0.45rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.about-research-area p {
+  margin: 0;
+}
+
+.about-section-content .about-systems-list {
+  margin: 0 0 1.05rem;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+  }
+
+  li + li {
+    margin-top: 1.4rem;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.about-item-subtitle {
+  color: var(--global-text-color-light);
+  font-weight: 400;
+}
+
 .about-extras:empty {
   display: none;
 }
@@ -238,6 +283,11 @@
     grid-template-columns: 1fr;
     gap: 0.7rem;
     padding: 1.7rem 0 1.6rem;
+  }
+
+  .about-research-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.2rem;
   }
 
   .about-footer-row {

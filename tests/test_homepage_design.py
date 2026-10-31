@@ -1,4 +1,5 @@
 from pathlib import Path
+import re
 import unittest
 
 
@@ -64,17 +65,17 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertIn('class="about-footer-row"', layout)
         self.assertIn("hero_title: Evolving Agent Harnesses and Shared Environments to Make Intelligence Cumulative.", page)
         self.assertIn("hero_intro:", page)
-        self.assertIn("self-evolving agentic system", page)
-        self.assertIn("agent harnesses and shared environments", page)
-        self.assertIn("Context IR", page)
-        self.assertIn("**shared environments** (data, memory, and context infrastructure)", page)
-        self.assertIn("experience-driven evolution", page)
-        self.assertIn("**IR-first, symbolic approach**", page)
-        self.assertIn("I welcome research collaborations on", page)
-        self.assertIn("**Research internships** are available at ByteDance (Shenzhen)", page)
-        self.assertIn("IR-first agentic systems", page)
+        self.assertIn("**self-evolving agentic systems**", page)
+        self.assertIn("shared context infrastructure", page)
+        self.assertIn("**IR-first framework**", page)
+        self.assertIn("autonomously construct context systems", page)
+        self.assertIn("through experience", page)
+        self.assertIn("exchange ideas, discuss research, and explore collaborations", page)
+        self.assertIn("**Research internships** at ByteDance (Shenzhen)", page)
+        self.assertIn("Top 1% (个人金牌)", page)
 
         section_ids = (
+            "research-directions",
             "current-focus",
             "selected-systems",
             "highlights",
@@ -82,6 +83,8 @@ class HomepageDesignContractTest(unittest.TestCase):
             "collaboration-internship",
             "recent-news",
         )
+        actual_ids = re.findall(r'<section class="about-section" aria-labelledby="([^"]+)"', page)
+        self.assertEqual(tuple(actual_ids), section_ids)
         for section_id in section_ids:
             with self.subTest(section_id=section_id):
                 self.assertIn(f'id="{section_id}"', page)
@@ -89,6 +92,22 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertEqual(page.count('class="about-section"'), len(section_ids))
         self.assertEqual(page.count('class="about-section-label"'), len(section_ids))
         self.assertEqual(page.count('class="about-section-content"'), len(section_ids))
+
+    def test_personal_intro_and_current_project_have_distinct_roles(self):
+        page = read("_pages/about.md")
+        intro = page.split("hero_intro: |\n", 1)[1].split("\n\nprofile:", 1)[0]
+        self.assertNotIn("AutoIA", intro)
+        self.assertIn("self-evolving agentic systems", intro)
+        self.assertIn("AI-powered data systems", intro)
+        self.assertIn("large-scale databases", intro)
+        self.assertIn("hardware-accelerated computing", intro)
+        self.assertLessEqual(len(intro.split()), 50)
+
+        directions = page.split('aria-labelledby="research-directions"', 1)[1].split("</section>", 1)[0]
+        self.assertEqual(directions.count('class="about-research-area"'), 4)
+        self.assertIn("context infrastructure, including agent memory", directions)
+        self.assertIn("vector and graph databases", directions)
+        self.assertNotIn("AutoIA", directions)
 
     def test_homepage_styles_are_wired_and_responsive(self):
         main = read("assets/css/main.scss")
@@ -107,6 +126,9 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertIn("@media (max-width: 767px)", styles)
         self.assertIn("@media (max-width: 575px)", styles)
         self.assertIn(".about-tagline {\n    font-size: 1.45rem;", styles)
+        self.assertIn("grid-template-columns: repeat(2, minmax(0, 1fr))", styles)
+        mobile = styles.split("@media (max-width: 767px)", 1)[1]
+        self.assertRegex(mobile, r"\.about-research-grid\s*\{\s*grid-template-columns: minmax\(0, 1fr\)")
 
 
 if __name__ == "__main__":

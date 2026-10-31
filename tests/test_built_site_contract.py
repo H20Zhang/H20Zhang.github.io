@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from html import unescape
 from html.parser import HTMLParser
 import json
 from pathlib import Path
@@ -107,6 +108,21 @@ def parse_page(path: Path) -> PageParser:
     return parser
 
 
+def visible_text(html: str) -> str:
+    return " ".join(unescape(re.sub(r"<[^>]+>", " ", html)).split())
+
+
+def homepage_section(html: str, section_id: str) -> str:
+    match = re.search(
+        rf'<section\b[^>]*aria-labelledby="{re.escape(section_id)}"[^>]*>(.*?)</section>',
+        html,
+        re.DOTALL,
+    )
+    if match is None:
+        raise AssertionError(f"homepage section not found: {section_id}")
+    return match.group(1)
+
+
 def compiled_css_rule(css: str, selector: str) -> dict[str, str]:
     pattern = re.compile(
         rf"(?:^|\ufeff|(?<=[{{}},;]))\s*{re.escape(selector)}\{{([^{{}}]+)\}}"
@@ -194,20 +210,81 @@ class BuiltSiteContractTest(unittest.TestCase):
         )
         self.assertTrue(og_image.startswith("https://"), og_image)
 
-    def test_homepage_explains_harness_environment_and_builder_evolution(self):
+    def test_homepage_separates_personal_identity_from_current_focus(self):
         html = (SITE / "index.html").read_text(encoding="utf-8")
+        intro = re.search(r'<div class="about-intro">(.*?)</div>', html, re.DOTALL)
+        self.assertIsNotNone(intro)
+        intro_text = visible_text(intro.group(1))
+        self.assertIn("self-evolving agentic systems", intro_text)
+        self.assertIn("shared context infrastructure", intro_text)
+        self.assertIn("AI-powered data systems", intro_text)
+        self.assertNotIn("AutoIA", intro_text)
+
+        focus = visible_text(homepage_section(html, "current-focus"))
         for phrase in (
-            "self-evolving agentic system",
-            "construction strategies",
-            "agent harnesses and shared environments",
+            "AutoIA — Self-Evolving Agentic Systems",
+            "IR-first framework",
+            "autonomously construct context systems",
+            "harnesses and shared environments through experience",
         ):
             with self.subTest(phrase=phrase):
-                self.assertIn(phrase, html)
+                self.assertIn(phrase, focus)
+        self.assertIn("/projects/1_autoia/", homepage_section(html, "current-focus"))
+
+    def test_homepage_research_directions_render_in_approved_order(self):
+        html = (SITE / "index.html").read_text(encoding="utf-8")
+        directions = homepage_section(html, "research-directions")
+        headings = [visible_text(h) for h in re.findall(r"<h3[^>]*>(.*?)</h3>", directions, re.DOTALL)]
+        self.assertEqual(headings, [
+            "Agentic Infrastructure",
+            "AI-Powered Data Systems",
+            "Database & Graph Systems",
+            "Hardware-Accelerated Computing",
+        ])
+        areas = re.findall(r'<div class="about-research-area">(.*?)</div>', directions, re.DOTALL)
+        self.assertEqual(len(areas), 4)
+        self.assertIn("context infrastructure, including agent memory", visible_text(areas[0]))
+        self.assertNotIn("agent memory", visible_text(areas[1]))
+        self.assertIn("vector and graph databases", visible_text(areas[2]))
+        self.assertNotIn("AutoIA", visible_text(directions))
+
+        ids = re.findall(r'<h2 class="about-section-label" id="([^"]+)"', html)
+        self.assertEqual(ids, [
+            "research-directions", "current-focus", "selected-systems",
+            "highlights", "honors-awards", "collaboration-internship", "recent-news",
+        ])
+
+    def test_research_direction_grid_has_desktop_and_mobile_layouts(self):
+        desktop = compiled_css_rule(self.css, ".about-research-grid")
+        mobile = compiled_css_cascade_rule(self.css, ".about-research-grid")
+        self.assertEqual(desktop.get("display"), "grid")
+        self.assertEqual(
+            re.sub(r"\s+", "", desktop.get("grid-template-columns", "")),
+            "repeat(2,minmax(0,1fr))",
+        )
+        self.assertEqual(
+            re.sub(r"\s+", "", mobile.get("grid-template-columns", "")),
+            "minmax(0,1fr)",
+        )
+
+    def test_homepage_invites_discussion_and_explains_chinese_honor(self):
+        html = (SITE / "index.html").read_text(encoding="utf-8")
+        connect = visible_text(homepage_section(html, "collaboration-internship"))
+        self.assertIn("Connect & Internships", connect)
+        self.assertIn("exchange ideas, discuss research, and explore collaborations", connect)
+        self.assertIn("Research internships", connect)
+        self.assertIn("ByteDance (Shenzhen)", connect)
+        self.assertIn("[Intern]", connect)
+        self.assertLess(len(connect.split()), 65)
+        honors = visible_text(homepage_section(html, "honors-awards"))
+        self.assertIn("Top 1% (个人金牌)", honors)
+        self.assertIn("筋斗云人才计划", honors)
+        self.assertIn("天才少年计划", honors)
 
     def test_generated_main_stylesheet_uses_build_specific_cache_key(self):
         homepage_html = (SITE / "index.html").read_text(encoding="utf-8")
         stylesheet = re.search(
-            r'href="/assets/css/main\.css\?v=([^"]+)"', homepage_html
+            r'href="/assets/css/main\.css\?v=([^\"]+)"', homepage_html
         )
 
         self.assertIsNotNone(stylesheet)
@@ -569,30 +646,30 @@ class BuiltSiteContractTest(unittest.TestCase):
                 self.assertEqual(og_type, "website")
 
     def test_homepage_presents_named_systems(self):
-        self.assertEqual(self.homepage.selected_systems_items, 4)
+        self.assertEqual(self.homepage.selected_systems_items, 3)
         self.assertNotIn("Independent Research", self.homepage.selected_systems_text)
         self.assertIn("Selected Systems", self.homepage.selected_systems_text)
-        for name in ("AutoIA @ ByteDance", "SEMA", "GES @ Huawei", "TQEX @ Huawei"):
+        for name in ("SEMA", "GES @ Huawei", "TQEX @ Huawei"):
             self.assertIn(name, self.homepage.selected_systems_text)
+        self.assertNotIn("AutoIA", self.homepage.selected_systems_text)
         self.assertNotIn("Huawei-era systems", self.homepage.selected_systems_text)
         self.assertNotIn("UBASE", self.homepage.selected_systems_text)
-        # Lead with the outcome for each system, then use scoped evidence.
+        # AutoIA is Current Focus; the selected systems retain outcome-led evidence.
         highlights = self.homepage.selected_systems_text
         for claim in (
-            "self-evolving agentic systems",
-            "IR-first approach",
             "LLM reasoning into databases",
-            "2–10× faster semantic query processing",
-            "three evaluated baselines",
+            "2–10× speedups",
+            "evaluated semantic-query workloads",
             "hundreds of billions of edges",
-            "#1 audited LDBC SNB Interactive results on both benchmark tracks",
+            "#1 LDBC SNB Interactive results on both tracks",
             "NVIDIA and AMD GPUs and Apple chips",
-            "12.2× over DuckDB",
+            "12.2× speedup over DuckDB",
             "22.7× over HeavyDB",
             "supported TPC-H SF100 queries",
         ):
             with self.subTest(claim=claim):
                 self.assertIn(claim, highlights)
+        self.assertNotIn("three evaluated baselines", highlights)
 
     def test_homepage_uses_cycling_profile_photo(self):
         cycling_images = [

@@ -30,12 +30,16 @@ def paper_ids(text):
 
 
 class ProjectAttributionContractTest(unittest.TestCase):
-    def test_homepage_connects_context_to_collaboration_and_named_systems(self):
+    def test_homepage_distinguishes_current_focus_from_named_systems(self):
         page = read("_pages/about.md")
-        self.assertIn("multi-agent and human–agent collaboration", page)
-        self.assertIn("build on one another's knowledge and work over time", page)
-        self.assertIn("Selected Systems", page)
-        self.assertIn("[**SEMA**](/projects/#sema)", page)
+        focus = page.split('aria-labelledby="current-focus"', 1)[1].split("</section>", 1)[0]
+        systems = page.split('aria-labelledby="selected-systems"', 1)[1].split("</section>", 1)[0]
+        self.assertIn("AutoIA", focus)
+        self.assertIn("/projects/1_autoia/", focus)
+        self.assertNotIn("AutoIA", systems)
+        for name in ("SEMA", "GES @ Huawei", "TQEX @ Huawei"):
+            self.assertIn(name, systems)
+        self.assertIn('href="/projects/#sema"', systems)
         self.assertNotIn(INDEPENDENT_URL, page)
         self.assertNotIn("is the platform for this work", page)
 

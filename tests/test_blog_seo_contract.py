@@ -21,6 +21,7 @@ class PageParser(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.html_lang = ""
         self.links: list[dict[str, str]] = []
+        self.anchors: list[dict[str, str]] = []
         self.metas: list[dict[str, str]] = []
         self.json_ld: list[str] = []
         self.title_parts: list[str] = []
@@ -36,6 +37,8 @@ class PageParser(HTMLParser):
             self.html_lang = attributes.get("lang", "")
         elif tag == "link":
             self.links.append(attributes)
+        elif tag == "a":
+            self.anchors.append(attributes)
         elif tag == "meta":
             self.metas.append(attributes)
         elif tag == "title":
@@ -185,21 +188,23 @@ class BlogSeoContractTest(unittest.TestCase):
             "人类与 AI Agent 的共享信息世界 | Hao Zhang",
         )
 
-    def test_homepage_and_writing_index_surface_the_primary_essay(self):
-        homepage_html = (SITE / "index.html").read_text(encoding="utf-8")
+    def test_homepage_writing_navigation_reaches_the_primary_essay(self):
+        homepage = parse_page(Path("index.html"))
+        writing = parse_page(Path("blog/index.html"))
         writing_html = (SITE / "blog" / "index.html").read_text(encoding="utf-8")
 
-        self.assertIn("shared information world", homepage_html.lower())
-        self.assertIn(
-            'href="/blog/2026/shared-information-world-ai-agents/"',
-            homepage_html,
-        )
+        # The personal overview routes essays through Writing rather than
+        # repeating the old Research Perspective paragraph on the homepage.
+        self.assertTrue(any(
+            anchor.get("href") == "/blog/"
+            and "nav-link" in anchor.get("class", "").split()
+            for anchor in homepage.anchors
+        ))
+        writing_hrefs = {anchor.get("href") for anchor in writing.anchors}
+        self.assertIn("/blog/2026/shared-information-world-ai-agents/", writing_hrefs)
+        self.assertIn("/blog/2026/shared-information-world-ai-agents-zh/", writing_hrefs)
         self.assertIn(
             "When Intelligence Becomes Abundant: Organizing the Shared Information World of Humans and AI Agents",
-            writing_html,
-        )
-        self.assertIn(
-            'href="/blog/2026/shared-information-world-ai-agents-zh/"',
             writing_html,
         )
 

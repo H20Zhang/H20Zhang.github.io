@@ -21,6 +21,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      homepage_sha256: ${{ steps.homepage_digest.outputs.sha256 }}
     env:
       JEKYLL_ENV: production
     steps:
@@ -45,6 +47,11 @@ jobs:
       - name: Check internal links and anchors
         run: python3 scripts/check_internal_links.py _site
 
+      - name: Record built homepage digest
+        id: homepage_digest
+        run: |
+          echo "sha256=$(sha256sum _site/index.html | cut -d ' ' -f1)" >> "$GITHUB_OUTPUT"
+
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4
@@ -65,3 +72,49 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Verify live homepage matches build
+        timeout-minutes: 4
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+          EXPECTED_SHA256: ${{ needs.build.outputs.homepage_sha256 }}
+          DEPLOY_COMMIT: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import os
+          import re
+          import time
+          import urllib.request
+
+          base_url = os.environ["SITE_URL"]
+          expected = os.environ["EXPECTED_SHA256"]
+          commit = os.environ["DEPLOY_COMMIT"]
+          if not re.fullmatch(r"[0-9a-f]{64}", expected):
+              raise SystemExit("Missing or invalid built-homepage SHA-256")
+
+          last_error = "No response received"
+          for attempt in range(1, 11):
+              separator = "&" if "?" in base_url else "?"
+              url = f"{base_url}{separator}deploy={commit}&attempt={attempt}"
+              request = urllib.request.Request(url, headers={
+                  "Cache-Control": "no-cache",
+                  "Pragma": "no-cache",
+                  "User-Agent": "homepage-deployment-verifier",
+              })
+              try:
+                  with urllib.request.urlopen(request, timeout=15) as response:
+                      actual = hashlib.sha256(response.read()).hexdigest()
+                  if actual == expected:
+                      print(f"Verified live homepage: {base_url}")
+                      print(f"SHA-256 matches build: {actual}")
+                      break
+                  last_error = f"Expected {expected}, received {actual}"
+              except OSError as exc:
+                  last_error = str(exc)
+              print(f"Attempt {attempt}/10: {last_error}", flush=True)
+              if attempt < 10:
+                  time.sleep(5)
+          else:
+              raise SystemExit(f"Live homepage verification failed: {last_error}")
+          PY

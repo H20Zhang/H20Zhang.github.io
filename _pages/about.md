@@ -38,20 +38,20 @@ latest_posts:
 <div class="about-section-content">
 <div class="about-research-grid">
   <div class="about-research-area">
-    <h3>Agentic Infrastructure</h3>
-    <p>Self-evolving agent systems that autonomously build and improve agent harnesses and context infrastructure, including agent memory.</p>
+    <h3>Agentic Systems &amp; Context Infrastructure</h3>
+    <p>Self-evolving agent systems, evolving harnesses and shared environments, agent memory, and context infrastructure.</p>
   </div>
   <div class="about-research-area">
     <h3>AI-Powered Data Systems</h3>
-    <p>LLM-powered semantic queries and AI-enhanced data processing.</p>
+    <p>LLM-powered semantic queries, AI-integrated data processing, and intelligent query execution.</p>
   </div>
   <div class="about-research-area">
-    <h3>Database &amp; Graph Systems</h3>
-    <p>Distributed SQL, vector and graph databases, query optimization, and large-scale graph processing.</p>
+    <h3>Scalable Data &amp; Retrieval Systems</h3>
+    <p>Distributed databases, vector search, graph databases, and large-scale query processing.</p>
   </div>
   <div class="about-research-area">
     <h3>Hardware-Accelerated Computing</h3>
-    <p>Efficient data processing across GPUs and heterogeneous accelerators.</p>
+    <p>Efficient and portable data processing across GPUs and heterogeneous accelerators.</p>
   </div>
 </div>
 </div>

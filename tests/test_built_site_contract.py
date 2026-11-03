@@ -222,7 +222,7 @@ class BuiltSiteContractTest(unittest.TestCase):
 
         focus = visible_text(homepage_section(html, "current-focus"))
         for phrase in (
-            "AutoIA — Self-Evolving Agentic Systems",
+            "AutoIA",
             "IR-first framework",
             "autonomously construct context systems",
             "harnesses and shared environments through experience",

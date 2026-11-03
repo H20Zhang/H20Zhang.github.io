@@ -118,7 +118,7 @@ I received my **Ph.D. from the Chinese University of Hong Kong**, advised by [Pr
 
 I'm always happy to **exchange ideas, discuss research, and explore collaborations** on AI and data systems. Feel free to reach out!
 
-**Research internships** at ByteDance (Shenzhen): zhanghaowuda12 [at] gmail [dot] com (subject: `[Intern]`).
+For **research internships at ByteDance (Shenzhen)**, please contact me at **zhanghaowuda12 [at] gmail [dot] com** (email subject: `[Intern]`).
 </div>
 </section>
 

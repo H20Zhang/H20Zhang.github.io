@@ -9,7 +9,9 @@ keywords: Hao Zhang, ByteDance, AI agents, self-evolving agentic systems, harnes
 last_modified_at: 2026-11-03
 hero_title: Making Intelligence Cumulative.
 hero_intro: |
-  My current research focuses on **self-evolving agentic systems**, particularly agent harnesses and shared context infrastructure. My broader work spans AI-powered data systems, large-scale databases, graph processing, and hardware-accelerated computing.
+  My current research focuses on **self-evolving agentic systems**, particularly agent harnesses and shared context infrastructure.
+
+  My broader research spans **AI-powered data systems, large-scale databases and graph processing, and hardware-accelerated computing**. I have designed and built **production-scale systems** at ByteDance and Huawei, including [**trillion-scale vector search**](/publications/#ATC-26) and [**graph databases managing hundreds of billions of edges**](/projects/3_ges/), with benchmark-leading results.
 
 profile:
   align: right
@@ -59,7 +61,7 @@ latest_posts:
 <h2 class="about-section-label" id="current-focus">Current Focus</h2>
 <div class="about-section-content" markdown="1">
 
-<h3 class="about-item-title">AutoIA — Self-Evolving Agentic Systems</h3>
+<h3 class="about-item-title">AutoIA @ ByteDance — Self-Evolving Agentic Systems</h3>
 
 I'm developing **AutoIA**, an **IR-first framework** for agents to autonomously construct context systems and continuously improve their harnesses and shared environments through experience.
 

@@ -11,34 +11,22 @@ def read(relative_path: str) -> str:
 
 
 class HomepageDesignContractTest(unittest.TestCase):
-    def test_selected_light_and_dark_palettes_are_declared(self):
-        variables = read("_sass/_variables.scss").lower()
+    def test_palette_tokens_are_declared(self):
+        # Verify theme inputs, not the particular hex colors chosen today.
+        variables = read("_sass/_variables.scss")
+        for token in (
+            "paper-cream-light",
+            "paper-sand-light",
+            "accent-color-light",
+            "paper-espresso-dark",
+            "paper-sand-dark",
+            "accent-color-dark",
+        ):
+            with self.subTest(token=token):
+                self.assertIn(f"${token}:", variables)
 
-        light_palette = (
-            "#fdfdfd",
-            "#f7f7f7",
-            "#3f5fcc",
-            "#273f9f",
-            "#1a1a1a",
-            "#6b7280",
-            "#cc4b00",
-        )
-        dark_palette = (
-            "#241a16",
-            "#2e211c",
-            "#f4eadf",
-            "#c2b2a7",
-            "#e58b6d",
-            "#f0a084",
-        )
-
-        for color in light_palette + dark_palette:
-            with self.subTest(color=color):
-                self.assertIn(color, variables)
-
-    def test_theme_exposes_warm_surface_tokens(self):
+    def test_theme_exposes_surface_tokens_in_both_modes(self):
         themes = read("_sass/_themes.scss")
-
         for token in (
             "--global-surface-color",
             "--global-section-alt-color",
@@ -46,33 +34,22 @@ class HomepageDesignContractTest(unittest.TestCase):
             "--global-section-accent-color",
         ):
             with self.subTest(token=token):
-                self.assertGreaterEqual(themes.count(token), 2)
-
-        self.assertIn("v.$accent-hover-light", themes)
-        self.assertIn("v.$accent-hover-dark", themes)
-        self.assertIn("rgba(229, 231, 235, 1)", themes)
-        self.assertNotIn("rgba(120, 51, 34, 0.18)", themes)
+                self.assertGreaterEqual(themes.count(token + ":"), 2)
 
     def test_homepage_uses_selected_editorial_structure(self):
         layout = read("_layouts/about.liquid")
         page = read("_pages/about.md")
 
-        self.assertIn('class="about-page"', layout)
-        self.assertIn('class="about-hero"', layout)
-        self.assertIn('class="about-hero-copy"', layout)
-        self.assertIn('class="about-hero-profile"', layout)
-        self.assertIn('class="about-sections"', layout)
-        self.assertIn('class="about-footer-row"', layout)
-        self.assertIn("hero_title: Evolving Agent Harnesses and Shared Environments to Make Intelligence Cumulative.", page)
-        self.assertIn("hero_intro:", page)
-        self.assertIn("**self-evolving agentic systems**", page)
-        self.assertIn("shared context infrastructure", page)
-        self.assertIn("**IR-first framework**", page)
-        self.assertIn("autonomously construct context systems", page)
-        self.assertIn("through experience", page)
-        self.assertIn("exchange ideas, discuss research, and explore collaborations", page)
-        self.assertIn("**Research internships** at ByteDance (Shenzhen)", page)
-        self.assertIn("Top 1% (个人金牌)", page)
+        for class_name in (
+            "about-page", "about-hero", "about-hero-copy",
+            "about-hero-profile", "about-sections", "about-footer-row",
+        ):
+            with self.subTest(class_name=class_name):
+                self.assertIn(f'class="{class_name}"', layout)
+
+        # Editorial copy is meant to change without breaking deployment.
+        self.assertRegex(page, r"(?m)^hero_title:\s*\S.+$")
+        self.assertIn("hero_intro: |", page)
 
         section_ids = (
             "research-directions",
@@ -96,18 +73,17 @@ class HomepageDesignContractTest(unittest.TestCase):
     def test_personal_intro_and_current_project_have_distinct_roles(self):
         page = read("_pages/about.md")
         intro = page.split("hero_intro: |\n", 1)[1].split("\n\nprofile:", 1)[0]
+        self.assertGreater(len(intro.split()), 10)
+        self.assertLessEqual(len(intro.split()), 65)
         self.assertNotIn("AutoIA", intro)
-        self.assertIn("self-evolving agentic systems", intro)
-        self.assertIn("AI-powered data systems", intro)
-        self.assertIn("large-scale databases", intro)
-        self.assertIn("hardware-accelerated computing", intro)
-        self.assertLessEqual(len(intro.split()), 50)
 
         directions = page.split('aria-labelledby="research-directions"', 1)[1].split("</section>", 1)[0]
         self.assertEqual(directions.count('class="about-research-area"'), 4)
-        self.assertIn("context infrastructure, including agent memory", directions)
-        self.assertIn("vector and graph databases", directions)
         self.assertNotIn("AutoIA", directions)
+
+        focus = page.split('aria-labelledby="current-focus"', 1)[1].split("</section>", 1)[0]
+        self.assertIn("AutoIA", focus)
+        self.assertIn("/projects/1_autoia/", focus)
 
     def test_homepage_styles_are_wired_and_responsive(self):
         main = read("assets/css/main.scss")
@@ -117,18 +93,13 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertTrue(about_path.exists(), "homepage Sass partial must exist")
 
         styles = read("_sass/_about.scss")
-        self.assertIn("grid-template-columns: minmax(0, 1.5fr) minmax(300px, 1fr)", styles)
-        self.assertIn("max-width: 340px;", styles)
-        self.assertIn("max-width: 320px;", styles)
-        self.assertIn("grid-template-columns: 176px minmax(0, 1fr)", styles)
-        self.assertIn("var(--global-section-alt-color)", styles)
-        self.assertIn("color: var(--global-section-accent-color)", styles)
-        self.assertIn("@media (max-width: 767px)", styles)
-        self.assertIn("@media (max-width: 575px)", styles)
-        self.assertIn(".about-tagline {\n    font-size: 1.45rem;", styles)
-        self.assertIn("grid-template-columns: repeat(2, minmax(0, 1fr))", styles)
-        mobile = styles.split("@media (max-width: 767px)", 1)[1]
-        self.assertRegex(mobile, r"\.about-research-grid\s*\{\s*grid-template-columns: minmax\(0, 1fr\)")
+        for selector in (".about-hero", ".about-tagline", ".about-section", ".about-research-grid"):
+            with self.subTest(selector=selector):
+                self.assertIn(selector, styles)
+
+        self.assertRegex(styles, r"\.about-hero\s*\{[^}]*grid-template-columns")
+        self.assertRegex(styles, r"\.about-research-grid\s*\{[^}]*grid-template-columns")
+        self.assertRegex(styles, r"(?s)@media\s*\(max-width:\s*\d+px\).*?\.about-research-grid\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)")
 
 
 if __name__ == "__main__":

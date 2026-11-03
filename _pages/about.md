@@ -98,7 +98,7 @@ I'm developing **AutoIA**, an **IR-first framework** for agents to autonomously 
 
 **#1 on both tracks of [LDBC SNB Interactive](https://ldbcouncil.org/benchmarks/snb/interactive/)** — [**Declarative**, 2024](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/) and [**Imperative**, 2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/) — including a reported **3,000× throughput advantage over the previous #2** on the declarative track.
 
-I received my **Ph.D. from the Chinese University of Hong Kong**, advised by [Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/) and [Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/), and my **B.S. in Computer Science from Wuhan University**.
+I received my **Ph.D. from the Chinese University of Hong Kong**, advised by [Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/) and [Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/), and my **B.S. in Computer Science from Wuhan University** ([Hongyi Honor College · 弘毅学堂](https://hyxt.whu.edu.cn/)).
 </div>
 </section>
 

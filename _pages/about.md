@@ -6,10 +6,10 @@ permalink: /
 subtitle: Research Scientist at ByteDance
 description: Hao Zhang researches self-evolving agentic systems, agent harnesses, and context infrastructure, alongside AI-powered data systems, databases, graphs, and hardware acceleration.
 keywords: Hao Zhang, ByteDance, AI agents, self-evolving agentic systems, harness evolution, environment evolution, shared agent environments, self-evolving harnesses, experience-driven construction, IR-first agentic systems, symbolic representations, verifiable evolution, Context IR, context infrastructure, agent memory, agent tools, agent skills, multi-agent collaboration, human-agent collaboration, vector databases, graph databases, semantic query processing, hardware-accelerated data systems
-last_modified_at: 2026-10-31
-hero_title: Evolving Agent Harnesses and Shared Environments to Make Intelligence Cumulative.
+last_modified_at: 2026-11-03
+hero_title: Making Intelligence Cumulative.
 hero_intro: |
-  My research focuses on **self-evolving agentic systems**, particularly agent harnesses and shared context infrastructure. My broader work spans AI-powered data systems, large-scale databases, graph processing, and hardware-accelerated computing.
+  My current research focuses on **self-evolving agentic systems**, particularly agent harnesses and shared context infrastructure. My broader work spans AI-powered data systems, large-scale databases, graph processing, and hardware-accelerated computing.
 
 profile:
   align: right

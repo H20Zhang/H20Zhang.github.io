@@ -75,15 +75,18 @@ class HomepageDesignContractTest(unittest.TestCase):
         intro = page.split("hero_intro: |\n", 1)[1].split("\n\nprofile:", 1)[0]
         self.assertGreater(len(intro.split()), 10)
         self.assertLessEqual(len(intro.split()), 65)
-        self.assertNotIn("AutoIA", intro)
 
         directions = page.split('aria-labelledby="research-directions"', 1)[1].split("</section>", 1)[0]
         self.assertEqual(directions.count('class="about-research-area"'), 4)
-        self.assertNotIn("AutoIA", directions)
 
         focus = page.split('aria-labelledby="current-focus"', 1)[1].split("</section>", 1)[0]
-        self.assertIn("AutoIA", focus)
-        self.assertIn("/projects/1_autoia/", focus)
+        project = re.search(r'<h3 class="about-item-title">([^<]+)</h3>', focus)
+        self.assertIsNotNone(project)
+        project_name = project.group(1).split("—", 1)[0].strip()
+        self.assertTrue(project_name)
+        self.assertNotIn(project_name, intro)
+        self.assertNotIn(project_name, directions)
+        self.assertRegex(focus, r"\]\(/projects/[^)]+\)")
 
     def test_homepage_styles_are_wired_and_responsive(self):
         main = read("assets/css/main.scss")

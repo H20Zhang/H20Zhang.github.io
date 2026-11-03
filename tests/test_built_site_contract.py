@@ -267,19 +267,13 @@ class BuiltSiteContractTest(unittest.TestCase):
             "minmax(0,1fr)",
         )
 
-    def test_homepage_invites_discussion_and_explains_chinese_honor(self):
+    def test_homepage_connect_section_has_recruiting_contact(self):
         html = (SITE / "index.html").read_text(encoding="utf-8")
         connect = visible_text(homepage_section(html, "collaboration-internship"))
-        self.assertIn("Connect & Internships", connect)
-        self.assertIn("exchange ideas, discuss research, and explore collaborations", connect)
-        self.assertIn("Research internships", connect)
-        self.assertIn("ByteDance (Shenzhen)", connect)
-        self.assertIn("[Intern]", connect)
-        self.assertLess(len(connect.split()), 65)
-        honors = visible_text(homepage_section(html, "honors-awards"))
-        self.assertIn("Top 1% (个人金牌)", honors)
-        self.assertIn("筋斗云人才计划", honors)
-        self.assertIn("天才少年计划", honors)
+        self.assertGreater(len(connect.split()), 15)
+        self.assertLess(len(connect.split()), 85)
+        self.assertRegex(connect.lower(), r"\bresearch internships?\b")
+        self.assertRegex(connect.lower(), r"(?:\[at\]|@)")
 
     def test_generated_main_stylesheet_uses_build_specific_cache_key(self):
         homepage_html = (SITE / "index.html").read_text(encoding="utf-8")

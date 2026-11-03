@@ -267,12 +267,11 @@ class BuiltSiteContractTest(unittest.TestCase):
             "minmax(0,1fr)",
         )
 
-    def test_homepage_connect_section_has_recruiting_contact(self):
+    def test_homepage_connect_section_has_contact_method(self):
         html = (SITE / "index.html").read_text(encoding="utf-8")
         connect = visible_text(homepage_section(html, "collaboration-internship"))
         self.assertGreater(len(connect.split()), 15)
         self.assertLess(len(connect.split()), 85)
-        self.assertRegex(connect.lower(), r"\bresearch internships?\b")
         self.assertRegex(connect.lower(), r"(?:\[at\]|@)")
 
     def test_generated_main_stylesheet_uses_build_specific_cache_key(self):

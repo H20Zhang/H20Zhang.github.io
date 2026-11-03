@@ -11,7 +11,7 @@ hero_title: Making Intelligence Cumulative.
 hero_intro: |
   My current research focuses on **self-evolving agentic systems**, particularly agent harnesses and shared context infrastructure.
 
-  My broader research spans **AI-powered data systems, large-scale databases and graph processing, and hardware-accelerated computing**. I have designed and built **production-scale systems** at ByteDance and Huawei, including [**trillion-scale vector search**](/publications/#ATC-26) and [**graph databases managing hundreds of billions of edges**](/projects/3_ges/), with benchmark-leading results.
+  My broader research spans **AI-powered data systems, scalable data and retrieval systems, and hardware-accelerated computing**. I have designed and built **production-scale systems** at ByteDance and Huawei, including [**trillion-scale vector search**](/publications/#ATC-26) and [**graph databases managing hundreds of billions of edges**](/projects/3_ges/), with benchmark-leading results.
 
 profile:
   align: right

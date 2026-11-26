@@ -24,28 +24,28 @@ $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;
 $yellow-color: #efcc00 !default;
 
-// Monograph Terracotta editorial system (Anthropic / Princeton warm academic
-// palette): clean snow-alabaster surfaces with zero yellow cast, warm charcoal
-// ink, and one coherent terracotta-sienna accent family in light and dark modes.
-$paper-cream-light: #fcfbfa !default;
-$paper-sand-light: #f5f2ed !default;
+// Restrained Warm Stone & Muted Clay editorial system (inspired by Pascal
+// Michaillat's minimalist academic design, warmed with low-saturation clay):
+// calm warm-stone canvas, crisp white cards, charcoal ink, and muted clay accent.
+$paper-cream-light: #f8f7f4 !default;
+$paper-sand-light: #f1efea !default;
 $paper-card-light: #ffffff !default;
-$divider-light: #e6e2dc !default;
-$accent-color-light: #b44c1f !default;
-$accent-hover-light: #8a3612 !default;
-$section-accent-light: #9c431c !default;
-$ink-color-light: #181716 !default;
-$text-muted-light: #635f5a !default;
+$divider-light: #e5e2dc !default;
+$accent-color-light: #94563e !default;
+$accent-hover-light: #78422d !default;
+$section-accent-light: #874e38 !default;
+$ink-color-light: #1e1d1b !default;
+$text-muted-light: #696660 !default;
 
-$paper-espresso-dark: #141312 !default;
-$paper-surface-dark: #1c1a18 !default;
-$paper-sand-dark: #211e1b !default;
-$divider-dark: rgba(230, 138, 92, 0.16) !default;
-$ink-color-dark: #edeae4 !default;
-$text-muted-dark: #a69f96 !default;
-$accent-color-dark: #e68a5c !default;
-$accent-hover-dark: #f2a67e !default;
-$section-accent-dark: #e68a5c !default;
+$paper-espresso-dark: #19191b !default;
+$paper-surface-dark: #222225 !default;
+$paper-sand-dark: #29292d !default;
+$divider-dark: rgba(255, 255, 255, 0.1) !default;
+$ink-color-dark: #e4e2dd !default;
+$text-muted-dark: #9c9992 !default;
+$accent-color-dark: #d49276 !default;
+$accent-hover-dark: #e3ab93 !default;
+$section-accent-dark: #cca08c !default;
 
 $grey-color: #828282 !default;
 $grey-color-light: color.adjust($grey-color, $lightness: 40%);
@@ -57,8 +57,8 @@ $black-color: #000000 !default;
 
 // Theme colors
 
-$code-bg-color-light: rgba($accent-color-light, 0.05);
-$code-bg-color-dark: $paper-surface-dark !default;
+$code-bg-color-light: $paper-sand-light;
+$code-bg-color-dark: $paper-sand-dark !default;
 
 // Font awesome location
 $fa-font-path: "../webfonts";

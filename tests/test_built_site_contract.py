@@ -310,16 +310,16 @@ class BuiltSiteContractTest(unittest.TestCase):
     def test_light_theme_uses_monograph_terracotta_palette(self):
         root_rule = compiled_css_rule(self.css, ":root")
         expected = {
-            "--global-bg-color": "#fcfbfa",
-            "--global-surface-color": "#fcfbfa",
-            "--global-section-alt-color": "#f5f2ed",
-            "--global-navbar-bg-color": "#fcfbfa",
-            "--global-text-color": "#181716",
-            "--global-text-color-light": "#635f5a",
-            "--global-theme-color": "#b44c1f",
-            "--global-hover-color": "#8a3612",
-            "--global-section-accent-color": "#9c431c",
-            "--global-divider-color": "#e6e2dc",
+            "--global-bg-color": "#f8f7f4",
+            "--global-surface-color": "#f8f7f4",
+            "--global-section-alt-color": "#f1efea",
+            "--global-navbar-bg-color": "#f8f7f4",
+            "--global-text-color": "#1e1d1b",
+            "--global-text-color-light": "#696660",
+            "--global-theme-color": "#94563e",
+            "--global-hover-color": "#78422d",
+            "--global-section-accent-color": "#874e38",
+            "--global-divider-color": "#e5e2dc",
         }
 
         for property_name, value in expected.items():
@@ -982,12 +982,8 @@ class BuiltSiteContractTest(unittest.TestCase):
         self.assertNotIn('class="more-info"', profile.group())
         self.assertNotIn("mailto:", profile.group())
         self.assertNotIn('class="about-hero-actions"', homepage_html)
-        self.assertIn('class="about-footer-social social"', homepage_html)
-
-        social_rule = compiled_css_rule(
-            self.css, ".about-footer-social .contact-icons"
-        )
-        self.assertEqual(social_rule.get("font-size"), "1.1rem")
+        self.assertIn('<span class="about-chinese-name" lang="zh-Hans">张颢</span>', hero.group())
+        self.assertNotIn('class="about-footer-social', homepage_html)
 
 
 if __name__ == "__main__":

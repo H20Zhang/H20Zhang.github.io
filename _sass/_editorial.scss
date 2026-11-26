@@ -135,9 +135,13 @@
   flex-direction: column;
   padding: 1.25rem 1.4rem 1.2rem;
   border: 1px solid var(--global-divider-color);
-  border-top: 2px solid color-mix(in srgb, var(--global-theme-color) 42%, var(--global-divider-color));
-  border-radius: 0.4rem;
+  border-radius: 0.5rem;
   background: var(--global-card-bg-color);
+  transition: border-color 0.16s ease;
+
+  &:hover {
+    border-color: color-mix(in srgb, var(--global-theme-color) 55%, var(--global-divider-color));
+  }
 
   .system-entry-heading-meta {
     display: inline-flex;
@@ -148,11 +152,11 @@
 
   .system-entry-badge {
     display: inline-block;
-    padding: 0.12rem 0.5rem;
-    border-radius: 999px;
-    border: 1px solid color-mix(in srgb, var(--global-theme-color) 22%, var(--global-divider-color));
-    background: color-mix(in srgb, var(--global-theme-color) 8%, var(--global-card-bg-color));
-    color: var(--global-theme-color);
+    padding: 0.12rem 0.52rem;
+    border-radius: 0.34rem;
+    border: 1px solid var(--global-divider-color);
+    background: var(--global-section-alt-color);
+    color: var(--global-text-color-light);
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.015em;
@@ -433,10 +437,9 @@
 }
 
 .system-highlight-card {
-  padding: 0.9rem 1rem;
+  padding: 0.9rem 1.05rem;
   border: 1px solid var(--global-divider-color);
-  border-top: 2px solid color-mix(in srgb, var(--global-theme-color) 42%, var(--global-divider-color));
-  border-radius: 0.4rem;
+  border-radius: 0.5rem;
   background: var(--global-card-bg-color);
 
   dt {
@@ -604,8 +607,21 @@ html[data-theme="dark"] .system-architecture-figure img {
 
 .publications ol.bibliography li .abbr abbr {
   margin-bottom: 0;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.34rem !important;
+  background: var(--global-section-alt-color) !important;
+  color: var(--global-text-color-light) !important;
   text-align: center;
   white-space: nowrap;
+}
+
+.publications ol.bibliography li .hidden {
+  text-align: left;
+
+  p {
+    margin: 0.8rem 1rem;
+    line-height: 1.62;
+  }
 }
 
 @media (min-width: 576px) {

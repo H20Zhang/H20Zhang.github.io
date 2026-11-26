@@ -2,7 +2,14 @@
  * Warm editorial About/homepage
  ******************************************************************************/
 
+// Keep the wider reading canvas and its navigation aligned on the homepage.
+body:has(.about-page) .container {
+  max-width: 65rem;
+}
+
 .about-page {
+  --about-display: Georgia, "Times New Roman", serif;
+  --about-tint: color-mix(in srgb, var(--global-theme-color) 5%, var(--global-bg-color));
   margin-top: -0.25rem;
 
   article {
@@ -22,7 +29,7 @@
   min-width: 0;
 
   .post-header {
-    margin-bottom: clamp(2.25rem, 5vw, 3.35rem);
+    margin-bottom: 1.35rem;
   }
 
   .desc {
@@ -35,19 +42,22 @@
 
 .about-name {
   margin: 0;
-  font-size: clamp(2.8rem, 5vw, 3.35rem);
+  font-family: var(--about-display);
+  font-size: clamp(3.2rem, 5.5vw, 4.5rem);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.045em;
 }
 
 .about-first-name {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .about-tagline {
   margin: 0 0 1rem;
-  color: var(--global-text-color);
+  color: var(--global-theme-color);
+  font-family: var(--about-display);
+  font-style: italic;
   font-size: clamp(1.5rem, 2.2vw, 1.65rem);
   font-weight: 400;
   line-height: 1.14;
@@ -55,7 +65,7 @@
 }
 
 .about-intro {
-  max-width: 590px;
+  max-width: 62ch;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.62;
@@ -63,12 +73,18 @@
   p {
     margin: 0;
   }
+
+  p + p {
+    margin-top: 0.65rem;
+  }
 }
 
 .about-hero-profile {
   width: 100%;
   max-width: 340px;
   justify-self: end;
+  align-self: center;
+  padding: 0 0.6rem 0.6rem 0;
 
   .profile {
     width: 100%;
@@ -76,6 +92,8 @@
 
   figure {
     margin: 0;
+    border-radius: 0.55rem;
+    box-shadow: 0.6rem 0.6rem var(--about-tint);
   }
 
   .profile-image {
@@ -113,7 +131,7 @@
   --about-section-background: var(--global-surface-color);
 
   display: grid;
-  grid-template-columns: 176px minmax(0, 1fr);
+  grid-template-columns: minmax(9rem, 1fr) minmax(0, 3fr);
   gap: clamp(1.75rem, 4vw, 3rem);
   padding: 1.95rem 0 1.8rem;
   border-top: 1px solid var(--global-divider-color);
@@ -121,19 +139,25 @@
   box-shadow: 0 0 0 100vmax var(--about-section-background);
   clip-path: inset(0 -100vmax);
 
-  &:nth-child(odd) {
-    --about-section-background: var(--global-section-alt-color);
+  &[aria-labelledby="research-directions"] {
+    display: block;
+
+    .about-section-label {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &[aria-labelledby="current-focus"] {
+    --about-section-background: var(--about-tint);
   }
 }
 
 .about-section-label {
   margin: 0;
-  color: var(--global-section-accent-color);
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1.45;
-  letter-spacing: 0.015em;
-  text-transform: uppercase;
+  color: var(--global-text-color);
+  font: 500 clamp(1.35rem, 2.3vw, 1.7rem) / 1.16 var(--about-display);
+  letter-spacing: -0.025em;
+  text-wrap: balance;
 }
 
 .about-section-content {
@@ -167,11 +191,24 @@
 .about-research-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.4rem 2rem;
+  gap: 0.9rem;
 }
 
 .about-research-area {
+  display: flex;
+  flex-direction: column;
   min-width: 0;
+  padding: clamp(1rem, 2vw, 1.4rem);
+  border: 1px solid var(--global-divider-color);
+  border-top: 2px solid color-mix(in srgb, var(--global-theme-color) 42%, var(--global-divider-color));
+  border-radius: 0.35rem;
+  background: var(--global-card-bg-color);
+}
+
+.about-research-area .about-research-work {
+  margin: auto 0 0;
+  padding-top: 0.75rem;
+  font-size: 0.87rem;
 }
 
 .about-section-content .about-research-area h3,
@@ -180,6 +217,12 @@
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.45;
+}
+
+.about-section-content .about-research-area h3 {
+  font-family: var(--about-display);
+  font-size: 1.2rem;
+  line-height: 1.24;
 }
 
 .about-research-area p {
@@ -265,18 +308,47 @@
   }
 
   .about-hero {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding-bottom: 2rem;
+    grid-template-columns: minmax(0, 1fr) clamp(5.25rem, 23vw, 9rem);
+    column-gap: 1rem;
+    row-gap: 0;
+    padding-bottom: 1.65rem;
   }
 
-  .about-hero-copy .post-header {
-    margin-bottom: 2.25rem;
+  .about-hero-copy {
+    display: contents;
+
+    .post-header {
+      grid-area: 1 / 1;
+      align-self: center;
+      margin: 0;
+    }
   }
 
   .about-hero-profile {
+    grid-area: 1 / 2;
     max-width: 320px;
-    justify-self: start;
+    padding: 0 0.35rem 0.35rem 0;
+
+    figure {
+      box-shadow: 0.35rem 0.35rem var(--about-tint);
+    }
+
+    .profile-image {
+      aspect-ratio: 1;
+    }
+  }
+
+  .about-name {
+    font-size: clamp(2.25rem, 8.6vw, 3.25rem);
+  }
+
+  .about-tagline,
+  .about-intro {
+    grid-column: 1 / -1;
+  }
+
+  .about-tagline {
+    margin: 1.4rem 0 0.6rem;
   }
 
   .about-section {
@@ -287,7 +359,7 @@
 
   .about-research-grid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 1.2rem;
+    gap: 0.75rem;
   }
 
   .about-footer-row {
@@ -309,15 +381,4 @@
   .about-footer-spacer {
     display: none;
   }
-}
-
-@media (max-width: 575px) {
-  .about-name {
-    font-size: 2.55rem;
-  }
-
-  .about-tagline {
-    font-size: 1.45rem;
-  }
-
 }

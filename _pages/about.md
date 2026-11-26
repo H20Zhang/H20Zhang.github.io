@@ -40,18 +40,22 @@ latest_posts:
   <div class="about-research-area">
     <h3>Agentic Systems &amp; Context Infrastructure</h3>
     <p>Self-evolving agent systems, evolving harnesses and shared environments, agent memory, and context infrastructure.</p>
+    <p class="about-research-work"><a href="/publications/#Arxiv-26-3">AdaMM</a></p>
   </div>
   <div class="about-research-area">
     <h3>AI-Powered Data Systems</h3>
     <p>LLM-powered semantic queries, AI-integrated data processing, and intelligent query execution.</p>
+    <p class="about-research-work"><a href="/publications/#VLDB-26-2">SEMA</a></p>
   </div>
   <div class="about-research-area">
     <h3>Scalable Data &amp; Retrieval Systems</h3>
     <p>Distributed databases, vector search, graph databases, and large-scale query processing.</p>
+    <p class="about-research-work"><a href="/publications/#ATC-26">Trillion-scale vector search</a></p>
   </div>
   <div class="about-research-area">
     <h3>Hardware-Accelerated Computing</h3>
     <p>Efficient and portable data processing across GPUs and heterogeneous accelerators.</p>
+    <p class="about-research-work"><a href="/projects/2_tqex/">TQEX</a></p>
   </div>
 </div>
 </div>

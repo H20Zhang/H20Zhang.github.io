@@ -24,28 +24,27 @@ $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;
 $yellow-color: #efcc00 !default;
 
-// Restrained Warm Stone & Muted Clay editorial system (inspired by Pascal
-// Michaillat's minimalist academic design, warmed with low-saturation clay):
-// calm warm-stone canvas, crisp white cards, charcoal ink, and muted clay accent.
-$paper-cream-light: #f8f7f4 !default;
-$paper-sand-light: #f1efea !default;
+// B1 · Sunlit Persimmon editorial palette: crisp sunlit snow-white canvas,
+// warm alabaster secondary surfaces, charcoal ink, and bright warm persimmon.
+$paper-cream-light: #ffffff !default;
+$paper-sand-light: #f7f6f4 !default;
 $paper-card-light: #ffffff !default;
-$divider-light: #e5e2dc !default;
-$accent-color-light: #94563e !default;
-$accent-hover-light: #78422d !default;
-$section-accent-light: #874e38 !default;
-$ink-color-light: #1e1d1b !default;
-$text-muted-light: #696660 !default;
+$divider-light: #e7e5e0 !default;
+$accent-color-light: #d94e1f !default;
+$accent-hover-light: #b53c14 !default;
+$section-accent-light: #c2451b !default;
+$ink-color-light: #161618 !default;
+$text-muted-light: #5f5d59 !default;
 
-$paper-espresso-dark: #19191b !default;
-$paper-surface-dark: #222225 !default;
-$paper-sand-dark: #29292d !default;
-$divider-dark: rgba(255, 255, 255, 0.1) !default;
-$ink-color-dark: #e4e2dd !default;
-$text-muted-dark: #9c9992 !default;
-$accent-color-dark: #d49276 !default;
-$accent-hover-dark: #e3ab93 !default;
-$section-accent-dark: #cca08c !default;
+$paper-espresso-dark: #141416 !default;
+$paper-surface-dark: #1e1e22 !default;
+$paper-sand-dark: #26262b !default;
+$divider-dark: rgba(255, 255, 255, 0.11) !default;
+$ink-color-dark: #ededee !default;
+$text-muted-dark: #a0a0a6 !default;
+$accent-color-dark: #ff8559 !default;
+$accent-hover-dark: #ffa07d !default;
+$section-accent-dark: #f27d52 !default;
 
 $grey-color: #828282 !default;
 $grey-color-light: color.adjust($grey-color, $lightness: 40%);
@@ -57,7 +56,7 @@ $black-color: #000000 !default;
 
 // Theme colors
 
-$code-bg-color-light: $paper-sand-light;
+$code-bg-color-light: rgba($accent-color-light, 0.06);
 $code-bg-color-dark: $paper-sand-dark !default;
 
 // Font awesome location

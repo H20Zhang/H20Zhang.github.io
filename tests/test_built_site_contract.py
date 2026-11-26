@@ -310,16 +310,16 @@ class BuiltSiteContractTest(unittest.TestCase):
     def test_light_theme_uses_monograph_terracotta_palette(self):
         root_rule = compiled_css_rule(self.css, ":root")
         expected = {
-            "--global-bg-color": "#f8f7f4",
-            "--global-surface-color": "#f8f7f4",
-            "--global-section-alt-color": "#f1efea",
-            "--global-navbar-bg-color": "#f8f7f4",
-            "--global-text-color": "#1e1d1b",
-            "--global-text-color-light": "#696660",
-            "--global-theme-color": "#94563e",
-            "--global-hover-color": "#78422d",
-            "--global-section-accent-color": "#874e38",
-            "--global-divider-color": "#e5e2dc",
+            "--global-bg-color": "#fff",
+            "--global-surface-color": "#fff",
+            "--global-section-alt-color": "#f7f6f4",
+            "--global-navbar-bg-color": "#fff",
+            "--global-text-color": "#161618",
+            "--global-text-color-light": "#5f5d59",
+            "--global-theme-color": "#d94e1f",
+            "--global-hover-color": "#b53c14",
+            "--global-section-accent-color": "#c2451b",
+            "--global-divider-color": "#e7e5e0",
         }
 
         for property_name, value in expected.items():
@@ -861,6 +861,17 @@ class BuiltSiteContractTest(unittest.TestCase):
 
     def test_cv_page_is_not_published(self):
         self.assertFalse((SITE / "cv" / "index.html").exists())
+        exp_html = (SITE / "experience" / "index.html").read_text(encoding="utf-8")
+        self.assertIn("<title>Experience | Hao Zhang</title>", exp_html)
+        for item in (
+            "ByteDance",
+            "Huawei",
+            "The Chinese University of Hong Kong",
+            "Wuhan University",
+            "139,411.14 throughput",
+            "40,347.04 throughput",
+        ):
+            self.assertIn(item, exp_html)
 
     def test_systems_page_lists_systems_not_affiliation_buckets(self):
         systems_html = (SITE / "projects" / "index.html").read_text(

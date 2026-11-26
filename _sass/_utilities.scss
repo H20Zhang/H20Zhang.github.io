@@ -45,11 +45,11 @@ pre {
 }
 
 code {
-  color: var(--global-text-color);
+  color: var(--global-theme-color);
   background-color: var(--global-code-bg-color);
-  border-radius: 4px;
+  border-radius: 3px;
   padding: 2px 5px;
-  font-size: 0.86em;
+  font-size: 0.87em;
 
   // Inline code should wrap
   white-space: normal;

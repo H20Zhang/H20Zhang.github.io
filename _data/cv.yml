@@ -1,0 +1,74 @@
+cv:
+  sections:
+    Experience:
+      - company: ByteDance
+        position: Research Scientist
+        location: Shenzhen, China
+        start_date: 2025
+        highlights:
+          - "Leading research and system architecture of [**AutoIA**](/projects/1_autoia/), an IR-first framework for self-evolving agent harnesses, shared context environments, and experience-driven construction."
+          - "Core contributor and corresponding author on [**UBASE**](/projects/ubase/) ([ATC 2026](/publications/#ATC-26)), ByteDance's production AI search engine spanning **7,000+ clusters, 300+ PB, and nearly one trillion vectors**, alongside multimodal agent memory ([**AdaMM**](/publications/#Arxiv-26-3), [**IGMem**](/publications/#Submitted-26-IGMem))."
+
+      - company: Huawei
+        position: Research Scientist
+        location: Shenzhen, China
+        start_date: 2022
+        end_date: 2025
+        highlights:
+          - "Researched and architected graph database infrastructure for [**Huawei GES**](/projects/3_ges/) ([SIGMOD 2025](/publications/#SIGMOD-25-1), [**RapidStore**](/publications/#VLDB-25), [**Aquila**](/publications/#VLDB-26)), supporting graphs with **hundreds of billions of edges** and achieving audited **#1 results on both LDBC SNB Interactive tracks** ([Declarative 2024](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/), [Imperative 2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/))."
+          - "Spearheaded hardware-portable tensor-centric query and graph execution across NVIDIA GPUs, AMD GPUs, and Apple silicon, including [**TQEX**](/projects/2_tqex/) ([SIGMOD 2026](/publications/#SIGMOD-26-2)), [**TGraph**](/publications/#SIGMOD-25-2) (SIGMOD 2025), and [**TenGraph**](/publications/#VLDB-24) (PVLDB 2024)."
+
+    Education:
+      - institution: The Chinese University of Hong Kong (CUHK)
+        area: Systems Engineering and Engineering Management
+        studyType: Ph.D.
+        location: Hong Kong
+        start_date: 2017
+        end_date: 2022
+        highlights:
+          - "Advisors: [**Prof. Jeffrey Xu Yu**](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/) and [**Prof. Hong Cheng**](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)."
+          - "Research focus: Distributed relational and graph query processing ([**SeccoSQL**](/projects/4_database_graph_systems/#seccosql), [**DISC**](/projects/4_database_graph_systems/#disc), [**Crystal**](/projects/4_database_graph_systems/#crystal), and learned subgraph cardinality estimation)."
+
+      - institution: Wuhan University
+        area: Computer Science
+        studyType: B.S.
+        location: Wuhan, China
+        start_date: 2013
+        end_date: 2017
+        highlights:
+          - "[**Hongyi Honor College (弘毅学堂)**](https://hyxt.whu.edu.cn/)."
+
+    Honors and Awards:
+      - title: ByteDance Soaring Star Talent Program（筋斗云人才计划）
+        date: 2025-01-01
+        awarder: ByteDance
+
+      - title: "LDBC SNB Interactive World Record — Imperative Track (#1)"
+        date: 2025-12-01
+        awarder: Linked Data Benchmark Council (LDBC)
+        url: https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/
+        summary: "Ranked #1 on the audited LDBC SNB Interactive imperative leaderboard (139,411.14 throughput at SF300)."
+
+      - title: Huawei Gold Award for Individual Excellence（个人金牌）
+        date: 2025-02-01
+        awarder: Huawei
+        summary: Top 1% individual distinction.
+
+      - title: "LDBC SNB Interactive World Record — Declarative Track (#1)"
+        date: 2024-09-16
+        awarder: Linked Data Benchmark Council (LDBC)
+        url: https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/
+        summary: "Ranked #1 on the audited LDBC SNB Interactive declarative leaderboard (40,347.04 throughput at SF300, over 3,000× the previous #2)."
+
+      - title: Huawei TopMinds Talent Program — First Class（天才少年计划 · 最高档）
+        date: 2022-01-01
+        awarder: Huawei
+
+      - title: Meritorious Winner, International Mathematical Contest in Modeling (MCM)
+        date: 2016-01-01
+        awarder: COMAP
+        summary: Top 6% distinction.
+
+    Academic Service:
+      - bullet: "**Benchmark Governance:** Member, Linked Data Benchmark Council (LDBC) Management and Planning Committee (MPC)."
+      - bullet: "**Conference & Journal Reviewing:** Reviewer / External Reviewer for SIGMOD, PVLDB, ICDE, KDD, AAAI, CIKM, PAKDD, and *ACM TKDD*."

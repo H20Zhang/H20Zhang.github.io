@@ -1008,7 +1008,7 @@ class BuiltSiteContractTest(unittest.TestCase):
             with self.subTest(path=str(relative_path)):
                 self.assertIn("navbar-expand-lg", html)
                 self.assertIn('class="site-shell-main"', html)
-                self.assertIn('class="nav-item sidebar-footer-item"', html)
+                self.assertIn('class="toggle-container sidebar-footer-item"', html)
                 self.assertIn('class="sidebar-quick-links"', html)
         self.assertIn(".site-shell-main{margin-left:13.5rem", self.css)
         progress_js = (SITE / "assets" / "js" / "progress-bar.js").read_text(encoding="utf-8")

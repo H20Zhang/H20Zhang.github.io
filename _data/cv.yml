@@ -18,26 +18,6 @@ cv:
           - "Led a team from exploratory R&D through production deployment of graph database infrastructure for [**Huawei GES**](/projects/3_ges/) ([SIGMOD 2025](/publications/#SIGMOD-25-1), [**RapidStore**](/publications/#VLDB-25), [**Aquila**](/publications/#VLDB-26)), supporting graphs with **hundreds of billions of edges** and achieving audited **#1 results on both LDBC SNB Interactive tracks** ([Declarative 2024](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/), [Imperative 2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/))."
           - "Led team-wide exploratory R&D and system delivery of hardware-portable tensor-centric query and graph execution across NVIDIA GPUs, AMD GPUs, and Apple silicon, including [**TQEX**](/projects/2_tqex/) ([SIGMOD 2026](/publications/#SIGMOD-26-2)), [**TGraph**](/publications/#SIGMOD-25-2) (SIGMOD 2025), and [**TenGraph**](/publications/#VLDB-24) (PVLDB 2024)."
 
-    Education:
-      - institution: The Chinese University of Hong Kong (CUHK)
-        area: Systems Engineering and Engineering Management
-        studyType: Ph.D.
-        location: Hong Kong
-        start_date: 2017
-        end_date: 2022
-        highlights:
-          - "Advisors: [**Prof. Jeffrey Xu Yu**](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/) and [**Prof. Hong Cheng**](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/)."
-          - "Research focus: Distributed relational and graph query processing ([**SeccoSQL**](/projects/4_database_graph_systems/#seccosql), [**DISC**](/projects/4_database_graph_systems/#disc), [**Crystal**](/projects/4_database_graph_systems/#crystal), and learned subgraph cardinality estimation)."
-
-      - institution: Wuhan University
-        area: Computer Science
-        studyType: B.S.
-        location: Wuhan, China
-        start_date: 2013
-        end_date: 2017
-        highlights:
-          - "[**Hongyi Honor College (弘毅学堂)**](https://hyxt.whu.edu.cn/)."
-
     Honors and Awards:
       - title: ByteDance Soaring Star Talent Program（筋斗云人才计划）
         date: 2025-01-01

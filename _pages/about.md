@@ -14,6 +14,8 @@ hero_intro: |
 
   My broader research spans **AI-powered data systems, scalable data and retrieval systems, and hardware-accelerated computing**. I have designed and built **production-scale systems** at ByteDance and Huawei, including [**trillion-scale vector search**](/publications/#ATC-26) and [**graph databases managing hundreds of billions of edges**](/projects/3_ges/), with benchmark-leading results.
 
+  I received my **Ph.D. from The Chinese University of Hong Kong (CUHK)** in **2022**, advised by [**Prof. Jeffrey Xu Yu**](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/) and [**Prof. Hong Cheng**](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/).
+
 hero_connect: |
   **Connect & Internships** — Always happy to exchange ideas, discuss research, and explore collaborations on AI and data systems. For **research internships at ByteDance (Shenzhen)**, please reach out at **zhanghaowuda12 [at] gmail [dot] com** (subject: `[Intern]`).
 
@@ -101,8 +103,6 @@ I'm developing **AutoIA**, an **IR-first framework** for agents to autonomously 
 **30+ publications** in database systems and AI, including SIGMOD, VLDB, ICDE, COLM, EMNLP, ATC, TKDE, and The VLDB Journal.
 
 **#1 on both tracks of [LDBC SNB Interactive](https://ldbcouncil.org/benchmarks/snb/interactive/)** — [**Declarative**, 2024](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/) and [**Imperative**, 2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/) — including a reported **3,000× throughput advantage over the previous #2** on the declarative track.
-
-I received my **Ph.D. from the Chinese University of Hong Kong**, advised by [Prof. Jeffrey Xu Yu](https://www.se.cuhk.edu.hk/people/academic-staff/prof-yu-xu-jeffrey/) and [Prof. Hong Cheng](https://www.se.cuhk.edu.hk/people/academic-staff/prof-cheng-hong/), and my **B.S. in Computer Science from Wuhan University** ([Hongyi Honor College · 弘毅学堂](https://hyxt.whu.edu.cn/)).
 </div>
 </section>
 

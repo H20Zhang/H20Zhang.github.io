@@ -868,12 +868,12 @@ class BuiltSiteContractTest(unittest.TestCase):
             "Huawei",
             "Architect &amp; Research Scientist",
             "exploratory R&amp;D through production deployment",
-            "The Chinese University of Hong Kong",
-            "Wuhan University",
             "139,411.14 throughput",
             "40,347.04 throughput",
         ):
             self.assertIn(item, exp_html)
+        self.assertNotIn('id="education"', exp_html)
+        self.assertNotIn("Wuhan University", exp_html)
 
     def test_systems_page_lists_systems_not_affiliation_buckets(self):
         systems_html = (SITE / "projects" / "index.html").read_text(
@@ -996,6 +996,10 @@ class BuiltSiteContractTest(unittest.TestCase):
         self.assertNotIn("mailto:", profile.group())
         self.assertNotIn('class="about-hero-actions"', homepage_html)
         self.assertIn('<span class="about-chinese-name" lang="zh-Hans">张颢</span>', hero.group())
+        self.assertIn("The Chinese University of Hong Kong (CUHK)", hero.group())
+        self.assertIn("2022", hero.group())
+        self.assertIn("Prof. Jeffrey Xu Yu", hero.group())
+        self.assertIn("Prof. Hong Cheng", hero.group())
         self.assertNotIn('class="about-footer-social', homepage_html)
 
     def test_desktop_navigation_renders_left_sidebar_shell(self):

@@ -75,7 +75,7 @@ class HomepageDesignContractTest(unittest.TestCase):
         page = read("_pages/about.md")
         intro = page.split("hero_intro: |\n", 1)[1].split("\n\nhero_connect:", 1)[0]
         self.assertGreater(len(intro.split()), 10)
-        self.assertLessEqual(len(intro.split()), 65)
+        self.assertLessEqual(len(intro.split()), 95)
 
         # Research directions render from the data shared with /publications/.
         directions = read("_data/research_areas.yml")

@@ -78,7 +78,7 @@
         - label: Overview
           url: /projects/2_tqex/
           primary: true
-        - label: TQEX(SQL) paper
+        - label: TQEX paper
           url: /publications/#SIGMOD-26-2
     - id: tgraph
       name: TGraph

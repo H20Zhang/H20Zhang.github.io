@@ -6,7 +6,7 @@ importance: 3
 category: systems
 project_group: huawei
 external_url: https://doi.org/10.1145/3769835
-external_label: TQEx(SQL), SIGMOD 2026
+external_label: TQEX, SIGMOD 2026
 related_publications: false
 highlights:
   - label: SQL Analytics Speedup
@@ -18,7 +18,7 @@ highlights:
 research_support:
   - area: Tensor-based SQL execution
     papers:
-      - name: TQEx(SQL)
+      - name: TQEX
         venue: SIGMOD 2026
         url: /publications/#SIGMOD-26-2
         summary: Bridges irregular relational workloads and uniform tensor operations through variable-length storage, tensorized joins and aggregates, and multi-XPU execution.
@@ -52,7 +52,7 @@ Use tensor computation runtimes as the portability layer, then bridge the worklo
 
 This Huawei-affiliated research line spans three workloads:
 
-<h3 id="tqex-sql">TQEx(SQL) — Relational SQL over Tensor Runtimes</h3>
+<h3 id="tqex-sql">TQEX — Relational SQL over Tensor Runtimes</h3>
 
 Bridges irregular relational storage and query operators with uniform tensor execution, introducing compact variable-length string/data layouts, tensorized join and aggregation operators, and multi-XPU mapping strategies ([SIGMOD 2026](https://doi.org/10.1145/3769835)).
 
@@ -70,14 +70,14 @@ Research and system architecture across this Huawei-affiliated tensor-centric da
 
 ## Impact
 
-On supported TPC-H SF100 queries across **NVIDIA GPUs, AMD GPUs, and Apple silicon**, **TQEx(SQL)** achieves **12.2× speedup over DuckDB**, **22.7× speedup over HeavyDB**, and **up to 41.9× speedup over the prior tensor query processor (TQP)**—demonstrating that a single portable tensor-runtime engine can outperform both CPU analytical engines and specialized GPU databases.
+On supported TPC-H SF100 queries across **NVIDIA GPUs, AMD GPUs, and Apple silicon**, **TQEX** achieves **12.2× speedup over DuckDB**, **22.7× speedup over HeavyDB**, and **up to 41.9× speedup over the prior tensor query processor (TQP)**—demonstrating that a single portable tensor-runtime engine can outperform both CPU analytical engines and specialized GPU databases.
 
 ## Evidence
 
-- [TQEx(SQL), SIGMOD 2026](https://doi.org/10.1145/3769835)
+- [TQEX, SIGMOD 2026](https://doi.org/10.1145/3769835)
 - [TenGraph, PVLDB 2024](https://doi.org/10.14778/3704965.3704967)
 - [TGraph, SIGMOD 2025](https://doi.org/10.1145/3709731)
 
 ## System boundary
 
-**TQEx(SQL)** is the named tensor-based SQL engine. TenGraph and TGraph are adjacent systems that share the tensor-runtime thesis; they are not presented here as modules of TQEx(SQL).
+**TQEX** is the named tensor-based SQL engine. TenGraph and TGraph are adjacent systems that share the tensor-runtime thesis; they are not presented here as modules of TQEX.

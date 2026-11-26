@@ -83,7 +83,7 @@
   keywords: Tensor query execution · GPU subgraph matching · Heterogeneous hardware
   highlights:
     - key: SIGMOD-26-2
-      label: TQEX(SQL)
+      label: TQEX
     - key: VLDB-24
       label: TenGraph
     - key: SIGMOD-25-2

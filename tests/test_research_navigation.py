@@ -30,7 +30,7 @@ class NavigationParser(HTMLParser):
             self.areas.append(attrs['data-area'])
         if tag == 'a':
             self._link = [attrs.get('href', ''), []]
-        if tag == 'tr':
+        if tag == 'li' and 'news-item' in (attrs.get('class') or '').split():
             self._row = []
 
     def handle_data(self, text):
@@ -43,7 +43,7 @@ class NavigationParser(HTMLParser):
         if tag == 'a' and self._link is not None:
             self.links.append((self._link[0], ' '.join(''.join(self._link[1]).split())))
             self._link = None
-        if tag == 'tr' and self._row is not None:
+        if tag == 'li' and self._row is not None:
             self.rows.append(' '.join(' '.join(self._row).split()))
             self._row = None
 
@@ -105,15 +105,22 @@ class ResearchNavigationTest(unittest.TestCase):
             if href.startswith('https://scholar.google.com/scholar?'):
                 self.assertEqual(label, 'Scholar search')
 
-    def test_homepage_and_archive_share_the_same_recent_news(self):
+    def test_homepage_and_archive_share_the_same_news(self):
         home = parse('index.html')
         archive = parse('news/index.html')
-        self.assertEqual(len(home.rows), 4)
-        self.assertEqual(home.rows, archive.rows[:4])
-        self.assertTrue(any('08/2026' in row and 'DocNavRAG' in row for row in archive.rows))
-        self.assertTrue(any('07/2026' in row and 'AdaMM' in row for row in archive.rows))
-        self.assertTrue(any('07/2026' in row and 'CoreSemDB' in row for row in archive.rows))
-        self.assertTrue(any('12/2025' in row and 'imperative' in row for row in archive.rows))
+        html = (SITE / 'index.html').read_text()
+        # The homepage shows the five latest items and folds the rest.
+        self.assertEqual(home.rows, archive.rows)
+        self.assertGreater(len(home.rows), 5)
+        news = html.split('aria-labelledby="recent-news"', 1)[1].split('</section>', 1)[0]
+        visible, older = news.split('<details class="news-older">', 1)
+        self.assertEqual(visible.count('class="news-item"'), 5)
+        self.assertEqual(older.count('class="news-item"'), len(home.rows) - 5)
+        self.assertIn('Show older news', older)
+        self.assertTrue(any('Aug 2026' in row and 'DocNavRAG' in row for row in archive.rows))
+        self.assertTrue(any('Jul 2026' in row and 'AdaMM' in row for row in archive.rows))
+        self.assertTrue(any('Jul 2026' in row and 'CoreSemDB' in row for row in archive.rows))
+        self.assertTrue(any('Dec 2025' in row and 'imperative' in row for row in archive.rows))
 
     def test_calendar_filter_is_independent_of_host_timezone(self):
         script = '''

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Two papers accepted by ICDE'27: [ISPG](/publications/#ICDE-27-1) and [Vora](/publications/#ICDE-27-2).
+Two papers accepted to ICDE 2027: [ISPG](/publications/#ICDE-27-1), which generates cost-based interleaved plans for SQL/PGQ graph queries, and [Vora](/publications/#ICDE-27-2), a vector-based engine for GPU-accelerated subgraph queries.

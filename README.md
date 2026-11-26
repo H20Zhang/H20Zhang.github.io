@@ -40,7 +40,8 @@ The local site is served at `http://localhost:4000`.
 - Update the main bio and homepage sections in `_pages/about.md`
 - Edit publications in `_bibliography/papers.bib`
 - Update projects in `_projects/`
-- Update announcements in `_news/`
+- Update announcements in `_news/` (the homepage shows the latest `announcements.limit` items and folds the rest under "Show older news")
+- Update homepage paper cards in `_data/selected_publications.yml`; figures live in `assets/img/publications/`
 - Update CV data in `_data/cv.yml`
 - Add blog posts under `_posts/YYYY-MM-DD-slug.md`
 

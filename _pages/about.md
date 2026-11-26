@@ -6,7 +6,7 @@ permalink: /
 subtitle: Research Scientist at ByteDance
 description: Hao Zhang researches self-evolving agentic systems, agent harnesses, and context infrastructure, alongside AI-powered data systems, databases, graphs, and hardware acceleration.
 keywords: Hao Zhang, ByteDance, AI agents, self-evolving agentic systems, harness evolution, environment evolution, shared agent environments, self-evolving harnesses, experience-driven construction, IR-first agentic systems, symbolic representations, verifiable evolution, Context IR, context infrastructure, agent memory, agent tools, agent skills, multi-agent collaboration, human-agent collaboration, vector databases, graph databases, semantic query processing, hardware-accelerated data systems
-last_modified_at: 2026-11-03
+last_modified_at: 2026-11-26
 hero_title: Making Intelligence Cumulative.
 hero_intro: |
   My current research focuses on **self-evolving agentic systems**, particularly agent harnesses and shared context infrastructure.
@@ -25,7 +25,7 @@ social: true
 announcements:
   enabled: false
   scrollable: false
-  limit: 4
+  limit: 5
 
 latest_posts:
   enabled: false
@@ -39,19 +39,46 @@ latest_posts:
 <div class="about-research-grid">
   <div class="about-research-area">
     <h3>Agentic Systems &amp; Context Infrastructure</h3>
-    <p>Self-evolving agent systems, evolving harnesses and shared environments, agent memory, and context infrastructure.</p>
+    <p>How can agents turn experience into memory, context, and harnesses that keep improving?</p>
+    <p class="about-research-keywords">Self-evolving agents · Agent memory · Context infrastructure · Test-time learning</p>
+    <ul class="about-research-papers" aria-label="Selected work in agentic systems">
+      <li><a href="/publications/#Arxiv-26-3" title="Beyond Retrieval: Analytic Memory for Multimodal Agents">AdaMM</a></li>
+      <li><a href="/publications/#Arxiv-26-4" title="DocNavRAG: Document-Structured Graph RAG with Stateful Evidence Construction for Complex Document Question Answering">DocNavRAG</a></li>
+      <li><a href="/publications/#Submitted-26-IGMem" title="IGMem: Interaction-Grounded Memory for Multimodal Multi-Party Conversations">IGMem</a></li>
+    </ul>
   </div>
   <div class="about-research-area">
     <h3>AI-Powered Data Systems</h3>
-    <p>LLM-powered semantic queries, AI-integrated data processing, and intelligent query execution.</p>
+    <p>How can a database query text and other unstructured content as efficiently as relational data?</p>
+    <p class="about-research-keywords">Semantic operators · LLM-assisted optimization · Hybrid semantic-relational queries</p>
+    <ul class="about-research-papers" aria-label="Selected work in AI-powered data systems">
+      <li><a href="/publications/#VLDB-26-2" title="Sema: A High-performance System for LLM-based Semantic Query Processing">SEMA</a></li>
+      <li><a href="/publications/#COLM-26" title="CoreSemDB: Benchmarking Hybrid Semantic-Relational Query Processing over Text-Rich Databases">CoreSemDB</a></li>
+      <li><a href="/publications/#ICDE-26" title="SQLVec: SQL-Based Vector Similarity Search">SQLVec</a></li>
+    </ul>
   </div>
   <div class="about-research-area">
     <h3>Scalable Data &amp; Retrieval Systems</h3>
-    <p>Distributed databases, vector search, graph databases, and large-scale query processing.</p>
+    <p>How do we keep trillion-vector indexes and hundred-billion-edge graphs fast as they grow?</p>
+    <p class="about-research-keywords">Vector search · Graph databases · Dynamic graph storage · Distributed query processing</p>
+    <ul class="about-research-papers" aria-label="Selected work in scalable data and retrieval systems">
+      <li><a href="/publications/#ATC-26" title="UBASE: An AI Search Engine for Trillion-Scale Vector Data Management">UBASE</a></li>
+      <li><a href="/publications/#SIGMOD-25-1" title="GES: High-Performance Graph Processing Engine and Service in Huawei">GES</a></li>
+      <li><a href="/publications/#VLDB-26" title="Aquila: A High-Concurrency System for Incremental Graph Query">Aquila</a></li>
+      <li><a href="/publications/#VLDB-25" title="RapidStore: An Efficient Dynamic Graph Storage System for Concurrent Queries">RapidStore</a></li>
+      <li><a href="/publications/#VLDB-20" title="Distributed Subgraph Counting: A General Approach">DISC</a></li>
+    </ul>
   </div>
   <div class="about-research-area">
     <h3>Hardware-Accelerated Computing</h3>
-    <p>Efficient and portable data processing across GPUs and heterogeneous accelerators.</p>
+    <p>How can one query engine run SQL and graph workloads efficiently across GPUs and other accelerators?</p>
+    <p class="about-research-keywords">Tensor query execution · GPU subgraph matching · Heterogeneous hardware</p>
+    <ul class="about-research-papers" aria-label="Selected work in hardware-accelerated computing">
+      <li><a href="/publications/#SIGMOD-26-2" title="TQEX(SQL): Tensor-based Query Engine Enhanced by Bridging the Gap">TQEX(SQL)</a></li>
+      <li><a href="/publications/#VLDB-24" title="TenGraph: A Tensor-Based Graph Query Engine">TenGraph</a></li>
+      <li><a href="/publications/#SIGMOD-25-2" title="TGraph: A Tensor-centric Graph Processing Framework">TGraph</a></li>
+      <li><a href="/publications/#ICDE-27-2" title="Vora: A Vector-Based Engine for Scalable GPU-Accelerated Subgraph Query Processing">Vora</a></li>
+    </ul>
   </div>
 </div>
 </div>
@@ -66,6 +93,21 @@ latest_posts:
 I'm developing **AutoIA**, an **IR-first framework** for agents to autonomously construct context systems and continuously improve their harnesses and shared environments through experience.
 
 [Explore AutoIA →](/projects/1_autoia/)
+</div>
+</section>
+
+<section class="about-section" aria-labelledby="recent-news">
+<h2 class="about-section-label" id="recent-news">News</h2>
+<div class="about-section-content">
+{% include news.liquid limit=true %}
+</div>
+</section>
+
+<section class="about-section" aria-labelledby="selected-publications">
+<h2 class="about-section-label" id="selected-publications">Selected Publications</h2>
+<div class="about-section-content">
+{% include selected_publications.liquid %}
+<p class="about-section-more"><a href="/publications/">All publications →</a></p>
 </div>
 </section>
 
@@ -88,7 +130,7 @@ I'm developing **AutoIA**, an **IR-first framework** for agents to autonomously 
   </li>
 </ul>
 
-[Explore All Systems →](/projects/) · [Publications →](/publications/)
+[Explore All Systems →](/projects/)
 </div>
 </section>
 
@@ -121,15 +163,5 @@ I received my **Ph.D. from the Chinese University of Hong Kong**, advised by [Pr
 I'm always happy to **exchange ideas, discuss research, and explore collaborations** on AI and data systems. Feel free to reach out!
 
 For **research internships at ByteDance (Shenzhen)**, please contact me at **zhanghaowuda12 [at] gmail [dot] com** (email subject: `[Intern]`).
-</div>
-</section>
-
-<section class="about-section" aria-labelledby="recent-news">
-<h2 class="about-section-label" id="recent-news">Recent News</h2>
-<div class="about-section-content" markdown="1">
-
-{% include news.liquid limit=true %}
-
-[→ All news](/news/)
 </div>
 </section>

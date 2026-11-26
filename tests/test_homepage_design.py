@@ -54,11 +54,12 @@ class HomepageDesignContractTest(unittest.TestCase):
         section_ids = (
             "research-directions",
             "current-focus",
+            "recent-news",
+            "selected-publications",
             "selected-systems",
             "highlights",
             "honors-awards",
             "collaboration-internship",
-            "recent-news",
         )
         actual_ids = re.findall(r'<section class="about-section" aria-labelledby="([^"]+)"', page)
         self.assertEqual(tuple(actual_ids), section_ids)
@@ -78,6 +79,10 @@ class HomepageDesignContractTest(unittest.TestCase):
 
         directions = page.split('aria-labelledby="research-directions"', 1)[1].split("</section>", 1)[0]
         self.assertEqual(directions.count('class="about-research-area"'), 4)
+        # Every research direction links to representative papers.
+        self.assertEqual(directions.count('class="about-research-papers"'), 4)
+        for area in directions.split('class="about-research-area"')[1:]:
+            self.assertRegex(area, r'href="/publications/#[^"]+"')
 
         focus = page.split('aria-labelledby="current-focus"', 1)[1].split("</section>", 1)[0]
         project = re.search(r'<h3 class="about-item-title">([^<]+)</h3>', focus)

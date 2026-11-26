@@ -77,7 +77,7 @@ a strong {
 .post article {
   p a,
   li a,
-  .news td a,
+  .news-body a,
   &.archive td a,
   .projects .small a:not(.github-icon) {
     @include editorial-inline-link;

@@ -256,8 +256,9 @@ class BuiltSiteContractTest(unittest.TestCase):
 
         ids = re.findall(r'<h2 class="about-section-label" id="([^"]+)"', html)
         self.assertEqual(ids, [
-            "research-directions", "current-focus", "selected-systems",
-            "highlights", "honors-awards", "collaboration-internship", "recent-news",
+            "research-directions", "current-focus", "recent-news",
+            "selected-publications", "selected-systems", "highlights",
+            "honors-awards", "collaboration-internship",
         ])
 
     def test_research_direction_grid_has_desktop_and_mobile_layouts(self):
@@ -643,6 +644,21 @@ class BuiltSiteContractTest(unittest.TestCase):
             with self.subTest(path=relative_path):
                 self.assertEqual(schema["@type"], "WebPage")
                 self.assertEqual(og_type, "website")
+
+    def test_homepage_selected_publications_show_paper_figures(self):
+        html = (SITE / "index.html").read_text(encoding="utf-8")
+        section = homepage_section(html, "selected-publications")
+        cards = re.findall(r'<li class="featured-paper"[^>]*>(.*?)</li>', section, re.DOTALL)
+        self.assertGreaterEqual(len(cards), 3)
+        for card in cards:
+            with self.subTest(card=visible_text(card)[:40]):
+                self.assertIn('class="featured-paper-venue"', card)
+                image = re.search(r'<img\b[^>]*src="([^"]+)"[^>]*>', card)
+                self.assertIsNotNone(image)
+                self.assertTrue((SITE / image.group(1).lstrip("/")).is_file())
+                self.assertRegex(image.group(0), r'alt="[^"]{20,}"')
+                self.assertIn("data-zoomable", image.group(0))
+                self.assertGreaterEqual(card.count("<p>"), 2)
 
     def test_homepage_presents_named_systems(self):
         self.assertEqual(self.homepage.selected_systems_items, 3)

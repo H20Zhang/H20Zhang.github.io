@@ -186,6 +186,232 @@
   margin: 0;
 }
 
+.about-section-content .about-research-area .about-research-keywords {
+  margin-top: 0.35rem;
+  color: var(--global-text-color-light);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.about-section-content .about-research-papers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0;
+  margin: 0.55rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.88rem;
+
+  li {
+    margin: 0;
+  }
+
+  li + li::before {
+    content: "·";
+    margin: 0 0.5rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+.about-section-more {
+  font-size: 0.88rem;
+}
+
+/* News timeline: shared by the homepage and the /news/ archive.
+   The rail sits midway through the column gap (date width + gap / 2); the
+   offsets are literal because the CSS minifier mangles calc() with var(). */
+.news {
+  --news-date-width: 4.6rem;
+  --news-gap: 1.6rem;
+  --news-rail: 5.4rem;
+}
+
+.news-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.post article .news-list .news-item,
+.news-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--news-date-width) minmax(0, 1fr);
+  column-gap: var(--news-gap);
+  align-items: baseline;
+  margin: 0;
+  padding-bottom: 1.05rem;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: var(--news-rail);
+  }
+
+  &::before {
+    top: 0.75rem;
+    bottom: -0.75rem;
+    width: 1px;
+    background: var(--global-divider-color);
+  }
+
+  &::after {
+    top: 0.75rem;
+    width: 0.44rem;
+    height: 0.44rem;
+    border-radius: 50%;
+    background: var(--global-theme-color);
+    transform: translate(-50%, -50%);
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.news-date {
+  color: var(--global-text-color-light);
+  font-size: 0.84rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.news-body {
+  min-width: 0;
+}
+
+.news-older {
+  margin-top: 1.05rem;
+
+  > summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--global-theme-color);
+    font-size: 0.88rem;
+    cursor: pointer;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      width: 0.42rem;
+      height: 0.42rem;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: translateY(-0.12rem) rotate(45deg);
+      transition: transform 0.15s ease;
+    }
+  }
+
+  &[open] > summary::after {
+    transform: translateY(0.1rem) rotate(-135deg);
+  }
+
+  .news-older-hide,
+  &[open] .news-older-show {
+    display: none;
+  }
+
+  &[open] .news-older-hide {
+    display: inline;
+  }
+
+  .news-list {
+    margin-top: 1.05rem;
+  }
+}
+
+/* Selected publications with paper figures. */
+.about-section-content .featured-papers {
+  margin: 0 0 1.4rem;
+  padding: 0;
+  list-style: none;
+}
+
+.about-section-content .featured-paper {
+  display: flow-root;
+  margin: 0;
+
+  & + .featured-paper {
+    margin-top: 1.6rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--global-divider-color);
+  }
+}
+
+.about-section-content .featured-paper-title {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.45;
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--global-theme-color);
+    }
+  }
+
+  strong {
+    color: var(--global-theme-color);
+    font-weight: 600;
+  }
+}
+
+.featured-paper-venue {
+  display: inline-block;
+  margin-right: 0.4rem;
+  padding: 0.05rem 0.45rem;
+  border-radius: 0.3rem;
+  background: color-mix(in srgb, var(--global-theme-color) 10%, transparent);
+  color: var(--global-theme-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  vertical-align: 0.1em;
+  white-space: nowrap;
+}
+
+.featured-paper-figure {
+  float: left;
+  width: min(50%, 400px);
+  margin: 0.3rem 1.5rem 0.6rem 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0.4rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.45rem;
+    background: #fff;
+    cursor: zoom-in;
+  }
+}
+
+.about-section-content .featured-paper-summary {
+
+  p {
+    margin: 0 0 0.7rem;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .about-section-content .about-systems-list {
   margin: 0 0 1.05rem;
   padding: 0;
@@ -288,6 +514,18 @@
   .about-research-grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 1.2rem;
+  }
+
+  .featured-paper-figure {
+    float: none;
+    width: 100%;
+    margin: 0 0 0.9rem;
+  }
+
+  .news {
+    --news-date-width: 4.1rem;
+    --news-gap: 1.2rem;
+    --news-rail: 4.7rem;
   }
 
   .about-footer-row {

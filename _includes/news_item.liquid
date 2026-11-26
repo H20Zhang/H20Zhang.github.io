@@ -1,0 +1,11 @@
+{% assign item = include.item %}
+<li class="news-item">
+  <time class="news-date" datetime="{{ item.date | hao_date: '%Y-%m' }}">{{ item.date | hao_date: '%b %Y' }}</time>
+  <div class="news-body">
+    {% if item.inline %}
+      {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+    {% else %}
+      <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+    {% endif %}
+  </div>
+</li>

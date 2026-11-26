@@ -8,4 +8,4 @@ inline: true
 related_posts: false
 ---
 
-[**DocNavRAG**](/publications/#Arxiv-26-4) released on arXiv.
+New preprint: [**DocNavRAG**](/publications/#Arxiv-26-4) follows a document's structure and builds up evidence step by step to answer complex questions about long documents.

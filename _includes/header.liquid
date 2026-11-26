@@ -118,16 +118,35 @@
             {% endif %}
           {% endfor %}
         </ul>
-        {% if site.enable_darkmode %}
-          <!-- Theme toggle -->
-          <div class="toggle-container sidebar-footer-item">
-            <button id="light-toggle" title="Change theme" aria-label="Change color theme">
-              <i class="fa-half-sun-moon" id="light-toggle-system"></i>
-              <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
-              <i class="fa-solid fa-sun" id="light-toggle-light"></i>
-            </button>
+        <!-- Mini sidebar Tetris (desktop only) + Theme toggle -->
+        <div class="sidebar-bottom-stack">
+          <div class="sidebar-tetris" id="sidebar-tetris" aria-label="Sidebar mini Tetris">
+            <div class="sidebar-tetris-bar">
+              <span class="sidebar-tetris-label" id="sidebar-tetris-status">TETRIS</span>
+              <span class="sidebar-tetris-meta">
+                <span class="sidebar-tetris-score" id="sidebar-tetris-score">0</span>
+                <button type="button" class="sidebar-tetris-reset" id="sidebar-tetris-reset" title="Reset game" aria-label="Reset Tetris game">↻</button>
+              </span>
+            </div>
+            <canvas
+              id="sidebar-tetris-canvas"
+              class="sidebar-tetris-canvas"
+              width="120"
+              height="180"
+              aria-label="Mini Tetris game, use arrow keys to play"
+            ></canvas>
           </div>
-        {% endif %}
+          {% if site.enable_darkmode %}
+            <div class="toggle-container sidebar-footer-item">
+              <button id="light-toggle" title="Change theme" aria-label="Change color theme">
+                <i class="fa-half-sun-moon" id="light-toggle-system"></i>
+                <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
+                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+              </button>
+              <span class="sidebar-tetris-keys" aria-hidden="true">← ↑ ↓ →</span>
+            </div>
+          {% endif %}
+        </div>
       </div>
     </div>
   </nav>

@@ -66,7 +66,7 @@ Provides a general tensor-centric programming and execution framework with graph
 
 ## My role
 
-Research and system architecture across this Huawei-affiliated tensor-centric data-systems line, spanning query/runtime design and execution over heterogeneous accelerators.
+Architect & Research Scientist — led the team in exploratory R&D and system delivery across this Huawei-affiliated tensor-centric data-systems line, spanning query/runtime architecture and execution over heterogeneous accelerators.
 
 ## Impact
 

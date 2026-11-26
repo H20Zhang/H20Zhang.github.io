@@ -866,6 +866,8 @@ class BuiltSiteContractTest(unittest.TestCase):
         for item in (
             "ByteDance",
             "Huawei",
+            "Architect &amp; Research Scientist",
+            "exploratory R&amp;D through production deployment",
             "The Chinese University of Hong Kong",
             "Wuhan University",
             "139,411.14 throughput",
@@ -1012,9 +1014,12 @@ class BuiltSiteContractTest(unittest.TestCase):
                 self.assertNotIn("sidebar-quick-links", html)
                 self.assertNotIn("sidebar-brand-role", html)
                 self.assertNotIn("sidebar-brand-cn", html)
+                self.assertIn('id="sidebar-tetris-canvas"', html)
+                self.assertIn("/assets/js/sidebar-tetris.js", html)
         home_html = (SITE / "index.html").read_text(encoding="utf-8")
         self.assertIn("is-home", home_html)
         self.assertIn(".site-shell-main{margin-left:12.25rem", self.css)
+        self.assertIn(".sidebar-tetris,.sidebar-tetris-keys{display:none}", self.css)
         progress_js = (SITE / "assets" / "js" / "progress-bar.js").read_text(encoding="utf-8")
         self.assertIn("(min-width: 992px)", progress_js)
 

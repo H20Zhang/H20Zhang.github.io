@@ -10,13 +10,13 @@ cv:
           - "Core contributor and corresponding author on [**UBASE**](/projects/ubase/) ([ATC 2026](/publications/#ATC-26)), ByteDance's production AI search engine spanning **7,000+ clusters, 300+ PB, and nearly one trillion vectors**, alongside multimodal agent memory ([**AdaMM**](/publications/#Arxiv-26-3), [**IGMem**](/publications/#Submitted-26-IGMem))."
 
       - company: Huawei
-        position: Research Scientist
+        position: Architect & Research Scientist
         location: Shenzhen, China
         start_date: 2022
         end_date: 2025
         highlights:
-          - "Researched and architected graph database infrastructure for [**Huawei GES**](/projects/3_ges/) ([SIGMOD 2025](/publications/#SIGMOD-25-1), [**RapidStore**](/publications/#VLDB-25), [**Aquila**](/publications/#VLDB-26)), supporting graphs with **hundreds of billions of edges** and achieving audited **#1 results on both LDBC SNB Interactive tracks** ([Declarative 2024](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/), [Imperative 2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/))."
-          - "Spearheaded hardware-portable tensor-centric query and graph execution across NVIDIA GPUs, AMD GPUs, and Apple silicon, including [**TQEX**](/projects/2_tqex/) ([SIGMOD 2026](/publications/#SIGMOD-26-2)), [**TGraph**](/publications/#SIGMOD-25-2) (SIGMOD 2025), and [**TenGraph**](/publications/#VLDB-24) (PVLDB 2024)."
+          - "Led a team from exploratory R&D through production deployment of graph database infrastructure for [**Huawei GES**](/projects/3_ges/) ([SIGMOD 2025](/publications/#SIGMOD-25-1), [**RapidStore**](/publications/#VLDB-25), [**Aquila**](/publications/#VLDB-26)), supporting graphs with **hundreds of billions of edges** and achieving audited **#1 results on both LDBC SNB Interactive tracks** ([Declarative 2024](https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/), [Imperative 2025](https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/))."
+          - "Led team-wide exploratory R&D and system delivery of hardware-portable tensor-centric query and graph execution across NVIDIA GPUs, AMD GPUs, and Apple silicon, including [**TQEX**](/projects/2_tqex/) ([SIGMOD 2026](/publications/#SIGMOD-26-2)), [**TGraph**](/publications/#SIGMOD-25-2) (SIGMOD 2025), and [**TenGraph**](/publications/#VLDB-24) (PVLDB 2024)."
 
     Education:
       - institution: The Chinese University of Hong Kong (CUHK)

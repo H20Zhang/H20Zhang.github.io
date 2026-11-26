@@ -82,7 +82,7 @@ The GES research and system line combines three connected pillars to sustain hig
 
 ## My role
 
-Research and system architecture for graph database infrastructure and the GES line of work, including execution design and benchmark-facing system optimization.
+Architect & Research Scientist — led the team from exploratory R&D through production deployment across the GES graph database infrastructure line, spanning storage/execution architecture and benchmark-facing system engineering.
 
 ## Evidence
 

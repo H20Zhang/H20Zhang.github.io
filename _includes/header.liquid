@@ -118,57 +118,16 @@
             {% endif %}
           {% endfor %}
         </ul>
-        <!-- Mini sidebar Arcade: Tetris, Snake & Neural Net (desktop only) + Theme toggle -->
-        <div class="sidebar-bottom-stack">
-          <div class="sidebar-tetris" id="sidebar-tetris" aria-label="Sidebar interactive canvas">
-            <div class="sidebar-tetris-bar">
-              <div class="sidebar-arcade-tabs" role="tablist" aria-label="Visualization mode">
-                <button
-                  type="button"
-                  class="sidebar-arcade-tab is-active"
-                  data-arcade-game="tetris"
-                  role="tab"
-                  aria-selected="true"
-                >Tetris</button>
-                <button
-                  type="button"
-                  class="sidebar-arcade-tab"
-                  data-arcade-game="snake"
-                  role="tab"
-                  aria-selected="false"
-                >Snake</button>
-                <button
-                  type="button"
-                  class="sidebar-arcade-tab"
-                  data-arcade-game="neural"
-                  role="tab"
-                  aria-selected="false"
-                >Neural</button>
-              </div>
-              <span class="sidebar-tetris-meta">
-                <span class="sidebar-tetris-score" id="sidebar-tetris-score">0</span>
-                <button type="button" class="sidebar-tetris-reset" id="sidebar-tetris-reset" title="Restart" aria-label="Restart visualization">↻</button>
-              </span>
-            </div>
-            <canvas
-              id="sidebar-tetris-canvas"
-              class="sidebar-tetris-canvas"
-              width="252"
-              height="252"
-              aria-label="Interactive Tetris, Snake, and Neural Network visualization"
-            ></canvas>
+        {% if site.enable_darkmode %}
+          <!-- Theme toggle -->
+          <div class="toggle-container sidebar-footer-item">
+            <button id="light-toggle" title="Change theme" aria-label="Change color theme">
+              <i class="fa-half-sun-moon" id="light-toggle-system"></i>
+              <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
+              <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+            </button>
           </div>
-          {% if site.enable_darkmode %}
-            <div class="toggle-container sidebar-footer-item">
-              <button id="light-toggle" title="Change theme" aria-label="Change color theme">
-                <i class="fa-half-sun-moon" id="light-toggle-system"></i>
-                <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
-                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
-              </button>
-              <span class="sidebar-tetris-keys" id="sidebar-arcade-hint" aria-hidden="true">AUTO · ← ↑ ↓ →</span>
-            </div>
-          {% endif %}
-        </div>
+        {% endif %}
       </div>
     </div>
   </nav>

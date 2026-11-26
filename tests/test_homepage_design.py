@@ -77,12 +77,15 @@ class HomepageDesignContractTest(unittest.TestCase):
         self.assertGreater(len(intro.split()), 10)
         self.assertLessEqual(len(intro.split()), 65)
 
-        directions = page.split('aria-labelledby="research-directions"', 1)[1].split("</section>", 1)[0]
-        self.assertEqual(directions.count('class="about-research-area"'), 4)
-        # Every research direction links to representative papers.
-        self.assertEqual(directions.count('class="about-research-papers"'), 4)
-        for area in directions.split('class="about-research-area"')[1:]:
-            self.assertRegex(area, r'href="/publications/#[^"]+"')
+        # Research directions render from the data shared with /publications/.
+        directions = read("_data/research_areas.yml")
+        self.assertEqual(len(re.findall(r"(?m)^- id: \S+$", directions)), 4)
+        self.assertIn("{% include research_directions.liquid %}", page)
+        for block in re.split(r"(?m)^- id: ", directions)[1:]:
+            highlights = re.findall(r"(?m)^    - key: (\S+)$", block)
+            papers = re.findall(r"(?m)^    - (\S+)$", block)
+            self.assertTrue(highlights)
+            self.assertTrue(set(highlights) <= set(papers))
 
         focus = page.split('aria-labelledby="current-focus"', 1)[1].split("</section>", 1)[0]
         project = re.search(r'<h3 class="about-item-title">([^<]+)</h3>', focus)

@@ -236,16 +236,24 @@ class BuiltSiteContractTest(unittest.TestCase):
         directions = homepage_section(html, "research-directions")
         headings = [visible_text(h) for h in re.findall(r"<h3[^>]*>(.*?)</h3>", directions, re.DOTALL)]
 
-        # Copy changes should not break deployment. Verify the generated page
-        # matches the source's four research areas in the intended order.
-        source = (ROOT / "_pages" / "about.md").read_text(encoding="utf-8")
-        source_directions = source.split('aria-labelledby="research-directions"', 1)[1].split("</section>", 1)[0]
-        expected_headings = [
-            unescape(h) for h in re.findall(r"<h3[^>]*>(.*?)</h3>", source_directions, re.DOTALL)
-        ]
+        # The homepage and /publications/ share _data/research_areas.yml, so
+        # direction titles, order, and paper counts agree on both pages.
+        data = (ROOT / "_data" / "research_areas.yml").read_text(encoding="utf-8")
+        blocks = re.split(r"(?m)^- id: ", data)[1:]
+        expected_headings = [re.search(r"(?m)^  title: (.+)$", b).group(1) for b in blocks]
         self.assertEqual(len(expected_headings), 4)
         self.assertEqual(headings, expected_headings)
-        self.assertEqual(len(set(headings)), 4)
+        publications = (SITE / "publications" / "index.html").read_text(encoding="utf-8")
+        for block in blocks:
+            area_id = block.split("\n", 1)[0].strip()
+            count = len(re.findall(r"(?m)^    - (\S+)$", block))
+            with self.subTest(area=area_id):
+                self.assertIn(f'href="/publications/#{area_id}">All {count} papers', directions)
+                self.assertIn(f'id="{area_id}"', publications)
+                self.assertRegex(
+                    publications,
+                    rf'data-research-area="{area_id}">[^<]*<span class="research-area-count">{count}</span>',
+                )
 
         areas = re.findall(r'<div class="about-research-area">(.*?)</div>', directions, re.DOTALL)
         self.assertEqual(len(areas), 4)

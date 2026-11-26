@@ -36,51 +36,7 @@ latest_posts:
 <section class="about-section" aria-labelledby="research-directions">
 <h2 class="about-section-label" id="research-directions">Research Directions</h2>
 <div class="about-section-content">
-<div class="about-research-grid">
-  <div class="about-research-area">
-    <h3>Agentic Systems &amp; Context Infrastructure</h3>
-    <p>How can agents turn experience into memory, context, and harnesses that keep improving?</p>
-    <p class="about-research-keywords">Self-evolving agents · Agent memory · Context infrastructure · Test-time learning</p>
-    <ul class="about-research-papers" aria-label="Selected work in agentic systems">
-      <li><a href="/publications/#Arxiv-26-3" title="Beyond Retrieval: Analytic Memory for Multimodal Agents">AdaMM</a></li>
-      <li><a href="/publications/#Arxiv-26-4" title="DocNavRAG: Document-Structured Graph RAG with Stateful Evidence Construction for Complex Document Question Answering">DocNavRAG</a></li>
-      <li><a href="/publications/#Submitted-26-IGMem" title="IGMem: Interaction-Grounded Memory for Multimodal Multi-Party Conversations">IGMem</a></li>
-    </ul>
-  </div>
-  <div class="about-research-area">
-    <h3>AI-Powered Data Systems</h3>
-    <p>How can a database query text and other unstructured content as efficiently as relational data?</p>
-    <p class="about-research-keywords">Semantic operators · LLM-assisted optimization · Hybrid semantic-relational queries</p>
-    <ul class="about-research-papers" aria-label="Selected work in AI-powered data systems">
-      <li><a href="/publications/#VLDB-26-2" title="Sema: A High-performance System for LLM-based Semantic Query Processing">SEMA</a></li>
-      <li><a href="/publications/#COLM-26" title="CoreSemDB: Benchmarking Hybrid Semantic-Relational Query Processing over Text-Rich Databases">CoreSemDB</a></li>
-      <li><a href="/publications/#ICDE-26" title="SQLVec: SQL-Based Vector Similarity Search">SQLVec</a></li>
-    </ul>
-  </div>
-  <div class="about-research-area">
-    <h3>Scalable Data &amp; Retrieval Systems</h3>
-    <p>How do we keep trillion-vector indexes and hundred-billion-edge graphs fast as they grow?</p>
-    <p class="about-research-keywords">Vector search · Graph databases · Dynamic graph storage · Distributed query processing</p>
-    <ul class="about-research-papers" aria-label="Selected work in scalable data and retrieval systems">
-      <li><a href="/publications/#ATC-26" title="UBASE: An AI Search Engine for Trillion-Scale Vector Data Management">UBASE</a></li>
-      <li><a href="/publications/#SIGMOD-25-1" title="GES: High-Performance Graph Processing Engine and Service in Huawei">GES</a></li>
-      <li><a href="/publications/#VLDB-26" title="Aquila: A High-Concurrency System for Incremental Graph Query">Aquila</a></li>
-      <li><a href="/publications/#VLDB-25" title="RapidStore: An Efficient Dynamic Graph Storage System for Concurrent Queries">RapidStore</a></li>
-      <li><a href="/publications/#VLDB-20" title="Distributed Subgraph Counting: A General Approach">DISC</a></li>
-    </ul>
-  </div>
-  <div class="about-research-area">
-    <h3>Hardware-Accelerated Computing</h3>
-    <p>How can one query engine run SQL and graph workloads efficiently across GPUs and other accelerators?</p>
-    <p class="about-research-keywords">Tensor query execution · GPU subgraph matching · Heterogeneous hardware</p>
-    <ul class="about-research-papers" aria-label="Selected work in hardware-accelerated computing">
-      <li><a href="/publications/#SIGMOD-26-2" title="TQEX(SQL): Tensor-based Query Engine Enhanced by Bridging the Gap">TQEX(SQL)</a></li>
-      <li><a href="/publications/#VLDB-24" title="TenGraph: A Tensor-Based Graph Query Engine">TenGraph</a></li>
-      <li><a href="/publications/#SIGMOD-25-2" title="TGraph: A Tensor-centric Graph Processing Framework">TGraph</a></li>
-      <li><a href="/publications/#ICDE-27-2" title="Vora: A Vector-Based Engine for Scalable GPU-Accelerated Subgraph Query Processing">Vora</a></li>
-    </ul>
-  </div>
-</div>
+{% include research_directions.liquid %}
 </div>
 </section>
 

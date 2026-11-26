@@ -1,0 +1,15 @@
+<div class="about-research-grid">
+  {% for area in site.data.research_areas %}
+    <div class="about-research-area">
+      <h3>{{ area.title | escape }}</h3>
+      <p>{{ area.question }}</p>
+      <p class="about-research-keywords">{{ area.keywords }}</p>
+      <ul class="about-research-papers" aria-label="Selected work in {{ area.title | escape }}">
+        {% for paper in area.highlights %}
+          <li><a href="/publications/#{{ paper.key }}">{{ paper.label }}</a></li>
+        {% endfor %}
+      </ul>
+      <p class="about-research-all"><a href="/publications/#{{ area.id }}">All {{ area.papers.size }} papers →</a></p>
+    </div>
+  {% endfor %}
+</div>

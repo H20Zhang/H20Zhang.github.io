@@ -61,7 +61,7 @@ class ResearchNavigationTest(unittest.TestCase):
         areas = re.findall(r'^- id: (\S+)$', data, re.M)
         page = parse('publications/index.html')
         self.assertEqual(page.areas, areas)
-        self.assertEqual(len(areas), 6)
+        self.assertEqual(len(areas), 4)
         self.assertEqual(len(keys), 36)
         self.assertNotIn('short_title:', data)
         template = (ROOT / '_pages/publications.md').read_text()

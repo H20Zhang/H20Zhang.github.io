@@ -1,62 +1,98 @@
-# One primary area per paper. Keys refer to the unchanged BibTeX records.
+# Research directions shared by the homepage and /publications/.
+# One primary direction per paper; keys refer to the unchanged BibTeX records.
 # Topic membership does not imply institutional or project affiliation.
-- id: memory-adaptation
-  title: Agent Memory & Retrieval
-  description: Multimodal agent memory, evidence retrieval, and stateful evidence construction.
+# `highlights` lists the papers linked from the homepage (a subset of `papers`).
+- id: agentic-systems
+  title: Agentic Systems & Context Infrastructure
+  description: Agent memory, evidence retrieval for agents, and test-time learning and serving.
+  question: How can agents turn experience into memory, context, and harnesses that keep improving?
+  keywords: Self-evolving agents · Agent memory · Context infrastructure · Test-time learning
+  highlights:
+    - key: Arxiv-26-3
+      label: AdaMM
+    - key: Arxiv-26-4
+      label: DocNavRAG
+    - key: Submitted-26-IGMem
+      label: IGMem
   papers:
     - Submitted-26-IGMem
     - Arxiv-26-3
     - Submitted-26-GATOR
     - Arxiv-26-4
-- id: test-time-learning-serving
-  title: Test-Time Learning & Serving
-  description: Test-time learning, selective memory writing, and serving systems for adaptation.
-  papers:
     - Submitted-26-SSW
     - Arxiv-26-5
-- id: retrieval-semantics
-  title: Semantic Queries & Vector Search
-  description: Semantic-relational queries, vector similarity search, and efficient AI search engines.
+- id: ai-data-systems
+  title: AI-Powered Data Systems
+  description: LLM-powered semantic queries and learned components for query processing.
+  question: How can a database query text and other unstructured content as efficiently as relational data?
+  keywords: Semantic operators · LLM-assisted optimization · Learned estimation
+  highlights:
+    - key: VLDB-26-2
+      label: SEMA
+    - key: COLM-26
+      label: CoreSemDB
+    - key: ICDE-22
+      label: Learned Join Decomposition
   papers:
-    - ICDE-26
     - VLDB-26-2
     - COLM-26
-    - Arxiv-26-2
+    - VLDBJ-23
+    - ICDE-22
+    - SIGMOD-22-2
+    - SIGMOD-21
+- id: scalable-systems
+  title: Scalable Data & Retrieval Systems
+  description: Vector search, graph databases and storage, graph learning, and distributed query processing.
+  question: How do we keep trillion-vector indexes and hundred-billion-edge graphs fast as they grow?
+  keywords: Vector search · Graph databases · Dynamic graph storage · Distributed query processing
+  highlights:
+    - key: ATC-26
+      label: UBASE
+    - key: SIGMOD-25-1
+      label: GES
+    - key: VLDB-26
+      label: Aquila
+    - key: VLDB-25
+      label: RapidStore
+    - key: VLDB-20
+      label: DISC
+  papers:
     - ATC-26
-- id: efficient-execution
-  title: Hardware-Efficient Execution
-  description: Tensor-based and GPU-accelerated execution of SQL, graph queries, and graph analytics.
-  papers:
-    - ICDE-27-2
-    - SIGMOD-26-1
-    - SIGMOD-26-2
-    - SIGMOD-25-2
-    - VLDB-24
-- id: graph-systems
-  title: Graph Systems & Learning
-  description: Graph storage, concurrent and incremental queries, graph representations, and learning on graphs.
-  papers:
+    - Arxiv-26-2
+    - ICDE-26
     - ICDE-27-1
     - VLDB-26
-    - DASFAA-25
     - SIGMOD-25-1
     - SIGMOD-25-3
     - VLDB-25
+    - DASFAA-25
     - ICDE-24-1
     - ICDE-24-2
-- id: query-analytics
-  title: Query Optimization & Distributed Analytics
-  description: Join processing, learned estimation, distributed execution, and large-scale subgraph analytics.
-  papers:
-    - VLDBJ-23
-    - ICDE-22
     - SIGMOD-22-1
-    - SIGMOD-22-2
     - ICDE-21
-    - SIGMOD-21
     - VLDB-20
     - TKDE-19
     - VLDB-18
     - DASFAA-17
     - Distributed-And-Parallel-Database-17
     - BigData-16
+- id: hardware-acceleration
+  title: Hardware-Accelerated Computing
+  description: Tensor-based and GPU-accelerated execution of SQL, graph queries, and graph analytics.
+  question: How can one query engine run SQL and graph workloads efficiently across GPUs and other accelerators?
+  keywords: Tensor query execution · GPU subgraph matching · Heterogeneous hardware
+  highlights:
+    - key: SIGMOD-26-2
+      label: TQEX(SQL)
+    - key: VLDB-24
+      label: TenGraph
+    - key: SIGMOD-25-2
+      label: TGraph
+    - key: ICDE-27-2
+      label: Vora
+  papers:
+    - ICDE-27-2
+    - SIGMOD-26-2
+    - SIGMOD-26-1
+    - SIGMOD-25-2
+    - VLDB-24

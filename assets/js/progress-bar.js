@@ -46,7 +46,8 @@ function getCurrentScrollPosition() {
 }
 
 function initializeProgressElement() {
-  let navbarHeight = $("#navbar").outerHeight(true);
+  const isSidebarLayout = window.matchMedia("(min-width: 992px)").matches;
+  let navbarHeight = isSidebarLayout ? 0 : $("#navbar").outerHeight(true);
   $("body").css({ "padding-top": navbarHeight });
   $("progress-container").css({ "padding-top": navbarHeight });
   progressBar.css({ top: navbarHeight });

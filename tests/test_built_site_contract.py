@@ -996,6 +996,24 @@ class BuiltSiteContractTest(unittest.TestCase):
         self.assertIn('<span class="about-chinese-name" lang="zh-Hans">张颢</span>', hero.group())
         self.assertNotIn('class="about-footer-social', homepage_html)
 
+    def test_desktop_navigation_renders_left_sidebar_shell(self):
+        for relative_path in (
+            Path("index.html"),
+            Path("publications/index.html"),
+            Path("projects/index.html"),
+            Path("experience/index.html"),
+            Path("blog/index.html"),
+        ):
+            html = (SITE / relative_path).read_text(encoding="utf-8")
+            with self.subTest(path=str(relative_path)):
+                self.assertIn("navbar-expand-lg", html)
+                self.assertIn('class="site-shell-main"', html)
+                self.assertIn('class="nav-item sidebar-footer-item"', html)
+                self.assertIn('class="sidebar-quick-links"', html)
+        self.assertIn(".site-shell-main{margin-left:13.5rem", self.css)
+        progress_js = (SITE / "assets" / "js" / "progress-bar.js").read_text(encoding="utf-8")
+        self.assertIn("(min-width: 992px)", progress_js)
+
 
 if __name__ == "__main__":
     unittest.main()

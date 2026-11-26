@@ -16,7 +16,7 @@
   </head>
 
   <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %}{% if site.footer_enabled == false %} no-footer{% elsif site.footer_fixed != true %} sticky-bottom-footer{% endif %}">
+  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %}{% if site.footer_enabled == false %} no-footer{% elsif site.footer_fixed != true %} sticky-bottom-footer{% endif %}{% if page.permalink == '/' %} is-home{% endif %}">
     <!-- Header -->
     {% include header.liquid %}
 

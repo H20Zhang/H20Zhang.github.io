@@ -715,12 +715,6 @@ html[data-theme="dark"] .publications ol.bibliography li div.figure-panel.hidden
 }
 
 // Left navigation sidebar shell on desktop (>=992px); compact top bar below 992px.
-.sidebar-brand-cn,
-.sidebar-brand-role,
-.sidebar-quick-links {
-  display: none;
-}
-
 @media (max-width: 991px) {
   #navbar .navbar-collapse {
     padding: 0.5rem 0 0.75rem;
@@ -747,15 +741,25 @@ html[data-theme="dark"] .publications ol.bibliography li div.figure-panel.hidden
     padding-top: 0 !important;
   }
 
+  body.is-home #navbar.navbar {
+    .navbar-brand {
+      display: none;
+    }
+
+    .navbar-collapse {
+      margin-top: 0.35rem;
+    }
+  }
+
   #navbar.navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: auto;
     bottom: 0;
-    width: 13.5rem;
+    width: 12.25rem;
     height: 100dvh;
-    padding: 2.25rem 1.25rem 1.5rem;
+    padding: 2.35rem 1.35rem 1.4rem;
     border-bottom: 0;
     border-right: 1px solid var(--global-divider-color);
     background-color: var(--global-section-alt-color);
@@ -776,48 +780,23 @@ html[data-theme="dark"] .publications ol.bibliography li div.figure-panel.hidden
     }
 
     .navbar-brand {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.28rem;
+      display: inline-block;
       margin: 0;
-      padding: 0 0.55rem 1.35rem;
-      border-bottom: 1px solid var(--global-divider-color);
-      font-size: 1.18rem;
-      line-height: 1.2;
-      white-space: normal;
-    }
-
-    .sidebar-brand-line {
-      display: inline-flex;
-      align-items: baseline;
-      gap: 0.25rem;
-    }
-
-    .sidebar-brand-cn {
-      display: inline;
-      margin-left: 0.15rem;
-      color: var(--global-text-color-light);
-      font-size: 0.82rem;
-      font-weight: 400;
-      letter-spacing: 0.03em;
-    }
-
-    .sidebar-brand-role {
-      display: block;
-      color: var(--global-text-color-light);
-      font-size: 0.74rem;
-      font-weight: 400;
-      line-height: 1.38;
+      padding: 0.15rem 0 0;
+      font-size: 1.06rem;
+      line-height: 1.25;
+      color: var(--global-text-color);
+      white-space: nowrap;
     }
 
     .navbar-collapse {
       display: flex !important;
       flex-direction: column;
       align-items: stretch;
+      justify-content: space-between;
       flex: 1 1 auto;
       width: 100%;
-      margin-top: 1.15rem;
+      margin-top: 1.45rem;
       text-align: left !important;
     }
 
@@ -825,10 +804,11 @@ html[data-theme="dark"] .publications ol.bibliography li div.figure-panel.hidden
       display: flex;
       flex-direction: column;
       align-items: stretch;
-      flex: 1 1 auto;
+      flex: 0 0 auto;
       width: 100%;
       margin: 0 !important;
-      gap: 0.2rem;
+      border-left: 1px solid var(--global-divider-color);
+      gap: 0.12rem;
     }
 
     .nav-item {
@@ -836,56 +816,62 @@ html[data-theme="dark"] .publications ol.bibliography li div.figure-panel.hidden
     }
 
     .nav-item .nav-link {
+      position: relative;
       display: flex;
       align-items: center;
-      padding: 0.48rem 0.7rem;
-      border-radius: 0.42rem;
+      padding: 0.38rem 0 0.38rem 0.95rem;
+      border-radius: 0;
+      background-color: transparent;
       color: var(--global-text-color-light);
-      font-size: 0.91rem;
-      font-weight: 500;
-      line-height: 1.35;
-      transition: background-color 0.14s ease, color 0.14s ease;
+      font-size: 0.92rem;
+      font-weight: 400;
+      line-height: 1.4;
+      transition: color 0.14s ease;
 
       &:hover,
       &:focus-visible {
-        background-color: color-mix(in srgb, var(--global-theme-color) 6%, transparent);
+        background-color: transparent;
         color: var(--global-text-color);
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: -1px;
+          top: 0.34rem;
+          bottom: 0.34rem;
+          width: 1.5px;
+          border-radius: 1px;
+          background-color: var(--global-text-color-light);
+          opacity: 0.5;
+        }
       }
     }
 
     .nav-item.active > .nav-link {
-      background-color: color-mix(in srgb, var(--global-theme-color) 10%, var(--global-card-bg-color));
-      box-shadow: inset 2.5px 0 0 var(--global-theme-color);
+      background-color: transparent;
+      box-shadow: none;
       color: var(--global-theme-color);
       font-weight: 600;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -1px;
+        top: 0.32rem;
+        bottom: 0.32rem;
+        width: 2px;
+        border-radius: 1px;
+        background-color: var(--global-theme-color);
+        opacity: 1;
+      }
     }
 
     .sidebar-footer-item {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
       margin-top: auto;
-      padding: 0.9rem 0.35rem 0;
-      border-top: 1px solid var(--global-divider-color);
-    }
-
-    .sidebar-quick-links {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.68rem;
-
-      a {
-        color: var(--global-text-color-light);
-        font-size: 0.94rem;
-        line-height: 1;
-        text-decoration: none;
-        transition: color 0.14s ease;
-
-        &:hover,
-        &:focus-visible {
-          color: var(--global-theme-color);
-        }
-      }
+      padding: 0.75rem 0 0;
     }
 
     #light-toggle {
@@ -900,13 +886,13 @@ html[data-theme="dark"] .publications ol.bibliography li div.figure-panel.hidden
 
   progress#progress {
     top: 0 !important;
-    left: 13.5rem;
-    width: calc(100% - 13.5rem);
+    left: 12.25rem;
+    width: calc(100% - 12.25rem);
     z-index: 1040;
   }
 
   .site-shell-main {
-    margin-left: 13.5rem;
+    margin-left: 12.25rem;
     overflow-x: clip;
 
     > .container {

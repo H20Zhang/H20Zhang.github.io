@@ -4,25 +4,21 @@
     <div class="container">
       {% if page.permalink != '/' or site.enable_navbar_social != true %}
         <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
-          <span class="sidebar-brand-line">
-            {% if site.title == 'blank' %}
-              {% if site.first_name %}
-                <span class="font-weight-bold">
-                  {{- site.first_name -}}
-                </span>
-              {% endif %}
-              {% if site.middle_name %}
-                {{- site.middle_name -}}
-              {% endif %}
-              {% if site.last_name %}
-                {{- site.last_name -}}
-              {% endif %}
-            {% else %}
-              {{- site.title -}}
+          {% if site.title == 'blank' %}
+            {% if site.first_name %}
+              <span class="font-weight-bold">
+                {{- site.first_name -}}
+              </span>
             {% endif %}
-            <span class="sidebar-brand-cn" lang="zh-Hans">张颢</span>
-          </span>
-          <span class="sidebar-brand-role">Research Scientist · ByteDance</span>
+            {% if site.middle_name %}
+              {{- site.middle_name -}}
+            {% endif %}
+            {% if site.last_name %}
+              {{- site.last_name -}}
+            {% endif %}
+          {% else %}
+            {{- site.title -}}
+          {% endif %}
         </a>
       {% elsif site.enable_navbar_social %}
         <!-- Social Icons -->
@@ -121,31 +117,17 @@
               {% endif %}
             {% endif %}
           {% endfor %}
-          {% if site.enable_darkmode %}
-            <!-- Sidebar footer: quick links + theme toggle -->
-            <li class="toggle-container sidebar-footer-item">
-              <div class="sidebar-quick-links" aria-label="Quick links">
-                {% if site.data.socials.email %}
-                  <a href="mailto:{{ site.data.socials.email }}" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                {% endif %}
-                {% if site.data.socials.scholar_userid %}
-                  <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-                {% endif %}
-                {% if site.data.socials.github_username %}
-                  <a href="https://github.com/{{ site.data.socials.github_username }}" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                {% endif %}
-                {% if site.data.socials.linkedin_username %}
-                  <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                {% endif %}
-              </div>
-              <button id="light-toggle" title="Change theme" aria-label="Change color theme">
-                <i class="fa-half-sun-moon" id="light-toggle-system"></i>
-                <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
-                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
-              </button>
-            </li>
-          {% endif %}
         </ul>
+        {% if site.enable_darkmode %}
+          <!-- Theme toggle -->
+          <div class="toggle-container sidebar-footer-item">
+            <button id="light-toggle" title="Change theme" aria-label="Change color theme">
+              <i class="fa-half-sun-moon" id="light-toggle-system"></i>
+              <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
+              <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+            </button>
+          </div>
+        {% endif %}
       </div>
     </div>
   </nav>

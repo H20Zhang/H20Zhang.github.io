@@ -20,7 +20,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     outputs:
       homepage_sha256: ${{ steps.homepage_digest.outputs.sha256 }}
     env:

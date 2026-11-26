@@ -18,6 +18,8 @@ PROJECTS = {
         {"SIGMOD-22-1", "VLDB-20", "VLDB-18"},
     ),
     "5_independent_research": ("Independent Research", "independent", INDEPENDENT_PAPERS),
+    "6_ubase": ("UBASE @ ByteDance", "bytedance", {"ATC-26", "Arxiv-26-2"}),
+    "7_sema": ("SEMA", "independent", {"VLDB-26-2", "COLM-26"}),
 }
 
 
@@ -39,7 +41,7 @@ class ProjectAttributionContractTest(unittest.TestCase):
         self.assertNotIn("AutoIA", systems)
         for name in ("SEMA", "GES @ Huawei", "TQEX @ Huawei"):
             self.assertIn(name, systems)
-        self.assertIn('href="/projects/#sema"', systems)
+        self.assertIn('href="/projects/sema/"', systems)
         self.assertNotIn(INDEPENDENT_URL, page)
         self.assertNotIn("is the platform for this work", page)
 

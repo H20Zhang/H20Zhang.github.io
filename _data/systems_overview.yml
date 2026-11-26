@@ -9,6 +9,26 @@
     - name: Tensorized k-TTC
       url: /publications/#SIGMOD-26-1
 
+"UBASE @ ByteDance":
+  story: >-
+    UBASE is ByteDance's production AI search engine across 7,000+ clusters and 300+ PB of indexed data, unifying vector search, lexical matching, and predicate filtering up to nearly one trillion vectors through SymRaBitQ quantization-aware graph indexing and hybrid memory/SSD storage.
+  core_idea: >-
+    Quantization-aware vector kernel (SymRaBitQ) for quantized-space index construction paired with an adaptive hybrid memory/SSD storage engine.
+  research:
+    - name: UBASE
+      url: /publications/#ATC-26
+    - name: SSD-Resident Graph Indexing
+      url: /publications/#Arxiv-26-2
+
+"SEMA":
+  story: >-
+    SEMA brings LLM-powered semantic operators into DuckDB as first-class citizens, combining declarative SemaSQL, LLM-assisted logical optimization, and runtime adaptive query execution for 2–10× speedups across semantic-query workloads.
+  core_idea: >-
+    Declarative semantic SQL, LLM-assisted predicate deduction and compression, and runtime adaptive operator fusion and batching.
+  research:
+    - name: SEMA
+      url: /publications/#VLDB-26-2
+
 "AutoIA @ ByteDance":
   story: >-
     I am developing AutoIA as a self-evolving agentic system that constructs and improves agent harnesses and shared environments. It uses a composable Context IR to organize data from files, databases, and apps, builds reusable context, memory, tools, and skills, and learns from task feedback and previous projects to improve its own construction strategies.

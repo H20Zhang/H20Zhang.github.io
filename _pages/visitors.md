@@ -23,7 +23,7 @@ nav_order: 5
         <img
           src="https://s01.flagcounter.com/map/ri9j/size_l/txt_000000/border_CCCCCC/pageviews_1/viewers_1/flags_0/"
           alt="Visitor map powered by Flag Counter"
-          style="display: block; width: 100%; max-width: 760px; height: auto; margin: 0 auto; border: 1px solid #cccccc; border-radius: 8px;"
+          style="display: block; width: 100%; max-width: 760px; height: auto; margin: 0 auto; border: 1px solid var(--global-divider-color); border-radius: 8px;"
         >
       </a>
     </div>

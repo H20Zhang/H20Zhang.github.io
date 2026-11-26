@@ -8,6 +8,13 @@ project_group: huawei
 external_url: https://doi.org/10.1145/3769835
 external_label: TQEx(SQL), SIGMOD 2026
 related_publications: false
+highlights:
+  - label: SQL Analytics Speedup
+    value: 12.2× over DuckDB & 22.7× over HeavyDB (TPC-H SF100)
+  - label: vs. Prior Tensor Engine
+    value: Up to 41.9× faster than TQP
+  - label: Accelerator Portability
+    value: NVIDIA GPUs, AMD GPUs & Apple Silicon
 research_support:
   - area: Tensor-based SQL execution
     papers:
@@ -45,13 +52,25 @@ Use tensor computation runtimes as the portability layer, then bridge the worklo
 
 This Huawei-affiliated research line spans three workloads:
 
-- **TQEx(SQL)** bridges relational storage and operators with tensor execution, including variable-length data, joins, aggregates, and multi-XPU processing.
-- **TenGraph** maps interactive graph queries to compact tensor representations and batched tensor computation.
-- **TGraph** provides a tensor-centric programming and execution framework for graph algorithms across tensor runtimes and accelerator backends.
+<h3 id="tqex-sql">TQEx(SQL) — Relational SQL over Tensor Runtimes</h3>
+
+Bridges irregular relational storage and query operators with uniform tensor execution, introducing compact variable-length string/data layouts, tensorized join and aggregation operators, and multi-XPU mapping strategies ([SIGMOD 2026](https://doi.org/10.1145/3769835)).
+
+<h3 id="tengraph">TenGraph — Interactive Graph Queries on Tensors</h3>
+
+Maps interactive multi-hop graph queries onto compact sparse-tensor representations of graph topology and executes batched graph-query operators on PyTorch ([PVLDB 2024](https://doi.org/10.14778/3704965.3704967)).
+
+<h3 id="tgraph">TGraph — Tensor-Centric Graph Analytics Framework</h3>
+
+Provides a general tensor-centric programming and execution framework with graph operators, compression, and out-of-memory execution across tensor runtimes and heterogeneous accelerator backends ([SIGMOD 2025](https://doi.org/10.1145/3709731)).
 
 ## My role
 
 Research and system architecture across this Huawei-affiliated tensor-centric data-systems line, spanning query/runtime design and execution over heterogeneous accelerators.
+
+## Impact
+
+On supported TPC-H SF100 queries across **NVIDIA GPUs, AMD GPUs, and Apple silicon**, **TQEx(SQL)** achieves **12.2× speedup over DuckDB**, **22.7× speedup over HeavyDB**, and **up to 41.9× speedup over the prior tensor query processor (TQP)**—demonstrating that a single portable tensor-runtime engine can outperform both CPU analytical engines and specialized GPU databases.
 
 ## Evidence
 

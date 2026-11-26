@@ -6,6 +6,13 @@ importance: 4
 category: systems
 project_group: cuhk
 related_publications: false
+highlights:
+  - label: SeccoSQL · SIGMOD 2022
+    value: Communication decoupled from local computation
+  - label: DISC · VLDB 2020
+    value: Subgraph counting via relational query processing
+  - label: Crystal · VLDB 2018
+    value: Direct execution over compressed subgraph matches
 research_support:
   - area: Distributed query execution
     papers:
@@ -33,22 +40,30 @@ research_support:
         role: Introduces compressed execution to control intermediate and output explosion.
 ---
 
-These earlier research systems form the database and graph-systems foundation behind my later work on production data infrastructure and AI-native systems.
+These earlier research systems, built during my Ph.D. at the Chinese University of Hong Kong, form the distributed database and graph-systems foundation behind my later work on production data infrastructure and AI-native systems.
+
+## Core idea
+
+Reformulate distributed SQL and large-scale graph workloads at the algebraic and execution-operator level—exposing communication as an explicit operator, recasting subgraph counting as relational algebra, and computing directly over compressed intermediate structures to avoid combinatorial blowup.
+
+## My role
+
+Lead Ph.D. researcher and first/corresponding author across all three systems at CUHK, advised by Prof. Jeffrey Xu Yu and Prof. Hong Cheng.
 
 ## SeccoSQL
 
-**Distributed SQL execution with communication separated from computation.** SeccoSQL explores a distributed query-processing model that exposes communication and local computation as separate operators, enabling a larger optimization space for complex SQL and graph-style queries.
+**Distributed SQL execution with communication separated from computation (`SIGMOD 2022`).** SeccoSQL introduces a distributed query-processing model that treats data shuffling and local computation as independent operators, unlocking multi-way and cyclic join plans unreachable by conventional coupled engines.
 
-- [GitHub](https://github.com/H20Zhang/SeccoSQL)
+- [Publication (SIGMOD 2022) →](/publications/#SIGMOD-22-1) · [Code on GitHub ↗](https://github.com/H20Zhang/SeccoSQL)
 
 ## DISC
 
-**Distributed graph analytics through relational query processing.** DISC decomposes local subgraph counting into relational queries so that distributed execution and relational optimization techniques can be reused for graph workloads.
+**Distributed graph analytics through relational query processing (`VLDB 2020`).** DISC reduces general $k$-node orbit-aware local subgraph counting to homomorphism counting expressed in relational joins, group-by, and aggregation on Spark—supporting 114 pattern queries beyond prior 5-node limits.
 
-- [GitHub](https://github.com/H20Zhang/DISC)
+- [Publication (VLDB 2020) →](/publications/#VLDB-20) · [Code on GitHub ↗](https://github.com/H20Zhang/DISC)
 
 ## Crystal
 
-**Compressed execution for distributed subgraph matching.** Crystal computes compressed results directly to reduce intermediate and output materialization costs for very large graph-pattern workloads.
+**Compressed execution for distributed subgraph matching (`VLDB 2018`).** Crystal decomposes patterns into core cliques and computes compressed match representations directly, dramatically cutting intermediate communication and output materialization on massive graphs.
 
-- [GitHub](https://github.com/H20Zhang/Crystal)
+- [Publication (VLDB 2018) →](/publications/#VLDB-18) · [Code on GitHub ↗](https://github.com/H20Zhang/Crystal)

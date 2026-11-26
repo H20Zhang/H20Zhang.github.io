@@ -1,10 +1,11 @@
 /*******************************************************************************
  * Site-wide editorial system shared with the homepage: one canvas width
- * (`max_width` in _config.yml), serif display headings, and a reading measure
- * for prose so long lines stay comfortable on the wider canvas.
+ * (`max_width` in _config.yml), serif display headings, unified component
+ * surfaces, and a comfortable reading measure on wide screens.
  ******************************************************************************/
 
 .post-header .post-title,
+.blog-index .blog-header-bar h1,
 .post article > h2,
 .post .system-research > h2,
 .publication-group-title,
@@ -15,7 +16,9 @@
   font-family: var(--global-display-font);
 }
 
-.post-header .post-title {
+.post-header .post-title,
+.blog-index .blog-header-bar h1 {
+  color: var(--global-text-color);
   font-weight: 400;
   letter-spacing: -0.03em;
 }
@@ -38,6 +41,26 @@
   letter-spacing: -0.015em;
 }
 
+// Unify essay cards, tag pills, code blocks, and tables with theme tokens.
+.essay-page .essay-article,
+.essay-page .essay-sidebar-inner {
+  background: var(--global-card-bg-color);
+  border-color: var(--global-divider-color);
+}
+
+.essay-page .essay-hero-tags a,
+.essay-page .essay-hero-tags span {
+  border: 1px solid var(--global-divider-color);
+  background: color-mix(in srgb, var(--global-theme-color) 5%, var(--global-card-bg-color));
+  color: var(--global-text-color-light);
+
+  &:hover {
+    border-color: color-mix(in srgb, var(--global-theme-color) 45%, var(--global-divider-color));
+    background: color-mix(in srgb, var(--global-theme-color) 10%, var(--global-card-bg-color));
+    color: var(--global-theme-color);
+  }
+}
+
 .post-header .post-description,
 .post article > p,
 .post article > ul,
@@ -50,6 +73,37 @@
   max-width: 50rem;
 }
 
+// Editorial tables (e.g., AutoIA mechanisms table and essay tables).
+.post article table:not(.table-borderless) {
+  width: 100%;
+  margin: 1.15rem 0 1.5rem;
+  border-collapse: collapse;
+  font-size: 0.94rem;
+  line-height: 1.6;
+
+  th,
+  td {
+    padding: 0.72rem 1rem 0.72rem 0;
+    border-bottom: 1px solid var(--global-divider-color);
+    vertical-align: top;
+  }
+
+  th {
+    padding-bottom: 0.55rem;
+    border-bottom: 1.5px solid var(--global-divider-color);
+    color: var(--global-section-accent-color);
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  td:first-child {
+    min-width: 11.5rem;
+    padding-right: 1.35rem;
+  }
+}
+
 // Venue badges keep their natural width when the publication row stacks.
 @media (max-width: 767px) {
   .publications ol.bibliography li .abbr abbr.badge {
@@ -59,34 +113,60 @@
 }
 
 // Systems index: each group is a grid of cards, matching the homepage
-// research-direction cards.
+// research-direction cards. Three-item groups render as 3 balanced columns.
 .projects .systems-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 
+@media (min-width: 992px) {
+  .projects .systems-grid:has(> :nth-child(3):last-child) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    .system-entry-title {
+      font-size: 1.28rem;
+    }
+  }
+}
+
 .projects .systems-grid .system-entry {
   display: flex;
   flex-direction: column;
-  padding: 1.2rem 1.4rem 1.15rem;
+  padding: 1.25rem 1.4rem 1.2rem;
   border: 1px solid var(--global-divider-color);
   border-top: 2px solid color-mix(in srgb, var(--global-theme-color) 42%, var(--global-divider-color));
-  border-radius: 0.35rem;
+  border-radius: 0.4rem;
   background: var(--global-card-bg-color);
 
-  .system-entry-title {
-    font-size: 1.3rem;
+  .system-entry-heading-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    flex-shrink: 0;
+  }
+
+  .system-entry-badge {
+    display: inline-block;
+    padding: 0.12rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--global-theme-color) 22%, var(--global-divider-color));
+    background: color-mix(in srgb, var(--global-theme-color) 8%, var(--global-card-bg-color));
+    color: var(--global-theme-color);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.015em;
+    line-height: 1.45;
+    white-space: nowrap;
   }
 
   .system-entry-narrative {
-    font-size: 0.94rem;
-    line-height: 1.6;
+    margin-top: 0.35rem;
   }
 
   .system-entry-actions {
     margin-top: auto;
-    padding-top: 0.85rem;
+    padding-top: 0.9rem;
   }
 }
 
@@ -138,13 +218,127 @@
   }
 }
 
-// System detail pages: prose column with a sticky "On this page" sidebar.
+// System detail pages: breadcrumb, key-highlights strip, architecture figure,
+// prose column, open research threads, and sticky "On this page" sidebar.
+.post--system-detail .post-header {
+  max-width: 50rem;
+  margin-bottom: 1.65rem;
+}
+
+.system-page-back {
+  margin: 0 0 0.55rem;
+  font-size: 0.84rem;
+
+  a {
+    color: var(--global-text-color-light);
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
 .system-page {
   display: grid;
-  grid-template-columns: minmax(0, 50rem) minmax(11rem, 14rem);
+  grid-template-columns: minmax(0, 50rem) minmax(12rem, 14.5rem);
   gap: 3rem;
   justify-content: space-between;
   align-items: start;
+}
+
+.system-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 0 0 1.75rem;
+}
+
+.system-highlight-card {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--global-divider-color);
+  border-top: 2px solid color-mix(in srgb, var(--global-theme-color) 42%, var(--global-divider-color));
+  border-radius: 0.4rem;
+  background: var(--global-card-bg-color);
+
+  dt {
+    margin: 0 0 0.28rem;
+    color: var(--global-section-accent-color);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  dd {
+    margin: 0;
+    color: var(--global-text-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.42;
+  }
+}
+
+.system-architecture-figure {
+  margin: 0 0 1.85rem;
+  padding: 0.85rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.45rem;
+  background: var(--global-card-bg-color);
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.3rem;
+    background: #fff;
+    cursor: zoom-in;
+  }
+
+  figcaption {
+    margin-top: 0.65rem;
+    color: var(--global-text-color-light);
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+}
+
+html[data-theme="dark"] .system-architecture-figure img {
+  filter: brightness(0.92);
+}
+
+.system-page-main h3[id] {
+  margin-top: 1.35rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.06rem;
+  font-weight: 600;
+  scroll-margin-top: 5.5rem;
+}
+
+.system-research .research-thread-list {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+.system-research .research-paper {
+  padding: 0.15rem 1rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.4rem;
+  background: var(--global-card-bg-color);
+
+  &:last-child {
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  summary {
+    padding: 0.7rem 0;
+  }
+
+  .research-paper-body {
+    padding: 0 0.5rem 0.8rem 0;
+  }
 }
 
 .system-page-sidebar {
@@ -212,6 +406,17 @@
 
   .system-page-sidebar {
     display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .system-highlights {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.65rem;
+  }
+
+  .post article table:not(.table-borderless) td:first-child {
+    min-width: 8rem;
   }
 }
 

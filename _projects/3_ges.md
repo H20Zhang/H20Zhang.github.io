@@ -13,6 +13,13 @@ secondary_links:
   - label: "LDBC Imperative #1"
     url: https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/
 related_publications: false
+highlights:
+  - label: "LDBC Declarative #1"
+    value: "40,347 throughput at SF300 (>3,000× previous #2)"
+  - label: "LDBC Imperative #1"
+    value: 139,411 throughput at SF300 (GES 3.1.0)
+  - label: Production Scale
+    value: Graphs with hundreds of billions of edges
 research_support:
   - area: Service architecture & execution
     papers:
@@ -67,7 +74,11 @@ Interactive graph services need to serve complex graph queries with high concurr
 
 ## Core idea
 
-The newer GES line uses a composable service architecture and factorized execution to improve high-concurrency query processing while retaining a production-oriented system design.
+The GES research and system line combines three connected pillars to sustain high concurrency on evolving graphs:
+
+- **Composable service architecture & factorized execution (`GES`, SIGMOD 2025):** Decouples cloud service components while using compact factorized intermediate representations (`f-Block` / `f-Tree`) in the query executor to eliminate multi-hop Cartesian blowups under high concurrency.
+- **Read/write-decoupled dynamic graph storage (`RapidStore`, VLDB 2025; `DGS Study`, SIGMOD 2025):** Separates read-optimized topology access from concurrent versioned updates so heavy update streams do not stall interactive queries.
+- **High-concurrency incremental graph queries (`Aquila`, VLDB 2026):** Maintains incremental query results efficiently under concurrent graph updates.
 
 ## My role
 
@@ -81,4 +92,8 @@ Research and system architecture for graph database infrastructure and the GES l
 
 ## Impact
 
-GES reached **#1** on the LDBC SNB Interactive declarative track with reported throughput over **3,000×** the previous #2 result, and later reached **#1** on the imperative track with Graph Engine Service 3.1.0 at SF300.
+GES reached **#1** on the LDBC SNB Interactive declarative track (SF300, 2024) with audited **40,347.04 throughput**—exceeding the previous #2 result by **over 3,000×**—and subsequently reached **#1** on the imperative track (SF300, 2025) with **139,411.14 throughput** on Graph Engine Service 3.1.0.
+
+## System boundary
+
+`GES`, `RapidStore`, `DGS Study`, and `Aquila` address the core service, dynamic storage, and incremental execution design space; the Huawei-affiliated papers on indexed reachability (`ICDE 2024`), streaming attributed network embedding (`SANE`, `ICDE 2024`), and graph learning (`DASFAA 2025`) represent adjacent graph research rather than modules of the deployed GES kernel.

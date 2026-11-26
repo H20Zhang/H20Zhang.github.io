@@ -73,7 +73,7 @@ I'm developing **AutoIA**, an **IR-first framework** for agents to autonomously 
 
 <ul class="about-systems-list">
   <li>
-    <h3 class="about-item-title"><a href="/projects/#sema">SEMA</a> <span class="about-item-subtitle">— LLM-Powered Databases</span></h3>
+    <h3 class="about-item-title"><a href="/projects/sema/">SEMA</a> <span class="about-item-subtitle">— LLM-Powered Databases</span></h3>
     <p>Brings <strong>LLM reasoning into databases</strong>, enabling SQL to analyze structured data alongside natural-language content. Achieves <strong>2–10× speedups</strong> on evaluated semantic-query workloads.</p>
   </li>
   <li>

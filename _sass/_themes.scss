@@ -94,10 +94,11 @@ html[data-theme="dark"] {
   --global-hover-text-color: #{v.$paper-espresso-dark};
   --global-footer-bg-color: #{v.$ink-color-dark};
   --global-footer-text-color: #{v.$paper-espresso-dark};
-  --global-footer-link-color: #{v.$accent-hover-light};
+  --global-footer-link-color: #{v.$paper-espresso-dark};
   --global-distill-app-color: #{v.$text-muted-dark};
   --global-divider-color: #{v.$divider-dark};
   --global-card-bg-color: #{v.$paper-surface-dark};
+  --global-highlight-color: #{v.$accent-hover-dark};
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$white-color, "red", v.$space: rgb)},
     #{color.channel(v.$white-color, "green", v.$space: rgb)},

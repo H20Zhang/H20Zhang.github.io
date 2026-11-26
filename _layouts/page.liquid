@@ -8,8 +8,11 @@ layout: default
   </style>
 {% endif %}
 
-<div class="post">
+<div class="post{% if page.collection == 'projects' %} post--system-detail{% endif %}">
   <header class="post-header">
+    {% if page.collection == 'projects' %}
+      <p class="system-page-back"><a href="{{ '/projects/' | relative_url }}">← All systems</a></p>
+    {% endif %}
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-description">{{ page.description }}</p>
   </header>
@@ -17,10 +20,36 @@ layout: default
   {% if page.collection == 'projects' %}
     <div class="system-page">
       <div class="system-page-main">
+        {% if page.highlights %}
+          <dl class="system-highlights">
+            {% for item in page.highlights %}
+              <div class="system-highlight-card">
+                <dt>{{ item.label }}</dt>
+                <dd>{{ item.value }}</dd>
+              </div>
+            {% endfor %}
+          </dl>
+        {% endif %}
+        {% if page.figure %}
+          <figure class="system-architecture-figure">
+            <img
+              src="{{ page.figure.path | relative_url }}"
+              alt="{{ page.figure.alt }}"
+              loading="eager"
+              decoding="async"
+              data-zoomable
+            >
+            {% if page.figure.caption %}
+              <figcaption>{{ page.figure.caption }}</figcaption>
+            {% endif %}
+          </figure>
+        {% endif %}
         <article>
           {{ content }}
         </article>
-        {% include system_research_details.liquid %}
+        {% if page.research_support %}
+          {% include system_research_details.liquid %}
+        {% endif %}
       </div>
       <aside class="system-page-sidebar" aria-label="On this page">
         <div class="system-page-sidebar-label">On this page</div>

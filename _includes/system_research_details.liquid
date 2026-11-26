@@ -6,7 +6,7 @@
       <div class="research-thread-label">{{ support.area }}</div>
       <div class="research-thread-list">
         {% for paper in support.papers %}
-          <details class="research-paper">
+          <details class="research-paper" open>
             <summary>
               <span class="research-paper-heading">
                 <strong>{{ paper.name }}</strong>{% if paper.venue %}<span class="research-paper-venue"> · {{ paper.venue }}</span>{% endif %}

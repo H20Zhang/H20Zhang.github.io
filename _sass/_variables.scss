@@ -24,27 +24,28 @@ $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;
 $yellow-color: #efcc00 !default;
 
-// Paper & Teal editorial system: warm paper with deep teal links and a rust
-// accent for structural labels; the dark theme mirrors it on teal-black.
-$paper-cream-light: #faf8f4 !default;
-$paper-sand-light: #f2eee6 !default;
-$paper-card-light: #fffdf9 !default;
-$divider-light: #e5dfd3 !default;
-$accent-color-light: #0f6b75 !default;
-$accent-hover-light: #0a4c54 !default;
-$section-accent-light: #a4512b !default;
-$ink-color-light: #1d2326 !default;
-$text-muted-light: #5d6669 !default;
+// Oxford Porcelain & Royal Slate editorial system: crisp porcelain surfaces,
+// deep slate ink, and one coherent Oxford/royal blue accent family across both
+// interactive links and structural labels, paired with a midnight-slate dark mode.
+$paper-cream-light: #fcfcfd !default;
+$paper-sand-light: #f3f6fb !default;
+$paper-card-light: #ffffff !default;
+$divider-light: #e2e8f0 !default;
+$accent-color-light: #1d4ed8 !default;
+$accent-hover-light: #1e3a8a !default;
+$section-accent-light: #315294 !default;
+$ink-color-light: #0f172a !default;
+$text-muted-light: #526071 !default;
 
-$paper-espresso-dark: #111a1c !default;
-$paper-surface-dark: #172326 !default;
-$paper-sand-dark: #172326 !default;
-$divider-dark: rgba(108, 196, 204, 0.18) !default;
-$ink-color-dark: #e8eeec !default;
-$text-muted-dark: #9fb0b1 !default;
-$accent-color-dark: #6cc4cc !default;
-$accent-hover-dark: #99dbe0 !default;
-$section-accent-dark: #e09a73 !default;
+$paper-espresso-dark: #0c1220 !default;
+$paper-surface-dark: #121b2e !default;
+$paper-sand-dark: #152036 !default;
+$divider-dark: rgba(148, 163, 184, 0.16) !default;
+$ink-color-dark: #e6edf7 !default;
+$text-muted-dark: #94a3b8 !default;
+$accent-color-dark: #7aa2f7 !default;
+$accent-hover-dark: #a5c0ff !default;
+$section-accent-dark: #89aee8 !default;
 
 $grey-color: #828282 !default;
 $grey-color-light: color.adjust($grey-color, $lightness: 40%);

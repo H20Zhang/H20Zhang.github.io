@@ -8,6 +8,13 @@ project_group: bytedance
 external_url: https://www.volcengine.com/product/context-search?_vtm_=a441938.b105878.0_0.0_0.0.133_11_000J33hNUY2PtPrMwlQ3ilQxfn2UtC
 external_label: Volcano Engine ContextSearch
 related_publications: false
+highlights:
+  - label: Core Abstraction
+    value: Composable Context IR over files, databases & apps
+  - label: Co-Evolution Scope
+    value: Agent harnesses, shared environments & builder strategies
+  - label: Reliability Guardrails
+    value: Provenance, versioning & task-level validation
 research_support:
   - area: Agent memory
     papers:
@@ -58,6 +65,10 @@ AutoIA treats context infrastructure as more than retrieval. It connects files, 
 **Construction-strategy evolution.** AutoIA retains successful projects, seed specifications, failures, and evaluation lessons as reusable construction experience. It adapts this experience to unfamiliar workloads instead of starting from scratch. This improves how the system builds and evolves its capabilities—not a claim that the underlying improvement algorithm autonomously rewrites itself.
 
 A central systems challenge is **validation before shared reuse**: incorrect derived information or a faulty tool can propagate across agents. Provenance, versioning, and task-level evaluation help distinguish durable improvements from one-off successes.
+
+## My role
+
+Leading research and system architecture of AutoIA at ByteDance, spanning Context IR formulation, agentic harness–environment co-evolution, and experience-driven construction.
 
 ## Research scope
 

@@ -301,19 +301,19 @@ class BuiltSiteContractTest(unittest.TestCase):
             stylesheet.group(1), "d41d8cd98f00b204e9800998ecf8427e"
         )
 
-    def test_light_theme_uses_paper_teal_palette(self):
+    def test_light_theme_uses_oxford_porcelain_palette(self):
         root_rule = compiled_css_rule(self.css, ":root")
         expected = {
-            "--global-bg-color": "#faf8f4",
-            "--global-surface-color": "#faf8f4",
-            "--global-section-alt-color": "#f2eee6",
-            "--global-navbar-bg-color": "#faf8f4",
-            "--global-text-color": "#1d2326",
-            "--global-text-color-light": "#5d6669",
-            "--global-theme-color": "#0f6b75",
-            "--global-hover-color": "#0a4c54",
-            "--global-section-accent-color": "#a4512b",
-            "--global-divider-color": "#e5dfd3",
+            "--global-bg-color": "#fcfcfd",
+            "--global-surface-color": "#fcfcfd",
+            "--global-section-alt-color": "#f3f6fb",
+            "--global-navbar-bg-color": "#fcfcfd",
+            "--global-text-color": "#0f172a",
+            "--global-text-color-light": "#526071",
+            "--global-theme-color": "#1d4ed8",
+            "--global-hover-color": "#1e3a8a",
+            "--global-section-accent-color": "#315294",
+            "--global-divider-color": "#e2e8f0",
         }
 
         for property_name, value in expected.items():
@@ -672,13 +672,25 @@ class BuiltSiteContractTest(unittest.TestCase):
         pages = {
             Path("blog/2026/next-gen-agent-en/index.html"): 'class="essay-toc"',
             Path("projects/1_autoia/index.html"): 'class="system-page-toc"',
+            Path("projects/2_tqex/index.html"): 'class="system-page-toc"',
             Path("projects/3_ges/index.html"): 'class="system-page-toc"',
+            Path("projects/4_database_graph_systems/index.html"): 'class="system-page-toc"',
+            Path("projects/ubase/index.html"): 'class="system-page-toc"',
+            Path("projects/sema/index.html"): 'class="system-page-toc"',
         }
         for relative_path, marker in pages.items():
             html = (SITE / relative_path).read_text(encoding="utf-8")
             toc = html.split(marker, 1)[1].split("</nav>", 1)[0]
             with self.subTest(path=str(relative_path)):
                 self.assertGreaterEqual(toc.count('class="toc-entry'), 3)
+
+    def test_system_detail_pages_have_highlights_and_open_threads(self):
+        for slug in ("1_autoia", "2_tqex", "3_ges", "4_database_graph_systems", "ubase", "sema"):
+            html = (SITE / "projects" / slug / "index.html").read_text(encoding="utf-8")
+            with self.subTest(slug=slug):
+                self.assertIn('class="system-highlights"', html)
+                self.assertEqual(html.count('class="system-highlight-card"'), 3)
+                self.assertIn('<details class="research-paper" open>', html)
 
     def test_systems_index_keeps_full_descriptions(self):
         html = (SITE / "projects" / "index.html").read_text(encoding="utf-8")

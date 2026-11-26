@@ -15,6 +15,9 @@ $(document).ready(function () {
   $(".links button.abstract").click(function () {
     togglePublicationPanel(this, "abstract");
   });
+  $(".links button.figure-toggle").click(function () {
+    togglePublicationPanel(this, "figure-panel");
+  });
   $(".links button.award").click(function () {
     togglePublicationPanel(this, "award");
   });

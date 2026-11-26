@@ -25,23 +25,6 @@
           <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
         {% endif %}
       {% endif %}
-      {% if entry.preview %}
-        {% if entry.preview contains '://' %}
-          <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
-        {% else %}
-          {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
-          {%
-            include figure.liquid
-            loading="lazy"
-            path=entry_path
-            sizes = "200px"
-            class="preview z-depth-1 rounded"
-            zoomable=true
-            avoid_scaling=true
-            alt=entry.title
-          %}
-        {% endif %}
-      {% endif %}
     </div>
   {% endif %}
 
@@ -215,6 +198,9 @@
       {% endif %}
       {% if entry.abstract %}
         <button class="abstract btn btn-sm z-depth-0" type="button" aria-expanded="false" aria-controls="{{ entry.key }}-abstract">Abstract</button>
+      {% endif %}
+      {% if entry.preview %}
+        <button class="figure-toggle btn btn-sm z-depth-0" type="button" aria-expanded="false" aria-controls="{{ entry.key }}-figure">Figure</button>
       {% endif %}
       {% if entry.doi %}
         <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
@@ -395,6 +381,25 @@
       <!-- Hidden abstract block -->
       <div class="abstract hidden" id="{{ entry.key }}-abstract" hidden>
         <p>{{ entry.abstract }}</p>
+      </div>
+    {% endif %}
+
+    {% if entry.preview %}
+      {% if entry.preview contains '://' %}
+        {% assign preview_src = entry.preview %}
+      {% else %}
+        {% assign preview_src = entry.preview | prepend: '/assets/img/publication_preview/' | relative_url %}
+      {% endif %}
+      <!-- Hidden figure block -->
+      <div class="figure-panel hidden" id="{{ entry.key }}-figure" hidden>
+        <img
+          class="publication-figure-img"
+          src="{{ preview_src }}"
+          alt="{{ entry.title }} overview figure"
+          loading="lazy"
+          decoding="async"
+          data-zoomable
+        >
       </div>
     {% endif %}
 

@@ -597,26 +597,22 @@ html[data-theme="dark"] .system-architecture-figure img {
   }
 }
 
-// Paper figures sit under the venue badge as zoomable thumbnails.
-.publications ol.bibliography li .abbr .preview {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin-top: 0.15rem;
-  padding: 0.25rem;
-  border-radius: 0.35rem;
-  background: #fff;
-  cursor: zoom-in;
+// Uniform compact venue-badge column on /publications/; figures open on demand.
+.publications ol.bibliography li .abbr {
+  margin-bottom: 0;
 }
 
-html[data-theme="dark"] .publications ol.bibliography li .abbr .preview {
-  filter: brightness(0.9);
+.publications ol.bibliography li .abbr abbr {
+  margin-bottom: 0;
+  text-align: center;
+  white-space: nowrap;
 }
 
 @media (min-width: 576px) {
   .publications ol.bibliography li .row > .abbr {
-    flex: 0 0 10.5rem;
-    max-width: 10.5rem;
+    flex: 0 0 6.8rem;
+    max-width: 6.8rem;
+    padding-top: 0.1rem;
   }
 
   .publications ol.bibliography li .row > .col-sm-10 {
@@ -626,10 +622,53 @@ html[data-theme="dark"] .publications ol.bibliography li .abbr .preview {
 }
 
 @media (max-width: 575px) {
-  .publications ol.bibliography li .abbr .preview {
-    max-width: 18rem;
-    margin-bottom: 0.6rem;
+  .publications ol.bibliography li .abbr {
+    margin-bottom: 0.35rem;
   }
+
+  .publications ol.bibliography li .abbr abbr.w-100 {
+    width: auto !important;
+    padding: 0.2rem 0.55rem;
+  }
+}
+
+.publications ol.bibliography li .links .btn[aria-expanded="true"] {
+  border-color: color-mix(in srgb, var(--global-theme-color) 55%, var(--global-divider-color));
+  background: color-mix(in srgb, var(--global-theme-color) 9%, var(--global-section-alt-color));
+  color: var(--global-theme-color);
+}
+
+.publications ol.bibliography li div.abstract.hidden.open,
+.publications ol.bibliography li div.bibtex.hidden.open,
+.publications ol.bibliography li div.figure-panel.hidden.open {
+  margin-top: 0.7rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.5rem;
+  background: var(--global-section-alt-color);
+}
+
+.publications ol.bibliography li div.figure-panel.hidden {
+  text-align: left;
+}
+
+.publications ol.bibliography li div.figure-panel.hidden.open {
+  padding: 0.85rem;
+  background: #fff;
+}
+
+html[data-theme="dark"] .publications ol.bibliography li div.figure-panel.hidden.open {
+  background: #f5f2ed;
+}
+
+.publications ol.bibliography li .publication-figure-img {
+  display: block;
+  max-width: min(100%, 40rem);
+  max-height: 22rem;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 0.25rem;
+  cursor: zoom-in;
 }
 
 .featured-paper-role,

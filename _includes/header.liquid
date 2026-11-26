@@ -118,22 +118,37 @@
             {% endif %}
           {% endfor %}
         </ul>
-        <!-- Mini sidebar Tetris (desktop only) + Theme toggle -->
+        <!-- Mini sidebar Arcade: Tetris & Snake (desktop only) + Theme toggle -->
         <div class="sidebar-bottom-stack">
-          <div class="sidebar-tetris" id="sidebar-tetris" aria-label="Sidebar mini Tetris">
+          <div class="sidebar-tetris" id="sidebar-tetris" aria-label="Sidebar mini arcade">
             <div class="sidebar-tetris-bar">
-              <span class="sidebar-tetris-label" id="sidebar-tetris-status">TETRIS</span>
+              <div class="sidebar-arcade-tabs" role="tablist" aria-label="Mini game mode">
+                <button
+                  type="button"
+                  class="sidebar-arcade-tab is-active"
+                  data-arcade-game="tetris"
+                  role="tab"
+                  aria-selected="true"
+                >Tetris</button>
+                <button
+                  type="button"
+                  class="sidebar-arcade-tab"
+                  data-arcade-game="snake"
+                  role="tab"
+                  aria-selected="false"
+                >Snake</button>
+              </div>
               <span class="sidebar-tetris-meta">
                 <span class="sidebar-tetris-score" id="sidebar-tetris-score">0</span>
-                <button type="button" class="sidebar-tetris-reset" id="sidebar-tetris-reset" title="Reset game" aria-label="Reset Tetris game">↻</button>
+                <button type="button" class="sidebar-tetris-reset" id="sidebar-tetris-reset" title="Restart game" aria-label="Restart mini game">↻</button>
               </span>
             </div>
             <canvas
               id="sidebar-tetris-canvas"
               class="sidebar-tetris-canvas"
-              width="120"
-              height="180"
-              aria-label="Mini Tetris game, use arrow keys to play"
+              width="180"
+              height="288"
+              aria-label="Mini Tetris and Snake game, use arrow keys to play"
             ></canvas>
           </div>
           {% if site.enable_darkmode %}
@@ -143,7 +158,7 @@
                 <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
                 <i class="fa-solid fa-sun" id="light-toggle-light"></i>
               </button>
-              <span class="sidebar-tetris-keys" aria-hidden="true">← ↑ ↓ →</span>
+              <span class="sidebar-tetris-keys" aria-hidden="true"><span class="sidebar-arcade-mode" id="sidebar-arcade-mode">AUTO</span> · ← ↑ ↓ →</span>
             </div>
           {% endif %}
         </div>

@@ -214,3 +214,38 @@
     display: none;
   }
 }
+
+// Paper figures sit under the venue badge as zoomable thumbnails.
+.publications ol.bibliography li .abbr .preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 0.15rem;
+  padding: 0.25rem;
+  border-radius: 0.35rem;
+  background: #fff;
+  cursor: zoom-in;
+}
+
+html[data-theme="dark"] .publications ol.bibliography li .abbr .preview {
+  filter: brightness(0.9);
+}
+
+@media (min-width: 576px) {
+  .publications ol.bibliography li .row > .abbr {
+    flex: 0 0 10.5rem;
+    max-width: 10.5rem;
+  }
+
+  .publications ol.bibliography li .row > .col-sm-10 {
+    flex: 1 1 0;
+    max-width: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .publications ol.bibliography li .abbr .preview {
+    max-width: 18rem;
+    margin-bottom: 0.6rem;
+  }
+}

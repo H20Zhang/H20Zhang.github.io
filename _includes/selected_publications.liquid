@@ -1,6 +1,6 @@
 <ul class="featured-papers">
   {% for paper in site.data.selected_publications %}
-    {% assign image_path = paper.image | prepend: '/assets/img/publications/' | relative_url %}
+    {% assign image_path = paper.image | prepend: '/assets/img/publication_preview/' | relative_url %}
     <li class="featured-paper" id="featured-{{ paper.id }}">
       <h3 class="featured-paper-title">
         <span class="featured-paper-venue">{{ paper.venue }}</span>

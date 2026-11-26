@@ -1,13 +1,13 @@
 # Homepage "Selected Publications". `id` is the BibTeX key; figures are taken
-# from the papers' arXiv sources and stored under assets/img/publications/.
+# from the papers' arXiv sources and stored under assets/img/publication_preview/ (shared with /publications/).
 - id: ATC-26
   venue: ATC 2026
   short: UBASE
   title: An AI Search Engine for Trillion-Scale Vector Data Management
   url: https://arxiv.org/abs/2608.30607
   image: ubase.webp
-  width: 1800
-  height: 1258
+  width: 1200
+  height: 846
   image_alt: UBASE architecture with a control plane, coordinate service, hybrid query engine, adaptive storage engine, ML services, and a quantization-aware vector kernel.
   summary: |
     UBASE has powered ByteDance search since 2016 and now spans **7,000+ clusters and 300 PB** of indexed data; its largest deployment indexes nearly **one trillion vectors**. At that scale, building graph indexes under constant ingestion and keeping them in memory become the bottlenecks.
@@ -19,8 +19,8 @@
   title: A High-performance System for LLM-based Semantic Query Processing
   url: https://arxiv.org/abs/2603.11622
   image: sema.webp
-  width: 1800
-  height: 772
+  width: 1200
+  height: 527
   image_alt: A SemaSQL query flows through SEMA's parser and planner, an LLM-assisted optimizer that removes redundancy and deduces predicates, and an adaptive executor that fuses semantic filters.
   summary: |
     LLM-powered analytics usually live in DataFrame scripts or SQL UDFs, out of reach of the query optimizer. SEMA, built on DuckDB, makes **semantic operators first-class**: with SemaSQL, users write natural-language conditions directly in SQL.
@@ -32,8 +32,8 @@
   title: "Beyond Retrieval: Analytic Memory for Multimodal Agents"
   url: https://arxiv.org/abs/2607.29440
   image: adamm.webp
-  width: 1800
-  height: 1197
+  width: 1200
+  height: 806
   image_alt: AdaMM turns historical multimodal sessions into retrieval memory and schema-induced analytic tables, then plans and executes tool calls to answer a question about average sleep after a hospital visit.
   summary: |
     An assistant that has seen months of sleep summaries should be able to answer “What was my average sleep after the hospital visit?” Retrieval memory returns relevant snippets, but it cannot reliably **filter, aggregate, or compare** observations across a long history.

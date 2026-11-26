@@ -41,8 +41,8 @@ class HomepageDesignContractTest(unittest.TestCase):
         page = read("_pages/about.md")
 
         for class_name in (
-            "about-page", "about-hero", "about-hero-copy",
-            "about-hero-profile", "about-sections", "about-footer-row",
+            "about-page", "about-hero", "about-hero-copy", "about-hero-links",
+            "about-hero-profile", "about-hero-connect", "about-sections", "about-footer-row",
         ):
             with self.subTest(class_name=class_name):
                 self.assertIn(f'class="{class_name}"', layout)
@@ -50,6 +50,7 @@ class HomepageDesignContractTest(unittest.TestCase):
         # Editorial copy is meant to change without breaking deployment.
         self.assertRegex(page, r"(?m)^hero_title:\s*\S.+$")
         self.assertIn("hero_intro: |", page)
+        self.assertIn("hero_connect: |", page)
 
         section_ids = (
             "research-directions",
@@ -59,7 +60,6 @@ class HomepageDesignContractTest(unittest.TestCase):
             "selected-systems",
             "highlights",
             "honors-awards",
-            "collaboration-internship",
         )
         actual_ids = re.findall(r'<section class="about-section" aria-labelledby="([^"]+)"', page)
         self.assertEqual(tuple(actual_ids), section_ids)
@@ -73,7 +73,7 @@ class HomepageDesignContractTest(unittest.TestCase):
 
     def test_personal_intro_and_current_project_have_distinct_roles(self):
         page = read("_pages/about.md")
-        intro = page.split("hero_intro: |\n", 1)[1].split("\n\nprofile:", 1)[0]
+        intro = page.split("hero_intro: |\n", 1)[1].split("\n\nhero_connect:", 1)[0]
         self.assertGreater(len(intro.split()), 10)
         self.assertLessEqual(len(intro.split()), 65)
 

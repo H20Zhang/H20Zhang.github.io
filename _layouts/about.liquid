@@ -21,6 +21,31 @@ layout: default
 
         <h2 class="about-tagline">{{ page.hero_title }}</h2>
         <div class="about-intro">{{ page.hero_intro | markdownify }}</div>
+
+        {% if page.social %}
+          <nav class="about-hero-links" aria-label="Academic and contact links">
+            {% if site.data.socials.email %}
+              <a href="mailto:{{ site.data.socials.email }}">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Email</span>
+              </a>
+            {% endif %}
+            {% if site.data.socials.scholar_userid %}
+              <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}">
+                <i class="ai ai-google-scholar" aria-hidden="true"></i><span>Google Scholar</span>
+              </a>
+            {% endif %}
+            {% if site.data.socials.github_username %}
+              <a href="https://github.com/{{ site.data.socials.github_username }}">
+                <i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span>
+              </a>
+            {% endif %}
+            {% if site.data.socials.linkedin_username %}
+              <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span>
+              </a>
+            {% endif %}
+          </nav>
+        {% endif %}
       </div>
 
       {% if page.profile %}
@@ -42,6 +67,12 @@ layout: default
             {% endif %}
           </div>
         </aside>
+      {% endif %}
+
+      {% if page.hero_connect %}
+        <div class="about-hero-connect" id="collaboration-internship">
+          {{ page.hero_connect | markdownify }}
+        </div>
       {% endif %}
     </section>
 

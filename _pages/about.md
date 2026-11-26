@@ -13,6 +13,9 @@ hero_intro: |
 
   My broader research spans **AI-powered data systems, scalable data and retrieval systems, and hardware-accelerated computing**. I have designed and built **production-scale systems** at ByteDance and Huawei, including [**trillion-scale vector search**](/publications/#ATC-26) and [**graph databases managing hundreds of billions of edges**](/projects/3_ges/), with benchmark-leading results.
 
+hero_connect: |
+  **Connect & Internships** — Always happy to exchange ideas, discuss research, and explore collaborations on AI and data systems. For **research internships at ByteDance (Shenzhen)**, please reach out at **zhanghaowuda12 [at] gmail [dot] com** (subject: `[Intern]`).
+
 profile:
   align: right
   image: homepage-cycling.jpeg
@@ -109,15 +112,5 @@ I received my **Ph.D. from the Chinese University of Hong Kong**, advised by [Pr
 - **ByteDance Soaring Star Talent Program**（筋斗云人才计划）
 - **Huawei Gold Award for Individual Excellence** — Top 1% (个人金牌)
 - **Huawei TopMinds Talent Program** — First Class (Highest Tier · 天才少年计划)
-</div>
-</section>
-
-<section class="about-section" aria-labelledby="collaboration-internship">
-<h2 class="about-section-label" id="collaboration-internship">Connect &amp; Internships</h2>
-<div class="about-section-content" markdown="1">
-
-I'm always happy to **exchange ideas, discuss research, and explore collaborations** on AI and data systems. Feel free to reach out!
-
-For **research internships at ByteDance (Shenzhen)**, please contact me at **zhanghaowuda12 [at] gmail [dot] com** (email subject: `[Intern]`).
 </div>
 </section>

@@ -266,7 +266,7 @@ class BuiltSiteContractTest(unittest.TestCase):
         self.assertEqual(ids, [
             "research-directions", "current-focus", "recent-news",
             "selected-publications", "selected-systems", "highlights",
-            "honors-awards", "collaboration-internship",
+            "honors-awards",
         ])
 
     def test_research_direction_grid_has_desktop_and_mobile_layouts(self):
@@ -284,7 +284,13 @@ class BuiltSiteContractTest(unittest.TestCase):
 
     def test_homepage_connect_section_has_contact_method(self):
         html = (SITE / "index.html").read_text(encoding="utf-8")
-        connect = visible_text(homepage_section(html, "collaboration-internship"))
+        connect_match = re.search(
+            r'<div class="about-hero-connect" id="collaboration-internship">(.*?)</div>',
+            html,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(connect_match)
+        connect = visible_text(connect_match.group(1))
         self.assertGreater(len(connect.split()), 15)
         self.assertLess(len(connect.split()), 85)
         self.assertRegex(connect.lower(), r"(?:\[at\]|@)")
@@ -956,8 +962,18 @@ class BuiltSiteContractTest(unittest.TestCase):
         )
         self.assertEqual(button_rule.get("font-size"), ".84rem")
 
-    def test_homepage_keeps_contact_below_hero_without_photo_metadata(self):
+    def test_homepage_surfaces_links_and_connect_in_hero(self):
         homepage_html = (SITE / "index.html").read_text(encoding="utf-8")
+        hero = re.search(
+            r'<section class="about-hero".*?</section>',
+            homepage_html, re.DOTALL
+        )
+        self.assertIsNotNone(hero)
+        for label in ("Email", "Google Scholar", "GitHub", "LinkedIn"):
+            self.assertIn(f"<span>{label}</span>", hero.group())
+        self.assertIn('id="collaboration-internship"', hero.group())
+        self.assertIn("zhanghaowuda12", hero.group())
+
         profile = re.search(
             r'<aside class="about-hero-profile".*?</aside>',
             homepage_html, re.DOTALL
@@ -966,8 +982,6 @@ class BuiltSiteContractTest(unittest.TestCase):
         self.assertNotIn('class="more-info"', profile.group())
         self.assertNotIn("mailto:", profile.group())
         self.assertNotIn('class="about-hero-actions"', homepage_html)
-        self.assertIn('aria-labelledby="collaboration-internship"', homepage_html)
-        self.assertIn("zhanghaowuda12", homepage_html)
         self.assertIn('class="about-footer-social social"', homepage_html)
 
         social_rule = compiled_css_rule(

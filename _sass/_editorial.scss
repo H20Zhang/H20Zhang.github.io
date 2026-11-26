@@ -631,3 +631,28 @@ html[data-theme="dark"] .publications ol.bibliography li .abbr .preview {
     margin-bottom: 0.6rem;
   }
 }
+
+.featured-paper-role,
+.publications ol.bibliography li .periodical .publication-role-badge {
+  display: inline-block;
+  font-style: normal;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.45;
+  padding: 0.05rem 0.44rem;
+  border-radius: 0.28rem;
+  border: 1px solid color-mix(in srgb, var(--global-theme-color) 28%, var(--global-divider-color));
+  background: color-mix(in srgb, var(--global-theme-color) 8%, var(--global-section-alt-color));
+  color: var(--global-section-accent-color);
+  white-space: nowrap;
+}
+
+.featured-paper-role {
+  margin-right: 0.4rem;
+  vertical-align: 0.1em;
+}
+
+.publications ol.bibliography li .periodical .publication-role-badge {
+  margin-left: 0.48rem;
+  vertical-align: 0.06em;
+}

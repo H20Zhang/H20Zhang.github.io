@@ -12,8 +12,8 @@ highlights:
     value: 2–10× faster across 20 semantic queries
   - label: Core Stack
     value: SemaSQL + LLM-assisted optimizer + Adaptive Query Execution
-  - label: Publication
-    value: PVLDB 2026 · Built on DuckDB
+  - label: Venue & Role
+    value: PVLDB 2026 · Project Lead
 figure:
   path: /assets/img/publication_preview/sema.webp
   alt: A SemaSQL query flows through SEMA's parser and planner, an LLM-assisted optimizer that reduces redundancy and deduces predicates, and an adaptive executor that fuses semantic filters.
@@ -50,6 +50,10 @@ SEMA makes semantic operators **first-class citizens** across parsing, logical o
 - **Declarative `SemaSQL` dialect:** Lets users embed natural-language predicates and semantic expressions directly inside standard SQL clauses (`WHERE`, `SELECT`, `JOIN`, `GROUP BY`) without manual prompt plumbing.
 - **LLM-assisted logical optimization:** Compresses redundant natural-language expressions and deduces cheap relational filter constraints (such as non-null or domain predicates) to prune rows before invoking LLMs.
 - **Adaptive Query Execution (AQE):** Uses runtime statistics during execution to dynamically reorder predicates, fuse compatible semantic operators into single prompts, and batch requests—seeking a Pareto-efficient balance among latency, token cost, and accuracy.
+
+## My role
+
+**Project lead** of SEMA, initiating the research problem and leading the overall system architecture, `SemaSQL` language formulation, LLM-assisted logical optimization, and runtime adaptive execution design.
 
 ## Impact
 

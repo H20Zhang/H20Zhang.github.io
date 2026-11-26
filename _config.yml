@@ -278,9 +278,11 @@ filtered_bibtex_keywords:
     pmid,
     poster,
     preview,
+    project_role,
     selected,
     slides,
     supp,
+    system,
     video,
     website,
   ]

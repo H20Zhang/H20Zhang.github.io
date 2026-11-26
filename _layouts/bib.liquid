@@ -203,7 +203,7 @@
       {% capture periodical %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
     {% endif %}
     <div class="periodical">
-      {{ periodical | strip }}
+      {{ periodical | strip }}{% if entry.project_role %}<span class="publication-role-badge">{{ entry.project_role }}</span>{% endif %}
     </div>
 
     <!-- Links/Buttons -->
@@ -273,6 +273,9 @@
         {% else %}
           <a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Slides</a>
         {% endif %}
+      {% endif %}
+      {% if entry.system %}
+        <a href="{{ entry.system | relative_url }}" class="btn btn-sm z-depth-0" role="button">System</a>
       {% endif %}
       {% if entry.website %}
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>

@@ -14,7 +14,7 @@ research_support:
         venue: PVLDB 2026
         url: /publications/#VLDB-26-2
         summary: Introduces LLM-powered semantic operators in SQL with optimization and adaptive execution.
-        role: Studies efficient query processing over structured data and semantic content as a separate academic collaboration.
+        role: Led the project to study efficient query processing over structured data and natural-language content as a separate academic collaboration.
   - area: Document retrieval
     papers:
       - name: DocNavRAG
@@ -35,7 +35,7 @@ My independent research and academic collaborations span **data systems and AI**
 
 ## Research directions
 
-**Semantic query processing.** How can database systems combine relational operations with semantic reasoning while controlling execution cost? SEMA explores first-class semantic operators, query optimization, and adaptive execution.
+**Semantic query processing.** How can database systems combine relational operations with semantic reasoning while controlling execution cost? In SEMA (project lead), we explore first-class semantic operators, query optimization, and adaptive execution.
 
 **Document retrieval.** How can agents navigate large document collections and accumulate the evidence needed for complex questions? DocNavRAG explores document-structured graphs and stateful evidence construction.
 

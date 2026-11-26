@@ -4,6 +4,7 @@
     <li class="featured-paper" id="featured-{{ paper.id }}">
       <h3 class="featured-paper-title">
         <span class="featured-paper-venue">{{ paper.venue }}</span>
+        {%- if paper.role %}<span class="featured-paper-role">{{ paper.role }}</span>{% endif %}
         <a href="{{ paper.url }}"><strong>{{ paper.short }}</strong>: {{ paper.title }}</a>
       </h3>
       <figure class="featured-paper-figure">

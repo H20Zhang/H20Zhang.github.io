@@ -38,7 +38,7 @@
   systems:
     - id: sema
       name: SEMA
-      badge: PVLDB 2026
+      badge: PVLDB 2026 · Project Lead
       url: /projects/sema/
       action: Explore
       description: Brings LLM reasoning into DuckDB as first-class semantic operators via SemaSQL, LLM-assisted logical optimization, and adaptive execution, achieving 2–10× faster semantic queries than three evaluated baselines.

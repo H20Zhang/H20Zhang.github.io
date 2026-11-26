@@ -15,6 +15,7 @@
     **SymRaBitQ**, a symmetric quantization scheme, lets UBASE build indexes directly on quantized vectors, while a hybrid memory/SSD storage engine trades memory for latency. UBASE delivers **up to 3× higher throughput**, **80% less indexing memory**, and **up to 99.4% lower serving cost**.
 - id: VLDB-26-2
   venue: VLDB 2026
+  role: Project Lead
   short: SEMA
   title: A High-performance System for LLM-based Semantic Query Processing
   url: https://arxiv.org/abs/2603.11622

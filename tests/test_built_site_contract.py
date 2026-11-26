@@ -869,10 +869,12 @@ class BuiltSiteContractTest(unittest.TestCase):
             "Architect &amp; Research Scientist",
             "Beijing &amp; Shanghai, China",
             "exploratory R&amp;D through production deployment",
+            "Huawei Ascend NPUs",
             "139,411.14 throughput",
             "40,347.04 throughput",
         ):
             self.assertIn(item, exp_html)
+        self.assertNotIn("system delivery", exp_html)
         self.assertNotIn('id="education"', exp_html)
         self.assertNotIn("Wuhan University", exp_html)
 

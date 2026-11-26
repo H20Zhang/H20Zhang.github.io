@@ -16,9 +16,11 @@ My systems research spans **self-evolving agentic systems and shared environment
     {% for group in site.data.systems_catalog %}
       <section class="systems-group" aria-labelledby="systems-{{ group.id }}">
         <h2 class="systems-group-label" id="systems-{{ group.id }}">{{ group.label }}</h2>
-        {% for system in group.systems %}
-          {% include systems_catalog_entry.liquid system=system %}
-        {% endfor %}
+        <div class="systems-grid">
+          {% for system in group.systems %}
+            {% include systems_catalog_entry.liquid system=system %}
+          {% endfor %}
+        </div>
       </section>
     {% endfor %}
   </div>

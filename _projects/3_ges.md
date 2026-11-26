@@ -8,9 +8,9 @@ project_group: huawei
 external_url: https://www.huaweicloud.com/product/ges.html
 external_label: Huawei GES
 secondary_links:
-  - label: LDBC Declarative #1
+  - label: "LDBC Declarative #1"
     url: https://ldbcouncil.org/benchmarks/snb/interactive/2024-09-16-graph-engine-service-sf300/
-  - label: LDBC Imperative #1
+  - label: "LDBC Imperative #1"
     url: https://ldbcouncil.org/benchmarks/snb/interactive/2025-12-01-graph-engine-service-sf300/
 related_publications: false
 research_support:

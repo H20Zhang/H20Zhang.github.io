@@ -6,6 +6,7 @@
 
 .post-header .post-title,
 .post article > h2,
+.post .system-research > h2,
 .publication-group-title,
 .projects .system-entry-title,
 .blog-index .blog-post-title,
@@ -19,7 +20,8 @@
   letter-spacing: -0.03em;
 }
 
-.post article > h2 {
+.post article > h2,
+.post .system-research > h2 {
   font-weight: 400;
   letter-spacing: -0.02em;
 }
@@ -53,5 +55,162 @@
   .publications ol.bibliography li .abbr abbr.badge {
     width: auto !important;
     min-width: 5.5rem;
+  }
+}
+
+// Systems index: each group is a grid of cards, matching the homepage
+// research-direction cards.
+.projects .systems-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.projects .systems-grid .system-entry {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 1.4rem 1.15rem;
+  border: 1px solid var(--global-divider-color);
+  border-top: 2px solid color-mix(in srgb, var(--global-theme-color) 42%, var(--global-divider-color));
+  border-radius: 0.35rem;
+  background: var(--global-card-bg-color);
+
+  .system-entry-title {
+    font-size: 1.3rem;
+  }
+
+  .system-entry-narrative {
+    font-size: 0.94rem;
+    line-height: 1.6;
+  }
+
+  .system-entry-actions {
+    margin-top: auto;
+    padding-top: 0.85rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .projects .systems-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+// Publications: research-area chips and linked titles.
+.research-area-nav {
+  gap: 0.5rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.32rem 0.75rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    background: var(--global-card-bg-color);
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      border-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+    }
+  }
+
+  .research-area-count {
+    margin-left: 0;
+    padding: 0 0.42rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--global-theme-color) 10%, transparent);
+    color: var(--global-theme-color);
+    font-size: 0.75rem;
+  }
+}
+
+.publications ol.bibliography li .title a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--global-theme-color);
+  }
+}
+
+// System detail pages: prose column with a sticky "On this page" sidebar.
+.system-page {
+  display: grid;
+  grid-template-columns: minmax(0, 50rem) minmax(11rem, 14rem);
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.system-page-sidebar {
+  position: sticky;
+  top: 5.5rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.45rem;
+  background: var(--global-card-bg-color);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.system-page-sidebar-label {
+  margin-bottom: 0.6rem;
+  color: var(--global-section-accent-color);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.post .system-page-toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0 0 0.4rem;
+  }
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+.system-page-sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.8rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--global-divider-color);
+
+  a {
+    color: var(--global-theme-color);
+    text-decoration: none;
+  }
+}
+
+.system-page-main h2[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+@media (max-width: 991px) {
+  .system-page {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .system-page-sidebar {
+    display: none;
   }
 }

@@ -42,7 +42,7 @@
       affiliation: Huawei
       url: /projects/3_ges/
       action: Explore
-      description: A production graph database supporting hundreds of billions of edges and real-time queries, with audited #1 LDBC SNB Interactive results on both benchmark tracks (2024–2025).
+      description: "A production graph database supporting hundreds of billions of edges and real-time queries, with audited #1 LDBC SNB Interactive results on both benchmark tracks (2024–2025)."
       links:
         - label: Overview
           url: /projects/3_ges/

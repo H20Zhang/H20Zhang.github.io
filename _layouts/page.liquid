@@ -14,12 +14,33 @@ layout: default
     <p class="post-description">{{ page.description }}</p>
   </header>
 
-  <article>
-    {{ content }}
-  </article>
+  {% if page.collection == 'projects' %}
+    <div class="system-page">
+      <div class="system-page-main">
+        <article>
+          {{ content }}
+        </article>
+        {% include system_research_details.liquid %}
+      </div>
+      <aside class="system-page-sidebar" aria-label="On this page">
+        <div class="system-page-sidebar-label">On this page</div>
+        <nav class="system-page-toc">{% toc %}</nav>
+        <div class="system-page-sidebar-links">
+          {% if page.research_support %}<a href="#research-threads">Research threads</a>{% endif %}
+          {% if page.external_url %}<a href="{{ page.external_url }}">{{ page.external_label | default: 'Project site' }} ↗</a>{% endif %}
+          {% for link in page.secondary_links %}<a href="{{ link.url }}">{{ link.label }} ↗</a>{% endfor %}
+          <a href="{{ '/projects/' | relative_url }}">← All systems</a>
+        </div>
+      </aside>
+    </div>
+  {% else %}
+    <article>
+      {{ content }}
+    </article>
 
-  {% if page.research_support %}
-    {% include system_research_details.liquid %}
+    {% if page.research_support %}
+      {% include system_research_details.liquid %}
+    {% endif %}
   {% endif %}
 
   {% if page.related_publications %}

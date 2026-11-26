@@ -668,6 +668,22 @@ class BuiltSiteContractTest(unittest.TestCase):
                 self.assertIn("data-zoomable", image.group(0))
                 self.assertGreaterEqual(card.count("<p>"), 2)
 
+    def test_long_pages_list_their_sections(self):
+        pages = {
+            Path("blog/2026/next-gen-agent-en/index.html"): 'class="essay-toc"',
+            Path("projects/1_autoia/index.html"): 'class="system-page-toc"',
+            Path("projects/3_ges/index.html"): 'class="system-page-toc"',
+        }
+        for relative_path, marker in pages.items():
+            html = (SITE / relative_path).read_text(encoding="utf-8")
+            toc = html.split(marker, 1)[1].split("</nav>", 1)[0]
+            with self.subTest(path=str(relative_path)):
+                self.assertGreaterEqual(toc.count('class="toc-entry'), 3)
+
+    def test_systems_index_keeps_full_descriptions(self):
+        html = (SITE / "projects" / "index.html").read_text(encoding="utf-8")
+        self.assertIn("audited #1 LDBC SNB Interactive results on both benchmark tracks", html)
+
     def test_homepage_presents_named_systems(self):
         self.assertEqual(self.homepage.selected_systems_items, 3)
         self.assertNotIn("Independent Research", self.homepage.selected_systems_text)

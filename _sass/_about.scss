@@ -2,13 +2,8 @@
  * Warm editorial About/homepage
  ******************************************************************************/
 
-// Keep the wider reading canvas and its navigation aligned on the homepage.
-body:has(.about-page) .container {
-  max-width: 65rem;
-}
-
 .about-page {
-  --about-display: Georgia, "Times New Roman", serif;
+  --about-display: var(--global-display-font);
   --about-tint: color-mix(in srgb, var(--global-theme-color) 5%, var(--global-bg-color));
   margin-top: -0.25rem;
 

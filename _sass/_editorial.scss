@@ -1,0 +1,57 @@
+/*******************************************************************************
+ * Site-wide editorial system shared with the homepage: one canvas width
+ * (`max_width` in _config.yml), serif display headings, and a reading measure
+ * for prose so long lines stay comfortable on the wider canvas.
+ ******************************************************************************/
+
+.post-header .post-title,
+.post article > h2,
+.publication-group-title,
+.projects .system-entry-title,
+.blog-index .blog-post-title,
+.essay-page .essay-title,
+.essay-page .essay-article h2 {
+  font-family: var(--global-display-font);
+}
+
+.post-header .post-title {
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+.post article > h2 {
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.essay-page .essay-title {
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.essay-page .essay-article h2 {
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+.post-header .post-description,
+.post article > p,
+.post article > ul,
+.post article > ol,
+.post article > h2,
+.post article > h3,
+.post article > blockquote,
+.post article > table,
+.post .system-research {
+  max-width: 50rem;
+}
+
+// Venue badges keep their natural width when the publication row stacks.
+@media (max-width: 767px) {
+  .publications ol.bibliography li .abbr abbr.badge {
+    width: auto !important;
+    min-width: 5.5rem;
+  }
+}

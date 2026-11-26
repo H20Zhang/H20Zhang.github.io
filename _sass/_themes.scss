@@ -6,6 +6,7 @@
 
 :root {
   color-scheme: light;
+  --global-display-font: Georgia, "Times New Roman", serif;
   --global-bg-color: #{v.$paper-cream-light};
   --global-surface-color: #{v.$paper-cream-light};
   --global-section-alt-color: #{v.$paper-sand-light};

@@ -61,5 +61,5 @@ UBASE powers retrieval across major ByteDance workloads—including conversation
 
 ## Evidence
 
-- [UBASE: An AI Search Engine for Trillion-Scale Vector Data Management (ATC 2026)](https://arxiv.org/abs/2608.30607)
+- [UBASE: An AI Search Engine for Trillion-Scale Vector Data Management at ByteDance (ATC 2026)](https://doi.org/10.1145/3828523.3857093)
 - [Optimizing SSD-Resident Graph Indexing for High-Throughput Vector Search (arXiv 2026)](https://arxiv.org/abs/2602.22805)

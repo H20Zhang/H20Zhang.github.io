@@ -3,8 +3,8 @@
 - id: ATC-26
   venue: ATC 2026
   short: UBASE
-  title: An AI Search Engine for Trillion-Scale Vector Data Management
-  url: https://arxiv.org/abs/2608.30607
+  title: An AI Search Engine for Trillion-Scale Vector Data Management at ByteDance
+  url: https://doi.org/10.1145/3828523.3857093
   image: ubase.webp
   width: 1200
   height: 846
@@ -17,8 +17,8 @@
   venue: VLDB 2026
   role: Project Lead
   short: SEMA
-  title: A High-performance System for LLM-based Semantic Query Processing
-  url: https://arxiv.org/abs/2603.11622
+  title: A High-Performance System for LLM-Based Semantic Query Processing
+  url: https://doi.org/10.14778/3836663.3836685
   image: sema.webp
   width: 1200
   height: 527
@@ -26,7 +26,7 @@
   summary: |
     LLM-powered analytics usually live in DataFrame scripts or SQL UDFs, out of reach of the query optimizer. SEMA, built on DuckDB, makes **semantic operators first-class**: with SemaSQL, users write natural-language conditions directly in SQL.
 
-    The optimizer compresses natural-language expressions and deduces relational constraints from them; at runtime, adaptive execution reorders and fuses semantic operators and batches prompts. On 20 semantic queries, SEMA runs **2–10× faster** than three baseline systems with competitive result quality.
+    The optimizer compresses natural-language expressions and deduces relational constraints from them; at runtime, adaptive execution reorders and fuses semantic operators and batches prompts. Across 26 semantic queries, SEMA runs **2–10× faster** than three baseline systems with competitive result quality.
 - id: Arxiv-26-3
   venue: arXiv 2026
   short: AdaMM

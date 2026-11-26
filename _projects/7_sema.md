@@ -9,7 +9,7 @@ project_group: independent
 related_publications: false
 highlights:
   - label: End-to-End Speedup
-    value: 2–10× faster across 20 semantic queries
+    value: 2–10× faster across 26 semantic queries
   - label: Core Stack
     value: SemaSQL + LLM-assisted optimizer + Adaptive Query Execution
   - label: Venue & Role
@@ -57,11 +57,11 @@ SEMA makes semantic operators **first-class citizens** across parsing, logical o
 
 ## Impact
 
-Across 20 semantic queries spanning classification, summarization, and information extraction workloads, SEMA achieves **2–10× end-to-end speedups** over three evaluated baseline systems while maintaining competitive result quality.
+Across 26 semantic queries spanning classification, summarization, text extraction, and ranking workloads, SEMA achieves **2–10× end-to-end speedups** over three evaluated baseline systems while maintaining competitive result quality.
 
 ## Evidence
 
-- [Sema: A High-performance System for LLM-based Semantic Query Processing (PVLDB 2026)](https://arxiv.org/abs/2603.11622)
+- [Sema: A High-Performance System for LLM-Based Semantic Query Processing (PVLDB 2026)](https://doi.org/10.14778/3836663.3836685)
 - [CoreSemDB: Benchmarking Hybrid Semantic-Relational Query Processing over Text-Rich Databases (COLM 2026)](/publications/#COLM-26)
 
 ## System boundary

@@ -110,11 +110,13 @@
       name: Vora
       badge: ICDE 2027
       url: /publications/#ICDE-27-2
-      description: A vector-based GPU subgraph query engine that reformulates subgraph pattern matching into scalable vectorized GPU execution for large graphs.
+      description: A vector-based GPU subgraph query engine that scales beyond GPU memory via VectorFlux operator fusion and workload decomposition, achieving up to 12× speedup over CPU systems and 7× over GPU baselines.
       links:
         - label: Paper
           url: /publications/#ICDE-27-2
           primary: true
+        - label: Code
+          url: https://github.com/gh8li/vora-artifact
 - id: distributed-analytics
   label: Distributed analytics
   systems:

@@ -945,7 +945,7 @@ class BuiltSiteContractTest(unittest.TestCase):
         self.assertIn('id="ICDE-26-abstract" hidden', publications_html)
         self.assertNotIn('<a class="abstract btn', publications_html)
         self.assertNotIn('<a class="bibtex btn', publications_html)
-        self.assertIn('placeholder="Filter publications"', publications_html)
+        self.assertIn('placeholder="Search by title, author, venue, or year…"', publications_html)
 
         button_rule = compiled_css_rule(
             self.css, ".publications ol.bibliography li .links .btn"

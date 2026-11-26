@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .map((node) => node.textContent).join(" ").replace(/\s+/g, " ").toLowerCase()
   ]));
   const controls = explorer.querySelector(".publication-view-controls");
+  const areaNav = explorer.querySelector(".research-area-nav");
   const viewButtons = Array.from(controls.querySelectorAll("button"));
   const results = document.getElementById("publication-results");
   const reset = document.getElementById("publication-reset");
@@ -67,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
       list.append(paper);
     }
     host.replaceChildren(...(view === "year" ? [yearContainer] : sections));
+    if (areaNav) areaNav.hidden = view === "year";
     viewButtons.forEach((button) => button.setAttribute("aria-pressed", String(button.dataset.publicationView === view)));
     filter();
   }

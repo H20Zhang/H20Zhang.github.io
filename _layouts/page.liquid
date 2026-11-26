@@ -14,7 +14,9 @@ layout: default
       <p class="system-page-back"><a href="{{ '/projects/' | relative_url }}">← All systems</a></p>
     {% endif %}
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-description">{{ page.description }}</p>
+    {% if page.description and page.hide_description != true %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
   </header>
 
   {% if page.collection == 'projects' %}

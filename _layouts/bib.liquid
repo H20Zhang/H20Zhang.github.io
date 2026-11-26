@@ -62,35 +62,35 @@
       {% endif %}
 
       {%- for author in entry.author_array limit: author_array_limit -%}
-        {% assign author_is_self = false %}
+        {%- assign author_is_self = false -%}
         {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
         {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
-        {% assign author_is_etal = false %}
-        {% if author_last_name == 'others' %}
-          {% assign author_is_etal = true %}
-        {% endif %}
-        {% if site.scholar.last_name contains author_last_name %}
-          {% if site.scholar.first_name contains author.first %}
-            {% assign author_is_self = true %}
-          {% endif %}
+        {%- assign author_is_etal = false -%}
+        {%- if author_last_name == 'others' -%}
+          {%- assign author_is_etal = true -%}
         {%- endif -%}
-        {% assign coauthor_url = null %}
+        {%- if site.scholar.last_name contains author_last_name -%}
+          {%- if site.scholar.first_name contains author.first -%}
+            {%- assign author_is_self = true -%}
+          {%- endif -%}
+        {%- endif -%}
+        {%- assign coauthor_url = null -%}
         {%- assign clean_last_name = author_last_name | downcase | remove_accents -%}
-        {% if site.data.coauthors[clean_last_name] %}
+        {%- if site.data.coauthors[clean_last_name] -%}
           {%- for coauthor in site.data.coauthors[clean_last_name] -%}
-            {% if coauthor.firstname contains author.first %}
+            {%- if coauthor.firstname contains author.first -%}
               {%- assign coauthor_url = coauthor.url -%}
-              {% break %}
+              {%- break -%}
             {%- endif -%}
-          {% endfor %}
+          {%- endfor -%}
         {%- endif -%}
 
         {%- if forloop.length > 1 -%}
-          {% if forloop.first == false -%}
-            {%- if forloop.length > 2 %}, {% elsif forloop.length == 2 %}  {% endif %}
-          {%- endif %}
-          {%- if forloop.last and author_array_limit == author_array_size %}and {% endif -%}
-        {% endif %}
+          {%- if forloop.first == false -%}
+            {%- if forloop.length > 2 -%}, {% elsif forloop.length == 2 %} {% endif -%}
+          {%- endif -%}
+          {%- if forloop.last and author_array_limit == author_array_size -%}and {% endif -%}
+        {%- endif -%}
         {%- if author_is_self -%}
           <em>
             {{- author.first }}
@@ -107,9 +107,9 @@
           {%- else -%}
             {{- author.first }}
             {{ author_last_html -}}
-          {% endif %}
+          {%- endif -%}
         {%- endif -%}
-      {% endfor %}
+      {%- endfor -%}
       {%- assign more_authors = author_array_size | minus: author_array_limit -%}
 
       {%- assign more_authors_hide = more_authors | append: ' more author' -%}
@@ -188,12 +188,22 @@
       {% include hook/bib.liquid %}
     {% endif %}
     {% assign entrytype_text = entrytype | strip_html | strip %}
-    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
+    {% assign note_text = entry.note | strip %}
+    {% if entrytype_text != '' %}
+      {% capture periodical %}{{ entrytype }}{% if entryyear != '' %},{{ entrymonth }}{{ entryyear }}{% endif %}{% if note_text != '' %} · {{ note_text }}{% endif %}{% endcapture %}
+    {% elsif note_text != '' %}
+      {% if entry.year and note_text contains entry.year %}
+        {% assign periodical = note_text %}
+      {% elsif entryyear != '' %}
+        {% capture periodical %}{{ note_text }},{{ entrymonth }}{{ entryyear }}{% endcapture %}
+      {% else %}
+        {% assign periodical = note_text %}
+      {% endif %}
+    {% else %}
+      {% capture periodical %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
+    {% endif %}
     <div class="periodical">
       {{ periodical | strip }}
-    </div>
-    <div class="periodical">
-      {{ entry.note | strip }}
     </div>
 
     <!-- Links/Buttons -->

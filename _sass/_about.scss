@@ -621,3 +621,8 @@
     display: none;
   }
 }
+
+// Paper figures keep their white canvas; soften it on the dark theme.
+html[data-theme="dark"] .featured-paper-figure img {
+  filter: brightness(0.9);
+}

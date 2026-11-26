@@ -24,22 +24,27 @@ $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;
 $yellow-color: #efcc00 !default;
 
-// Cobalt Mandarin editorial system selected for the light theme.
-$paper-cream-light: #fdfdfd !default;
-$paper-sand-light: #f7f7f7 !default;
-$accent-color-light: #3f5fcc !default;
-$accent-hover-light: #273f9f !default;
-$section-accent-light: #cc4b00 !default;
-$ink-color-light: #1a1a1a !default;
-$text-muted-light: #6b7280 !default;
+// Paper & Teal editorial system: warm paper with deep teal links and a rust
+// accent for structural labels; the dark theme mirrors it on teal-black.
+$paper-cream-light: #faf8f4 !default;
+$paper-sand-light: #f2eee6 !default;
+$paper-card-light: #fffdf9 !default;
+$divider-light: #e5dfd3 !default;
+$accent-color-light: #0f6b75 !default;
+$accent-hover-light: #0a4c54 !default;
+$section-accent-light: #a4512b !default;
+$ink-color-light: #1d2326 !default;
+$text-muted-light: #5d6669 !default;
 
-$paper-espresso-dark: #241a16 !default;
-$paper-surface-dark: #2e211c !default;
-$paper-sand-dark: #36251f !default;
-$ink-color-dark: #f4eadf !default;
-$text-muted-dark: #c2b2a7 !default;
-$accent-color-dark: #e58b6d !default;
-$accent-hover-dark: #f0a084 !default;
+$paper-espresso-dark: #111a1c !default;
+$paper-surface-dark: #172326 !default;
+$paper-sand-dark: #172326 !default;
+$divider-dark: rgba(108, 196, 204, 0.18) !default;
+$ink-color-dark: #e8eeec !default;
+$text-muted-dark: #9fb0b1 !default;
+$accent-color-dark: #6cc4cc !default;
+$accent-hover-dark: #99dbe0 !default;
+$section-accent-dark: #e09a73 !default;
 
 $grey-color: #828282 !default;
 $grey-color-light: color.adjust($grey-color, $lightness: 40%);

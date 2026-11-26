@@ -301,19 +301,19 @@ class BuiltSiteContractTest(unittest.TestCase):
             stylesheet.group(1), "d41d8cd98f00b204e9800998ecf8427e"
         )
 
-    def test_light_theme_uses_cobalt_mandarin_palette(self):
+    def test_light_theme_uses_paper_teal_palette(self):
         root_rule = compiled_css_rule(self.css, ":root")
         expected = {
-            "--global-bg-color": "#fdfdfd",
-            "--global-surface-color": "#fdfdfd",
-            "--global-section-alt-color": "#f7f7f7",
-            "--global-navbar-bg-color": "#fdfdfd",
-            "--global-text-color": "#1a1a1a",
-            "--global-text-color-light": "#6b7280",
-            "--global-theme-color": "#3f5fcc",
-            "--global-hover-color": "#273f9f",
-            "--global-section-accent-color": "#cc4b00",
-            "--global-divider-color": "rgba(229, 231, 235, 1)",
+            "--global-bg-color": "#faf8f4",
+            "--global-surface-color": "#faf8f4",
+            "--global-section-alt-color": "#f2eee6",
+            "--global-navbar-bg-color": "#faf8f4",
+            "--global-text-color": "#1d2326",
+            "--global-text-color-light": "#5d6669",
+            "--global-theme-color": "#0f6b75",
+            "--global-hover-color": "#0a4c54",
+            "--global-section-accent-color": "#a4512b",
+            "--global-divider-color": "#e5dfd3",
         }
 
         for property_name, value in expected.items():

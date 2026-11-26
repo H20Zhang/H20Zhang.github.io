@@ -32,7 +32,7 @@
     - key: COLM-26
       label: CoreSemDB
     - key: ICDE-22
-      label: Learned Join Decomposition
+      label: LSSMatch
   papers:
     - VLDB-26-2
     - COLM-26

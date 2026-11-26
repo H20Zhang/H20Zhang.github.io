@@ -867,6 +867,7 @@ class BuiltSiteContractTest(unittest.TestCase):
             "ByteDance",
             "Huawei",
             "Architect &amp; Research Scientist",
+            "Beijing &amp; Shanghai, China",
             "exploratory R&amp;D through production deployment",
             "139,411.14 throughput",
             "40,347.04 throughput",

@@ -216,16 +216,19 @@ class BuiltSiteContractTest(unittest.TestCase):
         self.assertIsNotNone(intro)
         intro_text = visible_text(intro.group(1))
         self.assertIn("self-evolving agentic systems", intro_text)
-        self.assertIn("shared context infrastructure", intro_text)
+        self.assertIn("agent harnesses", intro_text)
+        self.assertIn("agent memory", intro_text)
+        self.assertIn("context infrastructure", intro_text)
+        self.assertIn("agentic retrieval", intro_text)
         self.assertIn("AI-powered data systems", intro_text)
         self.assertNotIn("AutoIA", intro_text)
 
         focus = visible_text(homepage_section(html, "current-focus"))
         for phrase in (
             "AutoIA",
-            "IR-first framework",
-            "autonomously construct context systems",
-            "harnesses and shared environments through experience",
+            "IR-first context and agentic engine",
+            "queryable context layers",
+            "evaluation evidence and execution experience",
         ):
             with self.subTest(phrase=phrase):
                 self.assertIn(phrase, focus)
@@ -266,7 +269,6 @@ class BuiltSiteContractTest(unittest.TestCase):
         self.assertEqual(ids, [
             "research-directions", "current-focus", "recent-news",
             "selected-publications", "selected-systems", "highlights",
-            "honors-awards",
         ])
 
     def test_research_direction_grid_has_desktop_and_mobile_layouts(self):

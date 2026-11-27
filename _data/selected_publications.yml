@@ -1,31 +1,5 @@
 # Homepage "Selected Publications". `id` is the BibTeX key; figures are taken
 # from the papers' arXiv sources and stored under assets/img/publication_preview/ (shared with /publications/).
-- id: ATC-26
-  venue: ATC 2026
-  short: UBASE
-  title: An AI Search Engine for Trillion-Scale Vector Data Management at ByteDance
-  url: https://doi.org/10.1145/3828523.3857093
-  image: ubase.webp
-  width: 1200
-  height: 846
-  image_alt: UBASE architecture with a control plane, coordinate service, hybrid query engine, adaptive storage engine, ML services, and a quantization-aware vector kernel.
-  summary: |
-    UBASE has powered ByteDance search since 2016 and now spans **7,000+ clusters and 300 PB** of indexed data; its largest deployment indexes nearly **one trillion vectors**. At that scale, building graph indexes under constant ingestion and keeping them in memory become the bottlenecks.
-
-    **SymRaBitQ**, a symmetric quantization scheme, lets UBASE build indexes directly on quantized vectors, while a hybrid memory/SSD storage engine trades memory for latency. UBASE delivers **up to 3× higher throughput**, **80% less indexing memory**, and **up to 99.4% lower serving cost**.
-- id: VLDB-26-2
-  venue: VLDB 2026
-  short: SEMA
-  title: A High-Performance System for LLM-Based Semantic Query Processing
-  url: https://doi.org/10.14778/3836663.3836685
-  image: sema.webp
-  width: 1200
-  height: 527
-  image_alt: A SemaSQL query flows through SEMA's parser and planner, an LLM-assisted optimizer that removes redundancy and deduces predicates, and an adaptive executor that fuses semantic filters.
-  summary: |
-    LLM-powered analytics usually live in DataFrame scripts or SQL UDFs, out of reach of the query optimizer. SEMA, built on DuckDB, makes **semantic operators first-class**: with SemaSQL, users write natural-language conditions directly in SQL.
-
-    The optimizer compresses natural-language expressions and deduces relational constraints from them; at runtime, adaptive execution reorders and fuses semantic operators and batches prompts. Across 26 semantic queries, SEMA runs **2–10× faster** than three baseline systems with competitive result quality.
 - id: Arxiv-26-3
   venue: arXiv 2026
   short: AdaMM
@@ -39,3 +13,29 @@
     An assistant that has seen months of sleep summaries should be able to answer “What was my average sleep after the hospital visit?” Retrieval memory returns relevant snippets, but it cannot reliably **filter, aggregate, or compare** observations across a long history.
 
     AdaMM adds **analytic memory**: it extracts attribute–value observations from dialogue and images, discovers recurring fields without a predefined schema, and materializes them as tables. A memory-aware planner routes each step to retrieval or table operations, improving results on MemEye and MemGallery by **up to 11.3% and 6.9%**.
+- id: VLDB-26-2
+  venue: VLDB 2026
+  short: SEMA
+  title: A High-Performance System for LLM-Based Semantic Query Processing
+  url: https://doi.org/10.14778/3836663.3836685
+  image: sema.webp
+  width: 1200
+  height: 527
+  image_alt: A SemaSQL query flows through SEMA's parser and planner, an LLM-assisted optimizer that removes redundancy and deduces predicates, and an adaptive executor that fuses semantic filters.
+  summary: |
+    LLM-powered analytics usually live in DataFrame scripts or SQL UDFs, out of reach of the query optimizer. SEMA, built on DuckDB, makes **semantic operators first-class**: with SemaSQL, users write natural-language conditions directly in SQL.
+
+    The optimizer compresses natural-language expressions and deduces relational constraints from them; at runtime, adaptive execution reorders and fuses semantic operators and batches prompts. Across 26 semantic queries, SEMA runs **2–10× faster** than three baseline systems with competitive result quality.
+- id: ATC-26
+  venue: ATC 2026
+  short: UBASE
+  title: An AI Search Engine for Trillion-Scale Vector Data Management at ByteDance
+  url: https://doi.org/10.1145/3828523.3857093
+  image: ubase.webp
+  width: 1200
+  height: 846
+  image_alt: UBASE architecture with a control plane, coordinate service, hybrid query engine, adaptive storage engine, ML services, and a quantization-aware vector kernel.
+  summary: |
+    UBASE has powered ByteDance search since 2016 and now spans **7,000+ clusters and 300 PB** of indexed data; its largest deployment indexes nearly **one trillion vectors**. At that scale, building graph indexes under constant ingestion and keeping them in memory become the bottlenecks.
+
+    **SymRaBitQ**, a symmetric quantization scheme, lets UBASE build indexes directly on quantized vectors, while a hybrid memory/SSD storage engine trades memory for latency. UBASE delivers **up to 3× higher throughput**, **80% less indexing memory**, and **up to 99.4% lower serving cost**.

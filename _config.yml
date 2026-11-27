@@ -7,13 +7,13 @@ first_name: Hao
 middle_name:
 last_name: Zhang
 contact_note: >
-  Open to collaboration on harness and shared-environment evolution, context infrastructure,
-  memory, tools, skills, retrieval, and graph/vector systems. I am recruiting research interns
-  at ByteDance in Shenzhen. Email is the fastest way to reach me.
+  Open to collaboration on self-evolving agentic systems, agent harnesses, agent memory,
+  context infrastructure, agentic retrieval, and AI-powered data systems. I am recruiting
+  research interns at ByteDance in Shenzhen. Email is the fastest way to reach me.
 description: >
   Personal website of Hao Zhang, a Research Scientist studying self-evolving agentic
-  systems, harness and shared-environment evolution, context infrastructure, memory,
-  retrieval, and efficient data systems.
+  systems, agent harnesses, agent memory, context infrastructure, agentic retrieval,
+  and AI-powered data systems.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with
   <a href="https://github.com/alshedivat/al-folio">al-folio</a>.

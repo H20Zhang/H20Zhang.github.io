@@ -4,16 +4,18 @@
 # `highlights` lists the papers linked from the homepage (a subset of `papers`).
 - id: agentic-systems
   title: Agentic Systems & Context Infrastructure
-  description: Agent memory, evidence retrieval for agents, and test-time learning and serving.
-  question: How can agents turn experience into memory, context, and harnesses that keep improving?
-  keywords: Self-evolving agents · Agent memory · Context infrastructure · Test-time learning
+  description: Self-evolving agent harnesses, agent memory, context infrastructure, and agentic retrieval.
+  question: How can agents organize external knowledge, memory, and harnesses that keep improving from experience?
+  keywords: Self-evolving agents · Agent harnesses · Agent memory · Agentic retrieval
   highlights:
     - key: Arxiv-26-3
       label: AdaMM
-    - key: Arxiv-26-4
-      label: DocNavRAG
     - key: Submitted-26-IGMem
       label: IGMem
+    - key: Arxiv-26-4
+      label: DocNavRAG
+    - key: Submitted-26-GATOR
+      label: GATOR
   papers:
     - Submitted-26-IGMem
     - Arxiv-26-3
@@ -25,7 +27,7 @@
   title: AI-Powered Data Systems
   description: LLM-powered semantic queries and learned components for query processing.
   question: How can a database query text and other unstructured content as efficiently as relational data?
-  keywords: Semantic operators · LLM-assisted optimization · Learned estimation
+  keywords: Semantic operators · LLM-assisted optimization · Learned query estimation
   highlights:
     - key: VLDB-26-2
       label: SEMA
@@ -54,6 +56,8 @@
       label: Aquila
     - key: VLDB-25
       label: RapidStore
+    - key: ICDE-26
+      label: SQLVec
     - key: VLDB-20
       label: DISC
   papers:
@@ -77,19 +81,19 @@
     - Distributed-And-Parallel-Database-17
     - BigData-16
 - id: hardware-acceleration
-  title: Hardware-Accelerated Computing
+  title: Hardware-Accelerated Data Systems
   description: Tensor-based and GPU-accelerated execution of SQL, graph queries, and graph analytics.
   question: How can one query engine run SQL and graph workloads efficiently across GPUs and other accelerators?
-  keywords: Tensor query execution · GPU subgraph matching · Heterogeneous hardware
+  keywords: Tensor query execution · GPU subgraph matching · Heterogeneous accelerators
   highlights:
     - key: SIGMOD-26-2
       label: TQEX
-    - key: VLDB-24
-      label: TenGraph
-    - key: SIGMOD-25-2
-      label: TGraph
     - key: ICDE-27-2
       label: Vora
+    - key: SIGMOD-25-2
+      label: TGraph
+    - key: VLDB-24
+      label: TenGraph
   papers:
     - ICDE-27-2
     - SIGMOD-26-2

@@ -59,7 +59,6 @@ class HomepageDesignContractTest(unittest.TestCase):
             "selected-publications",
             "selected-systems",
             "highlights",
-            "honors-awards",
         )
         actual_ids = re.findall(r'<section class="about-section" aria-labelledby="([^"]+)"', page)
         self.assertEqual(tuple(actual_ids), section_ids)
